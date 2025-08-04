@@ -4,7 +4,7 @@
 
 {{BANNER}}
 
-[![Version](https://img.shields.io/badge/version-{{VERSION}}-blue.svg)](https://github.com/cyberpython-dev)
+[![Version](https://img.shields.io/badge/version-{{VERSION}}-blue.svg)](https://github.com/tu_usuario)
 ![Last Updated](https://img.shields.io/badge/last_updated-{{LAST_UPDATED}}-brightgreen)
 
 ## 🔍 About Me
@@ -15,7 +15,7 @@
 
 {{SKILLS}}
 
-## 🏆 Badges
+## 🏅 Badges
 
 {{BADGES}}
 
@@ -32,18 +32,4 @@
 
 {{CONTACT}}
 
-## 🚧 Current Projects
-
-```python
-# Security automation example
-import scapy.all as scapy
-
-def detect_arp_spoofing(interface):
-    packets = scapy.sniff(iface=interface, filter="arp", store=0)
-    for packet in packets:
-        if packet[scapy.ARP].op == 2:  # ARP reply
-            real_mac = get_mac(packet[scapy.ARP].psrc)
-            response_mac = packet[scapy.ARP].hwsrc
-            if real_mac != response_mac:
-                print(f"[!] ARP Spoofing detected: {packet[scapy.ARP].psrc} is at {response_mac}")
-```
+> **Note**: This README is auto-generated with Python. Last updated on {{LAST_UPDATED}}

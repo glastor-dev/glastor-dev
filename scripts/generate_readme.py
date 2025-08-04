@@ -1,147 +1,93 @@
 #!/usr/bin/env python3
-import json
 import datetime
 from pathlib import Path
-import requests
+import sys
+import logging
+from typing import Dict, Any
 
-# Configuration
-CONFIG = {
-    "metadata": {
-        "title": "Python & Cybersecurity Specialist",
-        "subtitle": "Offensive Security | DevSecOps | Python Automation",
-        "emoji": "🛡️",
-        "version": "1.0.0",
-        "language": "en",
-        "keywords": ["Python", "Cybersecurity", "Pentesting", "DevSecOps"],
-        "og_image": "https://i.postimg.cc/8zQZJX9L/cyber-banner.jpg"
-    },
-    "about": {
-        "description": "Security-focused Python developer with expertise in offensive security, automation, and secure SDLC. Passionate about building secure systems and contributing to open-source security tools.",
-        "core_skills": {
-            "security": ["Penetration Testing", "Threat Modeling", "Vulnerability Research"],
-            "python_ecosystem": ["Scapy", "PyCryptodome", "Requests", "Pwntools"],
-            "devsecops": ["Docker Security", "Kubernetes Hardening", "CI/CD Security"]
-        }
-    },
-    "badges": {
-        "Python": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
-        "Security": "https://img.shields.io/badge/Security-FF6D00?style=for-the-badge&logo=securityscorecard&logoColor=white",
-        "Kali Linux": "https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white",
-        "Docker": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
-        "OWASP": "https://img.shields.io/badge/OWASP-000000?style=for-the-badge&logo=owasp&logoColor=white",
-        "GitHub Actions": "https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"
-    },
-    "content": {
-        "header": {
-            "image": "https://i.postimg.cc/8zQZJX9L/cyber-banner.jpg",
-            "link": "https://github.com/cyberpython-dev",
-            "caption": "Security through automation ↓"
-        },
-        "quote": {
-            "text": "Security is always excessive until it's not enough.",
-            "author": "Robbie Sinclair",
-            "icon": "🔒"
-        },
-        "projects": {
-            "title": "Security Projects",
-            "count": 6,
-            "layout": "grid",
-            "features": ["security_level", "stars"]
-        },
-        "contact": {
-            "links": [
-                {
-                    "platform": "Keybase",
-                    "url": "https://keybase.io/cyberpython",
-                    "icon": "https://simpleicons.org/icons/keybase.svg"
-                },
-                {
-                    "platform": "ProtonMail",
-                    "url": "mailto:secure@protonmail.com",
-                    "icon": "https://simpleicons.org/icons/protonmail.svg"
-                },
-                {
-                    "platform": "GitHub",
-                    "url": "https://github.com/cyberpython-dev",
-                    "icon": "https://simpleicons.org/icons/github.svg"
-                },
-                {
-                    "platform": "Twitter",
-                    "url": "https://twitter.com/cyberpython",
-                    "icon": "https://simpleicons.org/icons/twitter.svg"
-                }
-            ]
-        }
-    },
-    "achievements": [
-        {
-            "title": "OSCP Certified",
-            "year": 2023,
-            "url": "https://www.offensive-security.com/offsec/certified-oscp/"
-        },
-        {
-            "title": "AWS Certified Security Specialist",
-            "year": 2024,
-            "url": "https://aws.amazon.com/certification/"
-        }
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('readme_generator.log'),
+        logging.StreamHandler()
     ]
-}
+)
 
-def load_banner():
-    with open(Path("scripts/banner.txt"), "r") as f:
-        return f.read()
+class ReadmeGenerator:
+    def __init__(self):
+        self.config = self.load_config()
+        self.template = self.load_template()
+        self.banner = self.load_banner()
 
-def generate_badges(badges):
-    return "\n".join([f"[![]({badges[key]})]({badges[key]})" for key in badges])
+    def load_config(self) -> Dict[str, Any]:
+        """Load configuration"""
+        return {
+            "metadata": {
+                "title": "Python & Cybersecurity Specialist",
+                "subtitle": "Offensive Security | DevSecOps | Python Automation",
+                "emoji": "🛡️",
+                "version": "1.0.0"
+            },
+            # ... (resto de tu configuración)
+        }
 
-def generate_skills(skills):
-    sections = []
-    for category in skills:
-        section = f"### {category.replace('_', ' ').title()}\n"
-        section += ", ".join([f"`{skill}`" for skill in skills[category]])
-        sections.append(section)
-    return "\n\n".join(sections)
+    def load_template(self) -> str:
+        """Load README template"""
+        template_path = Path(__file__).parent.parent / "templates" / "readme_template.md"
+        try:
+            with open(template_path, "r", encoding="utf-8") as f:
+                return f.read()
+        except Exception as e:
+            logging.error(f"Failed to load template: {str(e)}")
+            raise
 
-def generate_contact(links):
-    items = []
-    for link in links:
-        items.append(f"[![]({link['icon']})]({link['url']} '{link['platform']}')")
-    return " | ".join(items)
+    def load_banner(self) -> str:
+        """Load ASCII banner"""
+        banner_path = Path(__file__).parent / "banner.txt"
+        try:
+            with open(banner_path, "r", encoding="utf-8") as f:
+                return f.read()
+        except Exception as e:
+            logging.warning(f"Failed to load banner: {str(e)}")
+            return ""
 
-def generate_achievements(achievements):
-    items = []
-    for item in achievements:
-        items.append(f"- [{item['title']} ({item['year']})]({item['url']})")
-    return "\n".join(items)
+    def generate(self) -> bool:
+        """Generate README.md"""
+        try:
+            replacements = self.prepare_replacements()
+            readme_content = self.apply_replacements(replacements)
+            self.write_readme(readme_content)
+            return True
+        except Exception as e:
+            logging.error(f"Generation failed: {str(e)}")
+            return False
 
-def generate_readme():
-    with open(Path("templates/readme_template.md"), "r") as f:
-        template = f.read()
+    def prepare_replacements(self) -> Dict[str, str]:
+        """Prepare all template replacements"""
+        today = datetime.datetime.now().strftime("%Y-%m-%d")
+        return {
+            "{{TITLE}}": self.config["metadata"]["title"],
+            "{{SUBTITLE}}": self.config["metadata"]["subtitle"],
+            # ... (todos tus placeholders)
+        }
 
-    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    def apply_replacements(self, replacements: Dict[str, str]) -> str:
+        """Apply replacements to template"""
+        content = self.template
+        for placeholder, value in replacements.items():
+            content = content.replace(placeholder, value)
+        return content
 
-    replacements = {
-        "{{TITLE}}": CONFIG["metadata"]["title"],
-        "{{SUBTITLE}}": CONFIG["metadata"]["subtitle"],
-        "{{EMOJI}}": CONFIG["metadata"]["emoji"],
-        "{{VERSION}}": CONFIG["metadata"]["version"],
-        "{{LAST_UPDATED}}": today,
-        "{{BANNER}}": load_banner(),
-        "{{DESCRIPTION}}": CONFIG["about"]["description"],
-        "{{SKILLS}}": generate_skills(CONFIG["about"]["core_skills"]),
-        "{{BADGES}}": generate_badges(CONFIG["badges"]),
-        "{{QUOTE_TEXT}}": CONFIG["content"]["quote"]["text"],
-        "{{QUOTE_AUTHOR}}": CONFIG["content"]["quote"]["author"],
-        "{{QUOTE_ICON}}": CONFIG["content"]["quote"]["icon"],
-        "{{CONTACT}}": generate_contact(CONFIG["content"]["contact"]["links"]),
-        "{{ACHIEVEMENTS}}": generate_achievements(CONFIG["achievements"])
-    }
-
-    for placeholder, value in replacements.items():
-        template = template.replace(placeholder, value)
-
-    with open(Path("README.md"), "w") as f:
-        f.write(template)
+    def write_readme(self, content: str):
+        """Write final README.md"""
+        readme_path = Path(__file__).parent.parent / "README.md"
+        with open(readme_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        logging.info(f"Successfully generated {readme_path}")
 
 if __name__ == "__main__":
-    generate_readme()
+    generator = ReadmeGenerator()
+    success = generator.generate()
+    sys.exit(0 if success else 1)
