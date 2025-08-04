@@ -1,0 +1,14 @@
+# {{ data.metadata.title }} {{ data.metadata.emoji }}
+![Banner]({{ data.content.header.image }})
+
+## {{ data.metadata.subtitle }}
+
+{% if data.metadata.language == "en" %}
+{% include "en.md.j2" %}
+{% else %}
+{% include "es.md.j2" %}
+{% endif %}
+
+---
+
+{{ data.footer.notice }} • © {{ current_year }} [{{ data.footer.copyright.owner }}]({{ data.content.header.link }})

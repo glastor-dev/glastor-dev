@@ -1,0 +1,111 @@
+{
+  "readme": {
+    "metadata": {
+      "title": "Andrés Antonio Cardoso - Full Stack Developer",
+      "subtitle": "Python Specialist | Designer | Content Creator",
+      "emoji": "👋",
+      "last_updated": "auto",
+      "version": "1.0.0",
+      "language": "en",
+      "keywords": ["Python", "Full Stack", "Developer", "Portfolio"],
+      "og_image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg"
+    },
+    "about": {
+      "description": "Passionate Python developer with expertise in web technologies and creative design. Focused on building efficient, scalable solutions and sharing knowledge through content creation.",
+      "core_skills": {
+        "python_ecosystem": ["Django", "Flask", "FastAPI", "Pandas", "NumPy"],
+        "web_technologies": ["HTML5", "CSS3", "JavaScript", "REST APIs"],
+        "devops": ["Docker", "AWS", "CI/CD"]
+      }
+    },
+    "badges": {
+      "Python": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
+      "Django": "https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white",
+      "Flask": "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white",
+      "FastAPI": "https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white",
+      "JavaScript": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+      "Docker": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+    },
+    "content": {
+      "header": {
+        "image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg",
+        "link": "https://github.com/glastor-dev",
+        "caption": "Explore my projects ↓"
+      },
+      "quote": {
+        "text": "Any sufficiently advanced technology is indistinguishable from magic.",
+        "author": "Arthur C. Clarke",
+        "icon": "✨"
+      },
+      "projects": {
+        "title": "Featured Projects",
+        "count": 8,
+        "layout": "grid",
+        "features": ["tech_tags", "stars"]
+      },
+      "contact": {
+        "links": [
+          {
+            "platform": "Telegram",
+            "url": "https://t.me/zerhocool",
+            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817247/telegram_pexuvg.svg"
+          },
+          {
+            "platform": "Email",
+            "url": "mailto:glastor.info@gmail.com",
+            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817242/gmail_fw2wpz.svg"
+          },
+          {
+            "platform": "GitHub",
+            "url": "https://github.com/glastor-dev",
+            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817267/Github_dark_e9cyaa.svg"
+          },
+          {
+            "platform": "YouTube",
+            "url": "https://www.youtube.com/@glastor-es",
+            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732718064/youtube_jm0bhx.svg"
+          }
+        ]
+      }
+    },
+    "footer": {
+      "notice": "This README is updated automatically",
+      "copyright": {
+        "year": 2025,
+        "owner": "Andrés Antonio Cardoso",
+        "github_user": "glastor-dev",
+        "license": "All rights reserved"
+      }
+    },
+    "translations": {
+      "es": {
+        "header": "Explora mis proyectos ↓",
+        "quote": "Cualquier tecnología suficientemente avanzada es indistinguible de la magia.",
+        "footer_notice": "Este README se actualiza automáticamente",
+        "projects_title": "Proyectos destacados",
+        "contact_title": "Contacto",
+        "about_title": "Sobre mí"
+      },
+      "en": {
+        "header": "Explore my projects ↓",
+        "quote": "Any sufficiently advanced technology is indistinguishable from magic.",
+        "footer_notice": "This README is updated automatically",
+        "projects_title": "Featured Projects",
+        "contact_title": "Contact",
+        "about_title": "About Me"
+      }
+    },
+    "styles": {
+      "header_bg": "#222",
+      "header_text": "#fff",
+      "font_family": "Roboto, Arial, sans-serif"
+    },
+    "achievements": [
+      {
+        "title": "AWS Certified Developer",
+        "year": 2024,
+        "url": "https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2024-01-01"
+      }
+    ]
+  }
+}

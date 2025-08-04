@@ -1,0 +1,25 @@
+## {{ data.translations.en.about_title }}
+{{ data.about.description }}
+
+### 🛠 Core Skills
+{% for category, skills in data.about.core_skills.items() %}
+- **{{ category }}**: {{ skills|join(', ') }}
+{% endfor %}
+
+### 🏆 Achievements
+{% for achievement in data.achievements %}
+- [{{ achievement.title }} ({{ achievement.year }})]({{ achievement.url }})
+{% endfor %}
+
+## {{ data.translations.en.projects_title }}
+{{ data.content.projects.description }}
+
+{{ badges }}
+
+## {{ data.translations.en.contact_title }}
+{% for link in data.content.contact.links %}
+[<img src="{{ link.icon }}" alt="{{ link.platform }}" width="20"/>]({{ link.url }})
+{% endfor %}
+
+> {{ data.content.quote.text }}
+> *— {{ data.content.quote.author }} {{ data.content.quote.icon }}*

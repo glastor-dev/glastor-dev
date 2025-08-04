@@ -1,0 +1,22 @@
+[project]
+name = "readme-generator"
+version = "1.0.0"
+description = "Professional README generator from JSON data"
+authors = [
+    {name = "Andrés Antonio Cardoso", email = "glastor.info@gmail.com"},
+]
+dependencies = [
+    "Jinja2>=3.1.2",
+    "python-dateutil>=2.8.2",
+    "PyYAML>=6.0.1",
+    "typer>=0.9.0",
+    "rich>=13.7.0",
+    "pydantic>=2.5.3"
+]
+
+[project.scripts]
+readme-gen = "src.main:app"
+
+[tool.pytest.ini_options]
+python_files = "test_*.py"
+testpaths = ["tests"]
