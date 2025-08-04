@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hello, Andres is Here! 👋
 
 <a href="https://github.com/glastor-dev/">
@@ -54,3 +55,6 @@ Formamos mundos e identidades visuales, construidos sobre la base del pensamient
 </p>
 
 <div align="center"><em><a href="https://github.com/glastor-dev">* This is an automatically generated README file. Copyright © 2013-2025 GLASTOR DEV - All rights reserved.</a></em></div>
+=======
+# glastor
+>>>>>>> 93b7797d069bfd7399c56f7d553f19b29b17a987
