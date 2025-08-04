@@ -1,0 +1,60 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Ejecutar diariamente a medianoche UTC
+  workflow_dispatch: # Permitir ejecución manual
+  push:
+    branches: [main]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Necesario para el historial completo de git
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate README
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e  # Falla si hay error
+          python main.py
+
+      - name: Check README exists
+        run: |
+          if [ ! -f README.md ]; then
+            echo "README.md not found!"
+            exit 1
+          fi
+
+      - name: Show log on failure
+        if: failure()
+        run: cat github_readme.log || echo "No log file found."
+
+      - name: Commit and push changes if README updated
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto-update README [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi

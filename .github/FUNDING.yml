@@ -1,0 +1,29 @@
+# FUNDING.yml - Glastor DEV
+# Configuration for GitHub Sponsors and funding platforms
+# Last updated: 2024-01-25
+
+# Official GitHub Sponsors profile
+github: glastor-dev
+github_premium: true # If you have GitHub Premium features
+# Open Collective (For transparent community funding)
+open_collective: datagroupssl
+
+# Custom donation URLs
+custom:
+  - 'https://paypal.me/datagroupssl'
+  - 'https://opencollective.com/datagroupssl' # Mirror URL
+
+# Cryptocurrency options (Suggested addition)
+crypto:
+  bitcoin: '149SHZw94HNzpC883xT3QikiyMD72izA21'
+  ethereum: '0x89205A3A3b2A69De6Dbf7f01ED13B2108B2c43e7'
+  usdt red ton: 'UQAFTmXNuLBdzl5e5e4dLn1_BpPWWyLe8McvUCV8rMRala8F'
+# Uncomment and complete these if needed in future
+# patreon: your_username
+# ko_fi: your_username
+# tidelift: platform/package
+# community_bridge: project-name
+# liberapay: your_username
+# issuehunt: your_username
+# otechie: your_username
+

@@ -1,0 +1,8 @@
+package.json
+package-lock.json
+node_modules
+dist
+
+//.eslintignore
+node_modules
+__test__

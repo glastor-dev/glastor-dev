@@ -1,0 +1,196 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "object",
+      "properties": {
+        "metadata": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "subtitle": { "type": "string" },
+            "emoji": { "type": "string" },
+            "last_updated": { "type": "string" },
+            "version": { "type": "string" },
+            "language": { "type": "string" },
+            "keywords": { "type": "array", "items": { "type": "string" } },
+            "og_image": { "type": "string" },
+            "description": { "type": "string" },
+            "author": { "type": "string" }
+          },
+          "required": [
+            "title",
+            "subtitle",
+            "emoji",
+            "last_updated",
+            "version",
+            "language",
+            "keywords",
+            "og_image"
+          ]
+        },
+        "about": {
+          "type": "object",
+          "properties": {
+            "description": { "type": "string" },
+            "core_skills": {
+              "type": "object",
+              "properties": {
+                "python_ecosystem": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "web_technologies": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "devops": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "required": ["description", "core_skills"]
+        },
+        "badges": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "content": {
+          "type": "object",
+          "properties": {
+            "header": {
+              "type": "object",
+              "properties": {
+                "image": { "type": "string" },
+                "link": { "type": "string" },
+                "caption": { "type": "string" }
+              },
+              "required": ["image", "link", "caption"]
+            },
+            "quote": {
+              "type": "object",
+              "properties": {
+                "text": { "type": "string" },
+                "author": { "type": "string" },
+                "icon": { "type": "string" }
+              },
+              "required": ["text", "author", "icon"]
+            },
+            "projects": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "count": { "type": "integer" },
+                "layout": { "type": "string" },
+                "features": { "type": "array", "items": { "type": "string" } },
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": { "type": "string" },
+                      "url": { "type": "string" }
+                    },
+                    "required": ["type", "url"]
+                  }
+                }
+              },
+              "required": ["title", "count", "layout", "features"]
+            },
+            "contact": {
+              "type": "object",
+              "properties": {
+                "links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "platform": { "type": "string" },
+                      "url": { "type": "string" },
+                      "icon": { "type": "string" },
+                      "username": { "type": "string" },
+                      "type": { "type": "string" }
+                    },
+                    "required": ["platform", "url", "icon"]
+                  }
+                }
+              },
+              "required": ["links"]
+            }
+          },
+          "required": ["header", "quote", "projects", "contact"]
+        },
+        "footer": {
+          "type": "object",
+          "properties": {
+            "notice": { "type": "string" },
+            "copyright": {
+              "type": "object",
+              "properties": {
+                "year": { "type": "integer" },
+                "owner": { "type": "string" },
+                "github_user": { "type": "string" },
+                "license": { "type": "string" }
+              },
+              "required": ["year", "owner", "github_user", "license"]
+            }
+          },
+          "required": ["notice", "copyright"]
+        },
+        "translations": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "header": { "type": "string" },
+              "quote": { "type": "string" },
+              "footer_notice": { "type": "string" },
+              "projects_title": { "type": "string" },
+              "contact_title": { "type": "string" },
+              "about_title": { "type": "string" }
+            },
+            "required": [
+              "header",
+              "quote",
+              "footer_notice",
+              "projects_title",
+              "contact_title",
+              "about_title"
+            ]
+          }
+        },
+        "styles": {
+          "type": "object",
+          "properties": {
+            "header_bg": { "type": "string" },
+            "header_text": { "type": "string" },
+            "font_family": { "type": "string" }
+          }
+        },
+        "achievements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": { "type": "string" },
+              "year": { "type": "integer" },
+              "url": { "type": "string" }
+            },
+            "required": ["title", "year", "url"]
+          }
+        }
+      },
+      "required": [
+        "metadata",
+        "about",
+        "badges",
+        "content",
+        "footer",
+        "translations",
+        "styles",
+        "achievements"
+      ]
+    }
+  },
+  "required": ["readme"]
+}
