@@ -124,6 +124,9 @@ source/app/web/statics/preview
 .presets
 
 env
+venv/
+.venv/
+.venv*/
 __pycache__
 *.mov
 tmp/

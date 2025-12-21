@@ -59,7 +59,9 @@
 {{ project.description }}
 
 **Tech Stack:** {{ project.tech_stack|join(' • ') }}
+
 {% if project.repo %}**Repository:** [View Code]({{ project.repo }}){% endif %}{% if project.demo %} | **Live Demo:** [Visit Site]({{ project.demo }}){% endif %}
+
 **Highlights:** {{ project.highlights|join(' • ') }}
 
 {% endfor %}

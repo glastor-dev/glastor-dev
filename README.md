@@ -69,6 +69,7 @@
 Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma
 
 **Stack Tecnológico:** Python • Jinja2 • Typer • Rich
+
 **Repositorio:** [Ver Código](https://github.com/glastor-dev/glastor-dev)
 **Destacados:** Copyright automático • Multi-idioma • Herramienta CLI • 100% cobertura de tests
 
@@ -77,12 +78,14 @@ Arquitectura escalable de microservicios con FastAPI, Docker y PostgreSQL
 
 **Stack Tecnológico:** FastAPI • Docker • PostgreSQL • Redis
 
+
 **Destacados:** Async/await • Auth JWT • Docker compose • Documentación de API
 
 ### 🎨 Design Portfolio
 Portafolio personal mostrando proyectos de diseño y desarrollo
 
 **Stack Tecnológico:** React • TypeScript • Tailwind CSS
+
  | **Demo en Vivo:** [Visitar Sitio](https://glastor.dev)
 **Destacados:** Diseño responsive • Modo oscuro • Animaciones • SEO optimizado
 
