@@ -2,20 +2,41 @@
   "readme": {
     "metadata": {
       "title": "Andrés Antonio Cardoso - Full Stack Developer",
-      "subtitle": "Python Specialist | Designer | Content Creator",
+      "subtitle": "Especialista en Python | Diseñador | Creador de Contenido",
       "emoji": "👋",
       "last_updated": "auto",
-      "version": "1.0.0",
-      "language": "en",
-      "keywords": ["Python", "Full Stack", "Developer", "Portfolio"],
-      "og_image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg"
+      "version": "2.0.0",
+      "language": "es",
+      "keywords": ["Python", "Full Stack", "Developer", "Portfolio", "Open Source"],
+      "og_image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg",
+      "license": "GNU GPL v3",
+      "license_badge": "https://img.shields.io/badge/License-GPLv3-blue.svg"
+    },
+    "github_stats": {
+      "username": "glastor-dev",
+      "show_stats": true,
+      "show_languages": true,
+      "show_streak": true,
+      "show_trophies": true,
+      "theme": "radical"
     },
     "about": {
-      "description": "Passionate Python developer with expertise in web technologies and creative design. Focused on building efficient, scalable solutions and sharing knowledge through content creation.",
+      "description": "🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Enfocado en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.",
+      "tagline": "Construyendo el futuro, una línea de código a la vez",
+      "currently_working_on": [
+        "🔭 Generador avanzado de README con integración de IA",
+        "🌱 Aprendiendo Machine Learning y Data Science",
+        "👯 Abierto a colaborar en proyectos Open Source en Python",
+        "💬 Pregúntame sobre Python, Django, FastAPI y desarrollo web"
+      ],
+      "fun_fact": "⚡ Automatizo todo lo que hago más de dos veces",
       "core_skills": {
-        "python_ecosystem": ["Django", "Flask", "FastAPI", "Pandas", "NumPy"],
-        "web_technologies": ["HTML5", "CSS3", "JavaScript", "REST APIs"],
-        "devops": ["Docker", "AWS", "CI/CD"]
+        "python_ecosystem": ["Django", "Flask", "FastAPI", "Pandas", "NumPy", "Pytest"],
+        "web_technologies": ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "REST APIs", "GraphQL"],
+        "cybersecurity": ["OWASP Top 10", "Pentesting", "Nmap", "Wireshark", "Burp Suite", "Kali Linux", "Threat Modeling"],
+        "databases": ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+        "devops": ["Docker", "AWS", "CI/CD", "GitHub Actions", "Nginx"],
+        "tools": ["Git", "VS Code", "Linux", "Postman", "Figma"]
       }
     },
     "badges": {
@@ -24,26 +45,73 @@
       "Flask": "https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white",
       "FastAPI": "https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=FastAPI&logoColor=white",
       "JavaScript": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
-      "Docker": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+      "TypeScript": "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+      "React": "https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
+      "PostgreSQL": "https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white",
+      "MongoDB": "https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white",
+      "Docker": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+      "AWS": "https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white",
+      "Git": "https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white",
+      "Linux": "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
     },
     "content": {
       "header": {
         "image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg",
         "link": "https://github.com/glastor-dev",
-        "caption": "Explore my projects ↓"
+        "caption": "Explora mis proyectos ↓",
+        "typing_text": ["Full Stack Developer", "Especialista en Python", "Open Source Contributor", "Creador de Contenido Tech"]
       },
       "quote": {
-        "text": "Any sufficiently advanced technology is indistinguishable from magic.",
+        "text": "Cualquier tecnología suficientemente avanzada es indistinguible de la magia.",
         "author": "Arthur C. Clarke",
         "icon": "✨"
       },
-      "projects": {
-        "title": "Featured Projects",
-        "count": 8,
-        "layout": "grid",
-        "features": ["tech_tags", "stars"]
-      },
+      "featured_projects": [
+        {
+          "name": "🎯 Glastor README Generator",
+          "description": "Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma",
+          "tech_stack": ["Python", "Jinja2", "Typer", "Rich"],
+          "repo": "https://github.com/glastor-dev/glastor-dev",
+          "demo": null,
+          "stars": "⭐",
+          "highlights": ["Copyright automático", "Multi-idioma", "Herramienta CLI", "100% cobertura de tests"]
+        },
+        {
+          "name": "🚀 FastAPI Microservices",
+          "description": "Arquitectura escalable de microservicios con FastAPI, Docker y PostgreSQL",
+          "tech_stack": ["FastAPI", "Docker", "PostgreSQL", "Redis"],
+          "repo": null,
+          "demo": null,
+          "stars": "⭐⭐",
+          "highlights": ["Async/await", "Auth JWT", "Docker compose", "Documentación de API"]
+        },
+        {
+          "name": "🎨 Design Portfolio",
+          "description": "Portafolio personal mostrando proyectos de diseño y desarrollo",
+          "tech_stack": ["React", "TypeScript", "Tailwind CSS"],
+          "repo": null,
+          "demo": "https://glastor.dev",
+          "stars": "⭐",
+          "highlights": ["Diseño responsive", "Modo oscuro", "Animaciones", "SEO optimizado"]
+        }
+      ],
+      "blog_articles": [
+        {
+          "title": "🐍 Mejores prácticas en Python 2025",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/@glastor-es",
+          "date": "2025"
+        },
+        {
+          "title": "🚀 Construyendo APIs escalables con FastAPI",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/@glastor-es",
+          "date": "2025"
+        }
+      ],
       "contact": {
+        "availability": "💼 Disponible para proyectos freelance y colaboraciones",
+        "response_time": "📧 Respondo generalmente en 24 horas",
         "links": [
           {
             "platform": "Telegram",
@@ -69,30 +137,52 @@
       }
     },
     "footer": {
-      "notice": "This README is updated automatically",
+      "notice": "Este README se actualiza automáticamente",
       "copyright": {
         "year": 2025,
+        "start_year": 2010,
         "owner": "Andrés Antonio Cardoso",
         "github_user": "glastor-dev",
-        "license": "All rights reserved"
-      }
+        "license": "GNU GPL v3"
+      },
+      "cta": "⭐ Dale estrella al repo si te sirve | 🤝 ¡Colaboremos!"
     },
     "translations": {
       "es": {
         "header": "Explora mis proyectos ↓",
         "quote": "Cualquier tecnología suficientemente avanzada es indistinguible de la magia.",
         "footer_notice": "Este README se actualiza automáticamente",
-        "projects_title": "Proyectos destacados",
-        "contact_title": "Contacto",
-        "about_title": "Sobre mí"
+        "projects_title": "🚀 Proyectos Destacados",
+        "contact_title": "📫 Contacto",
+        "about_title": "👨‍💻 Sobre Mí",
+        "skills_title": "🛠️ Stack Tecnológico",
+        "stats_title": "📊 Estadísticas de GitHub",
+        "blog_title": "📝 Artículos & Tutoriales",
+        "currently_working": "🔭 Actualmente trabajando en",
+        "learning": "🌱 Actualmente aprendiendo",
+        "collaborate": "👯 Abierto a colaborar en",
+        "ask_me": "💬 Pregúntame sobre",
+        "fun_fact": "⚡ Dato curioso",
+        "availability": "💼 Disponible para proyectos freelance y colaboraciones",
+        "response_time": "📧 Respondo generalmente en 24 horas"
       },
       "en": {
         "header": "Explore my projects ↓",
         "quote": "Any sufficiently advanced technology is indistinguishable from magic.",
         "footer_notice": "This README is updated automatically",
-        "projects_title": "Featured Projects",
-        "contact_title": "Contact",
-        "about_title": "About Me"
+        "projects_title": "🚀 Featured Projects",
+        "contact_title": "📫 Contact",
+        "about_title": "👨‍💻 About Me",
+        "skills_title": "🛠️ Tech Stack",
+        "stats_title": "📊 GitHub Statistics",
+        "blog_title": "📝 Articles & Tutorials",
+        "currently_working": "🔭 Currently working on",
+        "learning": "🌱 Currently learning",
+        "collaborate": "👯 Open to collaborate on",
+        "ask_me": "💬 Ask me about",
+        "fun_fact": "⚡ Fun fact",
+        "availability": "💼 Available for freelance projects and collaborations",
+        "response_time": "📧 Usually responds within 24 hours"
       }
     },
     "styles": {
@@ -102,9 +192,32 @@
     },
     "achievements": [
       {
+        "title": "Python Institute — PCAP (Certified Associate in Python Programming)",
+        "year": 2025,
+        "status": "Certificado",
+        "url": "https://pythoninstitute.org/certification/pcap-certification-associate",
+        "badge": "https://img.shields.io/badge/Python-PCAP-3776AB?style=for-the-badge&logo=python&logoColor=white"
+      },
+      {
+        "title": "CompTIA Security+",
+        "year": 2025,
+        "status": "Certificado",
+        "url": "https://www.comptia.org/certifications/security",
+        "badge": "https://img.shields.io/badge/Cybersecurity-Security%2B-8A2BE2?style=for-the-badge&logo=securityscorecard&logoColor=white"
+      },
+      {
+        "title": "Docker Certified Associate (DCA)",
+        "year": 2025,
+        "status": "Certificado",
+        "url": "https://www.docker.com/certification/",
+        "badge": "https://img.shields.io/badge/Docker-DCA-2496ED?style=for-the-badge&logo=docker&logoColor=white"
+      },
+      {
         "title": "AWS Certified Developer",
         "year": 2024,
-        "url": "https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2024-01-01"
+        "status": "Certificado",
+        "url": "https://www.certmetrics.com/amazon/public/badge.aspx?i=1&t=c&d=2024-01-01",
+        "badge": "https://img.shields.io/badge/AWS-Certified-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white"
       }
     ]
   }

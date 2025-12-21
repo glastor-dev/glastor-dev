@@ -20,3 +20,19 @@ readme-gen = "src.main:app"
 [tool.pytest.ini_options]
 python_files = "test_*.py"
 testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]

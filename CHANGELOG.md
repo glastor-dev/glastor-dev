@@ -5,7 +5,33 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es/1.0.0/),
 y este proyecto adhiere al [Versionado Semántico](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-08-04
+## [1.0.0] - 2025-12-20
+
+### Added
+- ✨ Generación de README multi-idioma (Inglés, Español)
+- ✅ Validación de datos basada en Pydantic con mensajes de error detallados
+- 🎨 CLI enriquecido con salida de tablas y indicadores de progreso
+- 🧪 Suite de tests comprehensiva con pytest
+- 📊 Modo verbose para salida detallada de generación
+- 🔍 Comando de validación JSON sin generación de archivos
+- 🏷️ Comando de versión para mostrar información del proyecto
+- 📝 Documentación mejorada con ejemplos de uso
+- 🎯 Opción de generación específica por idioma (flag --lang)
+- 🛠️ Manejo de errores mejorado y retroalimentación al usuario
+
+### Changed
+- 🔧 Refactorización de ReadmeGenerator con mejor estructura
+- 📦 BadgeManager mejorado con múltiples opciones de formato (Markdown, HTML)
+- 💾 file_handler mejorado con utilidades de lectura/escritura
+- 🎨 Mejor organización y completitud de templates
+- 📈 Validación de datos más robusta con validadores personalizados
+
+### Fixed
+- 🐛 Corregidos problemas de importación relativa en main.py
+- 📁 Agregados archivos __init__.py faltantes para estructura de paquete
+- 🔧 Resueltos errores de importación de módulos
+
+## [0.1.0] - 2025-08-04
 
 ### Added
 

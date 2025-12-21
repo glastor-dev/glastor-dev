@@ -107,6 +107,12 @@ dist
 # User settings
 settings.json
 
+# VS Code
+.vscode/
+
+# Pytest
+.pytest_cache/
+
 # Community templates
 source/templates/.community
 source/templates/@*

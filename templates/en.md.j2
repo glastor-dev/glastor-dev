@@ -1,25 +1,118 @@
+{% if data.metadata.license_badge %}
+![License]({{ data.metadata.license_badge }})
+![Profile Views](https://komarev.com/ghpvc/?username={{ data.github_stats.username }}&color=blueviolet&style=flat-square)
+{% endif %}
+
 ## {{ data.translations.en.about_title }}
 {{ data.about.description }}
 
-### 🛠 Core Skills
-{% for category, skills in data.about.core_skills.items() %}
-- **{{ category }}**: {{ skills|join(', ') }}
+{% if data.about.tagline %}
+> *{{ data.about.tagline }}*
+{% endif %}
+
+{% if data.about.currently_working_on %}
+{% for item in data.about.currently_working_on %}
+{{ item }}
 {% endfor %}
+{% if data.about.fun_fact %}
+{{ data.about.fun_fact }}
+{% endif %}
+{% endif %}
 
-### 🏆 Achievements
-{% for achievement in data.achievements %}
-- [{{ achievement.title }} ({{ achievement.year }})]({{ achievement.url }})
-{% endfor %}
+---
 
-## {{ data.translations.en.projects_title }}
-{{ data.content.projects.description }}
+## {{ data.translations.en.stats_title }}
 
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username={{ data.github_stats.username }}&show_icons=true&theme={{ data.github_stats.theme }}&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="170"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={{ data.github_stats.username }}&layout=compact&theme={{ data.github_stats.theme }}&hide_border=true" alt="Top Languages" height="170"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&no-frame=true&no-bg=true&row=1&column=7" alt="GitHub Trophies" />
+</p>
+
+---
+
+## {{ data.translations.en.skills_title }}
+
+### 💻 Languages & Frameworks
 {{ badges }}
 
-## {{ data.translations.en.contact_title }}
-{% for link in data.content.contact.links %}
-[<img src="{{ link.icon }}" alt="{{ link.platform }}" width="20"/>]({{ link.url }})
+### 🔧 Development Skills
+{% for category, skills in data.about.core_skills.items() %}
+**{{ category|replace('_', ' ')|title }}**
+`{{ skills|join('` • `') }}`
+
 {% endfor %}
+
+---
+
+## {{ data.translations.en.projects_title }}
+
+{% for project in data.content.featured_projects %}
+### {{ project.name }}
+{{ project.description }}
+
+**Tech Stack:** {{ project.tech_stack|join(' • ') }}
+{% if project.repo %}**Repository:** [View Code]({{ project.repo }}){% endif %}{% if project.demo %} | **Live Demo:** [Visit Site]({{ project.demo }}){% endif %}
+**Highlights:** {{ project.highlights|join(' • ') }}
+
+{% endfor %}
+
+---
+
+{% if data.content.blog_articles %}
+## {{ data.translations.en.blog_title }}
+
+{% for article in data.content.blog_articles %}
+- **{{ article.title }}** - [{{ article.platform }}]({{ article.url }}) *({{ article.date }})*
+{% endfor %}
+
+---
+{% endif %}
+
+### 🏆 Certifications
+{% for achievement in data.achievements %}
+{% if achievement.badge %}
+
+[![{{ achievement.title }}]({{ achievement.badge }})]({{ achievement.url }}){% if achievement.year %} ({{ achievement.year }}){% endif %}{% if achievement.status %} — *{{ achievement.status }}*{% endif %}
+
+{% else %}
+- [{{ achievement.title }}{% if achievement.year %} ({{ achievement.year }}){% endif %}]({{ achievement.url }}){% if achievement.status %} — *{{ achievement.status }}*{% endif %}
+{% endif %}
+{% endfor %}
+
+---
+
+## {{ data.translations.en.contact_title }}
+
+{{ data.content.contact.availability }}
+{{ data.content.contact.response_time }}
+
+<p align="center">
+{% for link in data.content.contact.links %}
+  <a href="{{ link.url }}">
+    <img src="{{ link.icon }}" alt="{{ link.platform }}" width="40" height="40"/>
+  </a>
+{% endfor %}
+</p>
+
+---
+
+<div align="center">
 
 > {{ data.content.quote.text }}
 > *— {{ data.content.quote.author }} {{ data.content.quote.icon }}*
+
+{{ data.footer.cta }}
+
+{{ copyright }} | Licensed under [{{ data.footer.copyright.license }}](LICENSE)
+
+*{{ data.footer.notice }}*
+
+</div>

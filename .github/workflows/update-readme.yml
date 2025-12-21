@@ -2,10 +2,17 @@ name: Update README
 on:
   push:
     paths:
-      - 'data/profile.json'
+      - 'src/data/profile.json'
+      - 'templates/**'
+      - 'src/**'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -14,11 +21,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Generate README
-        run: python -m src.main generate data/profile.json
+        run: python -m src.main generate src/data/profile.json --quiet
       - name: Commit changes
         run: |
-          git config --global user.name "README Bot"
-          git config --global user.email "actions@github.com"
+          git config user.name "README Bot"
+          git config user.email "actions@github.com"
           git add README*.md
           git commit -m "Automated README update" || echo "No changes to commit"
           git push
