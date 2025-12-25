@@ -1,0 +1,94 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  github_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Extract release notes from CHANGELOG
+        env:
+          TAG_NAME: ${{ github.ref_name }}
+        run: |
+          python - << 'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          tag = os.environ.get('TAG_NAME', '').strip()
+          version = tag[1:] if tag.startswith('v') else tag
+
+          changelog_path = Path('CHANGELOG.md')
+          output_path = Path('RELEASE_NOTES.md')
+
+          if not changelog_path.exists():
+              output_path.write_text(
+                  f"## {tag}\n\nVer detalles en CHANGELOG.md.\n",
+                  encoding='utf-8',
+              )
+              raise SystemExit(0)
+
+          text = changelog_path.read_text(encoding='utf-8')
+          lines = text.splitlines()
+
+          header_re = re.compile(r"^##\s*\[(?P<ver>[^\]]+)\]\s*-\s*(?P<date>\d{4}-\d{2}-\d{2})\s*$")
+
+          start = None
+          title_line = None
+          for i, line in enumerate(lines):
+              m = header_re.match(line)
+              if not m:
+                  continue
+              if m.group('ver') == version:
+                  start = i
+                  title_line = f"## {tag} — {m.group('date')}"
+                  break
+
+          if start is None:
+              output_path.write_text(
+                  f"## {tag}\n\nNo se encontró la sección [{version}] en CHANGELOG.md.\n\nVer detalles en CHANGELOG.md.\n",
+                  encoding='utf-8',
+              )
+              raise SystemExit(0)
+
+          # Capture until next version header (## [x.y.z])
+          end = None
+          for j in range(start + 1, len(lines)):
+              if lines[j].startswith('## ['):
+                  end = j
+                  break
+          chunk = lines[start + 1 : end]
+
+          # Trim leading/trailing empty lines
+          while chunk and chunk[0].strip() == '':
+              chunk.pop(0)
+          while chunk and chunk[-1].strip() == '':
+              chunk.pop()
+
+          body = "\n".join(chunk).strip()
+          if not body:
+              body = "(Sin notas adicionales. Ver CHANGELOG.md)"
+
+          output_path.write_text(f"{title_line}\n\n{body}\n", encoding='utf-8')
+          print(output_path.read_text(encoding='utf-8'))
+          PY
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          body_path: RELEASE_NOTES.md
+          prerelease: ${{ contains(github.ref_name, '-') }}

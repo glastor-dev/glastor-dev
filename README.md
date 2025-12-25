@@ -1,21 +1,58 @@
 # Andrés Antonio Cardoso - Full Stack Developer 👋
-![Banner](https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg)
+![Banner](src/svg-png/banner-github.webp)
 
 ## Especialista en Python | Diseñador | Creador de Contenido
 
 ![Licencia](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![Vistas del Perfil](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas)
 
+Construyo APIs, tooling y automatizaciones con Python para productos y equipos (FastAPI/Django, CI/CD y Docker).
+
+Para presupuestos o colaboraciones: [Email](mailto:glastor.info@gmail.com) o [Telegram](https://t.me/zerhocool).
+
+Open Source: Issues y PRs bienvenidos — ver [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Políticas: [Soporte](support.md) • [Seguridad](security.md) • [Código de Conducta](code_of_conduct.md)
+
 ## 👨‍💻 Sobre Mí
-🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Enfocado en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.
+🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Me enfoco en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.
+
+Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente estoy migrando a GitHub repositorios privados que mantengo en otras plataformas. Vivo en Girona (España) desde 2022.
 
 > *Construyendo el futuro, una línea de código a la vez*
 
-🔭 Generador avanzado de README con integración de IA
-🌱 Aprendiendo Machine Learning y Data Science
-👯 Abierto a colaborar en proyectos Open Source en Python
-💬 Pregúntame sobre Python, Django, FastAPI y desarrollo web
-⚡ Automatizo todo lo que hago más de dos veces
+<details>
+  <summary><strong>EXTRAS: Toolbox</strong></summary>
+
+🖥️ **Sistema Operativo:**
+- Arch Linux, terminal Xterm o eDEX-UI
+- Windows 10 Pro, terminal Bash personalizada
+
+🍸 **Intereses:**
+- DevOps - Protocolos de Comunicación
+- Seguridad informática - Criptografía
+- Documentación de Software - Prompt Engineering - IA
+
+🕐 **Idiomas:**
+- Aprendiendo Catalán y estonio
+- Mejorando mi inglés
+
+📗 **Último libro:**
+- El libro negro del programador
+- El arte de la invisibilidad
+- Blue Team Handbook
+- Hacking Ético 101
+- Biohacker
+- El libro blanco del hacker
+- Big Data, Machine Learning y Data Science en Python
+
+- 🔭 Generador avanzado de README con integración de IA
+- 🌱 Aprendiendo Machine Learning y Data Science
+- 👯 Abierto a colaborar en proyectos Open Source en Python
+- 💬 Pregúntame sobre Python, Django, FastAPI y desarrollo web
+- ⚡ Automatizo todo lo que hago más de dos veces
+
+</details>
 
 ---
 
@@ -39,7 +76,11 @@
 ## 🛠️ Stack Tecnológico
 
 ### 💻 Lenguajes y Frameworks
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white) ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&amp;logo=django&amp;logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&amp;logo=flask&amp;logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&amp;logo=FastAPI&amp;logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&amp;logo=javascript&amp;logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&amp;logo=typescript&amp;logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white) ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&amp;logo=git&amp;logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&amp;logo=linux&amp;logoColor=black)
+<p align="center">
+  <a href="#">
+    <img src="https://skillicons.dev/icons?i=python,bash,html,css,js,ts,java,markdown,nodejs,latex,postman,php,svg,flask,vue,vite,nextjs,symfony,svelte,heroku,mongodb,mysql,postgresql,vercel,jest,docker,aws,ps,ai,pr,ae,linux,git,github,githubactions,gitlab,vscode" />
+  </a>
+</p>
 
 ### 🔧 Habilidades de Desarrollo
 **Python Ecosystem**
@@ -54,12 +95,11 @@
 **Databases**
 `PostgreSQL` • `MySQL` • `MongoDB` • `Redis`
 
-**Devops**
+**DevOps**
 `Docker` • `AWS` • `CI/CD` • `GitHub Actions` • `Nginx`
 
 **Tools**
 `Git` • `VS Code` • `Linux` • `Postman` • `Figma`
-
 
 ---
 
@@ -67,6 +107,8 @@
 
 ### 🎯 Glastor README Generator
 Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma
+
+Ideal para estandarizar documentación y acelerar el onboarding de repositorios.
 
 **Stack Tecnológico:** Python • Jinja2 • Typer • Rich
 
@@ -76,17 +118,21 @@ Generador profesional de README con plantillas Jinja2, copyright automático y s
 ### 🚀 FastAPI Microservices
 Arquitectura escalable de microservicios con FastAPI, Docker y PostgreSQL
 
+Pensado para backends con rendimiento, despliegue reproducible y crecimiento modular.
+
 **Stack Tecnológico:** FastAPI • Docker • PostgreSQL • Redis
 
+**Destacados:** Async/await • Auth JWT • Docker Compose • Documentación de API
 
-**Destacados:** Async/await • Auth JWT • Docker compose • Documentación de API
 
 ### 🎨 Design Portfolio
 Portafolio personal mostrando proyectos de diseño y desarrollo
 
+Enfocado en UI moderna y una presencia online clara para productos y perfiles.
+
 **Stack Tecnológico:** React • TypeScript • Tailwind CSS
 
- | **Demo en Vivo:** [Visitar Sitio](https://glastor.dev)
+**Demo en Vivo:** [Visitar Sitio](https://glastor.dev)
 **Destacados:** Diseño responsive • Modo oscuro • Animaciones • SEO optimizado
 
 
@@ -101,11 +147,11 @@ Portafolio personal mostrando proyectos de diseño y desarrollo
 
 ### 🏆 Certificaciones
 
-[![Python Institute — PCAP (Certified Associate in Python Programming)](https://img.shields.io/badge/Python-PCAP-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white)](https://pythoninstitute.org/certification/pcap-certification-associate) (2025) — *Certificado*
+[![Python Institute — PCAP (Certified Associate in Python Programming)](https://img.shields.io/badge/Python-PCAP-3776AB?style=for-the-badge&amp;logo=python&amp;logoColor=white)](https://pythoninstitute.org/certification/pcap-certification-associate) (2024) — *Certificado*
 
-[![CompTIA Security+](https://img.shields.io/badge/Cybersecurity-Security%2B-8A2BE2?style=for-the-badge&amp;logo=securityscorecard&amp;logoColor=white)](https://www.comptia.org/certifications/security) (2025) — *Certificado*
+[![CompTIA Security+](https://img.shields.io/badge/Cybersecurity-Security%2B-8A2BE2?style=for-the-badge&amp;logo=securityscorecard&amp;logoColor=white)](https://www.comptia.org/certifications/security) (2024) — *Certificado*
 
-[![Docker Certified Associate (DCA)](https://img.shields.io/badge/Docker-DCA-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white)](https://www.docker.com/certification/) (2025) — *Certificado*
+[![Docker Certified Associate (DCA)](https://img.shields.io/badge/Docker-DCA-2496ED?style=for-the-badge&amp;logo=docker&amp;logoColor=white)](https://www.docker.com/certification/) (2023) — *Certificado*
 
 [![AWS Certified Developer](https://img.shields.io/badge/AWS-Certified-FF9900?style=for-the-badge&amp;logo=amazon-aws&amp;logoColor=white)](https://www.certmetrics.com/amazon/public/badge.aspx?i=1&amp;t=c&amp;d=2024-01-01) (2024) — *Certificado*
 
@@ -118,16 +164,16 @@ Portafolio personal mostrando proyectos de diseño y desarrollo
 
 <p align="center">
   <a href="https://t.me/zerhocool">
-    <img src="https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817247/telegram_pexuvg.svg" alt="Telegram" width="40" height="40"/>
+    <img src="src/svg-png/telegram.webp" alt="Telegram" width="40" height="40"/>
   </a>
   <a href="mailto:glastor.info@gmail.com">
-    <img src="https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817242/gmail_fw2wpz.svg" alt="Email" width="40" height="40"/>
+    <img src="src/svg-png/gmail.webp" alt="Email" width="40" height="40"/>
   </a>
   <a href="https://github.com/glastor-dev">
-    <img src="https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817267/Github_dark_e9cyaa.svg" alt="GitHub" width="40" height="40"/>
+    <img src="src/svg-png/github.webp" alt="GitHub" width="40" height="40"/>
   </a>
   <a href="https://www.youtube.com/@glastor-es">
-    <img src="https://res.cloudinary.com/dsckwiyuz/image/upload/v1732718064/youtube_jm0bhx.svg" alt="YouTube" width="40" height="40"/>
+    <img src="src/svg-png/youtube.webp" alt="YouTube" width="40" height="40"/>
   </a>
 </p>
 

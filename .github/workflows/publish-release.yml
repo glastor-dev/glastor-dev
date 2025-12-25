@@ -1,0 +1,128 @@
+name: Publish Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version (sin 'v'), por ejemplo: 1.0.0 o 1.0.1-beta.1"
+        required: true
+        type: string
+      target_ref:
+        description: "Branch/commit/tag a publicar (por defecto: master)"
+        required: false
+        default: "master"
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ inputs.target_ref }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Prepare tag and release notes
+        env:
+          VERSION: ${{ inputs.version }}
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - << 'PY'
+          import os
+          import re
+          import subprocess
+          from pathlib import Path
+
+          version = os.environ['VERSION'].strip()
+          if version.startswith('v'):
+              raise SystemExit("Input 'version' debe ir sin 'v' (ej: 1.0.0)")
+
+          tag = f"v{version}"
+
+          def sh(cmd: list[str]) -> str:
+              print('+', ' '.join(cmd))
+              return subprocess.check_output(cmd, text=True).strip()
+
+          # Ensure tag doesn't already exist
+          try:
+              sh(["git", "rev-parse", "--verify", tag])
+              raise SystemExit(f"El tag {tag} ya existe.")
+          except subprocess.CalledProcessError:
+              pass
+
+          changelog_path = Path('CHANGELOG.md')
+          notes_path = Path('RELEASE_NOTES.md')
+
+          if not changelog_path.exists():
+              notes_path.write_text(
+                  f"## {tag}\n\nVer detalles en CHANGELOG.md.\n",
+                  encoding='utf-8',
+              )
+          else:
+              text = changelog_path.read_text(encoding='utf-8')
+              lines = text.splitlines()
+
+              header_re = re.compile(r"^##\s*\[(?P<ver>[^\]]+)\]\s*-\s*(?P<date>\d{4}-\d{2}-\d{2})\s*$")
+              start = None
+              date = None
+
+              for i, line in enumerate(lines):
+                  m = header_re.match(line)
+                  if m and m.group('ver') == version:
+                      start = i
+                      date = m.group('date')
+                      break
+
+              if start is None:
+                  notes_path.write_text(
+                      f"## {tag}\n\nNo se encontró la sección [{version}] en CHANGELOG.md.\n\nVer detalles en CHANGELOG.md.\n",
+                      encoding='utf-8',
+                  )
+              else:
+                  end = None
+                  for j in range(start + 1, len(lines)):
+                      if lines[j].startswith('## ['):
+                          end = j
+                          break
+                  chunk = lines[start + 1 : end]
+
+                  while chunk and chunk[0].strip() == '':
+                      chunk.pop(0)
+                  while chunk and chunk[-1].strip() == '':
+                      chunk.pop()
+
+                  body = "\n".join(chunk).strip() or "(Sin notas adicionales. Ver CHANGELOG.md)"
+                  title = f"## {tag} — {date}" if date else f"## {tag}"
+                  notes_path.write_text(f"{title}\n\n{body}\n", encoding='utf-8')
+
+          # Configure git and create annotated tag
+          sh(["git", "config", "user.name", "github-actions[bot]"])
+          sh(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"])
+          sh(["git", "tag", "-a", tag, "-m", tag])
+
+          # Push tag using GITHUB_TOKEN
+          repo = os.environ['REPO']
+          token = os.environ['GH_TOKEN']
+          sh(["git", "remote", "set-url", "origin", f"https://x-access-token:{token}@github.com/{repo}.git"])
+          sh(["git", "push", "origin", tag])
+
+          print(notes_path.read_text(encoding='utf-8'))
+          PY
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          name: v${{ inputs.version }}
+          body_path: RELEASE_NOTES.md
+          prerelease: ${{ contains(inputs.version, '-') }}

@@ -1,6 +1,6 @@
-# Contributing to README Generator
+# Contributing to GLASTOR README Generator
 
-Thank you for considering contributing to README Generator! 🎉
+Thank you for considering contributing to GLASTOR README Generator! 🎉
 
 ## How to Contribute
 
@@ -37,7 +37,23 @@ Feature suggestions are welcome! Please create an issue with:
    python -m pytest tests/ -v
    ```
 
-5. **Commit your changes**
+   On Windows you may need:
+   ```bash
+   py -m pytest tests/ -v
+   ```
+
+5. **Run lint/format (recommended)**
+   ```bash
+   ruff check .
+   ruff format .
+   ```
+
+   Or run everything via pre-commit:
+   ```bash
+   pre-commit run --all-files
+   ```
+
+6. **Commit your changes**
    ```bash
    git commit -m "feat: add amazing feature"
    ```
@@ -49,22 +65,32 @@ Feature suggestions are welcome! Please create an issue with:
    - `test:` - Test additions/changes
    - `refactor:` - Code refactoring
 
-6. **Push to your fork**
+7. **Push to your fork**
    ```bash
    git push origin feature/amazing-feature
    ```
 
-7. **Create a Pull Request**
+8. **Create a Pull Request**
+
+PR tips:
+- Keep PRs small and focused (one change-set per PR)
+- Include a short description of what changed and how to test it
+
+Note: DCO sign-off is NOT required for this repository.
 
 ## Development Setup
 
 1. Clone the repository
-2. Create virtual environment
-3. Install dependencies including dev tools:
+2. Create and activate a virtual environment
+3. Install dependencies (includes dev tools like pytest/ruff/black/pre-commit):
    ```bash
    pip install -r requirements.txt
-   pip install pytest pytest-cov
    ```
+
+Optional (recommended): enable pre-commit hooks
+```bash
+pre-commit install
+```
 
 ## Code Style
 
@@ -76,7 +102,7 @@ Feature suggestions are welcome! Please create an issue with:
 ## Testing
 
 - Write tests for new features
-- Maintain test coverage above 80%
+- Maintain test coverage above 80% when practical
 - Run tests before submitting PR
 
 ## Documentation
