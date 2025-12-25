@@ -61,8 +61,8 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
 ## 📊 Estadísticas de GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=glastor-dev&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true&locale=es" alt="Estadísticas de GitHub" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=glastor-dev&layout=compact&theme=radical&hide_border=true&locale=es" alt="Lenguajes Más Usados" height="170"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=glastor-dev&theme=radical" alt="Estadísticas de GitHub" height="170"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=glastor-dev&theme=radical" alt="Lenguajes Más Usados" height="170"/>
 </p>
 
 <p align="center">
@@ -70,7 +70,7 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=glastor-dev&theme=radical&no-frame=true&no-bg=true&row=1&column=7" alt="Trofeos de GitHub" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=glastor-dev&theme=radical&hide_border=true&area=true" alt="Actividad de GitHub" />
 </p>
 
 ---
@@ -189,7 +189,7 @@ Enfocado en UI moderna y una presencia online clara para productos y perfiles.
 
 ⭐ Dale estrella al repo si te sirve | 🤝 ¡Colaboremos!
 
-© 2010-2025 Andrés Antonio Cardoso | Licenciado bajo [GNU GPL v3](LICENSE)
+© 2010-2025 Andrés Antonio Cardoso — Todos los derechos reservados. — GLASTOR® marca registrada en Argentina (INPI) — Reg. 4559568 (Clase 42) y 4559567 (Clase 35), 19/08/2025. | Licenciado bajo [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html)
 
 *Este README se actualiza automáticamente*
 

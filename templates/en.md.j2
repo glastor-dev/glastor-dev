@@ -71,8 +71,8 @@
 ## {{ data.translations.en.stats_title }}
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username={{ data.github_stats.username }}&show_icons=true&theme={{ data.github_stats.theme }}&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" height="170"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username={{ data.github_stats.username }}&layout=compact&theme={{ data.github_stats.theme }}&hide_border=true" alt="Top Languages" height="170"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="GitHub Stats" height="170"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="Top Languages" height="170"/>
 </p>
 
 <p align="center">
@@ -80,7 +80,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&no-frame=true&no-bg=true&row=1&column=7" alt="GitHub Trophies" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true&area=true" alt="GitHub Activity" />
 </p>
 
 ---
@@ -175,7 +175,7 @@
 
 {{ data.footer.cta }}
 
-{{ copyright }} | Licensed under [{{ data.footer.copyright.license }}](LICENSE)
+{{ copyright }}{% if data.footer.rights_notice %} — {{ data.footer.rights_notice }}{% endif %}{% if data.footer.trademark_notice %} — {{ data.footer.trademark_notice }}{% endif %} | Licensed under [{{ data.footer.copyright.license }}]({{ data.footer.copyright.license_url if data.footer.copyright.license_url else 'LICENSE' }})
 
 *{{ data.footer.notice }}*
 
