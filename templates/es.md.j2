@@ -3,21 +3,68 @@
 ![Vistas del Perfil](https://komarev.com/ghpvc/?username={{ data.github_stats.username }}&color=blueviolet&style=flat-square&label=Visitas)
 {% endif %}
 
+{% if data.content.top_cta %}
+{% for line in data.content.top_cta %}
+{{ line }}
+
+{% endfor %}
+{% endif %}
+
 ## {{ data.translations.es.about_title }}
 {{ data.about.description }}
+
+{% if data.about.extra_paragraphs %}
+{% for paragraph in data.about.extra_paragraphs %}
+{{ paragraph }}
+
+{% endfor %}
+{% endif %}
 
 {% if data.about.tagline %}
 > *{{ data.about.tagline }}*
 {% endif %}
 
+<details>
+  <summary><strong>EXTRAS: Toolbox</strong></summary>
+
+🖥️ **Sistema Operativo:**
+{% if data.about.extras and data.about.extras.os %}
+{% for item in data.about.extras.os %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+🍸 **Intereses:**
+{% if data.about.extras and data.about.extras.interests %}
+{% for item in data.about.extras.interests %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+🕐 **Idiomas:**
+{% if data.about.extras and data.about.extras.languages %}
+{% for item in data.about.extras.languages %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+📗 **Último libro:**
+{% if data.about.extras and data.about.extras.books %}
+{% for item in data.about.extras.books %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
 {% if data.about.currently_working_on %}
 {% for item in data.about.currently_working_on %}
-{{ item }}
+- {{ item }}
 {% endfor %}
+{% endif %}
 {% if data.about.fun_fact %}
-{{ data.about.fun_fact }}
+- {{ data.about.fun_fact }}
 {% endif %}
-{% endif %}
+
+</details>
 
 ---
 
@@ -41,11 +88,21 @@
 ## {{ data.translations.es.skills_title }}
 
 ### 💻 Lenguajes y Frameworks
+{% if data.content.skill_icons_url %}
+<p align="center">
+  <a href="#">
+    <img src="{{ data.content.skill_icons_url }}" />
+  </a>
+</p>
+{% else %}
 {{ badges }}
+{% endif %}
 
 ### 🔧 Habilidades de Desarrollo
 {% for category, skills in data.about.core_skills.items() %}
-**{{ category|replace('_', ' ')|title }}**
+{% set label = category|replace('_', ' ')|title %}
+{% if category == 'devops' %}{% set label = 'DevOps' %}{% endif %}
+**{{ label }}**
 `{{ skills|join('` • `') }}`
 
 {% endfor %}
@@ -58,9 +115,14 @@
 ### {{ project.name }}
 {{ project.description }}
 
+{% if project.note %}
+{{ project.note }}
+{% endif %}
+
 **Stack Tecnológico:** {{ project.tech_stack|join(' • ') }}
 
-{% if project.repo %}**Repositorio:** [Ver Código]({{ project.repo }}){% endif %}{% if project.demo %} | **Demo en Vivo:** [Visitar Sitio]({{ project.demo }}){% endif %}
+{% if project.repo %}**Repositorio:** [Ver Código]({{ project.repo }}){% endif %}
+{% if project.demo %}**Demo en Vivo:** [Visitar Sitio]({{ project.demo }}){% endif %}
 
 **Destacados:** {{ project.highlights|join(' • ') }}
 

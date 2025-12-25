@@ -14,10 +14,12 @@ Open Source: Issues y PRs bienvenidos — ver [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Políticas: [Soporte](support.md) • [Seguridad](security.md) • [Código de Conducta](code_of_conduct.md)
 
+
 ## 👨‍💻 Sobre Mí
 🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Me enfoco en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.
 
 Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente estoy migrando a GitHub repositorios privados que mantengo en otras plataformas. Vivo en Girona (España) desde 2022.
+
 
 > *Construyendo el futuro, una línea de código a la vez*
 
@@ -101,6 +103,7 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
 **Tools**
 `Git` • `VS Code` • `Linux` • `Postman` • `Figma`
 
+
 ---
 
 ## 🚀 Proyectos Destacados
@@ -122,8 +125,8 @@ Pensado para backends con rendimiento, despliegue reproducible y crecimiento mod
 
 **Stack Tecnológico:** FastAPI • Docker • PostgreSQL • Redis
 
-**Destacados:** Async/await • Auth JWT • Docker Compose • Documentación de API
 
+**Destacados:** Async/await • Auth JWT • Docker Compose • Documentación de API
 
 ### 🎨 Design Portfolio
 Portafolio personal mostrando proyectos de diseño y desarrollo

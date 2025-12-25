@@ -8,7 +8,7 @@
       "version": "2.0.0",
       "language": "es",
       "keywords": ["Python", "Full Stack", "Developer", "Portfolio", "Open Source"],
-      "og_image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg",
+      "og_image": "src/svg-png/banner-github.webp",
       "license": "GNU GPL v3",
       "license_badge": "https://img.shields.io/badge/License-GPLv3-blue.svg"
     },
@@ -21,8 +21,35 @@
       "theme": "radical"
     },
     "about": {
-      "description": "🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Enfocado en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.",
+      "description": "🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Me enfoco en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.",
+      "extra_paragraphs": [
+        "Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente estoy migrando a GitHub repositorios privados que mantengo en otras plataformas. Vivo en Girona (España) desde 2022."
+      ],
       "tagline": "Construyendo el futuro, una línea de código a la vez",
+      "extras": {
+        "os": [
+          "Arch Linux, terminal Xterm o eDEX-UI",
+          "Windows 10 Pro, terminal Bash personalizada"
+        ],
+        "interests": [
+          "DevOps - Protocolos de Comunicación",
+          "Seguridad informática - Criptografía",
+          "Documentación de Software - Prompt Engineering - IA"
+        ],
+        "languages": [
+          "Aprendiendo Catalán y estonio",
+          "Mejorando mi inglés"
+        ],
+        "books": [
+          "El libro negro del programador",
+          "El arte de la invisibilidad",
+          "Blue Team Handbook",
+          "Hacking Ético 101",
+          "Biohacker",
+          "El libro blanco del hacker",
+          "Big Data, Machine Learning y Data Science en Python"
+        ]
+      },
       "currently_working_on": [
         "🔭 Generador avanzado de README con integración de IA",
         "🌱 Aprendiendo Machine Learning y Data Science",
@@ -56,20 +83,28 @@
     },
     "content": {
       "header": {
-        "image": "https://i.postimg.cc/5tgQctHt/wallpaper5-min.jpg",
+        "image": "src/svg-png/banner-github.webp",
         "link": "https://github.com/glastor-dev",
         "caption": "Explora mis proyectos ↓",
         "typing_text": ["Full Stack Developer", "Especialista en Python", "Open Source Contributor", "Creador de Contenido Tech"]
       },
+      "top_cta": [
+        "Construyo APIs, tooling y automatizaciones con Python para productos y equipos (FastAPI/Django, CI/CD y Docker).",
+        "Para presupuestos o colaboraciones: [Email](mailto:glastor.info@gmail.com) o [Telegram](https://t.me/zerhocool).",
+        "Open Source: Issues y PRs bienvenidos — ver [CONTRIBUTING.md](CONTRIBUTING.md).",
+        "Políticas: [Soporte](support.md) • [Seguridad](security.md) • [Código de Conducta](code_of_conduct.md)"
+      ],
       "quote": {
         "text": "Cualquier tecnología suficientemente avanzada es indistinguible de la magia.",
         "author": "Arthur C. Clarke",
         "icon": "✨"
       },
+      "skill_icons_url": "https://skillicons.dev/icons?i=python,bash,html,css,js,ts,java,markdown,nodejs,latex,postman,php,svg,flask,vue,vite,nextjs,symfony,svelte,heroku,mongodb,mysql,postgresql,vercel,jest,docker,aws,ps,ai,pr,ae,linux,git,github,githubactions,gitlab,vscode",
       "featured_projects": [
         {
           "name": "🎯 Glastor README Generator",
           "description": "Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma",
+          "note": "Ideal para estandarizar documentación y acelerar el onboarding de repositorios.",
           "tech_stack": ["Python", "Jinja2", "Typer", "Rich"],
           "repo": "https://github.com/glastor-dev/glastor-dev",
           "demo": null,
@@ -79,15 +114,17 @@
         {
           "name": "🚀 FastAPI Microservices",
           "description": "Arquitectura escalable de microservicios con FastAPI, Docker y PostgreSQL",
+          "note": "Pensado para backends con rendimiento, despliegue reproducible y crecimiento modular.",
           "tech_stack": ["FastAPI", "Docker", "PostgreSQL", "Redis"],
           "repo": null,
           "demo": null,
           "stars": "⭐⭐",
-          "highlights": ["Async/await", "Auth JWT", "Docker compose", "Documentación de API"]
+          "highlights": ["Async/await", "Auth JWT", "Docker Compose", "Documentación de API"]
         },
         {
           "name": "🎨 Design Portfolio",
           "description": "Portafolio personal mostrando proyectos de diseño y desarrollo",
+          "note": "Enfocado en UI moderna y una presencia online clara para productos y perfiles.",
           "tech_stack": ["React", "TypeScript", "Tailwind CSS"],
           "repo": null,
           "demo": "https://glastor.dev",
@@ -116,22 +153,22 @@
           {
             "platform": "Telegram",
             "url": "https://t.me/zerhocool",
-            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817247/telegram_pexuvg.svg"
+            "icon": "src/svg-png/telegram.webp"
           },
           {
             "platform": "Email",
             "url": "mailto:glastor.info@gmail.com",
-            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817242/gmail_fw2wpz.svg"
+            "icon": "src/svg-png/gmail.webp"
           },
           {
             "platform": "GitHub",
             "url": "https://github.com/glastor-dev",
-            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732817267/Github_dark_e9cyaa.svg"
+            "icon": "src/svg-png/github.webp"
           },
           {
             "platform": "YouTube",
             "url": "https://www.youtube.com/@glastor-es",
-            "icon": "https://res.cloudinary.com/dsckwiyuz/image/upload/v1732718064/youtube_jm0bhx.svg"
+            "icon": "src/svg-png/youtube.webp"
           }
         ]
       }
@@ -193,21 +230,21 @@
     "achievements": [
       {
         "title": "Python Institute — PCAP (Certified Associate in Python Programming)",
-        "year": 2025,
+        "year": 2024,
         "status": "Certificado",
         "url": "https://pythoninstitute.org/certification/pcap-certification-associate",
         "badge": "https://img.shields.io/badge/Python-PCAP-3776AB?style=for-the-badge&logo=python&logoColor=white"
       },
       {
         "title": "CompTIA Security+",
-        "year": 2025,
+        "year": 2024,
         "status": "Certificado",
         "url": "https://www.comptia.org/certifications/security",
         "badge": "https://img.shields.io/badge/Cybersecurity-Security%2B-8A2BE2?style=for-the-badge&logo=securityscorecard&logoColor=white"
       },
       {
         "title": "Docker Certified Associate (DCA)",
-        "year": 2025,
+        "year": 2023,
         "status": "Certificado",
         "url": "https://www.docker.com/certification/",
         "badge": "https://img.shields.io/badge/Docker-DCA-2496ED?style=for-the-badge&logo=docker&logoColor=white"
