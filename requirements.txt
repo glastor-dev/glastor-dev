@@ -4,7 +4,7 @@ PyYAML==6.0.1; python_version < '3.13'
 PyYAML>=6.0.2; python_version >= '3.13'
 typer==0.9.0; python_version < '3.13'
 typer>=0.12.0; python_version >= '3.13'
-rich==13.7.0
+rich==14.2.0
 pydantic==2.5.3; python_version < '3.13'
 pydantic>=2.10.0; python_version >= '3.13'
 pytest==7.4.3; python_version < '3.13'
