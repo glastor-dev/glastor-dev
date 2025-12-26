@@ -9,6 +9,6 @@ pydantic==2.5.3; python_version < '3.13'
 pydantic>=2.10.0; python_version >= '3.13'
 pytest==7.4.3; python_version < '3.13'
 pytest>=8.3.0; python_version >= '3.13'
-pre-commit==3.6.0
+pre-commit==4.5.1
 ruff==0.6.9
 black==24.10.0
