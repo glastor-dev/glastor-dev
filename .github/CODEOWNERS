@@ -1,0 +1,5 @@
+# CODEOWNERS
+# Define responsables automáticos de revisión.
+# Ajusta el usuario/equipo según tu organización.
+
+* @glastor-dev

@@ -20,7 +20,7 @@ Detalles completos (Added/Changed/Fixed):
 
 - Documentación principal: [README.md](README.md)
 - Ejemplos: [EXAMPLES.md](EXAMPLES.md)
-- Contribuciones: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Contribuciones: [CONTRIBUTING.md](.github/CONTRIBUTING.md)
 
 ## Verificación rápida
 

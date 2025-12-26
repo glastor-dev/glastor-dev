@@ -10,9 +10,9 @@ Construyo APIs, tooling y automatizaciones con Python para productos y equipos (
 
 Para presupuestos o colaboraciones: [Email](mailto:glastor.info@gmail.com) o [Telegram](https://t.me/zerhocool).
 
-Open Source: Issues y PRs bienvenidos — ver [CONTRIBUTING.md](CONTRIBUTING.md).
+Open Source: Issues y PRs bienvenidos — ver [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
-Políticas: [Soporte](support.md) • [Seguridad](security.md) • [Código de Conducta](code_of_conduct.md)
+Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) • [Código de Conducta](.github/CODE_OF_CONDUCT.md)
 
 
 ## 👨‍💻 Sobre Mí
