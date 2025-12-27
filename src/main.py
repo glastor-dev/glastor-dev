@@ -100,8 +100,8 @@ def generate(
         output_dir.mkdir(parents=True, exist_ok=True)
 
         if verbose or ci:
-            console.print(f"[blue]📂 Data file: {data_file}[/blue]")
-            console.print(f"[blue]📁 Output directory: {output_dir}[/blue]")
+            console.print(f"[blue]� Data file: {data_file}[/blue]")
+            console.print(f"[blue]� Output directory: {output_dir}[/blue]")
             if ci:
                 console.print(
                     "[yellow]CI mode enabled. Logs are minimal. Env vars can override config.[/yellow]"
@@ -236,7 +236,7 @@ def validate(
         from src.generators.readme_generator import ReadmeData, ReadmeDataStrict
 
         console = _make_console(quiet=False)
-        console.print(f"[blue]🔍 Validating: {data_file}[/blue]")
+        console.print(f"[blue]� Validating: {data_file}[/blue]")
 
         with open(data_file, encoding="utf-8") as f:
             raw_data = json.load(f)["readme"]
