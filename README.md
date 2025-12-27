@@ -10,7 +10,7 @@
 [![Sponsor-Glastor_DEV](https://img.shields.io/badge/Sponsor-Glastor_DEV-blue.svg)](https://github.com/sponsors/glastor-dev) ![Licencia](https://img.shields.io/badge/License-GPLv3-blue.svg)
 ![Vistas del Perfil](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas)
 <!-- Badges de estado y cobertura -->
-![Build Status](https://github.com/glastor-dev/glastor-dev-master/actions/workflows/ci.yml/badge.svg?branch=master)
+![Build Status](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master)
 ![Coverage](https://codecov.io/gh/glastor-dev/glastor-dev-master/branch/master/graph/badge.svg?token=YOUR_CODECOV_TOKEN)
 ![Last Commit](https://img.shields.io/github/last-commit/glastor-dev/glastor-dev-master?label=último%20commit)
 
