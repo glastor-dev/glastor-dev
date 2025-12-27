@@ -137,4 +137,4 @@ We accept multiple payment options globally:
 
 ## License 📜
 
-Copyright © 2013-2025 GLASTOR DEV. All rights reserved.
+Copyright © 2010-2025 GLASTOR DEV. All rights reserved.
