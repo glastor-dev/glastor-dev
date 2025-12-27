@@ -21,8 +21,15 @@ jobs:
       - name: Verify README is up-to-date
         run: python -m src.main generate src/data/profile.json --check --quiet
 
-      - name: Run tests
-        run: pytest -q
+      - name: Run tests with coverage
+        run: pytest --cov=src --cov-report=xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          file: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella
 
       - name: Lint (ruff)
         run: ruff check .
