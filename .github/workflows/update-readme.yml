@@ -20,12 +20,18 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Validate profile.json
+        run: python -m src.main validate src/data/profile.json
       - name: Generate README
         run: python -m src.main generate src/data/profile.json --quiet
+      - name: Lint README
+        run: |
+          pip install markdownlint-cli
+          markdownlint README.md
       - name: Commit changes
         run: |
           git config user.name "README Bot"
           git config user.email "actions@github.com"
           git add README*.md
-          git commit -m "Automated README update" || echo "No changes to commit"
+          git commit -m "Automated README update [skip ci] ($(date +'%Y-%m-%d %H:%M'))" || echo "No changes to commit"
           git push

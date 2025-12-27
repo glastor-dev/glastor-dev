@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -16,10 +17,11 @@ app = typer.Typer(
 def _make_console(*, quiet: bool) -> Console:
     # When running in CI/non-interactive shells, keep output minimal.
     is_tty = sys.stdout.isatty()
+    is_ci = os.environ.get("CI", "false").lower() == "true"
     return Console(
-        quiet=quiet or (not is_tty),
-        force_terminal=is_tty,
-        no_color=not is_tty,
+        quiet=quiet or (not is_tty) or is_ci,
+        force_terminal=is_tty or is_ci,
+        no_color=not is_tty and not is_ci,
     )
 
 
@@ -61,10 +63,18 @@ def generate(
         False, "--quiet", "-q", help="Suppress non-error output"
     ),
     verbose: bool = typer.Option(False, "--verbose", "-v", help="Show detailed output"),
+    ci: bool = typer.Option(
+        False, "--ci", help="Enable CI mode for minimal logs and env overrides"
+    ),
 ):
     """Generate README files from JSON data with customizable options"""
+
     try:
-        console = _make_console(quiet=quiet or stdout)
+        # Permitir override de datos por variables de entorno (ejemplo: token de Codecov)
+        if os.environ.get("CODECOV_TOKEN"):
+            os.environ["CODECOV_TOKEN"] = os.environ["CODECOV_TOKEN"]
+
+        console = _make_console(quiet=quiet or stdout or ci)
 
         # Validate data file
         if not data_file.exists():
@@ -89,9 +99,13 @@ def generate(
         # Create output directory if it doesn't exist
         output_dir.mkdir(parents=True, exist_ok=True)
 
-        if verbose:
+        if verbose or ci:
             console.print(f"[blue]📂 Data file: {data_file}[/blue]")
             console.print(f"[blue]📁 Output directory: {output_dir}[/blue]")
+            if ci:
+                console.print(
+                    "[yellow]CI mode enabled. Logs are minimal. Env vars can override config.[/yellow]"
+                )
 
         generator = ReadmeGenerator(
             data_file,
@@ -176,7 +190,7 @@ def generate(
                 raise typer.Exit(1 if changed else 0)
 
         # Display results in a table (only when writing files)
-        if (not stdout) and (not check):
+        if (not stdout) and (not check) and (not ci):
             table = Table(
                 title="✅ Generated Files", show_header=True, header_style="bold green"
             )
@@ -192,6 +206,10 @@ def generate(
             console.print(
                 "[bold green]✨ README files generated successfully![/bold green]"
             )
+        elif ci:
+            for file in generated_files:
+                print(f"[CI] Generated: {file} ({file.stat().st_size} bytes)")
+            print("[CI] README files generated successfully!")
 
     except FileNotFoundError as e:
         console.print(f"[bold red]❌ File not found: {str(e)}[/bold red]")
