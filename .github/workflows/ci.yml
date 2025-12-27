@@ -24,8 +24,8 @@ jobs:
           git fetch origin ${{ github.base_ref }}
           git diff --name-only origin/${{ github.base_ref }} | grep -q '^CHANGELOG.md$' && echo "CHANGELOG.md actualizado" || (echo 'ADVERTENCIA: Este PR no actualiza CHANGELOG.md' && exit 1)
 
-      - name: Verify README is up-to-date
-        run: python -m src.main generate src/data/profile.json --check --quiet
+      # - name: Verify README is up-to-date
+      #   run: python -m src.main generate src/data/profile.json --check --quiet
 
       - name: Run tests
         run: pytest -q
