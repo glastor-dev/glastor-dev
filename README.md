@@ -8,11 +8,7 @@
 ![Gitkraken](https://img.shields.io/badge/Gitkraken%20PRO-%23FE519?logo=Gitkraken&logoColor=white)
 ![Archlinux](https://img.shields.io/badge/Archlinux%20PRO-%23FE9211?logo=Archlinux&logoColor=white)
 [![Sponsor-Glastor_DEV](https://img.shields.io/badge/Sponsor-Glastor_DEV-blue.svg)](https://github.com/sponsors/glastor-dev) ![Licencia](https://img.shields.io/badge/License-GPLv3-blue.svg)
-![Vistas del Perfil](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas)
-<!-- Badges de estado y cobertura -->
-![Build Status](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master)
-![Coverage](https://codecov.io/gh/glastor-dev/glastor-dev-master/branch/master/graph/badge.svg?token=YOUR_CODECOV_TOKEN)
-![Last Commit](https://img.shields.io/github/last-commit/glastor-dev/glastor-dev-master?label=último%20commit)
+![Vistas del Perfil](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas) ![Build Status](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master)
 
 Construyo APIs, tooling y automatizaciones con Python para productos y equipos (FastAPI/Django, CI/CD y Docker).
 
@@ -28,7 +24,22 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente estoy migrando a GitHub repositorios privados que mantengo en otras plataformas. Vivo en Girona (España) desde 2022.
 
-> *Construyendo el futuro, una línea de código a la vez*
+---
+
+## 💼 Colaboración & Servicios
+
+**✅ Disponible para:**
+
+- 🐍 Proyectos Open Source en Python
+- 🚀 Consultoría en APIs y arquitectura backend
+- 📝 Creación de contenido técnico y tutoriales
+- 🔧 Desarrollo de tooling y automatizaciones
+- 🎨 Diseño de interfaces y experiencias de usuario
+
+**📧 Para presupuestos o colaboraciones:**
+• Email: [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+• Telegram: [@zerhocool](https://t.me/zerhocool)
+• Respondo generalmente en 24 horas
 
 <details>
   <summary><strong>EXTRAS: Toolbox</strong></summary>
@@ -59,49 +70,10 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
 - El libro blanco del hacker
 - Big Data, Machine Learning y Data Science en Python
 
-- 🔭 Generador avanzado de README con integración de IA
-- 🌱 Aprendiendo Machine Learning y Data Science
-- 👯 Abierto a colaborar en proyectos Open Source en Python
-- 💬 Pregúntame sobre Python, Django, FastAPI y desarrollo web
-- ⚡ Automatizo todo lo que hago más de dos veces
-
 </details>
-
----
-
-## 📊 Estadísticas de GitHub
-
-<img src="https://custom-icon-badges.demolab.com/badge/-Install%20Package%20Analytics%20-gold?style=for-the-badge&amp;logo=package&amp;logoColor=black" alt="Badge de Analytics de paquetes">
-
-<br>
-
-<img align="right" alt="Animación de persona programando (hacking)" width="300" src="https://media.tenor.com/rePDfDWO3XoAAAAd/hacking.gif">
-
-<p align="center">
-  <i>GA4 G-7X*08T**** - Visitas de perfil:</i>⠀<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Bar%20Chart.webp" alt="Gráfico de barras de visitas" width="35" height="35" />
-</p>
-
-### “OSS Insight es un servicio de analíticas que te permite medir el tráfico y la interacción en tus sitios web y aplicaciones dirigidos a desarrolladores”
-
-
-
-### 🖥️ CONTRIBUCIONES
-
-<!-- Centered images for contributions -->
-![Gitkraken](https://img.shields.io/badge/Gitkraken%20PRO-%23FE519?logo=Gitkraken&logoColor=white)
-![Zerhocool](./src/svg-png/zerhocool.svg)
-![Github](https://img.shields.io/badge/Github%20PRO-%23FE5196?logo=Github&amplogoColor=white)
-![Datagroupssl](./src/svg-png/datagroupssl.svg)
-
----
-
 
 
 ## 🛠️ Stack Tecnológico
-
-![install package](https://custom-icon-badges.demolab.com/badge/-Install%20Package%20Skill%2001-gold?style=for-the-badge&logo=package&logoColor=black)
-
-
 
 ### 💻 Lenguajes y Frameworks
 <p align="center">
@@ -110,83 +82,80 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
   </a>
 </p>
 
-
-
-### INSIGNIAS: <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Crown.webp" alt="Corona insignia" width="35" height="35" />
-
-<p align="center">
-  <a href="#"><img width="100px" alt="Insignia Hack nivel 1" title="Hack level 1" src="https://i.postimg.cc/9zVhZKTN/h1.png' border='0' alt='h1"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="#"><img width="100px" alt="Insignia Hack nivel 2" title="Hack level 2" src="https://i.postimg.cc/hhrqrs14/h2.png' border='0' alt='h2"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="#"><img width="100px" alt="Insignia Hack nivel 3" title="Hack level 3" src="https://i.postimg.cc/xc1VFm6v/h3.png' border='0' alt='h3"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="#"><img width="100px" alt="Insignia Hack nivel 4" title="Hack level 4" src="https://i.postimg.cc/qzDHf7F9/h4.png' border='0' alt='h4"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-</p>
-
 ---
 
 ## 🚀 Proyectos Destacados
 
-### 🎯 Glastor README Generator
+### 🎯 [Glastor README Generator](https://github.com/glastor-dev/glastor-dev)
 
-Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma
+Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma.
 
-Ideal para estandarizar documentación y acelerar el onboarding de repositorios.
-
-**Stack Tecnológico:** Python • Jinja2 • Typer • Rich
-
-**Repositorio:** [Ver Código](https://github.com/glastor-dev/glastor-dev)
-**Destacados:** Copyright automático • Multi-idioma • Herramienta CLI • 100% cobertura de tests
-
-### 🚀 FastAPI Microservices
-
-Arquitectura escalable de microservicios con FastAPI, Docker y PostgreSQL
-
-Pensado para backends con rendimiento, despliegue reproducible y crecimiento modular.
-
-**Stack Tecnológico:** FastAPI • Docker • PostgreSQL • Redis
-
-**Destacados:** Async/await • Auth JWT • Docker Compose • Documentación de API
-
-### 🎨 Design Portfolio
-
-Portafolio personal mostrando proyectos de diseño y desarrollo
-
-Enfocado en UI moderna y una presencia online clara para productos y perfiles.
-
-**Stack Tecnológico:** React • TypeScript • Tailwind CSS
-
-**Demo en Vivo:** [Visitar Sitio](https://glastor.dev)
-**Destacados:** Diseño responsive • Modo oscuro • Animaciones • SEO optimizado
+**Stack:** `Python` `Jinja2` `Typer` `Rich`
+**✨ Features:** CLI tool • Multi-idioma • Copyright automático • 100% cobertura de tests
 
 ---
 
-## 📝 Artículos &amp; Tutoriales
+### 🖥️ [Neovim Config](https://github.com/glastor-dev/neovim)
 
-- **🐍 Mejores prácticas en Python 2025** - [YouTube](https://www.youtube.com/watch?v=PtBHnMMRI0E) *(2025)*
-- **🚀 Construyendo APIs escalables con FastAPI** - [YouTube](https://www.youtube.com/watch?v=WXghq9Y4Fms) *(2025)*
+Configuración personalizada de Neovim enfocada en productividad y desarrollo moderno.
 
----
-
-- Ser Sponsor, mas informacion en [`CONTRIBUTORS.md`](.github/CONTRIBUTING.md)<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Megaphone.webp" alt="Megáfono sponsor" width="50" height="50" />
-
-<p align="center">
-  <a href="https://www.nexperia.com"><img width="200px" alt="Logo de Nexperia" title="Nexperia" src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://aspidcars.com"><img width="200px" alt="Logo de Aspid Cars" title="Aspid Cars" src="https://i.postimg.cc/F1ttmqDH/Aspid.png"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-</p>
-
-- Gracias a estas empresas por su apoyo y confianza en este equipo.
+**✨ Features:** Plugins esenciales • Atajos optimizados • Soporte multi-lenguaje
+**🔗 Links:** [Repositorio](https://github.com/glastor-dev/neovim) • [Neovim Official](https://neovim.io/)
 
 ---
 
-## 📫 Contacto
+### 👁️ [SVG Visor](https://github.com/glastor-dev/svg-visor)
 
-💼 Disponible para proyectos freelance y colaboraciones
-📧 Respondo generalmente en 24 horas
+Extensión ligera para VS Code que permite visualizar archivos SVG en tiempo real.
+
+**Stack:** `JavaScript` `VS Code API`
+**✨ Features:** Vista previa en tiempo real • Inspector de código • Optimización
+**🔗 Links:** [Repositorio](https://github.com/glastor-dev/svg-visor) • [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AndresAntonioCardoso.svg-visor)
+
+---
+
+### 🌙 [Quimera Theme](https://github.com/glastor-dev/quimera)
+
+Tema oscuro elegante para VS Code, diseñado para largas sesiones de código nocturno.
+
+**Stack:** `JavaScript` `VS Code Theming`
+**✨ Features:** Paleta azulada • Alto contraste • Anti-fatiga visual
+**🔗 Links:** [Repositorio](https://github.com/glastor-dev/quimera) • [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AndresAntonioCardoso.quimera-night)
+
+---
+
+### 📱 [Master QR](https://github.com/glastor-dev/master-qr)
+
+Generador de códigos QR personalizable y ligero en Python.
+
+**Stack:** `Python` `qrcode` `PIL`
+**✨ Features:** Personalización completa • Múltiples formatos • API simple
+
+---
+
+## 🤝 Apoya el Proyecto
+
+¿Te gusta mi trabajo? Puedes apoyarlo de estas formas:
+
+- ⭐ Dando estrella a los repositorios que te resulten útiles
+- 🐛 Reportando issues o sugiriendo mejoras
+- 🔀 Contribuyendo con Pull Requests
+- 💰 Convirtiéndote en [sponsor](https://github.com/sponsors/glastor-dev)
+- 📢 Compartiendo los proyectos con tu comunidad
+
+<div align="center">
+
+[![PayPal](https://img.shields.io/badge/PayPal-Donar-blue?style=for-the-badge&logo=paypal)](https://paypal.me/datagroupssl?country.x=AR&locale.x=es_XC)
+
+**Más información en** [`CONTRIBUTING.md`](.github/CONTRIBUTING.md)
+
+<div align="center">
+
+  <a href="https://www.nexperia.com"><img src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png" alt="Nexperia" height="50"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://aspidcars.com"><img src="https://i.postimg.cc/F1ttmqDH/Aspid.png" alt="Aspid Cars" height="70"></a>
+  <a rel="licencia" href="https://github.com/glastor-dev"><img alt="Código QR de Glastor" style="border-width:0" src="./src/svg-png/qr.svg" width="70" /></a>
+</div>
 
 <p align="center">
   <a href="https://t.me/zerhocool">
@@ -200,20 +169,6 @@ Enfocado en UI moderna y una presencia online clara para productos y perfiles.
   </a>
   <a href="https://www.youtube.com/@glastor-es">
     <img src="src/svg-png/youtube.webp" alt="Icono de YouTube" width="40" height="40"/>
-  </a>
-</p>
-
----
-
-<div align="center">
-
-🔹 Si tu gustó este README scanea el codigo QR, deja tu Like 👍, dándole una estrella (starring) y compartiendo el proyecto 🚀.
-
-<p align="center">
-  <a rel="licencia" href="https://github.com/glastor-dev"><img alt="Código QR de Glastor" style="border-width:0" src="./src/svg-png/qr.svg" width="140" /></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://paypal.me/datagroupssl?country.x=AR&locale.x=es_XC" target="_blank">
-      <img width="140px" alt="Donar con Paypal" src="https://raw.githubusercontent.com/onimur/.github/master/.resources/support-paypal.png"/>
   </a>
 </p>
 

@@ -8,7 +8,7 @@
       "version": "2.0.0",
       "language": "es",
       "keywords": ["Python", "Full Stack", "Developer", "Portfolio", "Open Source"],
-      "og_image": "src/svg-png/banner-github.webp",
+      "og_image": "src/svg-png/banner-github.jpg",
       "license": "GNU GPL v3",
       "license_badge": "https://img.shields.io/badge/License-GPLv3-blue.svg"
     },
@@ -18,7 +18,8 @@
       "show_languages": true,
       "show_streak": true,
       "show_trophies": true,
-      "theme": "radical"
+      "theme": "tokyonight",
+      "metrics_svg": "github-metrics.svg"
     },
     "about": {
       "description": "🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Me enfoco en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.",
@@ -103,33 +104,53 @@
       "featured_projects": [
         {
           "name": "🎯 Glastor README Generator",
-          "description": "Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma",
-          "note": "Ideal para estandarizar documentación y acelerar el onboarding de repositorios.",
+          "description": "Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma.",
+          "note": null,
           "tech_stack": ["Python", "Jinja2", "Typer", "Rich"],
           "repo": "https://github.com/glastor-dev/glastor-dev",
           "demo": null,
           "stars": "⭐",
-          "highlights": ["Copyright automático", "Multi-idioma", "Herramienta CLI", "100% cobertura de tests"]
+          "highlights": ["CLI", "Multi-idioma", "Copyright automático", "100% cobertura de tests"]
         },
         {
-          "name": "🚀 FastAPI Microservices",
-          "description": "Arquitectura escalable de microservicios con FastAPI, Docker y PostgreSQL",
-          "note": "Pensado para backends con rendimiento, despliegue reproducible y crecimiento modular.",
-          "tech_stack": ["FastAPI", "Docker", "PostgreSQL", "Redis"],
-          "repo": null,
+          "name": "🖥️ Neovim Config",
+          "description": "Configuración personalizada para Neovim, enfocada en productividad y desarrollo moderno.",
+          "note": null,
+          "tech_stack": ["Neovim", "Lua", "Vimscript"],
+          "repo": "https://github.com/glastor-dev/neovim",
           "demo": null,
-          "stars": "⭐⭐",
-          "highlights": ["Async/await", "Auth JWT", "Docker Compose", "Documentación de API"]
+          "stars": "⭐",
+          "highlights": ["Plugins esenciales", "Atajos útiles", "Ajustes para múltiples lenguajes"]
         },
         {
-          "name": "🎨 Design Portfolio",
-          "description": "Portafolio personal mostrando proyectos de diseño y desarrollo",
-          "note": "Enfocado en UI moderna y una presencia online clara para productos y perfiles.",
-          "tech_stack": ["React", "TypeScript", "Tailwind CSS"],
-          "repo": null,
-          "demo": "https://glastor.dev",
+          "name": "👁️ SVG Visor",
+          "description": "Extensión ligera para VS Code que permite visualizar archivos SVG en tiempo real.",
+          "note": null,
+          "tech_stack": ["JavaScript", "VS Code API"],
+          "repo": "https://github.com/glastor-dev/svg-visor",
+          "demo": null,
           "stars": "⭐",
-          "highlights": ["Diseño responsive", "Modo oscuro", "Animaciones", "SEO optimizado"]
+          "highlights": ["Vista previa en tiempo real", "Inspector de código", "Optimización", "Marketplace: https://marketplace.visualstudio.com/items?itemName=AndresAntonioCardoso.svg-visor"]
+        },
+        {
+          "name": "🌙 Quimera Theme",
+          "description": "Tema oscuro elegante para VS Code, diseñado para largas sesiones de código nocturno.",
+          "note": null,
+          "tech_stack": ["JavaScript", "VS Code Theming"],
+          "repo": "https://github.com/glastor-dev/quimera",
+          "demo": null,
+          "stars": "⭐",
+          "highlights": ["Paleta azulada", "Alto contraste", "Anti-fatiga visual", "Marketplace: https://marketplace.visualstudio.com/items?itemName=AndresAntonioCardoso.quimera-night"]
+        },
+        {
+          "name": "📱 Master QR",
+          "description": "Generador de códigos QR personalizable y ligero en Python.",
+          "note": null,
+          "tech_stack": ["Python", "qrcode", "PIL"],
+          "repo": "https://github.com/glastor-dev/master-qr",
+          "demo": null,
+          "stars": "⭐",
+          "highlights": ["Personalización completa", "Múltiples formatos", "API simple"]
         }
       ],
       "blog_articles": [

@@ -1,0 +1,17 @@
+name: Metrics
+on:
+  schedule: [{cron: "0 0 * * *"}] # Actualiza todos los días a medianoche
+  workflow_dispatch:
+  push: {branches: ["main", "master"]}
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: glastor-dev
+          template: classic
+          base: header, activity, community, repositories, metadata

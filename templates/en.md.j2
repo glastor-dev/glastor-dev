@@ -68,20 +68,19 @@
 
 ---
 
+
 ## {{ data.translations.en.stats_title }}
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="GitHub Stats" height="170"/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="Top Languages" height="170"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true&area=true" alt="GitHub Activity" />
-</p>
+<div align="center">
+  {% if data.github_stats.metrics_svg %}
+    <img src="./{{ data.github_stats.metrics_svg }}" alt="GitHub Metrics" />
+  {% else %}
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="GitHub Stats" height="170"/>
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="Top Languages" height="170"/>
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true" alt="GitHub Streak" />
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true&area=true" alt="GitHub Activity" />
+  {% endif %}
+</div>
 
 ---
 
