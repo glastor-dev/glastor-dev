@@ -1,4 +1,8 @@
 name: Metrics
+permissions:
+  contents: read
+  issues: read
+  packages: read
 on:
   schedule: [{cron: "0 0 * * *"}] # Actualiza todos los días a medianoche
   workflow_dispatch:
@@ -15,3 +19,4 @@ jobs:
           user: glastor-dev
           template: classic
           base: header, activity, community, repositories, metadata
+
