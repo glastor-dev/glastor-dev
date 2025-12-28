@@ -16,10 +16,18 @@
       "username": "glastor-dev",
       "show_stats": true,
       "show_languages": true,
-      "show_streak": true,
-      "show_trophies": true,
-      "theme": "tokyonight",
-      "metrics_svg": "github-metrics.svg"
+      "show_streak": false,
+      "show_trophies": false,
+      "theme": "transparent",
+      "metrics_svg": null,
+      "repo_pins": [
+        "neovim",
+        "master-qr",
+        "svg-png",
+        "quimera",
+        "svg-visor",
+        "spell"
+      ]
     },
     "about": {
       "description": "🚀 Desarrollador Python con experiencia en tecnologías web y diseño creativo. Me enfoco en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.",
@@ -89,6 +97,18 @@
         "caption": "Explora mis proyectos ↓",
         "typing_text": ["Full Stack Developer", "Especialista en Python", "Open Source Contributor", "Creador de Contenido Tech"]
       },
+      "clients": [
+        {
+          "name": "Nexperia",
+          "logo": "https://i.postimg.cc/nrQznYd2/nexperia-logo.png",
+          "url": "https://www.nexperia.com"
+        },
+        {
+          "name": "Aspid Cars",
+          "logo": "https://i.postimg.cc/F1ttmqDH/Aspid.png",
+          "url": "https://aspidcars.com"
+        }
+      ],
       "top_cta": [
         "Construyo APIs, tooling y automatizaciones con Python para productos y equipos (FastAPI/Django, CI/CD y Docker).",
         "Para presupuestos o colaboraciones: [Email](mailto:glastor.info@gmail.com) o [Telegram](https://t.me/zerhocool).",

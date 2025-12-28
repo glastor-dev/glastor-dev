@@ -3,8 +3,9 @@
 
 ## {{ data.metadata.subtitle }}
 
+{# Renderiza la plantilla según el idioma #}
 {% if data.metadata.language == "en" %}
-{% include "en.md.j2" %}
+	{% include "en.md.j2" %}
 {% else %}
-{% include "es.md.j2" %}
+	{% include "es.md.j2" %}
 {% endif %}

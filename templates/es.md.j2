@@ -1,3 +1,5 @@
+
+{# Badges y stats principales #}
 {% if data.metadata.license_badge %}
 ![Licencia]({{ data.metadata.license_badge }})
 ![Vistas del Perfil](https://komarev.com/ghpvc/?username={{ data.github_stats.username }}&color=blueviolet&style=flat-square&label=Visitas)
@@ -68,23 +70,20 @@
 
 ---
 
-
-## {{ data.translations.es.stats_title }}
+## Estadísticas de GitHub generadas dinámicamente
 
 <div align="center">
   {% if data.github_stats.metrics_svg %}
     <img src="./{{ data.github_stats.metrics_svg }}" alt="GitHub Metrics" />
   {% else %}
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="Estadísticas de GitHub" height="170"/>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}" alt="Lenguajes Más Usados" height="170"/>
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true&locale=es" alt="Racha de GitHub" />
-    <img src="https://github-readme-activity-graph.vercel.app/graph?username={{ data.github_stats.username }}&theme={{ data.github_stats.theme }}&hide_border=true&area=true" alt="Actividad de GitHub" />
+    <img src="https://github-readme-stats-theta-woad-23.vercel.app/api?username={{ data.github_stats.username }}&show_icons=true&theme=transparent" alt="GitHub Stats" />
+    <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/top-langs/?username={{ data.github_stats.username }}&layout=compact&theme=transparent&card_width=470" alt="Top Langs" />
   {% endif %}
 </div>
 
 ---
 
-## {{ data.translations.es.skills_title }}
+## 🛠️ Stack Tecnológico
 
 ### 💻 Lenguajes y Frameworks
 {% if data.content.skill_icons_url %}
@@ -108,47 +107,78 @@
 
 ---
 
-## {{ data.translations.es.projects_title }}
+## 📌 Repositorios Destacados
 
-{% for project in data.content.featured_projects %}
-### {{ project.name }}
-{{ project.description }}
-
-{% if project.note %}
-{{ project.note }}
-{% endif %}
-
-**Stack Tecnológico:** {{ project.tech_stack|join(' • ') }}
-
-{% if project.repo %}**Repositorio:** [Ver Código]({{ project.repo }}){% endif %}
-{% if project.demo %}**Demo en Vivo:** [Visitar Sitio]({{ project.demo }}){% endif %}
-
-**Destacados:** {{ project.highlights|join(' • ') }}
-
-{% endfor %}
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/neovim">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=neovim&theme=transparent" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/master-qr">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=master-qr&theme=transparent" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/svg-png">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=svg-png&theme=transparent" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/quimera">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=quimera&theme=transparent" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/svg-visor">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=svg-visor&theme=transparent" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/spell">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=spell&theme=transparent" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
-{% if data.content.blog_articles %}
-## {{ data.translations.es.blog_title }}
+## 🏆 Clientes y Colaboradores
 
-{% for article in data.content.blog_articles %}
-- **{{ article.title }}** - [{{ article.platform }}]({{ article.url }}) *({{ article.date }})*
-{% endfor %}
+<div align="center">
 
----
-{% endif %}
+**Proyectos exitosos desarrollados para:**
 
-### 🏆 Certificaciones
-{% for achievement in data.achievements %}
-{% if achievement.badge %}
+<table>
+  <tr>
+    <td align="center" width="200">
+      <a href="https://www.nexperia.com" target="_blank">
+        <img src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png" alt="Nexperia" height="60" style="margin-bottom:8px;"/>
+        <br/>
+        <b>Nexperia</b>
+      </a>
+    </td>
+    <td width="40"></td>
+    <td align="center" width="200">
+      <a href="https://aspidcars.com" target="_blank">
+        <img src="https://i.postimg.cc/F1ttmqDH/Aspid.png" alt="Aspid Cars" height="60" style="margin-bottom:8px;"/>
+        <br/>
+        <b>Aspid Cars</b>
+      </a>
+    </td>
+  </tr>
+</table>
 
-[![{{ achievement.title }}]({{ achievement.badge }})]({{ achievement.url }}){% if achievement.year %} ({{ achievement.year }}){% endif %}{% if achievement.status %} — *{{ achievement.status }}*{% endif %}
+<sub>🚀 Infraestructura, APIs y automatización empresarial</sub>
 
-{% else %}
-- [{{ achievement.title }}{% if achievement.year %} ({{ achievement.year }}){% endif %}]({{ achievement.url }}){% if achievement.status %} — *{{ achievement.status }}*{% endif %}
-{% endif %}
-{% endfor %}
+</div>
 
 ---
 
@@ -167,15 +197,16 @@
 
 ---
 
-<div align="center">
+### 📱 Conexión Rápida
 
-> {{ data.translations.es.quote }}
-> *— {{ data.content.quote.author }} {{ data.content.quote.icon }}*
+<a href="https://github.com/glastor-dev">
+<img src="./src/svg-png/qr.svg" alt="QR Code GLASTOR" width="130"/>
+</a>
 
-{{ data.footer.cta }}
+<sub>Escanea con tu móvil para acceso directo</sub>
+
+---
 
 {{ copyright }}{% if data.footer.rights_notice %} — {{ data.footer.rights_notice }}{% endif %}{% if data.footer.trademark_notice %} — {{ data.footer.trademark_notice }}{% endif %} | Licenciado bajo [{{ data.footer.copyright.license }}]({{ data.footer.copyright.license_url if data.footer.copyright.license_url else 'LICENSE' }})
 
 *{{ data.footer.notice }}*
-
-</div>

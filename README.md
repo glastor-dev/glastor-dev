@@ -1,8 +1,8 @@
-# Andrés Antonio Cardoso - Full Stack Developer 👋
+# Andrés Antonio Cardoso 👋
 
 ![Banner de Glastor](src/svg-png/banner-github.webp)
 
-## Especialista en Python | Diseñador | Creador de Contenido
+## Ingeniero backend en Python | Arquitecto de API | Tecnología de desarrollo y enseñanza
 
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 ![Gitkraken](https://img.shields.io/badge/Gitkraken%20PRO-%23FE519?logo=Gitkraken&logoColor=white)
@@ -20,9 +20,16 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 ## 👨‍💻 Sobre Mí
 
-🚀 Desarrollador Python con + de 10 años de experiencia en tecnologías web y diseño creativo. Me enfoco en construir soluciones eficientes y escalables, y en compartir conocimiento a través de contenido técnico.
+🚀 **Transformo ideas complejas en APIs robustas y automatizaciones inteligentes.**
 
-Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente estoy migrando a GitHub repositorios privados que mantengo en otras plataformas. Vivo en Girona (España) desde 2022.
+Con **+10 años** dominando Python y el ecosistema web, especializo en construir
+arquitecturas backend que escalan. Fundador de **GLASTOR®** (marca registrada INPI
+Argentina, 2025) — una década construyendo soluciones para startups y empresas en
+Europa y Latinoamérica.
+
+📍 Actualmente en **Girona, España** | 🌍 Trabajando con equipos globales
+💡 Creo contenido técnico para ayudar a otros devs a subir de nivel
+🔓 Liberando proyectos privados al Open Source porque el código vale más cuando se comparte.
 
 ---
 
@@ -70,8 +77,15 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
 - El libro blanco del hacker
 - Big Data, Machine Learning y Data Science en Python
 
-</details>
+---
 
+## Estadísticas de GitHub generadas dinámicamente
+
+![GitHub Stats](https://github-readme-stats-theta-woad-23.vercel.app/api?username=glastor-dev&show_icons=true&theme=transparent)
+
+![Top Langs](https://github-readme-stats-theta-woad-23.vercel.app/api/top-langs/?username=glastor-dev&layout=compact&theme=transparent&card_width=470)
+
+</details>
 
 ## 🛠️ Stack Tecnológico
 
@@ -84,93 +98,124 @@ Fundé GLASTOR en 2014 y en 2025 registré la marca en el INPI. Actualmente esto
 
 ---
 
-## 🚀 Proyectos Destacados
+## 📌 Repositorios Destacados
 
-### 🎯 [Glastor README Generator](https://github.com/glastor-dev/glastor-dev)
-
-Generador profesional de README con plantillas Jinja2, copyright automático y soporte multi-idioma.
-
-**Stack:** `Python` `Jinja2` `Typer` `Rich`
-**✨ Features:** CLI tool • Multi-idioma • Copyright automático • 100% cobertura de tests
-
----
-
-### 🖥️ [Neovim Config](https://github.com/glastor-dev/neovim)
-
-Configuración personalizada de Neovim enfocada en productividad y desarrollo moderno.
-
-**✨ Features:** Plugins esenciales • Atajos optimizados • Soporte multi-lenguaje
-**🔗 Links:** [Repositorio](https://github.com/glastor-dev/neovim) • [Neovim Official](https://neovim.io/)
-
----
-
-### 👁️ [SVG Visor](https://github.com/glastor-dev/svg-visor)
-
-Extensión ligera para VS Code que permite visualizar archivos SVG en tiempo real.
-
-**Stack:** `JavaScript` `VS Code API`
-**✨ Features:** Vista previa en tiempo real • Inspector de código • Optimización
-**🔗 Links:** [Repositorio](https://github.com/glastor-dev/svg-visor) • [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AndresAntonioCardoso.svg-visor)
-
----
-
-### 🌙 [Quimera Theme](https://github.com/glastor-dev/quimera)
-
-Tema oscuro elegante para VS Code, diseñado para largas sesiones de código nocturno.
-
-**Stack:** `JavaScript` `VS Code Theming`
-**✨ Features:** Paleta azulada • Alto contraste • Anti-fatiga visual
-**🔗 Links:** [Repositorio](https://github.com/glastor-dev/quimera) • [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=AndresAntonioCardoso.quimera-night)
-
----
-
-### 📱 [Master QR](https://github.com/glastor-dev/master-qr)
-
-Generador de códigos QR personalizable y ligero en Python.
-
-**Stack:** `Python` `qrcode` `PIL`
-**✨ Features:** Personalización completa • Múltiples formatos • API simple
+<table>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/neovim">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=neovim&theme=transparent" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/master-qr">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=master-qr&theme=transparent" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/svg-png">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=svg-png&theme=transparent" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/quimera">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=quimera&theme=transparent" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/svg-visor">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=svg-visor&theme=transparent" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/spell">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=spell&theme=transparent" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## 🤝 Apoya el Proyecto
 
-¿Te gusta mi trabajo? Puedes apoyarlo de estas formas:
+¿Te gusta mi trabajo? Aquí hay varias formas de apoyarlo:
 
-- ⭐ Dando estrella a los repositorios que te resulten útiles
-- 🐛 Reportando issues o sugiriendo mejoras
-- 🔀 Contribuyendo con Pull Requests
-- 💰 Convirtiéndote en [sponsor](https://github.com/sponsors/glastor-dev)
-- 📢 Compartiendo los proyectos con tu comunidad
-
-<div align="center">
-
-[![PayPal](https://img.shields.io/badge/PayPal-Donar-blue?style=for-the-badge&logo=paypal)](https://paypal.me/datagroupssl?country.x=AR&locale.x=es_XC)
-
-**Más información en** [`CONTRIBUTING.md`](.github/CONTRIBUTING.md)
+- ⭐ **Dale estrella** a los repositorios que te resulten útiles
+- 🐛 **Reporta bugs** o sugiere mejoras creando issues
+- 🔀 **Contribuye** con Pull Requests ([guía aquí](.github/CONTRIBUTING.md))
+- 💰 **Conviértete en sponsor** y aparece en esta sección
+- 📢 **Comparte** los proyectos con tu comunidad
 
 <div align="center">
 
-  <a href="https://www.nexperia.com"><img src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png" alt="Nexperia" height="50"></a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://aspidcars.com"><img src="https://i.postimg.cc/F1ttmqDH/Aspid.png" alt="Aspid Cars" height="70"></a>
-  <a rel="licencia" href="https://github.com/glastor-dev"><img alt="Código QR de Glastor" style="border-width:0" src="./src/svg-png/qr.svg" width="70" /></a>
+### 💝 Opciones de donación
+
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub-Sponsor-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/glastor-dev)
+[![PayPal](https://img.shields.io/badge/PayPal-Donar-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/datagroupssl?country.x=AR&locale.x=es_XC)
+
+**📋 Más información:** [`CONTRIBUTING.md`](.github/CONTRIBUTING.md)
+
 </div>
 
+---
+
+## 🏆 Agradecimientos Especiales
+
+<div align="center">
+
+**Empresas que han confiado en mi trabajo:**
+
+<a href="https://www.nexperia.com">
+  <img src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png" alt="Nexperia" height="60">
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://aspidcars.com">
+  <img src="https://i.postimg.cc/F1ttmqDH/Aspid.png" alt="Aspid Cars" height="60">
+</a>
+
+<sub>Proyectos desarrollados para estas organizaciones en infraestructura y automatización</sub>
+
+</div>
+
+---
+
+## 📫 Contacto
+
+<div align="center">
+
+**💼 Disponible para proyectos freelance y colaboraciones**
+📧 Respondo generalmente en 24 horas
+
 <p align="center">
-  <a href="https://t.me/zerhocool">
-    <img src="src/svg-png/telegram.webp" alt="Icono de Telegram" width="40" height="40"/>
+  <a href="https://t.me/zerhocool" title="Telegram">
+    <img src="src/svg-png/telegram.webp" alt="Telegram" width="45" height="45"/>
   </a>
-  <a href="mailto:glastor.info@gmail.com">
-    <img src="src/svg-png/gmail.webp" alt="Icono de Email" width="40" height="40"/>
+  &nbsp;&nbsp;
+  <a href="mailto:glastor.info@gmail.com" title="Email">
+    <img src="src/svg-png/gmail.webp" alt="Email" width="45" height="45"/>
   </a>
-  <a href="https://github.com/glastor-dev">
-    <img src="src/svg-png/github.webp" alt="Icono de GitHub" width="40" height="40"/>
+  &nbsp;&nbsp;
+  <a href="https://github.com/glastor-dev" title="GitHub">
+    <img src="src/svg-png/github.webp" alt="GitHub" width="45" height="45"/>
   </a>
-  <a href="https://www.youtube.com/@glastor-es">
-    <img src="src/svg-png/youtube.webp" alt="Icono de YouTube" width="40" height="40"/>
+  &nbsp;&nbsp;
+  <a href="https://www.youtube.com/@glastor-es" title="YouTube">
+    <img src="src/svg-png/youtube.webp" alt="YouTube" width="45" height="45"/>
   </a>
 </p>
+
+### 📱 Escanea para conectar rápido
+
+<a href="https://github.com/glastor-dev">
+  <img alt="QR Code GLASTOR" src="./src/svg-png/qr.svg" width="120"/>
+</a>
+
+</div>
 
 ---
 
