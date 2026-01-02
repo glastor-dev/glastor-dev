@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it."
+title: "GLASTOR README Generator"
+type: software
+version: "1.0.0"
+date-released: "2025-12-26"
+authors:
+  - name: "Andrés Antonio Cardoso"
+repository-code: "https://github.com/glastor-dev/glastor-dev"
+url: "https://github.com/glastor-dev/glastor-dev"
+license: "GPL-3.0-only"
+keywords:
+  - README
+  - generator
+  - documentation
+  - Jinja2
+  - CLI

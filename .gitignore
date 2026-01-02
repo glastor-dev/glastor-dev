@@ -1,0 +1,15 @@
+# Deno / Node
+node_modules/
+
+# Python/venv (not part of this repo)
+.venv/
+
+# Generated artifacts
+README.generated.md
+README.md.bak
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

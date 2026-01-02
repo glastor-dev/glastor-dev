@@ -1,0 +1,54 @@
+name: README
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  readme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v2.x
+
+      - name: Cache Deno
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/deno
+            ~/.cache/deno/npm
+            node_modules
+          key: ${{ runner.os }}-deno-${{ hashFiles('deno.lock', 'deno.json') }}
+          restore-keys: |
+            ${{ runner.os }}-deno-
+
+      - name: Prefetch dependencies
+        run: deno cache --lock=deno.lock src/main.ts
+
+      - name: Format (check)
+        run: deno fmt --check
+
+      - name: Lint
+        run: deno lint
+
+      - name: Type check
+        run: deno check --lock=deno.lock src/main.ts
+
+      - name: Tests
+        run: deno test -A --lock=deno.lock
+
+      - name: Generate README to temp
+        run: deno run -A --lock=deno.lock src/main.ts --template modern --output README.generated.md
+
+      - name: Fail if README is outdated
+        run: |
+          git diff --no-index --exit-code README.md README.generated.md
+
+      - name: Cleanup
+        if: always()
+        run: rm -f README.generated.md

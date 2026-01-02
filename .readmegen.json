@@ -1,0 +1,10 @@
+{
+  // Datos del repo remoto para badges/enlaces
+  "repoUrl": "https://github.com/glastor-dev/glastor-dev.git",
+  "repo": "glastor-dev/glastor-dev",
+  "defaultBranch": "master",
+  "ciWorkflow": "ci.yml",
+
+  // Opcional: ajustar estilo de shields
+  "badgeStyle": "flat-square"
+}
