@@ -12,7 +12,7 @@ Para reportar una vulnerabilidad, **no** abras un issue público.
 
 Usa uno de estos canales (por orden recomendado):
 
-1. **GitHub Security Advisories**: usa el botón **“Report a vulnerability”** (pestaña *Security* del repositorio).
+1. **GitHub Security Advisories**: usa el botón **“Report a vulnerability”** (pestaña _Security_ del repositorio).
 2. **Email**: [glastor.info@gmail.com](mailto:glastor.info@gmail.com) (asunto sugerido: `SECURITY: <breve descripción>`)
 
 ## Tiempos de respuesta (orientativos)

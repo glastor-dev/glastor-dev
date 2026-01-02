@@ -13,10 +13,12 @@ Changelog
 All notable changes to **GLASTOR README Generator** are documented in this file.
 
 This project adheres to:
+
 - **Format:** [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) - Human-readable changelog format
 - **Versioning:** [Semantic Versioning](https://semver.org/spec/v2.0.0.html) - Version numbering convention
 
 ### Version Number Scheme
+
 ```
 MAJOR.MINOR.PATCH (e.g., 1.0.0)
   │     │     │
@@ -41,6 +43,7 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 ### 🔮 Planned Features
 
 #### High Priority
+
 - [ ] **PDF Export** - Generate README as PDF document
 - [ ] **HTML Export** - Export as standalone HTML with embedded styles
 - [ ] **Plugin System** - Extensible architecture for custom generators
@@ -48,6 +51,7 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 - [ ] **Auto-update Statistics** - Dynamic GitHub stats integration
 
 #### Medium Priority
+
 - [ ] **Visual Editor** - Web-based GUI for profile editing
 - [ ] **Template Marketplace** - Community-contributed templates
 - [ ] **AI-Assisted Content** - Smart suggestions for README sections
@@ -55,12 +59,14 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 - [ ] **Cloud Sync** - Save profiles to cloud storage
 
 #### Low Priority
+
 - [ ] **Mobile App** - iOS/Android companion app
 - [ ] **Dark/Light Theme Toggle** - User preference for generated output
 - [ ] **Analytics Integration** - Track README views and engagement
 - [ ] **Collaborative Editing** - Multi-user profile editing
 
 ### 🔬 Under Investigation
+
 - Compatibility with Markdown parsers (CommonMark, GFM)
 - Performance optimization for large profiles (>5MB)
 - Integration with popular documentation tools (Sphinx, MkDocs)
@@ -100,7 +106,6 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 - **Badge URL correctness:** fixed query-string concatenation for the “Last Commit” badge (`branch` parameter handling).
 - **Markdown sanitation:** hardened sanitization to prevent accidental TS/JSON/YAML fragments from leaking into generated Markdown.
 - **HTML validity in templates:** removed/avoided stray closing tags and corrected organization/logo links.
-
 
 ## [1.0.0] - 2025-12-20
 
@@ -347,20 +352,21 @@ This is the inaugural stable release of GLASTOR README Generator, marking the tr
 
 #### Benchmark Comparison (v0.9 → v1.0)
 
-| Metric | v0.9 | v1.0 | Improvement |
-|--------|------|------|-------------|
-| **Generation Speed (1KB)** | 0.12s | 0.08s | 33% faster ⚡ |
-| **Generation Speed (10KB)** | 0.45s | 0.28s | 38% faster ⚡ |
-| **Generation Speed (100KB)** | 2.1s | 1.3s | 38% faster ⚡ |
-| **Memory Usage (Load)** | 15MB | 12MB | 20% less 💚 |
-| **Memory Usage (Generate)** | 45MB | 32MB | 29% less 💚 |
-| **Package Size** | 2.5MB | 1.8MB | 28% smaller 📦 |
+| Metric                       | v0.9  | v1.0  | Improvement    |
+| ---------------------------- | ----- | ----- | -------------- |
+| **Generation Speed (1KB)**   | 0.12s | 0.08s | 33% faster ⚡  |
+| **Generation Speed (10KB)**  | 0.45s | 0.28s | 38% faster ⚡  |
+| **Generation Speed (100KB)** | 2.1s  | 1.3s  | 38% faster ⚡  |
+| **Memory Usage (Load)**      | 15MB  | 12MB  | 20% less 💚    |
+| **Memory Usage (Generate)**  | 45MB  | 32MB  | 29% less 💚    |
+| **Package Size**             | 2.5MB | 1.8MB | 28% smaller 📦 |
 
 ---
 
 ### 🔧 Technical Details
 
 #### Dependencies Updated
+
 ```diff
 # Core Dependencies
 - jinja2==3.0.3
@@ -477,6 +483,7 @@ No migration required. Existing `profile.json` files work without changes.
 ### 🔧 Technical Specifications
 
 #### Initial Technology Stack
+
 ```yaml
 Language: Python 3.8+
 Template Engine: Jinja2 3.0.x
@@ -485,6 +492,7 @@ Output Format: Markdown (GitHub Flavored)
 ```
 
 #### File Structure
+
 ```
 readme-generator/
 ├── src/
@@ -502,6 +510,7 @@ readme-generator/
 ---
 
 ### 📝 Initial Profile Schema
+
 ```json
 {
   "readme": {
@@ -607,6 +616,7 @@ readme-generator/
 ---
 
 ### 📈 Statistics (v0.1.0)
+
 ```
 Lines of Code: ~450
 Test Coverage: 0% (no tests yet)
@@ -620,10 +630,10 @@ Example Projects: 8
 
 ## Version History Summary
 
-| Version | Release Date | Type | Key Features |
-|---------|--------------|------|--------------|
-| **1.0.0** | 2025-12-20 | Major | CLI, Multi-lang, Validation, Tests |
-| **0.1.0** | 2025-08-04 | Alpha | Initial release, Basic generation |
+| Version   | Release Date | Type  | Key Features                       |
+| --------- | ------------ | ----- | ---------------------------------- |
+| **1.0.0** | 2025-12-20   | Major | CLI, Multi-lang, Validation, Tests |
+| **0.1.0** | 2025-08-04   | Alpha | Initial release, Basic generation  |
 
 ---
 
@@ -632,11 +642,13 @@ Example Projects: 8
 ### From v0.1.0 to v1.0.0
 
 **Required Actions:**
+
 1. ✅ Update Python to 3.8+ (previously no minimum specified)
 2. ✅ Install new dependencies: `pip install -r requirements.txt`
 3. ✅ Update command syntax (see below)
 
 **Command Changes:**
+
 ```bash
 # Old (v0.1.0)
 python generator.py
@@ -646,14 +658,17 @@ python -m src.main generate src/data/profile.json
 ```
 
 **Profile Schema:**
+
 - ✅ No changes required - fully backward compatible
 - ⚠️ New optional fields available (see documentation)
 - 💡 Recommend using `validate` command to check profile
 
 **Breaking Changes:**
+
 - ❌ None
 
 **Deprecations:**
+
 - ⚠️ Direct script execution (`python generator.py`) - use module execution instead
 
 ---
@@ -681,8 +696,10 @@ python -m src.main generate src/data/profile.json
    - Link to issues/PRs when relevant
 
 4. **Example entry:**
+
 ```markdown
 ### Added
+
 - ✨ **Template Marketplace** - Community-contributed templates ([#123](https://github.com/glastor-dev/glastor-dev/issues/123))
   - Browse templates by category
   - One-click template installation

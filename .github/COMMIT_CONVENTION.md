@@ -12,7 +12,7 @@ Messages must be matched by the following regex:
 
 Notes:
 
-- The regex above enforces a 1–50 character subject after `: `.
+- The regex above enforces a 1–50 character subject after `:`.
 - `scope` is optional and should be short (module/package name).
 
 ### 📌 Examples
@@ -107,12 +107,12 @@ reference GitHub issues that this commit **Closes**.
 ### Issue / PR references (modern GitHub convention)
 
 - Prefer putting issue closing keywords in the footer:
-	- `Closes #123`
-	- `Fixes #123`
-	- `Resolves #123`
-	- `Refs #123` (reference only; does not auto-close)
+  - `Closes #123`
+  - `Fixes #123`
+  - `Resolves #123`
+  - `Refs #123` (reference only; does not auto-close)
 - If the commit is created from a merged PR, it’s also common to include the PR number at the end of the subject:
-	- `fix(api): handle timeout (#123)`
+  - `fix(api): handle timeout (#123)`
 
 ### Trailers
 

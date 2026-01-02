@@ -1,4 +1,4 @@
-﻿# Contribuir
+# Contribuir
 
 Gracias por querer contribuir a **GLASTOR**.
 
@@ -41,9 +41,9 @@ git diff --no-index -- README.md README.generated.md
 
 ## Flujo de PR
 
-1) Crea una rama desde `master`
-2) Mantén el PR pequeño y enfocado
-3) Asegura `deno task fmt:check`, `deno task lint`, `deno task check` y `deno task test` en verde
+1. Crea una rama desde `master`
+2. Mantén el PR pequeño y enfocado
+3. Asegura `deno task fmt:check`, `deno task lint`, `deno task check` y `deno task test` en verde
 
 ## Políticas
 

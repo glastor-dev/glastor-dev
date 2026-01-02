@@ -13,14 +13,12 @@ Answer: What does this PR do? Why is it needed?
 -->
 
 ### Problem Statement
+
 <!-- What issue or need does this PR address? -->
 
-
-
 ### Solution Overview
+
 <!-- Brief explanation of your approach and implementation -->
-
-
 
 ---
 
@@ -54,6 +52,7 @@ List key files, functions, or components modified.
 -->
 
 ### Modified Components
+
 <!-- List the main components, modules, or files affected -->
 
 -
@@ -61,14 +60,12 @@ List key files, functions, or components modified.
 -
 
 ### Technical Details
+
 <!-- Explain the technical implementation, architecture decisions, or algorithms used -->
 
-
-
 ### Design Decisions
+
 <!-- Justify why you chose this approach over alternatives -->
-
-
 
 ---
 
@@ -90,7 +87,9 @@ Include prerequisites, commands, and expected outcomes.
 -->
 
 #### Prerequisites
+
 <!-- List any setup requirements -->
+
 ```bash
 # Example: Install dependencies, set environment variables, etc.
 ```
@@ -102,13 +101,16 @@ Include prerequisites, commands, and expected outcomes.
 3.
 
 #### Expected Results
+
 <!-- What should happen when testing is successful? -->
 
 -
 -
 
 #### Test Data/Scenarios
+
 <!-- Include sample data, edge cases, or specific scenarios to test -->
+
 ```
 # Example test data or commands
 ```
@@ -253,8 +255,6 @@ Otherwise, you can remove it.
 
 <!-- Clearly describe what breaks and why -->
 
-
-
 ### Migration Path
 
 <!-- Provide step-by-step migration instructions for users/developers -->
@@ -284,18 +284,16 @@ Remove this section if not applicable.
 
 <!-- Include before/after performance measurements -->
 
-| Metric | Before | After | Change |
-|--------|--------|-------|--------|
-| Load Time | | | |
-| Memory Usage | | | |
-| API Response Time | | | |
-| Bundle Size | | | |
+| Metric            | Before | After | Change |
+| ----------------- | ------ | ----- | ------ |
+| Load Time         |        |       |        |
+| Memory Usage      |        |       |        |
+| API Response Time |        |       |        |
+| Bundle Size       |        |       |        |
 
 ### Performance Notes
 
 <!-- Explain any performance implications -->
-
-
 
 ---
 
@@ -352,8 +350,6 @@ This makes reviews more efficient and effective.
 Any other context, considerations, or information reviewers should know.
 Use this space for anything that doesn't fit in the above sections.
 -->
-
-
 
 ---
 
