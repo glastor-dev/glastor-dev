@@ -55,9 +55,17 @@ jobs:
             echo "::error::Missing required variable SONAR_PROJECT_KEY (Settings → Secrets and variables → Actions → Variables)"
             exit 1
           fi
-          SONAR_HOST_URL_FINAL="${SONAR_HOST_URL:-https://sonarcloud.io}"
-          if [[ -z "${SONAR_HOST_URL}" ]]; then
-            echo "::notice::SONAR_HOST_URL not set; defaulting to ${SONAR_HOST_URL_FINAL}"
+          # Normalize host URL. Some UIs may accidentally set SONAR_HOST_URL to '--'.
+          if [[ -z "${SONAR_HOST_URL}" || "${SONAR_HOST_URL}" == "--" ]]; then
+            SONAR_HOST_URL_FINAL="https://sonarcloud.io"
+            echo "::notice::SONAR_HOST_URL not set (or invalid); defaulting to ${SONAR_HOST_URL_FINAL}"
+          else
+            SONAR_HOST_URL_FINAL="${SONAR_HOST_URL}"
+          fi
+
+          if [[ ! "${SONAR_HOST_URL_FINAL}" =~ ^https?:// ]]; then
+            echo "::error::Invalid SONAR_HOST_URL value: '${SONAR_HOST_URL_FINAL}'. It must start with http:// or https:// (or leave it empty for SonarCloud)."
+            exit 1
           fi
 
           echo "sonar.projectKey=${SONAR_PROJECT_KEY}"
