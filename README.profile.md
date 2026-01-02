@@ -12,7 +12,7 @@
 ![Forks](https://img.shields.io/github/forks/glastor-dev/glastor-dev.svg?style=flat-square)
 ![Issues](https://img.shields.io/github/issues/glastor-dev/glastor-dev.svg?style=flat-square)
 ![Last Commit](https://img.shields.io/github/last-commit/glastor-dev/glastor-dev.svg?style=flat-square&branch=master)
-![Vistas del Perfil](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas) ![Build Status](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master)
+![Vistas del Perfil](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas) ![Build Status](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master) [![CodeQL](https://github.com/glastor-dev/glastor-dev/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/glastor-dev/glastor-dev/actions/workflows/codeql.yml) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=glastor-dev&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=glastor-dev)
 
 ## 🤝 Contribuir
 
