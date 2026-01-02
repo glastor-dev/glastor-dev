@@ -14,12 +14,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Skip Sonar scan for forks/Dependabot
+        if: >-
+          ${{ github.event_name == 'pull_request' &&
+              (github.event.pull_request.head.repo.full_name != github.repository || github.actor == 'dependabot[bot]') }}
+        run: |
+          echo "Skipping Sonar scan: secrets are not available for this event/actor."
+          echo "event_name=${{ github.event_name }}"
+          echo "actor=${{ github.actor }}"
+          echo "repo=${{ github.repository }}"
+          echo "pr_head_repo=${{ github.event.pull_request.head.repo.full_name }}"
+
       - name: Checkout
+        if: >-
+          ${{ github.event_name != 'pull_request' ||
+              (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]') }}
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Validate Sonar configuration
+        if: >-
+          ${{ github.event_name != 'pull_request' ||
+              (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]') }}
         shell: bash
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -27,6 +44,9 @@ jobs:
           SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
           SONAR_ORGANIZATION: ${{ vars.SONAR_ORGANIZATION }}
         run: |
+          echo "event_name=${{ github.event_name }}"
+          echo "actor=${{ github.actor }}"
+          echo "repo=${{ github.repository }}"
           if [[ -z "${SONAR_TOKEN}" ]]; then
             echo "::error::Missing required secret SONAR_TOKEN (Settings → Secrets and variables → Actions → Secrets)"
             exit 1
@@ -40,6 +60,9 @@ jobs:
           fi
 
       - name: SonarQube Scan
+        if: >-
+          ${{ github.event_name != 'pull_request' ||
+              (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]') }}
         uses: SonarSource/sonarqube-scan-action@v7.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
