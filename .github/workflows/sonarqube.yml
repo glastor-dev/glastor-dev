@@ -19,15 +19,35 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Validate Sonar configuration
+        shell: bash
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_PROJECT_KEY: ${{ vars.SONAR_PROJECT_KEY }}
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+          SONAR_ORGANIZATION: ${{ vars.SONAR_ORGANIZATION }}
+        run: |
+          if [[ -z "${SONAR_TOKEN}" ]]; then
+            echo "::error::Missing required secret SONAR_TOKEN (Settings → Secrets and variables → Actions → Secrets)"
+            exit 1
+          fi
+          if [[ -z "${SONAR_PROJECT_KEY}" ]]; then
+            echo "::error::Missing required variable SONAR_PROJECT_KEY (Settings → Secrets and variables → Actions → Variables)"
+            exit 1
+          fi
+          if [[ -z "${SONAR_HOST_URL}" ]]; then
+            echo "::notice::SONAR_HOST_URL not set; defaulting to https://sonarcloud.io"
+          fi
+
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v7.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL || 'https://sonarcloud.io' }}
         with:
           args: >
             -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
-            ${{ vars.SONAR_ORGANIZATION && format('-Dsonar.organization={0}', vars.SONAR_ORGANIZATION) || '' }}
+            -Dsonar.organization=${{ vars.SONAR_ORGANIZATION }}
             -Dsonar.sources=src
             -Dsonar.tests=test
             -Dsonar.exclusions=**/node_modules/**,**/.venv/**,**/images/**,**/bench/**,README*.md,**/*.md
