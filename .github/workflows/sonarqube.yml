@@ -60,6 +60,11 @@ jobs:
             echo "::notice::SONAR_HOST_URL not set; defaulting to ${SONAR_HOST_URL_FINAL}"
           fi
 
+          echo "sonar.projectKey=${SONAR_PROJECT_KEY}"
+          if [[ -n "${SONAR_ORGANIZATION}" ]]; then
+            echo "sonar.organization=${SONAR_ORGANIZATION}"
+          fi
+
           if [[ "${SONAR_HOST_URL_FINAL}" == "https://sonarcloud.io" ]]; then
             if [[ -z "${SONAR_ORGANIZATION}" ]]; then
               echo "::error::Missing required variable SONAR_ORGANIZATION for SonarCloud (Settings → Secrets and variables → Actions → Variables)"
@@ -76,6 +81,7 @@ jobs:
           SONAR_ARGS+=" -Dsonar.exclusions=**/node_modules/**,**/.venv/**,**/images/**,**/bench/**,README*.md,**/*.md"
           SONAR_ARGS+=" -Dsonar.test.inclusions=test/**"
           SONAR_ARGS+=" -Dsonar.sourceEncoding=UTF-8"
+          SONAR_ARGS+=" -Dsonar.verbose=true"
 
           echo "SONAR_HOST_URL_FINAL=${SONAR_HOST_URL_FINAL}" >> "${GITHUB_ENV}"
           echo "SONAR_ARGS=${SONAR_ARGS}" >> "${GITHUB_ENV}"
