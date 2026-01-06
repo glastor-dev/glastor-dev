@@ -411,11 +411,15 @@ Example\n * @example\n * hello("Andres")\n
 - jsr:@std/assert/string-includes
 - jsr:@std/fs/exists
 - jsr:@std/fs/walk
+- jsr:@std/fs@^1.0.0/exists
+- jsr:@std/fs@^1.0.0/walk
 - jsr:@std/jsonc/parse
+- jsr:@std/jsonc@^1.0.0/parse
 - jsr:@std/path/basename
 - jsr:@std/path/extname
 - jsr:@std/path/glob-to-regexp
 - jsr:@std/path/join
+- jsr:@std/path@^1.0.0/join
 
 ### Third-party
 - jsr:@cliffy/ansi@1.0.0-rc.7/colors
