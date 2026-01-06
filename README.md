@@ -2,7 +2,7 @@
 
 # GLASTOR® — Ingeniería de backend y arquitectura
 
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white) ![Deno Version](https://img.shields.io/badge/deno-%5E0.2.1-green?style=flat-square&logo=deno)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white) ![Deno Version](https://img.shields.io/badge/deno-%5E2.1.0-green?style=flat-square&logo=deno)
 
 ## Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps
 
