@@ -1,10 +1,6 @@
-# {{projectName}}
+# GLASTOR® — Ingeniería de backend y arquitectura
 
 ![Glastor banner](/images/banner-github.webp)
-
-{{badges}}
-
-{{description}}
 
 ## Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps
 
@@ -179,11 +175,5 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 ![Open Source ](https://i.postimg.cc/PxWYdHPN/gplv3-with-text-136x68.png)       ![Software Freedom](https://i.postimg.cc/fb0Ygmsc/conservancy-header.png)       ![Copyleft.otg](https://i.postimg.cc/htY9rMk4/copyleftorg-green-stylized.png)
 
 Esta obra está bajo [Licencia GNU General Publica (GNU GPL v3.0) -](https://www.gnu.org/licenses/gpl-3.0.html) [Software Freedom Conservancy.](https://sfconservancy.org/)
-
-{{apiDocs}}
-
-{{dependencies}}
-
-{{customSections}}
 
 Los datos y métricas mostrados aquí se sincronizan periódicamente con los sistemas del proyecto.
