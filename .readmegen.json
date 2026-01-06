@@ -1,10 +1,9 @@
 {
-  // Datos del repo remoto para badges/enlaces
+  "projectName": "glastor-deno",
+  "description": "Professional README generator for Deno projects with interactive CLI and GitHub Actions integration.",
   "repoUrl": "https://github.com/glastor-dev/glastor-dev.git",
   "repo": "glastor-dev/glastor-dev",
   "defaultBranch": "master",
   "ciWorkflow": "ci.yml",
-
-  // Opcional: ajustar estilo de shields
   "badgeStyle": "flat-square"
 }

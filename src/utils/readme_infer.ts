@@ -13,6 +13,7 @@ export async function inferDescriptionFromReadme(readmePath: string): Promise<st
     if (t.startsWith("#")) continue;
     if (t.startsWith("![") || t.startsWith("[![")) continue;
     if (t.startsWith("<")) continue;
+    if (t.includes("{{") && t.includes("}}")) continue;
     if (t.length < 20) continue;
     return t;
   }
