@@ -180,7 +180,8 @@ Esta obra está bajo [Licencia GNU General Publica (GNU GPL v3.0) -](https://www
 
 Los datos y métricas mostrados aquí se sincronizan periódicamente con los sistemas del proyecto.
 
-## 📖 API Documentation
+<details>
+  <summary><strong>📖 API Documentation</strong></summary>
 
 ### C:\Users\Andres\Desktop\glastor-deno\bench\template_and_sanitize_bench.ts
 #### BadgesConfig
@@ -374,7 +375,10 @@ Greets a person\n * @param name Nombre\n * @returns string\n
 Example\n * @example\n * hello("Andres")\n
 - Type: const
 
-## 📦 Dependencies
+</details>
+
+<details>
+  <summary><strong>📦 Dependencies</strong></summary>
 
 ### Config files
 - deno.json/deno.jsonc
@@ -399,3 +403,5 @@ Example\n * @example\n * hello("Andres")\n
 - jsr:@cliffy/command@1.0.0-rc.7
 - jsr:@cliffy/prompt@1.0.0-rc.7
 - npm:@swc/core
+
+</details>

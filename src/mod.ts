@@ -56,11 +56,11 @@ export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
   }
 
   if (!template.includes("{{apiDocs}}") && apiDocs) {
-    markdown += `\n\n## 📖 API Documentation\n\n${apiDocs}`;
+    markdown += `\n\n<details>\n  <summary><strong>📖 API Documentation</strong></summary>\n\n${apiDocs}\n\n</details>`;
   }
 
   if (!template.includes("{{dependencies}}") && dependencies) {
-    markdown += `\n\n## 📦 Dependencies\n\n${dependencies}`;
+    markdown += `\n\n<details>\n  <summary><strong>📦 Dependencies</strong></summary>\n\n${dependencies}\n\n</details>`;
   }
 
   const cleaned = sanitizeGeneratedMarkdown(markdown);

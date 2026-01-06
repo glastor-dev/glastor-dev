@@ -135,6 +135,7 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
     api: userConfig.sections?.api !== false,
     contributing: userConfig.sections?.contributing !== false,
     license: userConfig.sections?.license !== false,
+    dependencies: userConfig.sections?.dependencies !== false,
   };
 
   const toc = generateToc({
@@ -162,7 +163,7 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
     testCommand,
     contributing: sections.contributing ? contributing : "",
     license: sections.license ? (license || "(No license detected)") : "",
-    dependencies,
+    dependencies: userConfig.sections?.dependencies !== false ? dependencies : "",
     ci,
     customSections: "",
   };

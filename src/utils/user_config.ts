@@ -19,6 +19,7 @@ export interface UserConfig {
     api?: boolean;
     contributing?: boolean;
     license?: boolean;
+    dependencies?: boolean;
   };
   api?: {
     include?: string[];
