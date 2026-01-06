@@ -1,132 +1,72 @@
-# 📌 Git Commit Message Convention
+# 🏛️ Arquitectura de Mensajes de Commit (Conventional Commits)
 
-> This is adapted from [Angular's commit convention](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular).
+Para escalar el desarrollo y garantizar una **Software Supply Chain** transparente, este repositorio implementa una convención estricta basada en el [estándar de Angular](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular). Esta práctica no es solo estética: es el motor que impulsa nuestra automatización de versiones, generación de changelogs y auditoría técnica.
 
-## 📌 TL;DR
+## ⚙️ Especificación Técnica y Validación
 
-Messages must be matched by the following regex:
+Todo aporte debe superar el esquema de validación definido por la siguiente expresión regular para integrarse en el flujo de CI/CD:
 
 ```js
 /^(revert: )?(feat|fix|polish|docs|style|refactor|perf|test|workflow|ci|chore|types)(\([\w.-]+\))?: .{1,50}$/;
 ```
 
-Notes:
+### Parámetros de Calidad (Linting):
 
-- The regex above enforces a 1–50 character subject after `:`.
-- `scope` is optional and should be short (module/package name).
-
-### 📌 Examples
-
-Appears under "Features" header, `compiler` subheader:
-
-feat(compiler): add 'comments' option
-
-Appears under "Bug Fixes" header, `v-model` subheader, with a link to issue #28:
-
-fix(v-model): handle events on blur
-
-close #28
-
-Appears under "Performance Improvements" header, and under "Breaking Changes" with the breaking change explanation:
-
-perf(core): improve vdom diffing by removing 'foo' option
-
-BREAKING CHANGE: The 'foo' option has been removed.
-
-The following commit and commit `667ecc1` do not appear in the changelog if they are under the same release. If not, the revert commit appears under the "Reverts" header.
-
-\*\*revert: feat(compiler): add 'comments' option
-
-This reverts commit 667ecc1654a317a13331b17617d973392f415f02.\*\*
-
-## 📌Full Message Format
-
-A commit message consists of a **header**, **body** and **footer**. The header has a **type**, **scope** and **subject**:
-
-```text
-type scope: subject
-BLANK LINE
-body
-BLANK LINE
-footer
-```
-
-The **header** is mandatory and the **scope** of the header is optional.
-
-## 📌 Revert
-
-If the commit reverts a previous commit, it should begin with `revert:`, followed by the header of the reverted commit. In the body, it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
-
-## 📌 Type
-
-If the prefix is `feat`, `fix` or `perf`, it will appear in the changelog. However, if there is any BREAKING CHANGE (#footer), the commit will always appear in the changelog.
-
-Other prefixes are up to your discretion. Suggested prefixes are `docs`, `chore`, `style`, `refactor`, and `test` for non-changelog related tasks.
-
-Recommended mapping (GitHub-friendly):
-
-- `feat`: new user-facing functionality
-- `fix`: bug fix
-- `docs`: documentation only
-- `refactor`: refactor without behavior change
-- `perf`: performance improvement
-- `test`: tests only
-- `ci` / `workflow`: CI/CD or GitHub workflow changes
-- `chore`: maintenance tasks (deps, tooling)
-- `style`: formatting only (no logic changes)
-- `types`: typing-related changes
-- `polish`: small improvements / cleanup (prefer `refactor`/`chore` when possible)
-
-## 📌 Scope
-
-The scope could be anything specifying the place of the commit change. For example `core`, `compiler`, `ssr`, `v-model`, `transition` etc...
-
-Guidelines:
-
-- Use a stable identifier (folder/package/module).
-- Avoid overly broad scopes like `all`.
-
-## 📌 Subject
-
-The subject contains a succinct description of the change:
-
-- use the imperative, present tense: "change" not "changed" nor "changes"
-- don't capitalize the first letter
-- no dot (.) at the end
-
-## 📌 Body
-
-Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
-The body should include the motivation for the change and contrast this with previous behavior.
-
-## 📌 Footer
-
-The footer should contain any information about **Breaking Changes** and is also the place to
-reference GitHub issues that this commit **Closes**.
-
-### Issue / PR references (modern GitHub convention)
-
-- Prefer putting issue closing keywords in the footer:
-  - `Closes #123`
-  - `Fixes #123`
-  - `Resolves #123`
-  - `Refs #123` (reference only; does not auto-close)
-- If the commit is created from a merged PR, it’s also common to include the PR number at the end of the subject:
-  - `fix(api): handle timeout (#123)`
-
-### Trailers
-
-You may include standard Git trailers in the footer (one per line):
-
-- `Co-authored-by: Name <email>`
-- `Reviewed-by: Name <email>`
-
-If your project uses a DCO or requires sign-off, it will usually appear as:
-
-- `Signed-off-by: Name <email>`
-
-In this repository, DCO sign-off is **not required**, so `Signed-off-by:` is optional unless explicitly requested in a specific PR.
-
-**Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
+- **Scope (Opcional):** Define el contexto del cambio entre paréntesis (ej. `core`, `compiler`, `api`).
+- **Sujeto:** Máximo 50 caracteres. Debe ser conciso y descriptivo.
+- **DX-First:** Historiales limpios facilitan el _debugging_ y el _cherry-picking_.
 
 ---
+
+## 🏗️ Estructura del Mensaje
+
+Adoptamos un formato de tres bloques para maximizar la legibilidad y la compatibilidad con herramientas de orquestación:
+
+```text
+<tipo>(<scope>): <asunto>
+
+<body>
+
+<footer>
+```
+
+### 1. Header (Obligatorio)
+
+| Tipo              | Impacto en DX                                 | ¿Aparece en Changelog? |
+| :---------------- | :-------------------------------------------- | :--------------------: |
+| `feat`            | Implementación de nueva funcionalidad.        |         **Sí**         |
+| `fix`             | Resolución de un bug o regresión.             |         **Sí**         |
+| `perf`            | Optimización de recursos sin cambios lógicos. |         **Sí**         |
+| `refactor`        | Mejora de arquitectura o legibilidad.         |           No           |
+| `docs`            | Actualización de documentación técnica.       |           No           |
+| `test`            | Incremento de cobertura o fixes de testing.   |           No           |
+| `ci` / `workflow` | Ajustes en pipelines y automatización.        |           No           |
+| `chore`           | Mantenimiento de dependencias y tooling.      |           No           |
+| `style`           | Formateo de código (Prettier/Lint).           |           No           |
+| `types`           | Refinamiento de definiciones de tipos.        |           No           |
+| `polish`          | Refinamientos menores de UX/UI.               |           No           |
+
+> 💡 **Impacto en SemVer:** Cualquier commit con un `BREAKING CHANGE` en el footer forzará un incremento de versión mayor (_Major Release_), independientemente del tipo.
+
+### 2. Body (Opcional)
+
+Describe la motivación técnica del cambio. Contrasta la solución actual con el comportamiento previo para facilitar la revisión de pares (Code Review).
+
+### 3. Footer (Opcional)
+
+Espacio crítico para metadatos y gobernanza de la tarea:
+
+- **Referencias:** Vincula tickets mediante palabras clave: `Closes #123`, `Resolves #456`.
+- **Breaking Changes:** Debe iniciar con `BREAKING CHANGE:` seguido de una explicación clara sobre la pérdida de compatibilidad hacia atrás.
+
+---
+
+## 🔄 Reversiones (Reverts)
+
+En caso de rollback, el mensaje debe iniciar con `revert:`, seguido del header original. Es imperativo incluir el hash del commit afectado en el cuerpo: `This reverts commit <hash>`.
+
+## ✍️ Firmas y Trazabilidad (DCO)
+
+Se fomenta el uso de trailers estándar de Git como `Co-authored-by:` para dar crédito a colaboraciones múltiples. La firma `Signed-off-by:` garantiza el cumplimiento con el Developer Certificate of Origin si el flujo de trabajo lo requiere.
+
+© 2010-2026 Andrés Antonio Cardoso — Todos los derechos reservados

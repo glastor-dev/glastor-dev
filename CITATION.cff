@@ -1,17 +1,22 @@
 cff-version: 1.2.0
-message: "If you use this project, please cite it."
+message: "If you use this software, please cite it as below."
 title: "GLASTOR README Generator"
 type: software
-version: "1.0.0"
-date-released: "2025-12-26"
+version: "2.1.0"
+date-released: "2026-01-06"
 authors:
-  - name: "Andrés Antonio Cardoso"
-repository-code: "https://github.com/glastor-dev/glastor-dev"
-url: "https://github.com/glastor-dev/glastor-dev"
-license: "GPL-3.0-only"
+  - family-names: "Cardoso"
+    given-names: "Andrés Antonio"
+    email: "glastor.info@gmail.com"
+repository-code: "https://github.com/glastor-dev/glastor-deno"
+url: "https://github.com/glastor-dev/glastor-deno"
+license: GPL-3.0-only
 keywords:
+  - Deno
+  - TypeScript
   - README
-  - generator
-  - documentation
-  - Jinja2
+  - Documentation
+  - Automation
   - CLI
+  - Cliffy
+abstract: "Professional README generator for Deno projects. Features interactive configuration, robust validation, and automatic documentation synchronization via GitHub Actions."

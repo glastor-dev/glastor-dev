@@ -35,65 +35,69 @@ export interface UserConfig {
 
 export async function loadUserConfig(projectRoot: string): Promise<UserConfig> {
   const path = join(projectRoot, ".readmegen.json");
-  if (!(await exists(path))) {
-    return {
-      exclude: [".git", "node_modules", "dist", "build"],
-      includeExamples: true,
-      badgeStyle: "for-the-badge",
-    };
-  }
-
-  const text = await Deno.readTextFile(path);
-  const data = parseJsonc(text) as Record<string, unknown>;
-
-  const repoUrl = asString((data as any).repoUrl);
-  const repo = asString(data.repo) ?? (repoUrl ? parseGitHubRepoFromUrl(repoUrl) : undefined);
-
-  return {
-    projectName: asString(data.projectName),
-    description: asString(data.description),
-    repo,
-    repoUrl,
-    defaultBranch: asString((data as any).defaultBranch),
-    ciWorkflow: asString((data as any).ciWorkflow),
-    license: asString(data.license),
-    exclude: asStringArray(data.exclude),
-    includeExamples: asBoolean(data.includeExamples),
-    badgeStyle: asString(data.badgeStyle),
-    contributing: asString(data.contributing),
-    sections: isRecord(data.sections)
-      ? {
-        installation: asBoolean((data.sections as any).installation),
-        api: asBoolean((data.sections as any).api),
-        contributing: asBoolean((data.sections as any).contributing),
-        license: asBoolean((data.sections as any).license),
-      }
-      : undefined,
-    api: isRecord((data as any).api)
-      ? {
-        include: asStringArray(((data as any).api as any).include),
-        exclude: asStringArray(((data as any).api as any).exclude),
-        hideInternal: asBoolean(((data as any).api as any).hideInternal),
-      }
-      : undefined,
-    sanitize: isRecord((data as any).sanitize)
-      ? {
-        forceBannerFirst: asBoolean(((data as any).sanitize as any).forceBannerFirst),
-        bannerLine: asString(((data as any).sanitize as any).bannerLine),
-      }
-      : undefined,
-    strict: asBoolean((data as any).strict),
-    customSections: Array.isArray(data.customSections)
-      ? data.customSections
-        .filter((x) => isRecord(x))
-        .map((x) => ({
-          title: asString((x as any).title) ?? "",
-          content: asString((x as any).content) ?? "",
-          position: asString((x as any).position),
-        }))
-        .filter((x) => x.title && x.content)
-      : undefined,
+  const defaultConfig: UserConfig = {
+    exclude: [".git", "node_modules", "dist", "build"],
+    includeExamples: true,
+    badgeStyle: "for-the-badge",
   };
+
+  if (!(await exists(path))) return defaultConfig;
+
+  try {
+    const text = await Deno.readTextFile(path);
+    const data = parseJsonc(text) as any;
+
+    // Validación básica Pro: asegurar tipos correctos
+    validateConfig(data);
+
+    const repoUrl = asString(data.repoUrl);
+    const repo = asString(data.repo) ?? (repoUrl ? parseGitHubRepoFromUrl(repoUrl) : undefined);
+
+    return {
+      ...defaultConfig,
+      projectName: asString(data.projectName),
+      description: asString(data.description),
+      repo,
+      repoUrl,
+      defaultBranch: asString(data.defaultBranch),
+      ciWorkflow: asString(data.ciWorkflow),
+      license: asString(data.license),
+      exclude: asStringArray(data.exclude) ?? defaultConfig.exclude,
+      includeExamples: asBoolean(data.includeExamples) ?? defaultConfig.includeExamples,
+      badgeStyle: asString(data.badgeStyle) ?? defaultConfig.badgeStyle,
+      contributing: asString(data.contributing),
+      sections: isRecord(data.sections) ? data.sections : undefined,
+      api: isRecord(data.api) ? data.api : undefined,
+      sanitize: isRecord(data.sanitize) ? data.sanitize : undefined,
+      strict: asBoolean(data.strict),
+      customSections: validateCustomSections(data.customSections),
+    };
+  } catch (e) {
+    throw new Error(
+      `Invalid configuration in .readmegen.json: ${e instanceof Error ? e.message : String(e)}`,
+    );
+  }
+}
+
+function validateConfig(config: any) {
+  if (config.exclude && !Array.isArray(config.exclude)) {
+    throw new Error("'exclude' must be an array of strings.");
+  }
+  if (config.sections && !isRecord(config.sections)) {
+    throw new Error("'sections' must be an object.");
+  }
+}
+
+function validateCustomSections(sections: any) {
+  if (!Array.isArray(sections)) return undefined;
+  return sections
+    .filter(isRecord)
+    .map((s: any) => ({
+      title: asString(s.title) || "",
+      content: asString(s.content) || "",
+      position: asString(s.position),
+    }))
+    .filter((s) => s.title && s.content);
 }
 
 function asString(v: unknown): string | undefined {
@@ -105,29 +109,21 @@ function asBoolean(v: unknown): boolean | undefined {
 }
 
 function asStringArray(v: unknown): string[] | undefined {
-  return Array.isArray(v) ? v.filter((x) => typeof x === "string") : undefined;
+  return Array.isArray(v) ? v.filter((i) => typeof i === "string") as string[] : undefined;
 }
 
-function isRecord(v: unknown): v is Record<string, unknown> {
+function isRecord(v: unknown): v is Record<string, any> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
 }
 
 function parseGitHubRepoFromUrl(url: string): string | undefined {
-  // https://github.com/owner/repo(.git)
   try {
     const u = new URL(url);
     if (u.hostname !== "github.com") return undefined;
-
     const parts = u.pathname.replace(/^\/+/, "").replace(/\.git$/, "").split("/");
-    if (parts.length < 2) return undefined;
-    return `${parts[0]}/${parts[1]}`;
-  } catch {
-    // not a URL
-  }
+    if (parts.length >= 2) return `${parts[0]}/${parts[1]}`;
+  } catch { /* ignore */ }
 
-  // git@github.com:owner/repo(.git)
   const m = url.match(/^git@github\.com:([^/]+)\/([^\s]+?)(?:\.git)?$/);
-  if (m) return `${m[1]}/${m[2]}`;
-
-  return undefined;
+  return m ? `${m[1]}/${m[2]}` : undefined;
 }

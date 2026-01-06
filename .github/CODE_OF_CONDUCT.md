@@ -1,87 +1,71 @@
-# Código de Conducta — GLASTOR README Generator
+# 🛡️ Protocolo de Gobernanza y Colaboración
 
-## Nuestro Compromiso
+## 1. El Estándar DX y Excelencia Humana
 
-Nos comprometemos a que la participación en esta comunidad sea una experiencia libre de acoso para todas las personas, independientemente de:
+`**GLASTOR-DEV** la division de desarrollo de GLASTOR®` no es solo código; es un ecosistema de ingeniería de alto rendimiento. Nuestra misión es escalar soluciones técnicas manteniendo una Developer Experience (DX) excepcional. Este protocolo garantiza que la colaboración sea tan robusta y predecible como nuestro stack tecnológico, fomentando un entorno libre de fricciones donde la competencia técnica y el respeto profesional converjan.
 
-- Edad, tamaño corporal, discapacidad visible o invisible
-- Etnia, características sexuales, identidad y expresión de género
-- Nivel de experiencia, educación, estatus socioeconómico
-- Nacionalidad, apariencia, raza, casta, color, religión
-- Orientación sexual o identidad
+## 2. Pilares de la Ingeniería de Software Sostenible
 
-Prometemos actuar e interactuar de manera que contribuya a una comunidad abierta, acogedora, diversa, inclusiva y saludable.
+Para mantener la integridad de nuestra arquitectura y comunidad, exigimos adherencia a los siguientes estándares:
 
-## Estándares de Comportamiento
+### ⚡ Colaboración de Alto Impacto
 
-### Conducta positiva
+- **Empatía Técnica y Peer Review:** Abordamos las revisiones de código y discusiones de arquitectura con rigor técnico pero absoluta cortesía. Priorizamos la calidad del software sobre el ego del autor.
+- **Accountability Transparente:** Reconocemos errores de lógica o de comunicación de forma inmediata, transformándolos en oportunidades de optimización y documentación.
+- **Feedback Basado en Datos:** Todas las propuestas deben estar fundamentadas en benchmarks, mejores prácticas o patrones de diseño establecidos, evitando sesgos subjetivos.
 
-- Empatía y amabilidad hacia otras personas
-- Respeto por opiniones y experiencias diversas
-- Dar y aceptar retroalimentación constructiva
-- Asumir responsabilidad por errores y aprender de ellos
-- Priorizar el bienestar de la comunidad
+### 🚫 Limitaciones Técnicas y Sociales (Cero Tolerancia)
 
-### Conducta inaceptable
+- **Hostigamiento y Toxicidad:** Cualquier lenguaje que comprometa la seguridad psicológica del equipo será mitigado de inmediato.
+- **Sabotaje de Discusiones:** El ruido, el trolling y las interrupciones malintencionadas en issues o PRs degradan la eficiencia del proyecto y no serán permitidos.
+- **Vulneración de la Privacidad (Doxxing):** La seguridad de nuestros contribuidores es crítica. La divulgación de datos privados conlleva la revocación permanente de acceso.
 
-- Lenguaje o imaginería sexualizada, o avances sexuales no deseados
-- Comentarios trolls, insultos o ataques personales
-- Acoso público o privado, intimidación o persecución
-- Publicar información privada de terceros sin consentimiento (doxxing)
-- Cualquier conducta impropia en entornos profesionales
+## 3. Gobernanza y Compliance
 
-## Responsabilidades de Cumplimiento
+Los maintainers de Supernova actúan como el consejo de arquitectura y moderación. Es nuestra responsabilidad estratégica:
 
-Los responsables del mantenimiento del proyecto son quienes aplican este Código de Conducta. Se reservan el derecho y la responsabilidad de:
+- Garantizar una mediación imparcial en conflictos técnicos.
+- Moderar contribuciones que no cumplan con el estándar de calidad o conducta.
+- Ejecutar medidas correctivas alineadas con la salud a largo plazo del repositorio.
 
-- Aclarar normas cuando sea necesario
-- Remover, editar o rechazar contribuciones (issues, comentarios, PRs) que violen este código
-- Tomar medidas temporales o permanentes ante comportamientos inapropiados
+## 4. Alcance Operativo
 
-## Alcance
+Este framework es vinculante en todos los espacios oficiales de Supernova en GitHub y en cualquier entorno donde se represente formalmente al proyecto (Conferencias, Meetups, StackOverflow).
 
-Este Código de Conducta aplica a:
+## 5. Protocolo de Respuesta a Incidentes (IRP)
 
-- Espacios comunitarios del proyecto (por ejemplo: issues, PRs, discusiones y comentarios en GitHub)
-- Representación pública del proyecto (cuentas oficiales, eventos relacionados)
+Ante cualquier desviación de estos estándares, active el protocolo de notificación inmediata:
 
-## Cómo Reportar
+📧 **Canal de Integridad:** [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
 
-Si experimentas o presencias una violación, por favor repórtala por email:
+**Requisitos del Reporte:**
 
-- 📧 Email: [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+- Contexto detallado con enlaces (URLs) a la infracción.
+- Identificación de las partes involucradas.
+- Evidencia técnica (logs, capturas de pantalla o historial de commits).
 
-Sugerencia de información útil (si aplica):
+**SLA de Respuesta:** El equipo de moderación acusará recibo y procesará el caso en un plazo máximo de **72 horas laborales**, bajo estricta confidencialidad.
 
-- Qué ocurrió y dónde ocurrió (link)
-- Fechas/horas aproximadas
-- Evidencia (capturas, logs, enlaces)
-- Si hay riesgos inmediatos para alguien
+## 6. Matriz de Resolución de Conflictos (Enforcement)
 
-Los reportes se investigan de forma confidencial y justa. Intentaremos responder en un plazo razonable (habitualmente dentro de 72 horas).
+La gobernanza aplicará un sistema de escalado proporcional a la gravedad de la incidencia:
 
-## Guías de Cumplimiento (Enforcement Guidelines)
+1. **Corrección Técnica:** Notificación privada para rectificar el comportamiento.
+2. **Advertencia Formal:** Registro documentado de la falta con restricciones temporales de escritura.
+3. **Suspensión de Privilegios:** Bloqueo temporal de la capacidad de interactuar con el ecosistema Supernova.
+4. **Revocación Permanente:** Expulsión definitiva por infracciones críticas o degradación recurrente del entorno.
 
-Las acciones dependerán del contexto y severidad. Ejemplos de medidas:
+## 7. Directrices sobre IA y Code Integrity
 
-1. **Corrección**: aviso privado (y/o pedido de edición/eliminación) y guía para ajustar el comportamiento.
-2. **Advertencia**: advertencia formal; puede incluir restricción temporal de interacción.
-3. **Suspensión temporal**: bloqueo o limitación por un período definido.
-4. **Expulsión permanente**: para violaciones graves o recurrentes.
-
-## Uso de Inteligencia Artificial
-
-- Declara explícitamente el uso de herramientas de IA en contribuciones sustantivas.
-- No aportes contenido que infrinja derechos de autor o licencias de terceros.
+- **Transparencia:** Las contribuciones sustanciales generadas mediante IA (LLMs) deben declararse explícitamente en el PR.
+- **Compliance de IP:** Es responsabilidad del colaborador asegurar que el código generado no infrinja licencias de terceros, manteniendo la integridad legal del repositorio.
 
 ---
 
-## Atribución
+### Atribución y Vigencia
 
-Adaptado del [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html),
-con inspiración en:
+Este documento integra el [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html) con marcos de gobernanza de **Mozilla** y estándares de **OpenSSF**.
 
-- [Mozilla's Enforcement Ladder](https://github.com/mozilla/diversity)
-- [OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org)
+**Última revisión:** `2025-12-25` | **Versión:** `2.0.0-stable`
 
-Última actualización: `2025-12-25`
+© 2010-2026 Andrés Antonio Cardoso — Todos los derechos reservados

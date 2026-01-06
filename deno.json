@@ -1,7 +1,18 @@
 {
-  "name": "readmegen",
-  "version": "0.1.0",
+  "name": "@glastor-dev/readmegen",
+  "version": "0.2.1",
+  "description": "Professional README Generator for Deno projects with interactive CLI and GitHub Actions integration.",
+  "license": "GPL-3.0-only",
   "exports": "./src/mod.ts",
+  "publish": {
+    "include": [
+      "LICENSE",
+      "README.md",
+      "deno.json",
+      "src/**/*.ts",
+      "src/templates/*.md"
+    ]
+  },
   "nodeModulesDir": "auto",
   "lint": {
     "rules": {
@@ -38,9 +49,9 @@
     "proseWrap": "preserve"
   },
   "tasks": {
-    "readme": "deno run -A src/main.ts --template modern --output README.md",
-    "readme:force": "deno run -A src/main.ts --template modern --output README.md --force",
-    "readme:check": "deno run -A src/main.ts --template modern --output README.generated.md",
+    "readme": "deno run -A src/main.ts --output README.md",
+    "readme:force": "deno run -A src/main.ts --output README.md --force",
+    "readme:check": "deno run -A src/main.ts --output README.generated.md --force",
     "lint": "deno lint",
     "fmt": "deno fmt",
     "fmt:check": "deno fmt --check",

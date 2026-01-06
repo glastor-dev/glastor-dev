@@ -48,55 +48,37 @@ export function sanitizeGeneratedMarkdown(markdown: string): string {
   let inFence = false;
   let fenceMarker: string | null = null;
 
-  const bannerRx = /^!\[[^\]]*\]\(\/images\/banner-github\.webp\)\s*$/;
-  const trashRegexes = [
-    /^\s*export\s+interface\s+\w+\s*\{.*$/,
-    /^\s*"badgeStyle"\s*:\s*"[^"]+".*$/,
-    /^\s*import\s+type\s+\{\s*ExportInfo\s*\}.*$/,
-    /^\s*import\s+\{.*\}\s+from\s+['"].*['"];?\s*$/,
-    /^\s*import\s+.*\s+from\s+['"].*['"];?\s*$/,
-    /^\s*exports\.push\(makeExportInfo\(.*\)\);\s*$/,
+  const trashPatterns = [
+    /^\s*export\s+(interface|type|function)\s+\w+/,
+    /^\s*import\s+({[\s\w,]+}|[\w,*]+\s+as\s+[\w,*]+|[\w,*]+)\s+from\s+['"]/,
+    /^\s*["']badgeStyle["']\s*:/,
+    /^\s*exports\.push\(makeExportInfo\(.*\)\);/,
   ];
 
   function isTrashLine(line: string): boolean {
-    const normalizedLine = line.replace(/^[\uFEFF\u200B\u200C\u200D\u2060]+/, "");
-    const trimmed = normalizedLine.trim();
+    const trimmed = line.trim();
     if (!trimmed) return false;
 
-    // Heurística: líneas de TypeScript que no deberían aparecer fuera de fences
-    if (
-      trimmed.startsWith("import ") && (trimmed.includes(" from ") || trimmed.includes("from\t"))
-    ) return true;
-    if (
-      trimmed.startsWith("export ") &&
-      (trimmed.includes("interface ") || trimmed.includes("type ") || trimmed.includes("function "))
-    ) {
-      return true;
-    }
+    // Si la línea coincide con patrones conocidos de código TS/JS "basura"
+    if (trashPatterns.some((rx) => rx.test(line))) return true;
 
-    if (trashRegexes.some((rx) => rx.test(normalizedLine))) return true;
-
-    // Frases específicas que se estaban colando en README
-    const needles = [
-      "generateRepoBadges",
-      "export interface BadgesConfig",
-      "export interface RepoBadgesConfig",
-      '"badgeStyle"',
-      "Deno.readTextFile(filePath)",
-      'd.id?.type === "Identifier"',
-      'decl.type === "TsEnumDeclaration"',
-      "const decl = node.decl",
-      "if (paramMatch)",
-      "makeExportInfo(",
+    // Marcadores específicos que no deberían estar en el output final
+    const illegalTokens = [
       "{{repoBadges}}",
       "{{ciBadge}}",
+      "makeExportInfo(",
+      "Deno.readTextFile(",
     ];
-    return needles.some((n) => normalizedLine.includes(n));
+    return illegalTokens.some((token) => line.includes(token));
   }
 
   for (const line of lines) {
-    const normalizedLine = line.replace(/^[\uFEFF\u200B\u200C\u200D\u2060]+/, "");
+    const normalizedLine = line.replace(
+      /^[\uFEFF\u200B\u200C\u200D\u2060]+/,
+      "",
+    );
     const fenceMatch = normalizedLine.match(/^\s*(```+|~~~+)\s*/);
+
     if (fenceMatch) {
       const marker = fenceMatch[1];
       if (!inFence) {
@@ -114,17 +96,15 @@ export function sanitizeGeneratedMarkdown(markdown: string): string {
     out.push(normalizedLine);
   }
 
-  // Asegurar que el banner quede en la primera línea (requisito del README de perfil)
+  const bannerRx = /^!\[[^\]]*\]\(\/images\/banner-github\.webp\)\s*$/;
   const bannerIndex = out.findIndex((l) => bannerRx.test(l.trim()));
   if (bannerIndex >= 0) {
     const bannerLine = out[bannerIndex].trim();
     out.splice(bannerIndex, 1);
-    // Eliminar líneas vacías al principio
     while (out.length && out[0].trim() === "") out.shift();
-    out.unshift("", bannerLine);
-    out.shift();
-    // Asegurar una línea en blanco después del banner
-    if (out.length >= 2 && out[1].trim() !== "") out.splice(1, 0, "");
+    out.unshift("", bannerLine, "");
+    // Limpieza de extra enters
+    if (out[0] === "") out.shift();
   }
 
   return out.join("\n");

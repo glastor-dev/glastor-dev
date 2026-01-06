@@ -45,16 +45,16 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
 
   const projectName = userConfig.projectName ?? basenameSafe(options.projectRoot);
 
-  const denoConfig = await readDenoConfig(options.projectRoot);
-  const importMap = await readImportMap(options.projectRoot);
-
-  const workflows = await detectWorkflows(options.projectRoot);
-  const tests = await detectTests(options.projectRoot);
-  const projectFiles = await detectProjectFiles(options.projectRoot);
-
-  const importAnalysis = await analyzeImports(options.projectRoot, {
-    exclude: userConfig.exclude,
-  });
+  const [denoConfig, importMap, workflows, tests, projectFiles, importAnalysis] = await Promise.all(
+    [
+      readDenoConfig(options.projectRoot),
+      readImportMap(options.projectRoot),
+      detectWorkflows(options.projectRoot),
+      detectTests(options.projectRoot),
+      detectProjectFiles(options.projectRoot),
+      analyzeImports(options.projectRoot, { exclude: userConfig.exclude }),
+    ],
+  );
 
   const detectedConfigFiles: string[] = [];
   if (denoConfig) detectedConfigFiles.push("deno.json/deno.jsonc");
@@ -128,7 +128,7 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
   const contributing = userConfig.contributing ?? "Contributions welcome. Open an issue or a PR.";
 
   const dependencies = formatDependencies(importAnalysis, detectedConfigFiles, projectFiles);
-  const ci = workflows.length > 0 ? workflows.map((w) => `- ${w}`).join("\n") : "";
+  const ci = workflows.map((w) => `- ${w}`).join("\n");
 
   const sections = {
     installation: userConfig.sections?.installation !== false,
@@ -202,32 +202,20 @@ function basenameSafe(path: string): string {
 }
 
 function formatDependencies(
-  importAnalysis: {
-    std: string[];
-    thirdParty: string[];
-  },
+  importAnalysis: { std: string[]; thirdParty: string[] },
   configFiles: string[],
   projectFiles: string[],
 ): string {
-  const lines: string[] = [];
+  const sections = [
+    { title: "### Config files", items: configFiles },
+    { title: "### Project files", items: projectFiles },
+    { title: "### Standard Library", items: importAnalysis.std },
+    { title: "### Third-party", items: importAnalysis.thirdParty },
+  ];
 
-  lines.push("### Config files");
-  lines.push(configFiles.length ? configFiles.map((f) => `- ${f}`).join("\n") : "- (none)");
-
-  lines.push("\n### Project files");
-  lines.push(projectFiles.length ? projectFiles.map((f) => `- ${f}`).join("\n") : "- (none)");
-
-  lines.push("### Standard Library");
-  lines.push(
-    importAnalysis.std.length ? importAnalysis.std.map((i) => `- ${i}`).join("\n") : "- (none)",
-  );
-
-  lines.push("\n### Third-party");
-  lines.push(
-    importAnalysis.thirdParty.length
-      ? importAnalysis.thirdParty.map((i) => `- ${i}`).join("\n")
-      : "- (none)",
-  );
-
-  return lines.join("\n");
+  return sections
+    .map(({ title, items }) =>
+      `${title}\n${items.length ? items.map((f) => `- ${f}`).join("\n") : "- (none)"}`
+    )
+    .join("\n\n");
 }

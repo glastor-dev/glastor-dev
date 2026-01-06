@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Deno
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
 
@@ -31,10 +31,10 @@ jobs:
         run: deno cache --lock=deno.lock src/main.ts
 
       - name: Format (check)
-        run: deno fmt --check
+        run: deno task fmt:check
 
       - name: Lint
-        run: deno lint
+        run: deno task lint
 
       - name: Type check
         run: deno check --lock=deno.lock src/main.ts
@@ -43,7 +43,7 @@ jobs:
         run: deno test -A --lock=deno.lock
 
       - name: Generate README to temp
-        run: deno run -A --lock=deno.lock src/main.ts --template modern --output README.generated.md
+        run: deno task readme:check
 
       - name: Fail if README is outdated
         run: |
