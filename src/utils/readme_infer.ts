@@ -14,6 +14,11 @@ export async function inferDescriptionFromReadme(readmePath: string): Promise<st
     if (t.startsWith("![") || t.startsWith("[![")) continue;
     if (t.startsWith("<")) continue;
     if (t.includes("{{") && t.includes("}}")) continue;
+    
+    // Saltamos elementos de lista comunes y preguntas (como "¿Quieres contribuir?")
+    if (/^[\d*-]/.test(t)) continue;
+    if (t.startsWith("¿") || t.startsWith("?")) continue;
+    
     if (t.length < 20) continue;
     return t;
   }

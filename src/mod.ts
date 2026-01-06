@@ -32,7 +32,37 @@ export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
     readmePath: readmeSourcePath,
   });
 
-  const markdown = renderTemplate(template, analysis.templateData);
+  const projectName = analysis.templateData.projectName;
+  const badges = analysis.templateData.badges;
+  const apiDocs = analysis.templateData.apiDocs;
+  const dependencies = analysis.templateData.dependencies;
+
+  let markdown = renderTemplate(template, analysis.templateData);
+
+  // Lógica de Inyección Inteligente (si no se usaron placeholders)
+  if (!template.includes("{{badges}}") && badges) {
+    // Si ya hay badges manuales, filtramos los nuestros para no duplicar
+    const filteredBadges = badges.split(/\s+/).filter(b => {
+      const match = b.match(/!\[.*?\]\((.*?)\)/);
+      if (!match) return true;
+      const url = match[1];
+      return !markdown.includes(url);
+    }).join(" ");
+
+    if (filteredBadges.trim()) {
+      // Inyectar badges después del primer H1
+      markdown = markdown.replace(/^(# .*)(\r?\n|$)/m, `$1\n\n${filteredBadges}\n`);
+    }
+  }
+
+  if (!template.includes("{{apiDocs}}") && apiDocs) {
+    markdown += `\n\n## 📖 API Documentation\n\n${apiDocs}`;
+  }
+
+  if (!template.includes("{{dependencies}}") && dependencies) {
+    markdown += `\n\n## 📦 Dependencies\n\n${dependencies}`;
+  }
+
   const cleaned = sanitizeGeneratedMarkdown(markdown);
   await Deno.writeTextFile(args.output, cleaned);
 
@@ -101,11 +131,10 @@ export function sanitizeGeneratedMarkdown(markdown: string): string {
   if (bannerIndex >= 0) {
     const bannerLine = out[bannerIndex].trim();
     out.splice(bannerIndex, 1);
-    while (out.length && out[0].trim() === "") out.shift();
-    out.unshift("", bannerLine, "");
+    out.unshift(bannerLine, "");
     // Limpieza de extra enters
     if (out[0] === "") out.shift();
   }
 
-  return out.join("\n");
+  return out.join("\n").replace(/\n{3,}/g, "\n\n").trim() + "\n";
 }
