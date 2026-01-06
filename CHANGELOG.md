@@ -38,6 +38,28 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 
 ---
 
+## [2.1.0] - 2026-01-06
+
+### ✨ Added
+
+- **Smart Injection 🧠** - Automatically injects technical components (Badges, API, Dependencies) into the README if placeholders are missing in `README.profile.md`.
+- **Collapsible Technical Sections** - Uses `<details>` blocks for API Documentation and Dependencies to keep the README clean.
+- **Smart Layouts** - Featured repositories now support a premium 2-column grid layout.
+- **Robust Inference** - Improved project description extraction that filtered list items and decorative elements.
+
+### 🔄 Changed
+
+- **Profile-First Workflow** - Optimized `README.profile.md` handling to ensure 100% manual design fidelity.
+- **Enhanced Sanitization** - Intelligent badge deduplication to avoid repeating manual badges in generated sections.
+
+### 🚀 Pro Features (Consolidated)
+
+- Full CLI migration to **Cliffy** for professional DX.
+- Interactive `init` wizard for project bootstrapping.
+- Professional logging system and schema-validated configuration.
+
+---
+
 ## [Unreleased]
 
 ### 🔮 Planned Features
