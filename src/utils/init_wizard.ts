@@ -17,7 +17,6 @@ export async function runInitWizard(projectRoot: string) {
 
   const repo = await Input.prompt({
     message: "GitHub Repository (owner/repo):",
-    placeholder: "glastor-dev/glastor-deno",
   });
 
   const badgeStyle = await Select.prompt({
