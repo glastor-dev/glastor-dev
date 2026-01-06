@@ -2,8 +2,8 @@ import { analyzeProject } from "./project/analyze.ts";
 import { loadTemplate } from "./templates/load.ts";
 import { renderTemplate } from "./templates/render.ts";
 import { ensureWritableOutput } from "./utils/file_system.ts";
-import { exists } from "jsr:@std/fs/exists";
-import { join } from "jsr:@std/path/join";
+import { exists } from "jsr:@std/fs@^1.0.0/exists";
+import { join } from "jsr:@std/path@^1.0.0/join";
 
 export type TemplateName = "minimal" | "modern" | "detailed";
 

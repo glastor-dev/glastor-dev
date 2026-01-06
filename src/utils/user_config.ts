@@ -1,6 +1,6 @@
-import { exists } from "jsr:@std/fs/exists";
-import { join } from "jsr:@std/path/join";
-import { parse as parseJsonc } from "jsr:@std/jsonc/parse";
+import { exists } from "jsr:@std/fs@^1.0.0/exists";
+import { join } from "jsr:@std/path@^1.0.0/join";
+import { parse as parseJsonc } from "jsr:@std/jsonc@^1.0.0/parse";
 
 export interface UserConfig {
   projectName?: string;

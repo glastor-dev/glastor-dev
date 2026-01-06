@@ -1,4 +1,4 @@
-import { exists } from "jsr:@std/fs/exists";
+import { exists } from "jsr:@std/fs@^1.0.0/exists";
 
 export async function inferDescriptionFromReadme(readmePath: string): Promise<string | null> {
   if (!(await exists(readmePath))) return null;
