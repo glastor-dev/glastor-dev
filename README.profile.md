@@ -93,13 +93,32 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 ## 📌 Repositorios Destacados
 
-[![Supernova](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=supernova&theme=transparent)](https://github.com/glastor-dev/supernova)
-
-[![Kraken](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=kraken&theme=transparent)](https://github.com/glastor-dev/kraken)
-
-[![QR Prp](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=qr-pro&theme=transparent)](https://github.com/glastor-dev/qr-pro)
-
-[![Legacy-Lab](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=legacy-lab&theme=transparent)](https://github.com/glastor-dev/legacy-lab)
+<table border="0">
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/supernova">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=supernova&theme=transparent" alt="Supernova" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/kraken">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=kraken&theme=transparent" alt="Kraken" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/qr-pro">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=qr-pro&theme=transparent" alt="QR Pro" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/legacy-lab">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=legacy-lab&theme=transparent" alt="Legacy Lab" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 

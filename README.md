@@ -95,13 +95,32 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 ## 📌 Repositorios Destacados
 
-[![Supernova](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=supernova&theme=transparent)](https://github.com/glastor-dev/supernova)
-
-[![Kraken](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=kraken&theme=transparent)](https://github.com/glastor-dev/kraken)
-
-[![QR Prp](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=qr-pro&theme=transparent)](https://github.com/glastor-dev/qr-pro)
-
-[![Legacy-Lab](https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=legacy-lab&theme=transparent)](https://github.com/glastor-dev/legacy-lab)
+<table border="0">
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/supernova">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=supernova&theme=transparent" alt="Supernova" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/kraken">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=kraken&theme=transparent" alt="Kraken" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/glastor-dev/qr-pro">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=qr-pro&theme=transparent" alt="QR Pro" />
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/glastor-dev/legacy-lab">
+        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=legacy-lab&theme=transparent" alt="Legacy Lab" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -183,19 +202,19 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 <details>
   <summary><strong>📖 API Documentation</strong></summary>
 
-### /home/runner/work/glastor-dev/glastor-dev/bench/template_and_sanitize_bench.ts
+### C:\Users\Andres\Desktop\glastor-deno\bench\template_and_sanitize_bench.ts
 #### BadgesConfig
 - Type: interface
 
 #### KeepThis
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/api.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\api.ts
 #### generateApiDocs
 - Type: function
 - Signature: `generateApiDocs(exports: unknown[]): string`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/badges.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\badges.ts
 #### BadgesConfig
 - Type: interface
 
@@ -210,7 +229,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### RepoBadgesConfig
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/examples.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\examples.ts
 #### ExamplesOptions
 - Type: interface
 
@@ -221,7 +240,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 - Type: function (async)
 - Signature: `async generateExamples(projectRoot: string, exports: unknown[], options: unknown = …): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/toc.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\toc.ts
 #### generateToc
 - Type: function
 - Signature: `generateToc(options: unknown): string`
@@ -229,7 +248,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TocOptions
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/mod.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\mod.ts
 #### generateReadme
 - Type: function (async)
 - Signature: `async generateReadme(args: unknown): unknown`
@@ -244,7 +263,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TemplateName
 - Type: type
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/deno_json.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\deno_json.ts
 #### DenoConfig
 - Type: interface
 
@@ -252,7 +271,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 - Type: function (async)
 - Signature: `async readDenoConfig(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/import_map.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\import_map.ts
 #### ImportMap
 - Type: interface
 
@@ -260,7 +279,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 - Type: function (async)
 - Signature: `async readImportMap(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/imports.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\imports.ts
 #### analyzeImports
 - Type: function (async)
 - Signature: `async analyzeImports(projectRoot: string, options: unknown = …): unknown`
@@ -271,12 +290,12 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### ImportAnalysis
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/project_files.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\project_files.ts
 #### detectProjectFiles
 - Type: function (async)
 - Signature: `async detectProjectFiles(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\source_code.ts
 #### ExportInfo
 - Type: interface
 
@@ -297,12 +316,12 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### JSDocParam
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code_ast.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\source_code_ast.ts
 #### extractExportsAst
 - Type: function (async)
 - Signature: `async extractExportsAst(filePath: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/tests.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\tests.ts
 #### detectTests
 - Type: function (async)
 - Signature: `async detectTests(projectRoot: string): unknown`
@@ -310,12 +329,12 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TestDetection
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/workflows.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\workflows.ts
 #### detectWorkflows
 - Type: function (async)
 - Signature: `async detectWorkflows(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/project/analyze.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\project\analyze.ts
 #### analyzeProject
 - Type: function (async)
 - Signature: `async analyzeProject(options: unknown): unknown`
@@ -329,27 +348,27 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TemplateData
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/file_system.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\file_system.ts
 #### ensureWritableOutput
 - Type: function (async)
 - Signature: `async ensureWritableOutput(outputPath: string, options: unknown): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/init_wizard.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\init_wizard.ts
 #### runInitWizard
 - Type: function (async)
 - Signature: `async runInitWizard(projectRoot: string)`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/logger.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\logger.ts
 #### Logger
 - Type: const
 - Signature: `const Logger`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/readme_infer.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\readme_infer.ts
 #### inferDescriptionFromReadme
 - Type: function (async)
 - Signature: `async inferDescriptionFromReadme(readmePath: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/user_config.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\user_config.ts
 #### loadUserConfig
 - Type: function (async)
 - Signature: `async loadUserConfig(projectRoot: string): unknown`
@@ -357,7 +376,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### UserConfig
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/test/source_code_ast_test.ts
+### C:\Users\Andres\Desktop\glastor-deno\test\source_code_ast_test.ts
 #### hello
 Greets a person\n * @param name Nombre\n * @returns string\n
 - Type: function
