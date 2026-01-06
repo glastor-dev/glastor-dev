@@ -1,10 +1,10 @@
 ![Glastor banner](/images/banner-github.webp)
 
-# C:\Users\Andres\Desktop\glastor-deno
+# glastor-dev
 
 ![Deno](https://img.shields.io/badge/deno-%23000000.svg?style=flat-square&logo=deno&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white)
-![Deno Version](https://img.shields.io/badge/deno-%5E0.1.0-green?style=flat-square&logo=deno)
+![Deno Version](https://img.shields.io/badge/deno-%5E0.2.1-green?style=flat-square&logo=deno)
 ![CI](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master)
 
 ¿Quieres contribuir? Empieza por aquí:
@@ -87,19 +87,19 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 
 © 2010-2026 Andrés Antonio Cardoso — Todos los derechos reservados.
 
-### C:\Users\Andres\Desktop\glastor-deno\bench\template_and_sanitize_bench.ts
+### /home/runner/work/glastor-dev/glastor-dev/bench/template_and_sanitize_bench.ts
 #### BadgesConfig
 - Type: interface
 
 #### KeepThis
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\generators\api.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/generators/api.ts
 #### generateApiDocs
 - Type: function
 - Signature: `generateApiDocs(exports: unknown[]): string`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\generators\badges.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/generators/badges.ts
 #### BadgesConfig
 - Type: interface
 
@@ -114,7 +114,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### RepoBadgesConfig
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\generators\examples.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/generators/examples.ts
 #### ExamplesOptions
 - Type: interface
 
@@ -125,7 +125,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 - Type: function (async)
 - Signature: `async generateExamples(projectRoot: string, exports: unknown[], options: unknown = …): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\generators\toc.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/generators/toc.ts
 #### generateToc
 - Type: function
 - Signature: `generateToc(options: unknown): string`
@@ -133,7 +133,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### TocOptions
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\mod.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/mod.ts
 #### generateReadme
 - Type: function (async)
 - Signature: `async generateReadme(args: unknown): unknown`
@@ -148,7 +148,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### TemplateName
 - Type: type
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\deno_json.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/deno_json.ts
 #### DenoConfig
 - Type: interface
 
@@ -156,7 +156,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 - Type: function (async)
 - Signature: `async readDenoConfig(projectRoot: string): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\import_map.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/import_map.ts
 #### ImportMap
 - Type: interface
 
@@ -164,7 +164,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 - Type: function (async)
 - Signature: `async readImportMap(projectRoot: string): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\imports.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/imports.ts
 #### analyzeImports
 - Type: function (async)
 - Signature: `async analyzeImports(projectRoot: string, options: unknown = …): unknown`
@@ -175,12 +175,12 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### ImportAnalysis
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\project_files.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/project_files.ts
 #### detectProjectFiles
 - Type: function (async)
 - Signature: `async detectProjectFiles(projectRoot: string): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\source_code.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code.ts
 #### ExportInfo
 - Type: interface
 
@@ -201,12 +201,12 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### JSDocParam
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\source_code_ast.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code_ast.ts
 #### extractExportsAst
 - Type: function (async)
 - Signature: `async extractExportsAst(filePath: string): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\tests.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/tests.ts
 #### detectTests
 - Type: function (async)
 - Signature: `async detectTests(projectRoot: string): unknown`
@@ -214,12 +214,12 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### TestDetection
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\parsers\workflows.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/parsers/workflows.ts
 #### detectWorkflows
 - Type: function (async)
 - Signature: `async detectWorkflows(projectRoot: string): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\project\analyze.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/project/analyze.ts
 #### analyzeProject
 - Type: function (async)
 - Signature: `async analyzeProject(options: unknown): unknown`
@@ -233,27 +233,27 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### TemplateData
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\src\utils\file_system.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/utils/file_system.ts
 #### ensureWritableOutput
 - Type: function (async)
 - Signature: `async ensureWritableOutput(outputPath: string, options: unknown): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\utils\init_wizard.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/utils/init_wizard.ts
 #### runInitWizard
 - Type: function (async)
 - Signature: `async runInitWizard(projectRoot: string)`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\utils\logger.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/utils/logger.ts
 #### Logger
 - Type: const
 - Signature: `const Logger`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\utils\readme_infer.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/utils/readme_infer.ts
 #### inferDescriptionFromReadme
 - Type: function (async)
 - Signature: `async inferDescriptionFromReadme(readmePath: string): unknown`
 
-### C:\Users\Andres\Desktop\glastor-deno\src\utils\user_config.ts
+### /home/runner/work/glastor-dev/glastor-dev/src/utils/user_config.ts
 #### loadUserConfig
 - Type: function (async)
 - Signature: `async loadUserConfig(projectRoot: string): unknown`
@@ -261,7 +261,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 #### UserConfig
 - Type: interface
 
-### C:\Users\Andres\Desktop\glastor-deno\test\source_code_ast_test.ts
+### /home/runner/work/glastor-dev/glastor-dev/test/source_code_ast_test.ts
 #### hello
 Greets a person\n * @param name Nombre\n * @returns string\n
 - Type: function
@@ -292,9 +292,7 @@ Example\n * @example\n * hello("Andres")\n
 - jsr:@std/fs/exists
 - jsr:@std/fs/walk
 - jsr:@std/jsonc/parse
-- jsr:@std/path
 - jsr:@std/path/basename
-- jsr:@std/path/dirname
 - jsr:@std/path/extname
 - jsr:@std/path/glob-to-regexp
 - jsr:@std/path/join
