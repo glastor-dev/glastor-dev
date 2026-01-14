@@ -1,14 +1,17 @@
 ![Glastor banner](/images/banner-github.webp)
 
+<!--
+  ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
+-->
 # GLASTOR® — Ingeniería de backend y arquitectura
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white) ![Deno Version](https://img.shields.io/badge/deno-%5E2.1.0-green?style=flat-square&logo=deno)
 
 ## Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps
 
-![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+![Awesome](https://img.shields.io/badge/awesome-yes-ff9000.svg?style=flat-square)
 ![Deno](https://img.shields.io/badge/deno-%23000000.svg?style=flat-square&logo=deno&logoColor=white)
-![Gitkraken](https://img.shields.io/badge/Gitkraken%20PRO-%23FE519?logo=Gitkraken&logoColor=white)
+![Gitkraken](https://img.shields.io/badge/Gitkraken%20PRO-%23179287?style=flat-square&logo=Gitkraken&logoColor=white)
 ![Archlinux](https://img.shields.io/badge/Archlinux%20PRO-%23FE9211?logo=Archlinux&logoColor=white)
 ![Stars](https://img.shields.io/github/stars/glastor-dev/glastor-dev.svg?style=flat-square)
 ![Forks](https://img.shields.io/github/forks/glastor-dev/glastor-dev.svg?style=flat-square)
@@ -35,6 +38,7 @@ Los patrocinios se pueden realizar a través de GitHub Sponsors o OpenCollective
 
 ---
 
+## 🚀 Bio & Stack
 Desarrollo de API, herramientas y automatizaciones con Python para productos y equipos (FastAPI/Django, CI/CD y Docker).
 
 ### 💼 Especialidad técnica
@@ -51,10 +55,6 @@ Desarrollo de API, herramientas y automatizaciones con Python para productos y e
 - 📝 Creación de contenido técnico y tutoriales
 - 🔧 Desarrollo de tooling y automatizaciones
 - 🎨 Diseño de interfaces y experiencias de usuario
-
-📧 Para presupuestos o colaboraciones: [Email](mailto:glastor.info@gmail.com) o [Telegram](https://t.me/zerhocool).
-
-Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) • [Código de Conducta](.github/CODE_OF_CONDUCT.md)
 
 <details>
   <summary><strong>EXTRAS: Toolbox</strong></summary>
@@ -86,10 +86,34 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 ### 💻 Lenguajes y Frameworks
 
 <p align="center">
-  <a href="#">
-    <img src="https://skillicons.dev/icons?i=python,bash,html,css,js,ts,java,markdown,nodejs,latex,postman,php,svg,flask,vue,vite,nextjs,symfony,svelte,heroku,mongodb,mysql,postgresql,vercel,jest,docker,aws,ps,ai,pr,ae,linux,git,github,githubactions,gitlab,vscode" alt="Iconos de lenguajes y frameworks" />
-  </a>
+  <strong>Lenguajes &amp; Markup:</strong><br>
+  <img src="https://skillicons.dev/icons?i=python,js,ts,java,php,bash,html,css,svg,markdown,latex" alt="Lenguajes y Markup" /><br><br>
+  <strong>Frameworks &amp; Runtimes:</strong><br>
+  <img src="https://skillicons.dev/icons?i=nodejs,flask,vue,vite,nextjs,symfony,svelte" alt="Frameworks y Runtimes" /><br><br>
+  <strong>BBDD, Cloud &amp; DevOps:</strong><br>
+  <img src="https://skillicons.dev/icons?i=mongodb,mysql,postgresql,heroku,vercel,docker,aws,githubactions" alt="BBDD, Cloud & DevOps" /><br><br>
+  <strong>Herramientas &amp; Diseño:</strong><br>
+  <img src="https://skillicons.dev/icons?i=git,github,gitlab,linux,vscode,postman,jest,ps,ai,pr,ae" alt="Herramientas y Diseño" />
 </p>
+
+---
+
+## 🗺️ Roadmap 2025
+
+```mermaid
+gantt
+    title Hoja de Ruta GLASTOR-DENO
+    dateFormat  YYYY-MM-DD
+    section Core
+    CLI Migration (Cliffy)   :done,    des1, 2024-12-01, 2025-01-06
+    Smart Injection Engine   :active,  des2, 2025-01-07, 30d
+    Plugin System            :         des3, after des2, 45d
+    section Features
+    PDF Export               :         feat1, 2025-03-01, 20d
+    HTML Export              :         feat2, after feat1, 15d
+    section Community
+    Template Marketplace     :         comm1, 2025-05-01, 60d
+```
 
 ---
 
@@ -97,28 +121,12 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 <table border="0">
   <tr>
-    <td>
-      <a href="https://github.com/glastor-dev/supernova">
-        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=supernova&theme=transparent" alt="Supernova" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/glastor-dev/kraken">
-        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=kraken&theme=transparent" alt="Kraken" />
-      </a>
-    </td>
+    <td><a href="https://github.com/glastor-dev/supernova"><img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=supernova&theme=transparent" alt="Supernova" /></a></td>
+    <td><a href="https://github.com/glastor-dev/kraken"><img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=kraken&theme=transparent" alt="Kraken" /></a></td>
   </tr>
   <tr>
-    <td>
-      <a href="https://github.com/glastor-dev/qr-pro">
-        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=qr-pro&theme=transparent" alt="QR Pro" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/glastor-dev/legacy-lab">
-        <img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=legacy-lab&theme=transparent" alt="Legacy Lab" />
-      </a>
-    </td>
+    <td><a href="https://github.com/glastor-dev/qr-pro"><img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=qr-pro&theme=transparent" alt="QR Pro" /></a></td>
+    <td><a href="https://github.com/glastor-dev/legacy-lab"><img src="https://github-readme-stats-theta-woad-23.vercel.app/api/pin/?username=glastor-dev&repo=legacy-lab&theme=transparent" alt="Legacy Lab" /></a></td>
   </tr>
 </table>
 
@@ -128,28 +136,12 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 <div align="center">
 
-**Empresas que han confiado en mi trabajo:**
-
-<a href="https://www.nexperia.com">
-  <img src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png" alt="Nexperia" height="60">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://aspidcars.com">
-  <img src="https://i.postimg.cc/F1ttmqDH/Aspid.png" alt="Aspid Cars" height="60">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://rizin.re/">
-  <img src="./images/rizin.png" alt="Rizin" height="60">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://route4me.com/es">
-  <img src="./images/route4me-logo.png" alt="Route4Me" height="60">
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://neovim.io/">
-  <img src="./images/neovim-logo.png" alt="Neovim" height="60">
-</a>
-
+**Empresas que han confiado en mi trabajo:**<br>
+<a href="https://www.nexperia.com"><img src="https://i.postimg.cc/nrQznYd2/nexperia-logo.png" alt="Nexperia" height="60"></a> &nbsp;&nbsp;
+<a href="https://aspidcars.com"><img src="https://i.postimg.cc/F1ttmqDH/Aspid.png" alt="Aspid Cars" height="60"></a> &nbsp;&nbsp;
+<a href="https://rizin.re/"><img src="./images/rizin.png" alt="Rizin" height="60"></a> &nbsp;&nbsp;
+<a href="https://route4me.com/es"><img src="./images/route4me-logo.png" alt="Route4Me" height="60"></a> &nbsp;&nbsp;
+<a href="https://neovim.io/"><img src="./images/neovim-logo.png" alt="Neovim" height="60"></a><br>
 <sub>Proyectos desarrollados para estas organizaciones en infraestructura y automatización</sub>
 
 </div>
@@ -189,9 +181,11 @@ Políticas: [Soporte](.github/SUPPORT.md) • [Seguridad](.github/SECURITY.md) �
 
 </div>
 
+<p align="center">Políticas: <a href=".github/SUPPORT.md">Soporte</a> • <a href=".github/SECURITY.md">Seguridad</a> • <a href=".github/CODE_OF_CONDUCT.md">Código de Conducta</a></p>
+
 ---
 
-© 2010-2025 Andrés Antonio Cardoso — Todos los derechos reservados. 2025 GLASTOR® marca registrada en Argentina (INPI) — Reg. 4559568 (Clase 42) y 4559567 (Clase 35), 19/08/2025.
+© 2010-2026 Andrés Antonio Cardoso — Todos los derechos reservados. 2026 GLASTOR® marca registrada en Argentina (INPI) — Reg. 4559568 (Clase 42) y 4559567 (Clase 35), 19/08/2025.
 
 ![Open Source ](https://i.postimg.cc/PxWYdHPN/gplv3-with-text-136x68.png)       ![Software Freedom](https://i.postimg.cc/fb0Ygmsc/conservancy-header.png)       ![Copyleft.otg](https://i.postimg.cc/htY9rMk4/copyleftorg-green-stylized.png)
 
@@ -202,19 +196,19 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 <details>
   <summary><strong>📖 API Documentation</strong></summary>
 
-### /home/runner/work/glastor-dev/glastor-dev/bench/template_and_sanitize_bench.ts
+### C:\Users\Andres\Desktop\glastor-deno\bench\template_and_sanitize_bench.ts
 #### BadgesConfig
 - Type: interface
 
 #### KeepThis
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/api.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\api.ts
 #### generateApiDocs
 - Type: function
 - Signature: `generateApiDocs(exports: unknown[]): string`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/badges.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\badges.ts
 #### BadgesConfig
 - Type: interface
 
@@ -229,7 +223,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### RepoBadgesConfig
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/examples.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\examples.ts
 #### ExamplesOptions
 - Type: interface
 
@@ -240,7 +234,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 - Type: function (async)
 - Signature: `async generateExamples(projectRoot: string, exports: unknown[], options: unknown = …): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/generators/toc.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\generators\toc.ts
 #### generateToc
 - Type: function
 - Signature: `generateToc(options: unknown): string`
@@ -248,7 +242,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TocOptions
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/mod.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\mod.ts
 #### generateReadme
 - Type: function (async)
 - Signature: `async generateReadme(args: unknown): unknown`
@@ -263,7 +257,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TemplateName
 - Type: type
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/deno_json.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\deno_json.ts
 #### DenoConfig
 - Type: interface
 
@@ -271,7 +265,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 - Type: function (async)
 - Signature: `async readDenoConfig(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/import_map.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\import_map.ts
 #### ImportMap
 - Type: interface
 
@@ -279,7 +273,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 - Type: function (async)
 - Signature: `async readImportMap(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/imports.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\imports.ts
 #### analyzeImports
 - Type: function (async)
 - Signature: `async analyzeImports(projectRoot: string, options: unknown = …): unknown`
@@ -290,12 +284,12 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### ImportAnalysis
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/project_files.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\project_files.ts
 #### detectProjectFiles
 - Type: function (async)
 - Signature: `async detectProjectFiles(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\source_code.ts
 #### ExportInfo
 - Type: interface
 
@@ -316,12 +310,12 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### JSDocParam
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code_ast.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\source_code_ast.ts
 #### extractExportsAst
 - Type: function (async)
 - Signature: `async extractExportsAst(filePath: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/tests.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\tests.ts
 #### detectTests
 - Type: function (async)
 - Signature: `async detectTests(projectRoot: string): unknown`
@@ -329,12 +323,12 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TestDetection
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/workflows.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\parsers\workflows.ts
 #### detectWorkflows
 - Type: function (async)
 - Signature: `async detectWorkflows(projectRoot: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/project/analyze.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\project\analyze.ts
 #### analyzeProject
 - Type: function (async)
 - Signature: `async analyzeProject(options: unknown): unknown`
@@ -348,27 +342,27 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### TemplateData
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/file_system.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\file_system.ts
 #### ensureWritableOutput
 - Type: function (async)
 - Signature: `async ensureWritableOutput(outputPath: string, options: unknown): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/init_wizard.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\init_wizard.ts
 #### runInitWizard
 - Type: function (async)
 - Signature: `async runInitWizard(projectRoot: string)`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/logger.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\logger.ts
 #### Logger
 - Type: const
 - Signature: `const Logger`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/readme_infer.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\readme_infer.ts
 #### inferDescriptionFromReadme
 - Type: function (async)
 - Signature: `async inferDescriptionFromReadme(readmePath: string): unknown`
 
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/user_config.ts
+### C:\Users\Andres\Desktop\glastor-deno\src\utils\user_config.ts
 #### loadUserConfig
 - Type: function (async)
 - Signature: `async loadUserConfig(projectRoot: string): unknown`
@@ -376,7 +370,7 @@ Los datos y métricas mostrados aquí se sincronizan periódicamente con los sis
 #### UserConfig
 - Type: interface
 
-### /home/runner/work/glastor-dev/glastor-dev/test/source_code_ast_test.ts
+### C:\Users\Andres\Desktop\glastor-deno\test\source_code_ast_test.ts
 #### hello
 Greets a person\n * @param name Nombre\n * @returns string\n
 - Type: function

@@ -37,7 +37,8 @@ Implementamos un flujo de CI/CD riguroso para proteger la estabilidad de `main`:
    - Cumplimiento estricto del _Clean Code_.
    - Cobertura de tests unitarios: `deno task test`.
    - Formateo y Linting: `deno task fmt` y `deno task lint`.
-   - Actualización sincrónica de la documentación vía `README.profile.md`.
+   - **IMPORTANTE:** No edites `README.md` directamente. Edita `README.profile.md` y ejecuta el generador.
+   - Actualización sincrónica de la documentación: `deno task readme`.
 3. **Protocolo de Commits (SemVer)**
    Adoptamos _Conventional Commits_ para una trazabilidad automatizada:
 
@@ -100,8 +101,8 @@ Para discusiones arquitectónicas o consultas de infraestructura:
 
 ## Código de Conducta
 
-Este ecosistema opera bajo nuestro [Código de Conducta](.github/CODE_OF_CONDUCT.md). Fomentamos un entorno de colaboración profesional, meritocrático y respetuoso.
+Este ecosistema opera bajo nuestro [Código de Conducta](./CODE_OF_CONDUCT.md). Fomentamos un entorno de colaboración profesional, meritocrático y respetuoso.
 
-Agradecemos tu contribución a la excelencia tecnológica de Supernova.
+Agradecemos tu contribución a la excelencia tecnológica de GLASTOR-DENO.
 
 © 2010-2026 Andrés Antonio Cardoso — Todos los derechos reservados

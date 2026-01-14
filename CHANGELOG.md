@@ -38,25 +38,29 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 
 ---
 
-## [2.1.0] - 2026-01-06
+## [2.1.0] - 2025-01-06
+
+**Release Name:** "Pro Tooling & Interactive UX"
+**Release Type:** Minor (Feature Update)
 
 ### ✨ Added
 
+- **Cliffy CLI Integration:** Replaced basic argument parsing with the professional Cliffy framework.
+- **Interactive Setup Wizard (`init`):** Added a new interactive command to guide users through configuration.
 - **Smart Injection 🧠** - Automatically injects technical components (Badges, API, Dependencies) into the README if placeholders are missing in `README.profile.md`.
 - **Collapsible Technical Sections** - Uses `<details>` blocks for API Documentation and Dependencies to keep the README clean.
 - **Smart Layouts** - Featured repositories now support a premium 2-column grid layout.
-- **Robust Inference** - Improved project description extraction that filtered list items and decorative elements.
+- **Professional Logger:** Centralized logging utility with colored status icons (✔, ℹ, ➔, ✖) and consistent branding.
+- **Dynamic Profile Flow:** Introduced `README.profile.md` as the source-of-truth, allowing for a hybrid of manual content and automatic data injection.
+- **Auto-Update Automation:** New GitHub Action workflow that automatically regenerates and commits the `README.md` on code changes.
+- **Robust Schema Validation:** Implementation of a validation layer for user configuration to prevent malformed data and provide clear error feedback.
 
 ### 🔄 Changed
 
-- **Profile-First Workflow** - Optimized `README.profile.md` handling to ensure 100% manual design fidelity.
-- **Enhanced Sanitization** - Intelligent badge deduplication to avoid repeating manual badges in generated sections.
-
-### 🚀 Pro Features (Consolidated)
-
-- Full CLI migration to **Cliffy** for professional DX.
-- Interactive `init` wizard for project bootstrapping.
-- Professional logging system and schema-validated configuration.
+- **Profile-First Workflow:** Optimized `README.profile.md` handling to ensure 100% manual design fidelity.
+- **Improved Sanitization:** hardcoded patterns were replaced with flexible regex heuristics to better clean up generated Markdown.
+- **Parallel Analysis:** Optimized project analysis by running independent file system operations concurrently using `Promise.all`.
+- **Deno Task Alignment:** Standardized `deno task` commands to use the new output and template defaults.
 
 ---
 
@@ -71,28 +75,6 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 - [ ] **Plugin System** - Extensible architecture for custom generators
 - [ ] **French & German Support** - Additional language translations
 - [ ] **Auto-update Statistics** - Dynamic GitHub stats integration
-
----
-
-## [2.1.0] - 2026-01-06
-
-**Release Name:** "Pro Tooling & Interactive UX"
-**Release Type:** Minor (Feature Update)
-
-### ✨ Added
-
-- **Cliffy CLI Integration:** Replaced basic argument parsing with the professional Cliffy framework, providing structured help, versioning, and better command handling.
-- **Interactive Setup Wizard (`init`):** Added a new interactive command to guide users through the process of creating their `.readmegen.json` configuration.
-- **Professional Logger:** Centralized logging utility with colored status icons (✔, ℹ, ➔, ✖) and consistent branding.
-- **Dynamic Profile Flow:** Introduced `README.profile.md` as the source-of-truth, allowing for a hybrid of manual content and automatic data injection.
-- **Auto-Update Automation:** New GitHub Action workflow that automatically regenerates and commits the `README.md` on code changes.
-- **Robust Schema Validation:** Implementation of a validation layer for user configuration to prevent malformed data and provide clear error feedback.
-
-### 🔄 Changed
-
-- **Improved Sanitization:** hardcoded patterns were replaced with flexible regex heuristics to better clean up generated Markdown.
-- **Parallel Analysis:** Optimized project analysis by running independent file system operations concurrently using `Promise.all`.
-- **Deno Task Alignment:** Standardized `deno task` commands to use the new output and template defaults.
 
 ---
 
@@ -119,7 +101,7 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 
 ---
 
-## [2.0.0] - 2026-01-02
+## [2.0.0] - 2025-01-02
 
 **Release Name:** "Automation & Profile Template"
 **Release Type:** Major
@@ -153,7 +135,7 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 - **Markdown sanitation:** hardened sanitization to prevent accidental TS/JSON/YAML fragments from leaking into generated Markdown.
 - **HTML validity in templates:** removed/avoided stray closing tags and corrected organization/logo links.
 
-## [1.0.0] - 2025-12-20
+## [1.0.0] - 2024-12-20
 
 **Release Name:** "Genesis"
 **Release Type:** Major Stable Release
@@ -456,7 +438,7 @@ No migration required. Existing `profile.json` files work without changes.
 
 ---
 
-## [0.1.0] - 2025-08-04
+## [0.1.0] - 2024-08-04
 
 **Release Name:** "Bootstrap"
 **Release Type:** Initial Alpha Release
@@ -702,8 +684,8 @@ Example Projects: 8
 
 | Version   | Release Date | Type  | Key Features                       |
 | --------- | ------------ | ----- | ---------------------------------- |
-| **1.0.0** | 2025-12-20   | Major | CLI, Multi-lang, Validation, Tests |
-| **0.1.0** | 2025-08-04   | Alpha | Initial release, Basic generation  |
+| **1.0.0** | 2024-12-20   | Major | CLI, Multi-lang, Validation, Tests |
+| **0.1.0** | 2024-08-04   | Alpha | Initial release, Basic generation  |
 
 ---
 
@@ -836,7 +818,7 @@ Follow [Semantic Versioning](https://semver.org/):
 ## Changelog Metadata
 
 - **Format Version:** Keep a Changelog 1.1.0
-- **Last Updated:** January 6, 2026
+- **Last Updated:** January 6, 2025
 - **Maintained By:** GLASTOR Team
 - **License:** This changelog is part of the GPL-3.0 licensed project
 

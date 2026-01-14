@@ -42,7 +42,7 @@ export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
   // Lógica de Inyección Inteligente (si no se usaron placeholders)
   if (!template.includes("{{badges}}") && badges) {
     // Si ya hay badges manuales, filtramos los nuestros para no duplicar
-    const filteredBadges = badges.split(/\s+/).filter(b => {
+    const filteredBadges = badges.split(/\s+/).filter((b) => {
       const match = b.match(/!\[.*?\]\((.*?)\)/);
       if (!match) return true;
       const url = match[1];
@@ -56,11 +56,13 @@ export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
   }
 
   if (!template.includes("{{apiDocs}}") && apiDocs) {
-    markdown += `\n\n<details>\n  <summary><strong>📖 API Documentation</strong></summary>\n\n${apiDocs}\n\n</details>`;
+    markdown +=
+      `\n\n<details>\n  <summary><strong>📖 API Documentation</strong></summary>\n\n${apiDocs}\n\n</details>`;
   }
 
   if (!template.includes("{{dependencies}}") && dependencies) {
-    markdown += `\n\n<details>\n  <summary><strong>📦 Dependencies</strong></summary>\n\n${dependencies}\n\n</details>`;
+    markdown +=
+      `\n\n<details>\n  <summary><strong>📦 Dependencies</strong></summary>\n\n${dependencies}\n\n</details>`;
   }
 
   const cleaned = sanitizeGeneratedMarkdown(markdown);
