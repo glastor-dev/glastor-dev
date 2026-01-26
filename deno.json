@@ -1,6 +1,6 @@
 {
   "name": "@glastor-dev/readmegen",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Professional README Generator for Deno projects with interactive CLI and GitHub Actions integration.",
   "license": "GPL-3.0-only",
   "exports": "./src/mod.ts",

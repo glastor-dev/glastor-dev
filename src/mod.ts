@@ -2,7 +2,6 @@ import { analyzeProject } from "./project/analyze.ts";
 import { loadTemplate } from "./templates/load.ts";
 import { renderTemplate } from "./templates/render.ts";
 import { ensureWritableOutput } from "./utils/file_system.ts";
-import { exists } from "jsr:@std/fs@^1.0.0/exists";
 import { join } from "jsr:@std/path@^1.0.0/join";
 
 export type TemplateName = "minimal" | "modern" | "detailed";
@@ -16,13 +15,21 @@ export interface GenerateReadmeArgs {
 export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
   const templateName = (args.template || "modern").toLowerCase();
   const profileTemplatePath = join(Deno.cwd(), "README.profile.md");
-  const hasProfileTemplate = await exists(profileTemplatePath);
 
-  const template = hasProfileTemplate
-    ? await Deno.readTextFile(profileTemplatePath)
-    : await loadTemplate(templateName);
+  let template: string;
+  let hasProfileTemplate = false;
 
-  await ensureWritableOutput(args.output, { force: args.force });
+  try {
+    template = await Deno.readTextFile(profileTemplatePath);
+    hasProfileTemplate = true;
+  } catch (error) {
+    if (!(error instanceof Deno.errors.NotFound)) throw error;
+    template = await loadTemplate(templateName);
+  }
+
+  // Si la fuente es README.profile.md, forzar siempre la escritura de README.md
+  const forceWrite = hasProfileTemplate && args.output.trim().toLowerCase() === "readme.md";
+  await ensureWritableOutput(args.output, { force: forceWrite || args.force });
 
   // Si hay README.profile.md, lo usamos como fuente para inferir descripción.
   const readmeSourcePath = hasProfileTemplate ? profileTemplatePath : args.output;
@@ -32,7 +39,6 @@ export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
     readmePath: readmeSourcePath,
   });
 
-  const projectName = analysis.templateData.projectName;
   const badges = analysis.templateData.badges;
   const apiDocs = analysis.templateData.apiDocs;
   const dependencies = analysis.templateData.dependencies;

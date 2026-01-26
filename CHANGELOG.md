@@ -78,6 +78,29 @@ MAJOR.MINOR.PATCH (e.g., 1.0.0)
 
 ---
 
+## [2.2.0] - 2026-01-25
+
+**Release Name:** "Docker & CI/CD Automation"
+**Release Type:** Minor (Feature Update)
+
+### ✨ Added
+
+- **Soporte Docker:** Añadido `Dockerfile` para ejecutar el generador en contenedores, facilitando entornos reproducibles y portabilidad.
+- **Guía Docker:** Nuevo archivo `README.docker.md` con instrucciones para construir y ejecutar el CLI vía Docker.
+- **Workflow GitHub Actions:** Integración de workflow para build y push automático de la imagen a Docker Hub en cada push a `main`.
+- **Actualización dinámica:** El proceso de generación de `README.md` ahora puede ejecutarse completamente en Docker, incluyendo badges y métricas.
+
+### 🛠️ Beneficios
+
+- Entorno de desarrollo y ejecución 100% reproducible.
+- Portabilidad multiplataforma (Windows, Linux, Mac) sin dependencias locales.
+- Automatización del despliegue de imágenes en Docker Hub.
+- Onboarding más rápido para nuevos colaboradores.
+
+---
+
+---
+
 #### Medium Priority
 
 - [ ] **Visual Editor** - Web-based GUI for profile editing

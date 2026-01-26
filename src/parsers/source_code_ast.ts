@@ -1,12 +1,11 @@
-import * as swc from "npm:@swc/core";
-
+import { parse } from "https://deno.land/x/swc@0.2.1/mod.ts";
 import type { ExportInfo, ExportType, JSDocParam } from "./source_code.ts";
 
 export async function extractExportsAst(filePath: string): Promise<ExportInfo[]> {
   const code = await Deno.readTextFile(filePath);
 
-  // SWC expone parseSync; lo envolvemos para mantener API async.
-  const module = swc.parseSync(code, {
+  // Usar parse de swc para Deno (async)
+  const module = await parse(code, {
     syntax: inferSyntax(filePath),
     tsx: filePath.endsWith(".tsx"),
     target: "es2022",

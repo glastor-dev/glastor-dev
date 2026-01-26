@@ -6,6 +6,13 @@ on:
     paths-ignore:
       - "README.md"
       - "README.generated.md"
+  schedule:
+    - cron: "0 3 * * 1" # Lunes a las 03:00 UTC (ajusta si prefieres otro día/hora)
+  workflow_dispatch:
+    - name: Actualizar fecha en README.profile.md
+      run: |
+        fecha=$(date +'%Y-%m-%d')
+        sed -i "s/Última actualización: .*/Última actualización: $fecha/" README.profile.md
 
 jobs:
   update-readme:

@@ -1,13 +1,15 @@
+import { relative } from "jsr:@std/path";
 import type { ExportInfo } from "../parsers/source_code.ts";
 
-export function generateApiDocs(exports: ExportInfo[]): string {
+export function generateApiDocs(exports: ExportInfo[], projectRoot: string = Deno.cwd()): string {
   if (!exports.length) return "(No public exports detected)";
 
   const groups = groupByFile(exports);
   const sections: string[] = [];
 
   for (const filePath of Object.keys(groups).sort()) {
-    sections.push(`### ${normalizePath(filePath)}`);
+    const relativePath = relative(projectRoot, filePath);
+    sections.push(`### ${normalizePath(relativePath)}`);
 
     for (const exp of groups[filePath].sort((a, b) => a.name.localeCompare(b.name))) {
       sections.push(`#### ${exp.name}`);
@@ -57,5 +59,5 @@ function groupByFile(exports: ExportInfo[]): Record<string, ExportInfo[]> {
 }
 
 function normalizePath(p: string): string {
-  return p.replaceAll("\\\\", "/");
+  return p.replaceAll("\\", "/");
 }
