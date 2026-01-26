@@ -14,35 +14,12 @@ export interface RepoBadgesConfig {
   branch?: string;
 }
 
-export function generateBadges(config: BadgesConfig): string {
-  const style = encodeURIComponent(config.badgeStyle ?? "for-the-badge");
-
-  const badges: string[] = [
-    `![Deno](https://img.shields.io/badge/deno-%23000000.svg?style=${style}&logo=deno&logoColor=white)`,
-    `![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=${style}&logo=typescript&logoColor=white)`,
-  ];
-
-  if (config.license) {
-    const lic = encodeURIComponent(config.license);
-    badges.push(`![License](https://img.shields.io/badge/license-${lic}-blue.svg?style=${style})`);
-  }
-
-  if (config.denoVersion) {
-    const v = encodeURIComponent(`^${config.denoVersion}`);
-    badges.push(
-      `![Deno Version](https://img.shields.io/badge/deno-${v}-green?style=${style}&logo=deno)`,
-    );
-  }
-
-  if (config.hasWorkflows && config.repo) {
-    const workflow = encodeURIComponent(config.workflowFile ?? "ci.yml");
-    const branch = config.branch ? `?branch=${encodeURIComponent(config.branch)}` : "";
-    badges.push(
-      `![CI](https://github.com/${config.repo}/actions/workflows/${workflow}/badge.svg${branch})`,
-    );
-  }
-
-  return badges.join("\n");
+export function generateBadges(_config: BadgesConfig): string {
+  return [
+    `[![Deno](https://img.shields.io/badge/Deno-%5E1.40.0-black?logo=deno&logoColor=white)](https://deno.land/)`,
+    `[![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker&logoColor=white)](https://hub.docker.com/)`,
+    `[![Lefthook](https://img.shields.io/badge/lefthook-enabled-brightgreen?logo=lefthook&logoColor=white)](https://github.com/evilmartians/lefthook)`,
+  ].join("\n");
 }
 
 export function generateRepoBadges(config: RepoBadgesConfig): string {

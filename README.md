@@ -8,8 +8,6 @@
 
 # GLASTOR® — Ingeniería de backend y arquitectura
 
-![Deno](https://img.shields.io/badge/deno-%23000000.svg?style=flat-square&logo=deno&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=flat-square&logo=typescript&logoColor=white) ![Deno Version](https://img.shields.io/badge/deno-%5E2.2.0-green?style=flat-square&logo=deno) ![CI](https://github.com/glastor-dev/glastor-dev/actions/workflows/ci.yml/badge.svg?branch=master)
-
 **Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps**
 
 [![Deno](https://img.shields.io/badge/Deno-%5E1.40.0-black?logo=deno&logoColor=white)](https://deno.land/)
@@ -711,11 +709,7 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 - Type: function (async)
 - Signature: `async readImportMap(projectRoot: string): unknown`
 
-<<<<<<< HEAD
 ### src/parsers/imports.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/imports.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### analyzeImports
 - Type: function (async)
 - Signature: `async analyzeImports(projectRoot: string, options: unknown = …): unknown`
@@ -726,20 +720,12 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 #### ImportAnalysis
 - Type: interface
 
-<<<<<<< HEAD
 ### src/parsers/project_files.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/project_files.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### detectProjectFiles
 - Type: function (async)
 - Signature: `async detectProjectFiles(projectRoot: string): unknown`
 
-<<<<<<< HEAD
 ### src/parsers/source_code.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### ExportInfo
 - Type: interface
 
@@ -760,20 +746,12 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 #### JSDocParam
 - Type: interface
 
-<<<<<<< HEAD
 ### src/parsers/source_code_ast.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/source_code_ast.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### extractExportsAst
 - Type: function (async)
 - Signature: `async extractExportsAst(filePath: string): unknown`
 
-<<<<<<< HEAD
 ### src/parsers/tests.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/tests.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### detectTests
 - Type: function (async)
 - Signature: `async detectTests(projectRoot: string): unknown`
@@ -781,20 +759,12 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 #### TestDetection
 - Type: interface
 
-<<<<<<< HEAD
 ### src/parsers/workflows.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/parsers/workflows.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### detectWorkflows
 - Type: function (async)
 - Signature: `async detectWorkflows(projectRoot: string): unknown`
 
-<<<<<<< HEAD
 ### src/project/analyze.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/project/analyze.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### analyzeProject
 - Type: function (async)
 - Signature: `async analyzeProject(options: unknown): unknown`
@@ -808,47 +778,27 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 #### TemplateData
 - Type: interface
 
-<<<<<<< HEAD
 ### src/utils/file_system.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/file_system.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### ensureWritableOutput
 - Type: function (async)
 - Signature: `async ensureWritableOutput(outputPath: string, options: unknown): unknown`
 
-<<<<<<< HEAD
 ### src/utils/init_wizard.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/init_wizard.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### runInitWizard
 - Type: function (async)
 - Signature: `async runInitWizard(projectRoot: string)`
 
-<<<<<<< HEAD
 ### src/utils/logger.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/logger.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### Logger
 - Type: const
 - Signature: `const Logger`
 
-<<<<<<< HEAD
 ### src/utils/readme_infer.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/readme_infer.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### inferDescriptionFromReadme
 - Type: function (async)
 - Signature: `async inferDescriptionFromReadme(readmePath: string): unknown`
 
-<<<<<<< HEAD
 ### src/utils/user_config.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/src/utils/user_config.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### loadUserConfig
 - Type: function (async)
 - Signature: `async loadUserConfig(projectRoot: string): unknown`
@@ -856,11 +806,7 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 #### UserConfig
 - Type: interface
 
-<<<<<<< HEAD
 ### test/source_code_ast_test.ts
-=======
-### /home/runner/work/glastor-dev/glastor-dev/test/source_code_ast_test.ts
->>>>>>> ac902005eda6c982d3572779fdfca43bbdb6b9f5
 #### hello
 Greets a person\n * @param name Nombre\n * @returns string\n
 - Type: function
