@@ -413,7 +413,7 @@ Agradecemos a todos nuestros contributors:
 generateReadme(args: GenerateReadmeArgs): Promise<string>
 // Generador principal de README con análisis completo de proyecto
 
-generateBadges(config: BadgesConfig): string
+generateBadges(_config: BadgesConfig): string
 // Genera badges dinámicos basados en project config
 
 generateApiDocs(exports: ExportInfo[]): string
