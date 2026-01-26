@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-01-25
+  🔄 Última actualización: 2026-01-26
   📦 Versión del generador: v2.2.0
 -->
 
@@ -624,7 +624,7 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-01-25</sub>  
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-01-26
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
@@ -650,7 +650,7 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 
 #### generateBadges
 - Type: function
-- Signature: `generateBadges(config: unknown): string`
+- Signature: `generateBadges(_config: unknown): string`
 
 #### generateRepoBadges
 - Type: function
