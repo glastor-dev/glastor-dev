@@ -1,4 +1,4 @@
-![Glastor banner](/images/banner-github.webp)
+![Glastor banner](./images/banner-github.webp)
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
