@@ -1,0 +1,51 @@
+name: Deploy Rustdoc to GitHub Pages
+
+on:
+  push:
+    branches: ["main", "master"]
+  workflow_dispatch:
+
+# Permite que el Action pueda escribir en GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Previene que múltiples despliegues se sobreescriban
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Construir la Documentación
+        run: cargo doc --release --no-deps
+
+      - name: Crear index.html para redirección automática
+        # Como Rust genera la doc dentro de target/doc/nombre_del_crate,
+        # creamos un index.html en la raíz para que redirija automáticamente.
+        run: echo '<meta http-equiv="refresh" content="0; url=glastor_dev/index.html">' > target/doc/index.html
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: Subir artefactos
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "target/doc"
+
+      - name: Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

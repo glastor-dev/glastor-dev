@@ -1,0 +1,27 @@
+﻿name: Benchmarks
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+
+      - name: Cache Rust
+        uses: Swatinem/rust-cache@v2
+
+      - name: Prefetch dependencies
+        run: cargo fetch
+
+      - name: Bench
+        run: deno task bench
+

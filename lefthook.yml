@@ -1,0 +1,15 @@
+# lefthook.yml
+# Documentación: https://github.com/evilmartians/lefthook
+
+pre-commit:
+  parallel: true
+  commands:
+    fmt:
+      glob: "*.rs"
+      run: cargo fmt -- --check
+    clippy:
+      glob: "*.rs"
+      run: cargo clippy -- -D warnings
+    generate:
+      glob: "README.profile.md"
+      run: cargo run -- --force
