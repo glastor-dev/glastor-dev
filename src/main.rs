@@ -2,11 +2,11 @@ use chrono::Local;
 use clap::Parser;
 use colored::Colorize;
 use regex::Regex;
+use reqwest::header::USER_AGENT;
 use serde_json::Value;
 use std::fs;
 use std::path::Path;
 use std::process;
-use reqwest::header::USER_AGENT;
 
 /// Generador de README en Rust
 #[derive(Parser, Debug)]
@@ -33,11 +33,22 @@ struct Args {
 async fn main() {
     let args = Args::parse();
 
-    println!("{}", "Iniciando generador de README en Rust...".cyan().bold());
+    println!(
+        "{}",
+        "Iniciando generador de README en Rust...".cyan().bold()
+    );
 
     // 1. Validar salida
     if Path::new(&args.output).exists() && !args.force {
-        eprintln!("{}", format!("Error: El archivo de salida '{}' ya existe. Usa --force para sobrescribirlo.", args.output).red().bold());
+        eprintln!(
+            "{}",
+            format!(
+                "Error: El archivo de salida '{}' ya existe. Usa --force para sobrescribirlo.",
+                args.output
+            )
+            .red()
+            .bold()
+        );
         process::exit(1);
     }
 
@@ -45,17 +56,31 @@ async fn main() {
     let template_content = match fs::read_to_string(&args.template) {
         Ok(content) => content,
         Err(e) => {
-            eprintln!("{}", format!("Error al leer la plantilla '{}': {}", args.template, e).red().bold());
+            eprintln!(
+                "{}",
+                format!("Error al leer la plantilla '{}': {}", args.template, e)
+                    .red()
+                    .bold()
+            );
             process::exit(1);
         }
     };
 
     // 2.5. Generar SVG si se pide
     if let Some(user) = &args.github_user {
-        println!("{}", format!("Generando estadísticas SVG para el usuario: {}...", user).yellow());
+        println!(
+            "{}",
+            format!("Generando estadísticas SVG para el usuario: {}...", user).yellow()
+        );
         match generate_github_stats(user).await {
-            Ok(_) => println!("{}", "SVG de estadísticas generado en images/github_stats.svg".green()),
-            Err(e) => eprintln!("{}", format!("Error generando SVG de GitHub: {}", e).red().bold()),
+            Ok(_) => println!(
+                "{}",
+                "SVG de estadísticas generado en images/github_stats.svg".green()
+            ),
+            Err(e) => eprintln!(
+                "{}",
+                format!("Error generando SVG de GitHub: {}", e).red().bold()
+            ),
         }
     }
 
@@ -63,7 +88,7 @@ async fn main() {
     let project_name = "Proyecto Autogenerado";
     let description = "Descripción generada automáticamente con Rust 🦀";
     let badges = "[![Rust](https://img.shields.io/badge/Rust-Ready-orange)](https://rust-lang.org)";
-    
+
     // Aquí podríamos leer archivos reales (como deno.json o package.json)
     // Para simplificar, utilizamos valores hardcodeados o leídos de un archivo de config
     let mut config_data = serde_json::json!({
@@ -101,29 +126,41 @@ async fn main() {
 
     // 4. Reemplazar variables (estilo {{variable}})
     let mut output_content = template_content.clone();
-    
+
     // Buscamos todos los placeholders de tipo {{var}}
     let re = Regex::new(r"\{\{([a-zA-Z0-9_]+)\}\}").unwrap();
-    
-    output_content = re.replace_all(&output_content, |caps: &regex::Captures| {
-        let key = &caps[1];
-        match config_data.get(key) {
-            Some(val) => {
-                if let Some(str_val) = val.as_str() {
-                    str_val.to_string()
-                } else {
-                    val.to_string()
+
+    output_content = re
+        .replace_all(&output_content, |caps: &regex::Captures| {
+            let key = &caps[1];
+            match config_data.get(key) {
+                Some(val) => {
+                    if let Some(str_val) = val.as_str() {
+                        str_val.to_string()
+                    } else {
+                        val.to_string()
+                    }
                 }
-            },
-            None => format!("{{{{{}}}}}", key), // Dejar intacto si no se encuentra
-        }
-    }).to_string();
+                None => format!("{{{{{}}}}}", key), // Dejar intacto si no se encuentra
+            }
+        })
+        .to_string();
 
     // 5. Escribir salida
     match fs::write(&args.output, output_content) {
-        Ok(_) => println!("{}", format!("¡Éxito! README generado en: {}", args.output).green().bold()),
+        Ok(_) => println!(
+            "{}",
+            format!("¡Éxito! README generado en: {}", args.output)
+                .green()
+                .bold()
+        ),
         Err(e) => {
-            eprintln!("{}", format!("Error al escribir el archivo de salida: {}", e).red().bold());
+            eprintln!(
+                "{}",
+                format!("Error al escribir el archivo de salida: {}", e)
+                    .red()
+                    .bold()
+            );
             process::exit(1);
         }
     }
@@ -131,31 +168,36 @@ async fn main() {
 
 async fn generate_github_stats(username: &str) -> Result<(), Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
-    
+
     // Fetch user info
     let user_url = format!("https://api.github.com/users/{}", username);
-    let user_res: Value = client.get(&user_url)
+    let user_res: Value = client
+        .get(&user_url)
         .header(USER_AGENT, "glastor-dev")
         .send()
         .await?
         .json()
         .await?;
-        
+
     let followers = user_res["followers"].as_i64().unwrap_or(0);
     let public_repos = user_res["public_repos"].as_i64().unwrap_or(0);
 
     // Fetch repos
-    let repos_url = format!("https://api.github.com/users/{}/repos?per_page=100", username);
-    let repos_res: Value = client.get(&repos_url)
+    let repos_url = format!(
+        "https://api.github.com/users/{}/repos?per_page=100",
+        username
+    );
+    let repos_res: Value = client
+        .get(&repos_url)
         .header(USER_AGENT, "glastor-dev")
         .send()
         .await?
         .json()
         .await?;
-        
+
     let mut stars = 0;
     let mut forks = 0;
-    
+
     if let Some(repos) = repos_res.as_array() {
         for repo in repos {
             stars += repo["stargazers_count"].as_i64().unwrap_or(0);
@@ -165,7 +207,7 @@ async fn generate_github_stats(username: &str) -> Result<(), Box<dyn std::error:
 
     // Leer plantilla SVG
     let svg_template = fs::read_to_string("images/stats.template.svg")?;
-    
+
     // Reemplazar valores
     let svg_output = svg_template
         .replace("{{username}}", username)
@@ -173,10 +215,9 @@ async fn generate_github_stats(username: &str) -> Result<(), Box<dyn std::error:
         .replace("{{followers}}", &followers.to_string())
         .replace("{{stars}}", &stars.to_string())
         .replace("{{forks}}", &forks.to_string());
-        
+
     // Guardar
     fs::write("images/github_stats.svg", svg_output)?;
-    
+
     Ok(())
 }
-
