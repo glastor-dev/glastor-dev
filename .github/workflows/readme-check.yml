@@ -1,0 +1,47 @@
+﻿name: README
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  readme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+
+      - name: Cache Rust
+        uses: Swatinem/rust-cache@v2
+
+      - name: Prefetch dependencies
+        run: cargo fetch
+
+      - name: Format (check)
+        run: cargo fmt -- --check
+
+      - name: Lint
+        run: cargo clippy -- -D warnings
+
+      - name: Type check
+        run: cargo check
+
+      - name: Tests
+        run: cargo test
+
+      - name: Generate README to temp
+        run: cargo run -- --check
+
+      - name: Fail if README is outdated
+        run: |
+          git diff --no-index --exit-code README.md README.generated.md
+
+      - name: Cleanup
+        if: always()
+        run: rm -f README.generated.md
+
