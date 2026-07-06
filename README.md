@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-07-04
+  🔄 Última actualización: 2026-07-06
   📦 Versión del generador: v0.1.0
 -->
 
@@ -522,7 +522,7 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 0.1.0 • Última actualización: 2026-07-04</sub>  
+<sub>🤖 README generado automáticamente • Versión 0.1.0 • Última actualización: 2026-07-06</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
