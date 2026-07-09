@@ -1,4 +1,4 @@
-﻿name: SonarQube
+name: SonarQube
 
 on:
   push:
@@ -98,7 +98,7 @@ jobs:
         if: >-
           ${{ github.event_name != 'pull_request' ||
               (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]') }}
-        uses: SonarSource/sonarqube-scan-action@v7.0.0
+        uses: SonarSource/sonarqube-scan-action@v8.2.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ env.SONAR_HOST_URL_FINAL }}
