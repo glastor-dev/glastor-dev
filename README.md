@@ -1,8 +1,8 @@
-![Glastor banner](./images/banner-github.webp)
+![Glastor banner](https://res.cloudinary.com/dzualplqi/image/upload/v1783635547/banner-github_txtpvy.webp)
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-07-06
+  🔄 Última actualización: 2026-07-10
   📦 Versión del generador: v0.1.0
 -->
 
@@ -277,15 +277,15 @@ Agradecemos a todos nuestros contributors:
 
 <p align="center">
   <a href="https://t.me/zerhocool" title="Telegram - Respuesta más rápida">
-    <img src="images/telegram.webp" alt="Telegram" width="55" height="55"/>
+    <img src="images/telegram.svg" alt="Telegram" width="55" height="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="mailto:glastor.info@gmail.com" title="Email - Consultas profesionales">
-    <img src="images/gmail.webp" alt="Email" width="55" height="55"/>
+    <img src="images/gmail.svg" alt="Email" width="55" height="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/glastor-dev" title="GitHub - Código y proyectos">
-    <img src="images/github.webp" alt="GitHub" width="55" height="55"/>
+    <img src="images/github.svg" alt="GitHub" width="55" height="55"/>
   </a>
 </p>
 
@@ -293,7 +293,7 @@ Agradecemos a todos nuestros contributors:
 
 **🔗 Más recursos:**
 
-[🌐 Website](https://glastor.xyz)
+[🌐 Website](https://glastor-dev.github.io/glastor-dev/glastor_dev/index.html)
 
 </div>
 
@@ -349,7 +349,7 @@ ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
 // Valida permisos y crea directorio si necesario
 ```
 
-**Ver docs completas:** [API Documentation](https://glastor.dev/docs/api)
+**Ver docs completas:** [API Documentation](https://glastor-dev.github.io/glastor-dev/glastor_dev/index.html)
 
 </details>
 
@@ -522,7 +522,11 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 
 ---
 
+<<<<<<< HEAD
 <sub>🤖 README generado automáticamente • Versión 0.1.0 • Última actualización: 2026-07-06</sub>  
+=======
+<sub>🤖 README generado automáticamente • Versión 0.1.0 • Última actualización: 2026-07-10</sub>  
+>>>>>>> 05319b7 (refactor: migrate contact icons to SVG and update banner to Cloudinary CDN)
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>

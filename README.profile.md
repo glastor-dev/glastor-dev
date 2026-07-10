@@ -1,4 +1,4 @@
-![Glastor banner](./images/banner-github.webp)
+![Glastor banner](https://res.cloudinary.com/dzualplqi/image/upload/v1783635547/banner-github_txtpvy.webp)
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
@@ -60,6 +60,102 @@ Desarrollo **sistemas de ultra-alto rendimiento**, **APIs REST** y **herramienta
 - **Desarrollo** de tooling interno, CLI tools y automatizaciones
 - **Technical writing** y documentación de APIs
 - **Proyectos Open Source** — Issues y PRs bienvenidos
+
+<details>
+  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
+
+### 🖥️ Entorno de Desarrollo
+
+**Sistemas Operativos:**
+
+- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
+  - Terminal: Xterm + Zsh + Oh-My-Zsh
+  - WM: i3-gaps con Polybar
+  - Terminal alternativo: eDEX-UI (cyberpunk style)
+- 🪟 **Windows 10 Pro** (testing)
+  - Terminal: Windows Terminal + Git Bash
+  - WSL2: Ubuntu 22.04 LTS
+
+**Editores & IDEs:**
+
+- 💻 **VS Code** (principal) — Extensions:
+  - rust-analyzer, Python, crates, Even Better TOML
+  - GitLens, Docker, Thunder Client
+  - Quimera Theme (propio)
+- ⚡ **Neovim** — Para edición rápida y remota
+  - Config: LazyVim + custom plugins
+  - LSP: rust-analyzer, pyright
+
+**Version Control:**
+
+- 🦑 **GitKraken PRO** — GUI para operaciones complejas
+- 🔧 **Git CLI** — Para automation y scripts
+- 📊 **GitHub Desktop** — Para quick commits
+
+### 🎯 Áreas de Especialización
+
+**Backend & APIs:**
+
+- Rust backend patterns (Axum, Actix-Web, Tokio)
+- System programming & Low-level optimization
+- FastAPI patterns & best practices
+- gRPC con Rust & Python
+
+**DevOps & Infrastructure:**
+
+- Docker multi-stage builds
+- Docker Compose orchestration
+- GitHub Actions workflows
+- AWS (EC2, Lambda, RDS, S3)
+- Terraform (IaC)
+
+**Security & Cryptography:**
+
+- OWASP Top 10 mitigation
+- JWT/OAuth2 implementation
+- Encryption (AES, RSA)
+- Penetration testing basics
+- Secure coding practices
+
+**AI/ML & Automation:**
+
+- Prompt Engineering (GPT-4, Claude)
+- LangChain for AI workflows
+- OpenAI API integration
+- Automation scripts (Python, Bash)
+- Web scraping (Beautiful Soup, Scrapy)
+
+**Documentation & Technical Writing:**
+
+- API documentation (OpenAPI/Swagger)
+- Technical blog writing
+- Video tutorial creation
+- Code documentation standards
+
+### 📚 Lecturas & Formación Continua
+
+**Libros técnicos recientes:**
+
+- ✅ _The Pragmatic Programmer_ (20th Anniversary)
+- ✅ _Clean Architecture_ — Robert C. Martin
+- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
+- 📖 _Building Microservices_ (2nd ed.) — En progreso
+- 📖 _Site Reliability Engineering_ — Google (En progreso)
+
+**Cursos & Certificaciones en proceso:**
+
+- 🎓 AWS Solutions Architect Associate (ETA: Q2 2026)
+- 🎓 Certified Kubernetes Administrator (CKA) (ETA: Q3 2026)
+- 📚 FastAPI Advanced Patterns (FastAPI creator's course)
+
+**Podcasts favoritos:**
+
+- 🎙️ Talk Python To Me
+- 🎙️ Python Bytes
+- 🎙️ The Changelog
+- 🎙️ Software Engineering Daily
+
+</details>
 
 ---
 
@@ -277,15 +373,15 @@ Agradecemos a todos nuestros contributors:
 
 <p align="center">
   <a href="https://t.me/zerhocool" title="Telegram - Respuesta más rápida">
-    <img src="images/telegram.webp" alt="Telegram" width="55" height="55"/>
+    <img src="images/telegram.svg" alt="Telegram" width="55" height="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="mailto:glastor.info@gmail.com" title="Email - Consultas profesionales">
-    <img src="images/gmail.webp" alt="Email" width="55" height="55"/>
+    <img src="images/gmail.svg" alt="Email" width="55" height="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/glastor-dev" title="GitHub - Código y proyectos">
-    <img src="images/github.webp" alt="GitHub" width="55" height="55"/>
+    <img src="images/github.svg" alt="GitHub" width="55" height="55"/>
   </a>
 </p>
 
@@ -293,7 +389,7 @@ Agradecemos a todos nuestros contributors:
 
 **🔗 Más recursos:**
 
-[🌐 Website](https://glastor.xyz)
+[🌐 Website](https://glastor-dev.github.io/glastor-dev/glastor_dev/index.html)
 
 </div>
 
@@ -349,7 +445,7 @@ ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
 // Valida permisos y crea directorio si necesario
 ```
 
-**Ver docs completas:** [API Documentation](https://glastor.dev/docs/api)
+**Ver docs completas:** [API Documentation](https://glastor-dev.github.io/glastor-dev/glastor_dev/index.html)
 
 </details>
 
@@ -393,102 +489,6 @@ cargo install --git https://github.com/glastor-dev/glastor-dev.git
 
 # O descargando binarios pre-compilados desde GitHub Releases
 ```
-
-</details>
-
-<details>
-  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
-
-### 🖥️ Entorno de Desarrollo
-
-**Sistemas Operativos:**
-
-- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
-  - Terminal: Xterm + Zsh + Oh-My-Zsh
-  - WM: i3-gaps con Polybar
-  - Terminal alternativo: eDEX-UI (cyberpunk style)
-- 🪟 **Windows 10 Pro** (testing)
-  - Terminal: Windows Terminal + Git Bash
-  - WSL2: Ubuntu 22.04 LTS
-
-**Editores & IDEs:**
-
-- 💻 **VS Code** (principal) — Extensions:
-  - rust-analyzer, Python, crates, Even Better TOML
-  - GitLens, Docker, Thunder Client
-  - Quimera Theme (propio)
-- ⚡ **Neovim** — Para edición rápida y remota
-  - Config: LazyVim + custom plugins
-  - LSP: rust-analyzer, pyright
-
-**Version Control:**
-
-- 🦑 **GitKraken PRO** — GUI para operaciones complejas
-- 🔧 **Git CLI** — Para automation y scripts
-- 📊 **GitHub Desktop** — Para quick commits
-
-### 🎯 Áreas de Especialización
-
-**Backend & APIs:**
-
-- Rust backend patterns (Axum, Actix-Web, Tokio)
-- System programming & Low-level optimization
-- FastAPI patterns & best practices
-- gRPC con Rust & Python
-
-**DevOps & Infrastructure:**
-
-- Docker multi-stage builds
-- Docker Compose orchestration
-- GitHub Actions workflows
-- AWS (EC2, Lambda, RDS, S3)
-- Terraform (IaC)
-
-**Security & Cryptography:**
-
-- OWASP Top 10 mitigation
-- JWT/OAuth2 implementation
-- Encryption (AES, RSA)
-- Penetration testing basics
-- Secure coding practices
-
-**AI/ML & Automation:**
-
-- Prompt Engineering (GPT-4, Claude)
-- LangChain for AI workflows
-- OpenAI API integration
-- Automation scripts (Python, Bash)
-- Web scraping (Beautiful Soup, Scrapy)
-
-**Documentation & Technical Writing:**
-
-- API documentation (OpenAPI/Swagger)
-- Technical blog writing
-- Video tutorial creation
-- Code documentation standards
-
-### 📚 Lecturas & Formación Continua
-
-**Libros técnicos recientes:**
-
-- ✅ _The Pragmatic Programmer_ (20th Anniversary)
-- ✅ _Clean Architecture_ — Robert C. Martin
-- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
-- 📖 _Building Microservices_ (2nd ed.) — En progreso
-- 📖 _Site Reliability Engineering_ — Google (En progreso)
-
-**Cursos & Certificaciones en proceso:**
-
-- 🎓 AWS Solutions Architect Associate (ETA: Q2 2026)
-- 🎓 Certified Kubernetes Administrator (CKA) (ETA: Q3 2026)
-- 📚 FastAPI Advanced Patterns (FastAPI creator's course)
-
-**Podcasts favoritos:**
-
-- 🎙️ Talk Python To Me
-- 🎙️ Python Bytes
-- 🎙️ The Changelog
-- 🎙️ Software Engineering Daily
 
 </details>
 
