@@ -61,6 +61,102 @@ Desarrollo **sistemas de ultra-alto rendimiento**, **APIs REST** y **herramienta
 - **Technical writing** y documentación de APIs
 - **Proyectos Open Source** — Issues y PRs bienvenidos
 
+<details>
+  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
+
+### 🖥️ Entorno de Desarrollo
+
+**Sistemas Operativos:**
+
+- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
+  - Terminal: Xterm + Zsh + Oh-My-Zsh
+  - WM: i3-gaps con Polybar
+  - Terminal alternativo: eDEX-UI (cyberpunk style)
+- 🪟 **Windows 10 Pro** (testing)
+  - Terminal: Windows Terminal + Git Bash
+  - WSL2: Ubuntu 22.04 LTS
+
+**Editores & IDEs:**
+
+- 💻 **VS Code** (principal) — Extensions:
+  - rust-analyzer, Python, crates, Even Better TOML
+  - GitLens, Docker, Thunder Client
+  - Quimera Theme (propio)
+- ⚡ **Neovim** — Para edición rápida y remota
+  - Config: LazyVim + custom plugins
+  - LSP: rust-analyzer, pyright
+
+**Version Control:**
+
+- 🦑 **GitKraken PRO** — GUI para operaciones complejas
+- 🔧 **Git CLI** — Para automation y scripts
+- 📊 **GitHub Desktop** — Para quick commits
+
+### 🎯 Áreas de Especialización
+
+**Backend & APIs:**
+
+- Rust backend patterns (Axum, Actix-Web, Tokio)
+- System programming & Low-level optimization
+- FastAPI patterns & best practices
+- gRPC con Rust & Python
+
+**DevOps & Infrastructure:**
+
+- Docker multi-stage builds
+- Docker Compose orchestration
+- GitHub Actions workflows
+- AWS (EC2, Lambda, RDS, S3)
+- Terraform (IaC)
+
+**Security & Cryptography:**
+
+- OWASP Top 10 mitigation
+- JWT/OAuth2 implementation
+- Encryption (AES, RSA)
+- Penetration testing basics
+- Secure coding practices
+
+**AI/ML & Automation:**
+
+- Prompt Engineering (GPT-4, Claude)
+- LangChain for AI workflows
+- OpenAI API integration
+- Automation scripts (Python, Bash)
+- Web scraping (Beautiful Soup, Scrapy)
+
+**Documentation & Technical Writing:**
+
+- API documentation (OpenAPI/Swagger)
+- Technical blog writing
+- Video tutorial creation
+- Code documentation standards
+
+### 📚 Lecturas & Formación Continua
+
+**Libros técnicos recientes:**
+
+- ✅ _The Pragmatic Programmer_ (20th Anniversary)
+- ✅ _Clean Architecture_ — Robert C. Martin
+- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
+- 📖 _Building Microservices_ (2nd ed.) — En progreso
+- 📖 _Site Reliability Engineering_ — Google (En progreso)
+
+**Cursos & Certificaciones en proceso:**
+
+- 🎓 AWS Solutions Architect Associate (ETA: Q2 2026)
+- 🎓 Certified Kubernetes Administrator (CKA) (ETA: Q3 2026)
+- 📚 FastAPI Advanced Patterns (FastAPI creator's course)
+
+**Podcasts favoritos:**
+
+- 🎙️ Talk Python To Me
+- 🎙️ Python Bytes
+- 🎙️ The Changelog
+- 🎙️ Software Engineering Daily
+
+</details>
+
 ---
 
 ## 🛠️ Stack Tecnológico
@@ -396,102 +492,6 @@ cargo install --git https://github.com/glastor-dev/glastor-dev.git
 
 </details>
 
-<details>
-  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
-
-### 🖥️ Entorno de Desarrollo
-
-**Sistemas Operativos:**
-
-- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
-  - Terminal: Xterm + Zsh + Oh-My-Zsh
-  - WM: i3-gaps con Polybar
-  - Terminal alternativo: eDEX-UI (cyberpunk style)
-- 🪟 **Windows 10 Pro** (testing)
-  - Terminal: Windows Terminal + Git Bash
-  - WSL2: Ubuntu 22.04 LTS
-
-**Editores & IDEs:**
-
-- 💻 **VS Code** (principal) — Extensions:
-  - rust-analyzer, Python, crates, Even Better TOML
-  - GitLens, Docker, Thunder Client
-  - Quimera Theme (propio)
-- ⚡ **Neovim** — Para edición rápida y remota
-  - Config: LazyVim + custom plugins
-  - LSP: rust-analyzer, pyright
-
-**Version Control:**
-
-- 🦑 **GitKraken PRO** — GUI para operaciones complejas
-- 🔧 **Git CLI** — Para automation y scripts
-- 📊 **GitHub Desktop** — Para quick commits
-
-### 🎯 Áreas de Especialización
-
-**Backend & APIs:**
-
-- Rust backend patterns (Axum, Actix-Web, Tokio)
-- System programming & Low-level optimization
-- FastAPI patterns & best practices
-- gRPC con Rust & Python
-
-**DevOps & Infrastructure:**
-
-- Docker multi-stage builds
-- Docker Compose orchestration
-- GitHub Actions workflows
-- AWS (EC2, Lambda, RDS, S3)
-- Terraform (IaC)
-
-**Security & Cryptography:**
-
-- OWASP Top 10 mitigation
-- JWT/OAuth2 implementation
-- Encryption (AES, RSA)
-- Penetration testing basics
-- Secure coding practices
-
-**AI/ML & Automation:**
-
-- Prompt Engineering (GPT-4, Claude)
-- LangChain for AI workflows
-- OpenAI API integration
-- Automation scripts (Python, Bash)
-- Web scraping (Beautiful Soup, Scrapy)
-
-**Documentation & Technical Writing:**
-
-- API documentation (OpenAPI/Swagger)
-- Technical blog writing
-- Video tutorial creation
-- Code documentation standards
-
-### 📚 Lecturas & Formación Continua
-
-**Libros técnicos recientes:**
-
-- ✅ _The Pragmatic Programmer_ (20th Anniversary)
-- ✅ _Clean Architecture_ — Robert C. Martin
-- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
-- 📖 _Building Microservices_ (2nd ed.) — En progreso
-- 📖 _Site Reliability Engineering_ — Google (En progreso)
-
-**Cursos & Certificaciones en proceso:**
-
-- 🎓 AWS Solutions Architect Associate (ETA: Q2 2026)
-- 🎓 Certified Kubernetes Administrator (CKA) (ETA: Q3 2026)
-- 📚 FastAPI Advanced Patterns (FastAPI creator's course)
-
-**Podcasts favoritos:**
-
-- 🎙️ Talk Python To Me
-- 🎙️ Python Bytes
-- 🎙️ The Changelog
-- 🎙️ Software Engineering Daily
-
-</details>
-
 ---
 
 <div align="center">
@@ -522,11 +522,7 @@ en asociación con [Software Freedom Conservancy](https://sfconservancy.org/)
 
 ---
 
-<<<<<<< HEAD
-<sub>🤖 README generado automáticamente • Versión 0.1.0 • Última actualización: 2026-07-06</sub>  
-=======
 <sub>🤖 README generado automáticamente • Versión 0.1.0 • Última actualización: 2026-07-10</sub>  
->>>>>>> 05319b7 (refactor: migrate contact icons to SVG and update banner to Cloudinary CDN)
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
