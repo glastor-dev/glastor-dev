@@ -29,6 +29,9 @@ jobs:
         with:
           mdbook-version: "0.4.37"
 
+      - name: Copy README
+        run: cp README.md book/src/README.md
+
       - name: Build mdBook
         working-directory: ./book
         run: mdbook build
