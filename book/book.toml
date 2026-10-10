@@ -6,7 +6,7 @@ src = "src"
 title = "Documentación de Glastor"
 
 [output.html]
-theme = "ayu" # Puede ser light, rust, coal, navy, ayu
+default-theme = "ayu" # Puede ser light, rust, coal, navy, ayu
 mathjax-support = true
 git-repository-url = "https://github.com/glastor-dev/glastor-dev"
 git-repository-icon = "fa-github"
