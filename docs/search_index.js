@@ -1,0 +1,62 @@
+(function () {
+  window.DENO_DOC_SEARCH_INDEX = {
+    "kind": "search",
+    "nodes": [{
+      "id": "namespace_templatename",
+      "kind": [{ "char": "T", "kind": "TypeAlias", "title": "Type Alias" }],
+      "name": "TemplateName",
+      "file": ".",
+      "doc": "",
+      "url": "././~/TemplateName.html",
+      "deprecated": false,
+    }, {
+      "id": "namespace_generatereadmeargs",
+      "kind": [{ "char": "I", "kind": "Interface", "title": "Interface" }],
+      "name": "GenerateReadmeArgs",
+      "file": ".",
+      "doc": "",
+      "url": "././~/GenerateReadmeArgs.html",
+      "deprecated": false,
+    }, {
+      "id": "namespace_generatereadmeargs",
+      "kind": [{ "char": "p", "kind": "Property", "title": "Property" }],
+      "name": "GenerateReadmeArgs.template",
+      "file": ".",
+      "doc": "",
+      "url": "././~/GenerateReadmeArgs.template.html",
+      "deprecated": false,
+    }, {
+      "id": "namespace_generatereadmeargs",
+      "kind": [{ "char": "p", "kind": "Property", "title": "Property" }],
+      "name": "GenerateReadmeArgs.output",
+      "file": ".",
+      "doc": "",
+      "url": "././~/GenerateReadmeArgs.output.html",
+      "deprecated": false,
+    }, {
+      "id": "namespace_generatereadmeargs",
+      "kind": [{ "char": "p", "kind": "Property", "title": "Property" }],
+      "name": "GenerateReadmeArgs.force",
+      "file": ".",
+      "doc": "",
+      "url": "././~/GenerateReadmeArgs.force.html",
+      "deprecated": false,
+    }, {
+      "id": "namespace_generatereadme",
+      "kind": [{ "char": "f", "kind": "Function", "title": "Function" }],
+      "name": "generateReadme",
+      "file": ".",
+      "doc": "",
+      "url": "././~/generateReadme.html",
+      "deprecated": false,
+    }, {
+      "id": "namespace_sanitizegeneratedmarkdown",
+      "kind": [{ "char": "f", "kind": "Function", "title": "Function" }],
+      "name": "sanitizeGeneratedMarkdown",
+      "file": ".",
+      "doc": "",
+      "url": "././~/sanitizeGeneratedMarkdown.html",
+      "deprecated": false,
+    }],
+  };
+})();

@@ -1,0 +1,13 @@
+[book]
+authors = ["Andres Antonio Cardoso"]
+language = "es"
+multilingual = false
+src = "src"
+title = "Documentación de Glastor"
+
+[output.html]
+theme = "ayu" # Puede ser light, rust, coal, navy, ayu
+mathjax-support = true
+git-repository-url = "https://github.com/glastor-dev/glastor-dev"
+git-repository-icon = "fa-github"
+edit-url-template = "https://github.com/glastor-dev/glastor-dev/edit/master/book/src/{path}"

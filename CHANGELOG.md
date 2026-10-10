@@ -857,7 +857,7 @@ Follow [Semantic Versioning](https://semver.org/):
 
 ---
 
-© 2010-2025 Andrés Antonio Cardoso
+© 2010-2026 Andrés Antonio Cardoso
 
 [⬆ Back to Top](#-changelog)
 
