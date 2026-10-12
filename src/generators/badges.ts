@@ -16,7 +16,7 @@ export interface RepoBadgesConfig {
 
 export function generateBadges(_config: BadgesConfig): string {
   return [
-    `[![Deno](https://img.shields.io/badge/Deno-%5E1.40.0-black?logo=deno&logoColor=white)](https://deno.land/)`,
+    `[![Deno](https://img.shields.io/badge/Deno-%5E2.0.0-black?logo=deno&logoColor=white)](https://deno.land/)`,
     `[![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker&logoColor=white)](https://hub.docker.com/)`,
     `[![Lefthook](https://img.shields.io/badge/lefthook-enabled-brightgreen?logo=lefthook&logoColor=white)](https://github.com/evilmartians/lefthook)`,
   ].join("\n");

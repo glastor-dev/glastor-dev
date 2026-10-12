@@ -24,7 +24,7 @@ export async function readDenoConfig(projectRoot: string): Promise<DenoConfig | 
 
   const name = typeof data.name === "string" ? data.name : undefined;
   const version = typeof data.version === "string" ? data.version : undefined;
-  const exportsField = (data as any).exports;
+  const exportsField = data.exports;
   const tasks = isRecord(data.tasks) ? (data.tasks as Record<string, string>) : undefined;
 
   return { name, version, exports: exportsField, tasks };

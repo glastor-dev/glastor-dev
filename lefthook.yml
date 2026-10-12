@@ -5,5 +5,7 @@ pre-commit:
       run: deno lint
     fmt:
       run: deno fmt --check
+    check:
+      run: deno check src/main.ts
     test:
-      run: deno test -A
+      run: deno task test

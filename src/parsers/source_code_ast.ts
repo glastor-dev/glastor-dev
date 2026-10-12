@@ -1,106 +1,131 @@
-import { parse } from "https://deno.land/x/swc@0.2.1/mod.ts";
+import ts from "npm:typescript@^5.7.0";
 import type { ExportInfo, ExportType, JSDocParam } from "./source_code.ts";
+
+export interface JSDocInfo {
+  description: string;
+  params: JSDocParam[];
+  returns?: string;
+  returnsType?: string;
+  throws?: string[];
+  deprecated?: string;
+  since?: string;
+  isBeta?: boolean;
+  isInternal?: boolean;
+  examples: string[];
+}
 
 export async function extractExportsAst(filePath: string): Promise<ExportInfo[]> {
   const code = await Deno.readTextFile(filePath);
+  return extractExportsAstFromCode(code, filePath);
+}
 
-  // Usar parse de swc para Deno (async)
-  const module = await parse(code, {
-    syntax: inferSyntax(filePath),
-    tsx: filePath.endsWith(".tsx"),
-    target: "es2022",
-    comments: true,
-  }) as any;
-
-  const comments = collectComments(module);
+export function extractExportsAstFromCode(code: string, filePath: string): ExportInfo[] {
+  const sourceFile = ts.createSourceFile(filePath, code, ts.ScriptTarget.Latest, true);
   const exports: ExportInfo[] = [];
 
-  for (const node of module.body ?? []) {
-    // export const/let/var
-    if (node.type === "ExportDeclaration" && node.declaration) {
-      const decl = node.declaration;
-      const startPos = node.span?.start ?? decl.span?.start ?? 0;
-      const jsDoc = findLeadingJsDoc(code, comments, startPos);
+  for (const node of sourceFile.statements) {
+    const isExported = ts.canHaveModifiers(node)
+      ? Boolean(ts.getModifiers(node)?.some((m) => m.kind === ts.SyntaxKind.ExportKeyword))
+      : false;
+    const isDefault = ts.canHaveModifiers(node)
+      ? Boolean(ts.getModifiers(node)?.some((m) => m.kind === ts.SyntaxKind.DefaultKeyword))
+      : false;
 
-      if (decl.type === "FunctionDeclaration") {
-        const name = decl.identifier?.value ?? "(anonymous)";
-        const signature = buildFunctionSignature(code, name, decl);
-        exports.push(
-          makeExportInfo(filePath, name, "function", Boolean(decl.async), jsDoc, signature),
-        );
-        continue;
-      }
+    const jsDoc = findLeadingJsDoc(node, code);
 
-      if (decl.type === "ClassDeclaration") {
-        const name = decl.identifier?.value ?? "(anonymous)";
-        exports.push(makeExportInfo(filePath, name, "class", false, jsDoc, `class ${name}`));
-        continue;
-      }
+    // export function / export default function
+    if (ts.isFunctionDeclaration(node) && (isExported || isDefault)) {
+      const name = node.name?.text ?? (isDefault ? "default" : "(anonymous)");
+      const isAsync = Boolean(
+        ts.getModifiers(node)?.some((m) => m.kind === ts.SyntaxKind.AsyncKeyword),
+      );
+      const typeParams = node.typeParameters?.length
+        ? `<${node.typeParameters.map((tp) => tp.getText(sourceFile)).join(", ")}>`
+        : "";
+      const params = node.parameters.map((p) => p.getText(sourceFile)).join(", ");
+      const retType = node.type ? `: ${node.type.getText(sourceFile)}` : "";
+      const signature = `${isAsync ? "async " : ""}${name}${typeParams}(${params})${retType}`
+        .trim();
 
-      if (decl.type === "VariableDeclaration") {
-        const kind = decl.kind as ExportType; // const|let|var
-        for (const d of decl.declarations ?? []) {
-          const name = d.id?.type === "Identifier" ? d.id.value : null;
-          if (!name) continue;
-          const signature = buildVariableSignature(code, name, kind, d.init);
-          exports.push(makeExportInfo(filePath, name, kind, false, jsDoc, signature));
-        }
-        continue;
-      }
-
-      // export interface/type/enum (los tratamos como const para docs simples)
-      if (decl.type === "TsInterfaceDeclaration") {
-        exports.push(
-          makeExportInfo(filePath, decl.id?.value ?? "(anonymous)", "interface", false, jsDoc),
-        );
-        continue;
-      }
-      if (decl.type === "TsTypeAliasDeclaration") {
-        exports.push(
-          makeExportInfo(filePath, decl.id?.value ?? "(anonymous)", "type", false, jsDoc),
-        );
-        continue;
-      }
-      if (decl.type === "TsEnumDeclaration") {
-        exports.push(
-          makeExportInfo(filePath, decl.id?.value ?? "(anonymous)", "enum", false, jsDoc),
-        );
-        continue;
-      }
+      exports.push(makeExportInfo(filePath, name, "function", isAsync, jsDoc, signature));
+      continue;
     }
 
-    // export default function/class
-    if (node.type === "ExportDefaultDeclaration") {
-      const decl = node.decl;
-      const jsDoc = findLeadingJsDoc(code, comments, node.span?.start ?? 0);
+    // export class / export default class
+    if (ts.isClassDeclaration(node) && (isExported || isDefault)) {
+      const name = node.name?.text ?? (isDefault ? "default" : "(anonymous)");
+      exports.push(makeExportInfo(filePath, name, "class", false, jsDoc, `class ${name}`));
+      continue;
+    }
 
-      if (decl?.type === "FunctionExpression" || decl?.type === "FunctionDeclaration") {
-        const name = decl.identifier?.value ?? "default";
-        const signature = buildFunctionSignature(code, name, decl);
-        exports.push(
-          makeExportInfo(filePath, name, "function", Boolean(decl.async), jsDoc, signature),
-        );
-        continue;
-      }
-      if (decl?.type === "ClassExpression" || decl?.type === "ClassDeclaration") {
-        const name = decl.identifier?.value ?? "default";
-        exports.push(makeExportInfo(filePath, name, "class", false, jsDoc, `class ${name}`));
-        continue;
-      }
+    // export const / let / var
+    if (ts.isVariableStatement(node) && isExported) {
+      const flags = node.declarationList.flags;
+      const kind: ExportType = (flags & ts.NodeFlags.Const)
+        ? "const"
+        : (flags & ts.NodeFlags.Let)
+        ? "let"
+        : "var";
 
-      exports.push(makeExportInfo(filePath, "default", "const", false, jsDoc, "default"));
+      for (const decl of node.declarationList.declarations) {
+        const name = decl.name.getText(sourceFile);
+        let signature = `${kind} ${name}`;
+
+        if (
+          decl.initializer &&
+          (ts.isArrowFunction(decl.initializer) || ts.isFunctionExpression(decl.initializer))
+        ) {
+          const fn = decl.initializer;
+          const isAsync = Boolean(
+            ts.canHaveModifiers(fn) &&
+              ts.getModifiers(fn)?.some((m) => m.kind === ts.SyntaxKind.AsyncKeyword),
+          );
+          const typeParams = fn.typeParameters?.length
+            ? `<${fn.typeParameters.map((tp) => tp.getText(sourceFile)).join(", ")}>`
+            : "";
+          const params = fn.parameters.map((p) => p.getText(sourceFile)).join(", ");
+          const retType = fn.type ? `: ${fn.type.getText(sourceFile)}` : "";
+          signature = `${kind} ${name} = ${
+            isAsync ? "async " : ""
+          }${typeParams}(${params})${retType} => …`;
+        }
+
+        exports.push(makeExportInfo(filePath, name, kind, false, jsDoc, signature));
+      }
+      continue;
+    }
+
+    // export interface
+    if (ts.isInterfaceDeclaration(node) && isExported) {
+      exports.push(makeExportInfo(filePath, node.name.text, "interface", false, jsDoc));
+      continue;
+    }
+
+    // export type
+    if (ts.isTypeAliasDeclaration(node) && isExported) {
+      exports.push(makeExportInfo(filePath, node.name.text, "type", false, jsDoc));
+      continue;
+    }
+
+    // export enum
+    if (ts.isEnumDeclaration(node) && isExported) {
+      exports.push(makeExportInfo(filePath, node.name.text, "enum", false, jsDoc));
       continue;
     }
 
     // export { a as b }
-    if (node.type === "ExportNamedDeclaration") {
-      const jsDoc = findLeadingJsDoc(code, comments, node.span?.start ?? 0);
-      for (const spec of node.specifiers ?? []) {
-        if (spec.type !== "ExportSpecifier") continue;
-        const name = spec.exported?.value ?? spec.orig?.value;
-        if (!name) continue;
+    if (ts.isExportDeclaration(node) && node.exportClause && ts.isNamedExports(node.exportClause)) {
+      for (const el of node.exportClause.elements) {
+        const name = el.name.text;
         exports.push(makeExportInfo(filePath, name, "const", false, jsDoc, `export { ${name} }`));
       }
+      continue;
+    }
+
+    // export default <expression>
+    if (ts.isExportAssignment(node) && !node.isExportEquals) {
+      const name = node.expression.getText(sourceFile) || "default";
+      exports.push(makeExportInfo(filePath, "default", "const", false, jsDoc, name));
       continue;
     }
   }
@@ -115,73 +140,19 @@ export async function extractExportsAst(filePath: string): Promise<ExportInfo[]>
   });
 }
 
-function inferSyntax(filePath: string): "typescript" | "ecmascript" {
-  return filePath.endsWith(".ts") || filePath.endsWith(".tsx") ? "typescript" : "ecmascript";
+function findLeadingJsDoc(node: ts.Node, code: string): JSDocInfo | null {
+  const commentRanges = ts.getLeadingCommentRanges(code, node.pos);
+  if (!commentRanges?.length) return null;
+  const lastRange = commentRanges[commentRanges.length - 1];
+  const text = code.substring(lastRange.pos, lastRange.end);
+  if (!text.startsWith("/**")) return null;
+  return parseJsDocText(text);
 }
 
-type SwcComment = { kind: string; text: string; span: { start: number; end: number } };
-
-function collectComments(module: any): SwcComment[] {
-  // SWC guarda comentarios en module.comments (dependiendo de versión) o los anexa.
-  const c: SwcComment[] = [];
-  const raw = module?.comments;
-
-  // Formatos vistos:
-  // - { leading: [...], trailing: [...] }
-  // - { leadingComments: [...], trailingComments: [...] }
-  // - array
-  if (!raw) return c;
-
-  if (Array.isArray(raw)) return raw as SwcComment[];
-
-  for (const key of ["leading", "trailing", "leadingComments", "trailingComments"]) {
-    const arr = raw[key];
-    if (Array.isArray(arr)) c.push(...arr);
-  }
-
-  return c;
-}
-
-function findLeadingJsDoc(
-  code: string,
-  comments: SwcComment[],
-  position: number,
-): JSDocInfo | null {
-  // Elegimos el comentario de bloque más cercano antes de position
-  const candidates = comments
-    .filter((c) => c.kind === "Block" && c.span?.end != null && c.span.end <= position)
-    .sort((a, b) => (b.span.end - a.span.end));
-
-  const nearest = candidates[0];
-  if (!nearest) return null;
-
-  // Solo considerarlo JSDoc si está inmediatamente antes del export (ignorando whitespace)
-  const between = code.slice(nearest.span.end, position);
-  if (between.trim().length !== 0) return null;
-
-  const text = nearest.text ?? "";
-  // JSDoc suele ser /** ... */; en SWC el text viene sin /* */.
-  if (!text.trimStart().startsWith("*")) return null;
-
-  return parseJsDocFromBlockText(text);
-}
-
-interface JSDocInfo {
-  description: string;
-  params: JSDocParam[];
-  returns?: string;
-  returnsType?: string;
-  throws?: string[];
-  deprecated?: string;
-  since?: string;
-  isBeta?: boolean;
-  isInternal?: boolean;
-  examples: string[];
-}
-
-function parseJsDocFromBlockText(blockText: string): JSDocInfo {
-  // blockText es el contenido interno del /* ... */
-  const lines = blockText
+function parseJsDocText(commentText: string): JSDocInfo {
+  const clean = commentText
+    .replace(/^\/\*\*?/, "")
+    .replace(/\*\/$/, "")
     .split("\n")
     .map((l) => l.replace(/^\s*\*\s?/, "").trimEnd());
 
@@ -199,7 +170,7 @@ function parseJsDocFromBlockText(blockText: string): JSDocInfo {
   let inExample = false;
   let currentExample: string[] = [];
 
-  for (const line of lines) {
+  for (const line of clean) {
     const trimmed = line.trim();
     if (!trimmed) {
       if (!inExample) descriptionLines.push("");
@@ -218,7 +189,6 @@ function parseJsDocFromBlockText(blockText: string): JSDocInfo {
         inExample = false;
         if (currentExample.length) examples.push(currentExample.join("\n").trim());
         currentExample = [];
-        // seguir con el tag actual
       } else {
         currentExample.push(line);
         continue;
@@ -316,211 +286,4 @@ function makeExportInfo(
     isInternal: jsDoc?.isInternal,
     examples: jsDoc?.examples ?? [],
   };
-}
-
-function buildFunctionSignature(code: string, name: string, fnNode: any): string {
-  const asyncPrefix = fnNode?.async ? "async " : "";
-  const typeParams = fnNode?.typeParams?.params
-    ? `<${(fnNode.typeParams.params as any[]).map(formatTsTypeParam).join(", ")}>`
-    : "";
-  const params = (fnNode?.params ?? []).map((p: any) => formatParam(code, p)).join(", ");
-  const returnType = fnNode?.returnType?.typeAnnotation
-    ? `: ${formatTsType(fnNode.returnType.typeAnnotation)}`
-    : "";
-  return `${asyncPrefix}${name}${typeParams}(${params})${returnType}`.trim();
-}
-
-function buildVariableSignature(
-  code: string,
-  name: string,
-  kind: ExportType,
-  init: any,
-): string | undefined {
-  if (!init) return `${kind} ${name}`;
-
-  if (init.type === "ArrowFunctionExpression" || init.type === "FunctionExpression") {
-    const asyncPrefix = init?.async ? "async " : "";
-    const params = (init?.params ?? []).map((p: any) => formatParam(code, p)).join(", ");
-    const returnType = init?.returnType?.typeAnnotation
-      ? `: ${formatTsType(init.returnType.typeAnnotation)}`
-      : "";
-    return `${kind} ${name} = ${asyncPrefix}(${params})${returnType} => …`;
-  }
-
-  return `${kind} ${name}`;
-}
-
-function formatParam(_code: string, param: any): string {
-  const pat = param?.pat ?? param;
-  if (!pat) return "";
-
-  return formatPattern(pat);
-
-  function formatPattern(p: any): string {
-    if (!p) return "[param]";
-
-    // foo = 123
-    if (p.type === "AssignmentPattern") {
-      const left = formatPattern(p.left);
-      const right = formatExpressionLiteral(p.right);
-      const type = p.typeAnnotation?.typeAnnotation
-        ? `: ${formatTsType(p.typeAnnotation.typeAnnotation)}`
-        : "";
-      return `${left}${type} = ${right}`.trim();
-    }
-
-    if (p.type === "Identifier") {
-      const name = p.value ?? "";
-      const opt = p.optional ? "?" : "";
-      const type = p.typeAnnotation?.typeAnnotation
-        ? `: ${formatTsType(p.typeAnnotation.typeAnnotation)}`
-        : "";
-      return `${name}${opt}${type}`.trim();
-    }
-
-    if (p.type === "RestElement") {
-      const arg = p.arg?.type === "Identifier" ? p.arg.value : "arg";
-      const type = p.typeAnnotation?.typeAnnotation
-        ? `: ${formatTsType(p.typeAnnotation.typeAnnotation)}`
-        : "";
-      return `...${arg}${type}`.trim();
-    }
-
-    if (p.type === "ObjectPattern") {
-      const props = (p.properties ?? []).map((prop: any) => {
-        if (!prop) return "";
-        if (prop.type === "RestElement") return `...${formatPattern(prop.arg)}`;
-        if (prop.type === "KeyValuePatternProperty") {
-          const key = formatObjectKey(prop.key);
-          const val = formatPattern(prop.value);
-          // { a: a } -> { a }
-          if (prop.value?.type === "Identifier" && prop.value.value === key) return key;
-          return `${key}: ${val}`;
-        }
-        if (prop.type === "AssignmentPatternProperty") {
-          const key = prop.key?.value ?? formatObjectKey(prop.key);
-          const value = prop.value ? ` = ${formatExpressionLiteral(prop.value)}` : "";
-          return `${key}${value}`.trim();
-        }
-        return "";
-      }).filter(Boolean);
-
-      const type = p.typeAnnotation?.typeAnnotation
-        ? `: ${formatTsType(p.typeAnnotation.typeAnnotation)}`
-        : "";
-      return `{ ${props.join(", ")} }${type}`.trim();
-    }
-
-    if (p.type === "ArrayPattern") {
-      const elems = (p.elements ?? []).map((e: any) => {
-        if (!e) return "";
-        if (e.type === "RestElement") return `...${formatPattern(e.arg)}`;
-        return formatPattern(e);
-      });
-      const type = p.typeAnnotation?.typeAnnotation
-        ? `: ${formatTsType(p.typeAnnotation.typeAnnotation)}`
-        : "";
-      return `[${elems.join(", ")}]${type}`.trim();
-    }
-
-    // Último recurso: no intentamos reconstruir el texto original.
-    return "[param]";
-  }
-
-  function formatObjectKey(k: any): string {
-    if (!k) return "key";
-    if (k.type === "Identifier") return String(k.value);
-    if (k.type === "StringLiteral") return JSON.stringify(k.value);
-    if (k.type === "NumericLiteral") return String(k.value);
-    return "key";
-  }
-
-  function formatExpressionLiteral(expr: any): string {
-    if (!expr) return "…";
-    if (expr.type === "StringLiteral") return JSON.stringify(expr.value);
-    if (expr.type === "NumericLiteral") return String(expr.value);
-    if (expr.type === "BooleanLiteral") return String(expr.value);
-    if (expr.type === "NullLiteral") return "null";
-    return "…";
-  }
-}
-
-function formatTsTypeParam(p: any): string {
-  const name = p?.name?.value ?? "T";
-  const constraint = p?.constraint ? ` extends ${formatTsType(p.constraint)}` : "";
-  const def = p?.default ? ` = ${formatTsType(p.default)}` : "";
-  return `${name}${constraint}${def}`;
-}
-
-function formatTsType(t: any): string {
-  if (!t || typeof t !== "object") return "unknown";
-
-  if (t.type === "TsKeywordType") return String(t.kind);
-  if (t.type === "TsThisType") return "this";
-  if (t.type === "TsLitType") return formatTsLiteral(t.lit);
-  if (t.type === "TsNullKeyword") return "null";
-
-  if (t.type === "TsTypeRef") {
-    const name = formatTsEntityName(t.typeName);
-    const params = Array.isArray(t.typeParams?.params) && t.typeParams.params.length
-      ? `<${t.typeParams.params.map(formatTsType).join(", ")}>`
-      : "";
-    return `${name}${params}`;
-  }
-
-  if (t.type === "TsArrayType") return `${formatTsType(t.elemType)}[]`;
-  if (t.type === "TsParenthesizedType") return `(${formatTsType(t.typeAnnotation)})`;
-  if (t.type === "TsUnionType") return (t.types ?? []).map(formatTsType).join(" | ") || "unknown";
-  if (t.type === "TsIntersectionType") {
-    return (t.types ?? []).map(formatTsType).join(" & ") || "unknown";
-  }
-  if (t.type === "TsTupleType") return `[${(t.elemTypes ?? []).map(formatTsType).join(", ")}]`;
-  if (t.type === "TsTypeOperator") return `${t.operator} ${formatTsType(t.typeAnnotation)}`;
-
-  if (t.type === "TsFnOrConstructorType") {
-    const params = (t.params ?? []).map((p: any) => {
-      const name = p?.pat?.type === "Identifier" ? p.pat.value : "param";
-      const opt = p?.pat?.optional ? "?" : "";
-      const ann = p?.typeAnnotation?.typeAnnotation
-        ? formatTsType(p.typeAnnotation.typeAnnotation)
-        : "unknown";
-      return `${name}${opt}: ${ann}`;
-    }).join(", ");
-    const ret = t.typeAnnotation ? formatTsType(t.typeAnnotation) : "unknown";
-    return `(${params}) => ${ret}`;
-  }
-
-  if (t.type === "TsTypeLit") {
-    const members = (t.members ?? []).map((m: any) => {
-      if (m.type === "TsPropertySignature") {
-        const key = m.key?.type === "Identifier" ? m.key.value : "prop";
-        const opt = m.optional ? "?" : "";
-        const ann = m.typeAnnotation?.typeAnnotation
-          ? formatTsType(m.typeAnnotation.typeAnnotation)
-          : "unknown";
-        return `${key}${opt}: ${ann}`;
-      }
-      return null;
-    }).filter(Boolean);
-    return `{ ${members.join("; ")} }`;
-  }
-
-  return "unknown";
-}
-
-function formatTsEntityName(n: any): string {
-  if (!n) return "unknown";
-  if (n.type === "Identifier") return String(n.value);
-  if (n.type === "TsQualifiedName") {
-    return `${formatTsEntityName(n.left)}.${formatTsEntityName(n.right)}`;
-  }
-  return "unknown";
-}
-
-function formatTsLiteral(lit: any): string {
-  if (!lit) return "unknown";
-  if (lit.type === "StringLiteral") return JSON.stringify(lit.value);
-  if (lit.type === "NumericLiteral") return String(lit.value);
-  if (lit.type === "BooleanLiteral") return String(lit.value);
-  return "unknown";
 }

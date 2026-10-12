@@ -37,6 +37,8 @@ export interface TemplateData {
   currentDate: string;
   currentVersion: string;
   currentYear: string;
+  nextOpening: string;
+  proximasAperturas: string;
 }
 
 export interface ProjectAnalysis {
@@ -152,6 +154,24 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
     includeCi: workflows.length > 0,
   });
 
+  const now = new Date();
+  const nextOpeningDate = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+  const monthsEs = [
+    "Enero",
+    "Febrero",
+    "Marzo",
+    "Abril",
+    "Mayo",
+    "Junio",
+    "Julio",
+    "Agosto",
+    "Septiembre",
+    "Octubre",
+    "Noviembre",
+    "Diciembre",
+  ];
+  const nextOpening = `${monthsEs[nextOpeningDate.getMonth()]} ${nextOpeningDate.getFullYear()}`;
+
   const templateData: TemplateData = {
     projectName,
     badges,
@@ -169,9 +189,11 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
     dependencies: userConfig.sections?.dependencies !== false ? dependencies : "",
     ci,
     customSections: "",
-    currentDate: new Date().toISOString().split("T")[0],
+    currentDate: now.toISOString().split("T")[0],
     currentVersion: denoConfig?.version ?? "unknown",
-    currentYear: new Date().getFullYear().toString(),
+    currentYear: now.getFullYear().toString(),
+    nextOpening,
+    proximasAperturas: nextOpening,
   };
 
   if (userConfig.strict) {

@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-10-11
+  🔄 Última actualización: 2026-10-12
   📦 Versión del generador: v2.2.0
 -->
 
@@ -10,7 +10,7 @@
 
 **Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps**
 
-[![Deno](https://img.shields.io/badge/Deno-%5E1.40.0-black?logo=deno&logoColor=white)](https://deno.land/)
+[![Deno](https://img.shields.io/badge/Deno-%5E2.0.0-black?logo=deno&logoColor=white)](https://deno.land/)
 [![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker&logoColor=white)](https://hub.docker.com/)
 [![Lefthook](https://img.shields.io/badge/lefthook-enabled-brightgreen?logo=lefthook&logoColor=white)](https://github.com/evilmartians/lefthook)
 [![CodeQL](https://github.com/glastor-dev/glastor-dev/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/glastor-dev/glastor-dev/actions/workflows/codeql.yml)
@@ -20,7 +20,7 @@
 
 <div align="center">
 
-**🟢 Disponible para proyectos — Próximas aperturas: Marzo 2026**
+**🟢 Disponible para proyectos — Próximas aperturas: Noviembre 2026**
 
 [📧 Contacto](mailto:ventas@glastor.es) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
 
@@ -96,34 +96,6 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 </div>
 
 ---
-
-## 🗺️ Roadmap 2025-2026
-
-```mermaid
-gantt
-    title Hoja de Ruta GLASTOR 2025-2026
-    dateFormat  YYYY-MM-DD
-    section Core Development
-    CLI Migration (Cliffy)      :done,    des1, 2024-12-01, 2025-01-06
-    Smart Injection Engine      :active,  des2, 2025-01-07, 30d
-    Plugin System Architecture  :         des3, after des2, 45d
-    API v2.0 Release           :         des4, after des3, 30d
-
-    section Export Features
-    PDF Export (Pandoc)        :         feat1, 2025-03-01, 20d
-    HTML Export (Customizable) :         feat2, after feat1, 15d
-    DOCX Export (Enterprise)   :         feat3, after feat2, 15d
-
-    section Community & Growth
-    Template Marketplace       :         comm1, 2025-05-01, 60d
-    Plugin Registry            :         comm2, after comm1, 45d
-    Documentation Site         :         comm3, 2025-04-01, 30d
-
-    section Content & Outreach
-    Blog Launch (10 articles)  :         cont1, 2025-02-15, 90d
-    YouTube Tutorials (20 vids):         cont2, 2025-03-01, 120d
-    Conference Talk (PyCon)    :         cont3, 2025-07-15, 5d
-```
 
 ## 💙 Sponsors & Colaboradores
 
@@ -235,50 +207,18 @@ Tu apoyo permite dedicar más tiempo al desarrollo de herramientas Open Source d
 
 ---
 
-## 🤝 Contribuir al Proyecto
-
-¿Quieres contribuir? ¡Excelente! Aquí está el proceso optimizado:
-
-**🚀 Quick Start:**
-
-1. Lee la guía completa: [CONTRIBUTING.md](.github/CONTRIBUTING.md)
-2. Busca issues etiquetados: `good first issue` | `help wanted` | `bug`
-3. Comenta en el issue que lo tomas (evita trabajo duplicado)
-4. Fork → Branch → Code → Test → PR
-
-**✅ Checklist antes de abrir PR:**
-
-```bash
-# Formatting
-deno task fmt:check
-
-# Linting
-deno task lint
-
-# Type checking
-deno task check
-
-# Tests (con coverage)
-deno task test --coverage
-
-# Integration tests
-deno task test:integration
-```
-
-**🎯 Áreas donde necesitamos ayuda:**
-
-- 📝 **Documentation** — Mejorar docs, escribir tutoriales, traducir
-- 🐛 **Bug fixes** — Issues marcados como `bug` o `good first issue`
-- ✨ **Features** — Implementar features del roadmap
-- 🧪 **Testing** — Aumentar coverage (actual: 78%, meta: 90%)
-- 🎨 **Design** — Templates, themes, UI improvements
-
 **🏆 Contributors Hall of Fame:**
 
 Agradecemos a todos nuestros contributors:
 
 <!-- ALL-CONTRIBUTORS-LIST:START -->
-<!-- Placeholder for auto-generated contributor list -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<a href="https://github.com/glastor-dev/glastor-dev/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=glastor-dev/glastor-dev" alt="Contributors" />
+</a>
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 [Ver todos los contributors →](https://github.com/glastor-dev/glastor-dev/graphs/contributors)
@@ -409,7 +349,7 @@ ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
 
 ```json
 {
-  "@swc/core": "^1.3.0" // Fast TypeScript/JavaScript parser
+  "typescript": "^5.7.0" // TypeScript Compiler AST API (offline, zero WASM)
 }
 ```
 
@@ -559,7 +499,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-11
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-12</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
@@ -577,7 +517,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/generators/api.ts
 #### generateApiDocs
 - Type: function
-- Signature: `generateApiDocs(exports: unknown[], projectRoot: string = …): string`
+- Signature: `generateApiDocs(exports: ExportInfo[], projectRoot: string = Deno.cwd()): string`
 
 ### src/generators/badges.ts
 #### BadgesConfig
@@ -585,11 +525,11 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 #### generateBadges
 - Type: function
-- Signature: `generateBadges(_config: unknown): string`
+- Signature: `generateBadges(_config: BadgesConfig): string`
 
 #### generateRepoBadges
 - Type: function
-- Signature: `generateRepoBadges(config: unknown): string`
+- Signature: `generateRepoBadges(config: RepoBadgesConfig): string`
 
 #### RepoBadgesConfig
 - Type: interface
@@ -603,12 +543,12 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 #### generateExamples
 - Type: function (async)
-- Signature: `async generateExamples(projectRoot: string, exports: unknown[], options: unknown = …): unknown`
+- Signature: `async generateExamples(projectRoot: string, exports: ExportInfo[], options: ExamplesOptions = {}): Promise<ExamplesResult>`
 
 ### src/generators/toc.ts
 #### generateToc
 - Type: function
-- Signature: `generateToc(options: unknown): string`
+- Signature: `generateToc(options: TocOptions): string`
 
 #### TocOptions
 - Type: interface
@@ -616,7 +556,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/mod.ts
 #### generateReadme
 - Type: function (async)
-- Signature: `async generateReadme(args: unknown): unknown`
+- Signature: `async generateReadme(args: GenerateReadmeArgs): Promise<void>`
 
 #### GenerateReadmeArgs
 - Type: interface
@@ -634,7 +574,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 #### readDenoConfig
 - Type: function (async)
-- Signature: `async readDenoConfig(projectRoot: string): unknown`
+- Signature: `async readDenoConfig(projectRoot: string): Promise<DenoConfig | null>`
 
 ### src/parsers/import_map.ts
 #### ImportMap
@@ -642,12 +582,12 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 #### readImportMap
 - Type: function (async)
-- Signature: `async readImportMap(projectRoot: string): unknown`
+- Signature: `async readImportMap(projectRoot: string): Promise<ImportMap | null>`
 
 ### src/parsers/imports.ts
 #### analyzeImports
 - Type: function (async)
-- Signature: `async analyzeImports(projectRoot: string, options: unknown = …): unknown`
+- Signature: `async analyzeImports(projectRoot: string, options: AnalyzeImportsOptions = {}): Promise<ImportAnalysis>`
 
 #### AnalyzeImportsOptions
 - Type: interface
@@ -658,7 +598,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/parsers/project_files.ts
 #### detectProjectFiles
 - Type: function (async)
-- Signature: `async detectProjectFiles(projectRoot: string): unknown`
+- Signature: `async detectProjectFiles(projectRoot: string): Promise<string[]>`
 
 ### src/parsers/source_code.ts
 #### ExportInfo
@@ -669,11 +609,11 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 #### extractExports
 - Type: function (async)
-- Signature: `async extractExports(filePath: string): unknown`
+- Signature: `async extractExports(filePath: string): Promise<ExportInfo[]>`
 
 #### extractExportsFromProject
 - Type: function (async)
-- Signature: `async extractExportsFromProject(projectRoot: string, options: unknown = …): unknown`
+- Signature: `async extractExportsFromProject(projectRoot: string, options: ExtractOptions = {}): Promise<ExportInfo[]>`
 
 #### ExtractOptions
 - Type: interface
@@ -684,12 +624,19 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/parsers/source_code_ast.ts
 #### extractExportsAst
 - Type: function (async)
-- Signature: `async extractExportsAst(filePath: string): unknown`
+- Signature: `async extractExportsAst(filePath: string): Promise<ExportInfo[]>`
+
+#### extractExportsAstFromCode
+- Type: function
+- Signature: `extractExportsAstFromCode(code: string, filePath: string): ExportInfo[]`
+
+#### JSDocInfo
+- Type: interface
 
 ### src/parsers/tests.ts
 #### detectTests
 - Type: function (async)
-- Signature: `async detectTests(projectRoot: string): unknown`
+- Signature: `async detectTests(projectRoot: string): Promise<TestDetection>`
 
 #### TestDetection
 - Type: interface
@@ -697,12 +644,12 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/parsers/workflows.ts
 #### detectWorkflows
 - Type: function (async)
-- Signature: `async detectWorkflows(projectRoot: string): unknown`
+- Signature: `async detectWorkflows(projectRoot: string): Promise<string[]>`
 
 ### src/project/analyze.ts
 #### analyzeProject
 - Type: function (async)
-- Signature: `async analyzeProject(options: unknown): unknown`
+- Signature: `async analyzeProject(options: AnalyzeProjectOptions): Promise<ProjectAnalysis>`
 
 #### AnalyzeProjectOptions
 - Type: interface
@@ -716,7 +663,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/utils/file_system.ts
 #### ensureWritableOutput
 - Type: function (async)
-- Signature: `async ensureWritableOutput(outputPath: string, options: unknown): unknown`
+- Signature: `async ensureWritableOutput(outputPath: string, options: { force: boolean }): Promise<void>`
 
 ### src/utils/init_wizard.ts
 #### runInitWizard
@@ -731,15 +678,22 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 ### src/utils/readme_infer.ts
 #### inferDescriptionFromReadme
 - Type: function (async)
-- Signature: `async inferDescriptionFromReadme(readmePath: string): unknown`
+- Signature: `async inferDescriptionFromReadme(readmePath: string): Promise<string | null>`
 
 ### src/utils/user_config.ts
 #### loadUserConfig
 - Type: function (async)
-- Signature: `async loadUserConfig(projectRoot: string): unknown`
+- Signature: `async loadUserConfig(projectRoot: string): Promise<UserConfig>`
 
 #### UserConfig
 - Type: interface
+
+### test/sanitize_test.ts
+#### add
+- Type: function
+
+#### add
+- Type: function
 
 ### test/source_code_ast_test.ts
 #### hello
@@ -773,7 +727,10 @@ Example\n * @example\n * hello("Andres")\n
 - LICENSE
 
 ### Standard Library
+- jsr:@std/assert
 - jsr:@std/assert/equals
+- jsr:@std/assert/match
+- jsr:@std/assert/rejects
 - jsr:@std/assert/string-includes
 - jsr:@std/fs/exists
 - jsr:@std/fs/walk
@@ -788,9 +745,9 @@ Example\n * @example\n * hello("Andres")\n
 - jsr:@std/path@^1.0.0/join
 
 ### Third-party
-- https://deno.land/x/swc@0.2.1/mod.ts
 - jsr:@cliffy/ansi@1.0.0-rc.7/colors
 - jsr:@cliffy/command@1.0.0-rc.7
 - jsr:@cliffy/prompt@1.0.0-rc.7
+- npm:typescript@^5.7.0
 
 </details>

@@ -7,8 +7,12 @@ on:
       - "README.md"
       - "README.generated.md"
   schedule:
-    - cron: "0 3 * * 1" # Lunes a las 03:00 UTC (ajusta si prefieres otro día/hora)
+    - cron: "0 3 * * 1" # Cada lunes a las 03:00 UTC
+    - cron: "0 0 1 * *" # Primer día del mes a las 00:00 UTC (rotación de aperturas)
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   update-readme:
@@ -22,11 +26,6 @@ jobs:
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-
-      - name: Actualizar fecha en README.profile.md
-        run: |
-          fecha=$(date +'%Y-%m-%d')
-          sed -i "s/Última actualización: .*/Última actualización: $fecha/" README.profile.md
 
       - name: Generate README
         run: deno task readme:force

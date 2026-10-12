@@ -2,8 +2,11 @@ name: Benchmarks
 
 on:
   push:
-    branches: [master]
+    branches: [master, main]
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   bench:

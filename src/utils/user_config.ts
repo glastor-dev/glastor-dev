@@ -46,7 +46,7 @@ export async function loadUserConfig(projectRoot: string): Promise<UserConfig> {
 
   try {
     const text = await Deno.readTextFile(path);
-    const data = parseJsonc(text) as any;
+    const data = (parseJsonc(text) as Record<string, unknown>) ?? {};
 
     // Validación básica Pro: asegurar tipos correctos
     validateConfig(data);
@@ -67,9 +67,9 @@ export async function loadUserConfig(projectRoot: string): Promise<UserConfig> {
       includeExamples: asBoolean(data.includeExamples) ?? defaultConfig.includeExamples,
       badgeStyle: asString(data.badgeStyle) ?? defaultConfig.badgeStyle,
       contributing: asString(data.contributing),
-      sections: isRecord(data.sections) ? data.sections : undefined,
-      api: isRecord(data.api) ? data.api : undefined,
-      sanitize: isRecord(data.sanitize) ? data.sanitize : undefined,
+      sections: isRecord(data.sections) ? (data.sections as UserConfig["sections"]) : undefined,
+      api: isRecord(data.api) ? (data.api as UserConfig["api"]) : undefined,
+      sanitize: isRecord(data.sanitize) ? (data.sanitize as UserConfig["sanitize"]) : undefined,
       strict: asBoolean(data.strict),
       customSections: validateCustomSections(data.customSections),
     };
@@ -80,7 +80,7 @@ export async function loadUserConfig(projectRoot: string): Promise<UserConfig> {
   }
 }
 
-function validateConfig(config: any) {
+function validateConfig(config: Record<string, unknown>) {
   if (config.exclude && !Array.isArray(config.exclude)) {
     throw new Error("'exclude' must be an array of strings.");
   }
@@ -89,11 +89,11 @@ function validateConfig(config: any) {
   }
 }
 
-function validateCustomSections(sections: any) {
+function validateCustomSections(sections: unknown) {
   if (!Array.isArray(sections)) return undefined;
   return sections
     .filter(isRecord)
-    .map((s: any) => ({
+    .map((s) => ({
       title: asString(s.title) || "",
       content: asString(s.content) || "",
       position: asString(s.position),
@@ -110,10 +110,10 @@ function asBoolean(v: unknown): boolean | undefined {
 }
 
 function asStringArray(v: unknown): string[] | undefined {
-  return Array.isArray(v) ? v.filter((i) => typeof i === "string") as string[] : undefined;
+  return Array.isArray(v) ? (v.filter((i) => typeof i === "string") as string[]) : undefined;
 }
 
-function isRecord(v: unknown): v is Record<string, any> {
+function isRecord(v: unknown): v is Record<string, unknown> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
 }
 

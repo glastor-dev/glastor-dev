@@ -1,14 +1,20 @@
-# Utiliza la imagen oficial de Deno
-FROM denoland/deno:alpine-1.40.4
+# Imagen oficial de Deno 2 en Alpine
+FROM denoland/deno:alpine
 
 # Establece el directorio de trabajo
 WORKDIR /app
 
-# Copia los archivos del proyecto
-COPY . .
+# Copia configuración y dependencias primero para optimizar la caché de capas
+COPY deno.json deno.lock* ./
 
-# Expone el puerto si tu app lo necesita (opcional)
-# EXPOSE 8000
+# Copia el código fuente
+COPY src/ ./src/
 
-# Comando por defecto: muestra ayuda del CLI
-CMD ["run", "--allow-read", "--allow-write", "--allow-env", "--allow-net", "src/main.ts", "--help"]
+# Cachea las dependencias del proyecto
+RUN deno cache src/main.ts
+
+# Seguridad: Usuario no privilegiado 'deno'
+USER deno
+
+# Comando por defecto con privilegios mínimos (PoLP)
+CMD ["run", "--allow-read", "--allow-write", "--allow-env", "src/main.ts", "--help"]

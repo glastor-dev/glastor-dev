@@ -1,0 +1,19 @@
+{
+  "version": "0.2",
+  "language": "en,es",
+  "words": [
+    "glastor",
+    "Glastor",
+    "GLASTOR",
+    "readmegen",
+    "proximas",
+    "Aperturas",
+    "Khasis",
+    "Founde"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    ".git/**",
+    "deno.lock"
+  ]
+}

@@ -1,0 +1,17 @@
+.git
+.github
+.vscode
+.idea
+node_modules
+dist
+build
+book/book
+docs
+test
+bench
+.venv
+*.bak
+.DS_Store
+Thumbs.db
+.env*
+.cspell.json
