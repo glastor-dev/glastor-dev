@@ -1,19 +1,24 @@
 {
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "language": "en,es",
-  "words": [
-    "glastor",
-    "Glastor",
-    "GLASTOR",
-    "readmegen",
-    "proximas",
-    "Aperturas",
-    "Khasis",
-    "Founde"
+  "language": "en,es,es-ES",
+  "import": [
+    "@cspell/dict-es-es/cspell-ext.json"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-words",
+      "path": "./.cspell/custom-words.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": [
+    "custom-words"
   ],
   "ignorePaths": [
     "node_modules/**",
     ".git/**",
-    "deno.lock"
+    "deno.lock",
+    "book/book/**"
   ]
 }

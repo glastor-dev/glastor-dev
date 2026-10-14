@@ -34,3 +34,31 @@ export function generateRepoBadges(config: RepoBadgesConfig): string {
     `![Last Commit](https://img.shields.io/github/last-commit/${repo}.svg?style=${style}${branch})`,
   ].join("\n");
 }
+
+export interface VisitorBadgeConfig {
+  target: string; // e.g. "github.com/glastor-dev" or "glastor-dev"
+  style?: string; // e.g. "flat-square"
+  label?: string; // e.g. "Visitas"
+  extraCount?: number;
+  color?: string; // e.g. "8a2be2"
+  labelColor?: string; // e.g. "555555"
+}
+
+export function generateVisitorBadge(config: VisitorBadgeConfig): string {
+  const target = config.target.startsWith("github.com/")
+    ? config.target
+    : `github.com/${config.target}`;
+  const style = encodeURIComponent(config.style ?? "flat-square");
+  const label = encodeURIComponent(config.label ?? "Visitas");
+  const extraCount = typeof config.extraCount === "number"
+    ? `&extraCount=${config.extraCount}`
+    : "";
+  const color = encodeURIComponent(config.color ?? "8a2be2");
+  const labelColor = encodeURIComponent(config.labelColor ?? "555555");
+
+  const badgeUrl =
+    `https://hits.sh/${target}.svg?style=${style}&label=${label}${extraCount}&color=${color}&labelColor=${labelColor}`;
+  const targetUrl = `https://hits.sh/${target}/`;
+
+  return `[![Profile Views](${badgeUrl})](${targetUrl})`;
+}

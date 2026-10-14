@@ -56,6 +56,11 @@
     "fmt:check": "deno fmt --check",
     "check": "deno check src/main.ts",
     "test": "deno test --allow-read --allow-write --allow-env",
-    "bench": "deno bench --allow-read --allow-write --allow-env --lock=deno.lock"
+    "bench": "deno bench --allow-read --allow-write --allow-env --lock=deno.lock",
+    "spell:check": "npx cspell \"**/*.md\"",
+    "spell:add": "deno run --allow-run --allow-read --allow-write scripts/spell_add.ts"
+  },
+  "imports": {
+    "@cspell/dict-es-es": "npm:@cspell/dict-es-es@^3.0.9"
   }
 }

@@ -1,0 +1,41 @@
+name: Nemesis Security & Hygiene Audit
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+concurrency:
+  group: nemesis-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write # Requerido para auto-commits de remediación/limpieza
+  pull-requests: write # Requerido para comentarios y sugerencias interactivas de 1-click
+  security-events: write # Requerido para publicar alertas SARIF en GitHub Security tab
+
+jobs:
+  audit:
+    name: Nemesis Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ejecutar Nemesis Security Auditor
+        uses: glastor-dev/nemesis@master
+        with:
+          diff-mode: ${{ github.event_name == 'pull_request' }}
+          auto-fix: false
+          pr-suggestions: true
+          scan-secrets: true
+          scan-sast: true
+          scan-sca: true
+          scan-hygiene: true
+          scan-licenses: true
+          generate-sbom: true
+          upload-sarif: true
+          fail-on-critical: false

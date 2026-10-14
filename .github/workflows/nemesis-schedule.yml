@@ -1,0 +1,42 @@
+name: Nemesis Scheduled Deep Audit & SBOM
+
+on:
+  schedule:
+    - cron: "0 3 * * 0" # Domingos a las 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  deep-audit:
+    name: Full Audit & SBOM Generation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ejecutar Auditoría Completa con Nemesis
+        id: nemesis
+        uses: glastor-dev/nemesis@master
+        with:
+          diff-mode: false
+          scan-secrets: true
+          scan-sast: true
+          scan-sca: true
+          scan-hygiene: true
+          scan-licenses: true
+          generate-sbom: true
+          upload-sarif: true
+          fail-on-critical: false
+
+      - name: Archivar Reportes y SBOM CycloneDX
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nemesis-security-reports
+          path: |
+            .nemesis-reports/

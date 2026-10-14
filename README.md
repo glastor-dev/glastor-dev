@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-10-12
+  🔄 Última actualización: 2026-10-14
   📦 Versión del generador: v2.2.0
 -->
 
@@ -16,7 +16,8 @@
 [![CodeQL](https://github.com/glastor-dev/glastor-dev/actions/workflows/codeql.yml/badge.svg?branch=master)](https://github.com/glastor-dev/glastor-dev/actions/workflows/codeql.yml)
 [![License: GPL v3](https://img.shields.io/badge/Code_License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY 4.0](https://img.shields.io/badge/Text_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-![Profile Views](https://komarev.com/ghpvc/?username=glastor-dev&color=blueviolet&style=flat-square&label=Visitas)
+[![Profile Views](https://hits.sh/github.com/glastor-dev.svg?style=flat-square&label=Visitas&extraCount=1465&color=8a2be2&labelColor=555555)](https://hits.sh/github.com/glastor-dev/)
+[![Estado](https://status.glastor-dev.deno.net/badge/glastor-dev/glastor-dev.svg)](https://status.glastor-dev.deno.net/glastor-dev/glastor-dev)
 
 <div align="center">
 
@@ -499,7 +500,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-12</sub>  
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-14</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
@@ -531,7 +532,14 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 - Type: function
 - Signature: `generateRepoBadges(config: RepoBadgesConfig): string`
 
+#### generateVisitorBadge
+- Type: function
+- Signature: `generateVisitorBadge(config: VisitorBadgeConfig): string`
+
 #### RepoBadgesConfig
+- Type: interface
+
+#### VisitorBadgeConfig
 - Type: interface
 
 ### src/generators/examples.ts

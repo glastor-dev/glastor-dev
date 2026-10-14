@@ -1,0 +1,13 @@
+# Nemesis Security, Hygiene & Compliance Configuration (.nemesis.yml)
+# Repositorio: glastor-dev/glastor-dev
+version: "1"
+
+# Reglas de exclusión y justificación de falsos positivos
+# Toda exclusión requiere obligatoriamente una razón ('reason')
+ignore:
+  - path: "test/**"
+    reason: "Archivos de prueba y fixtures para la suite automatizada de tests"
+
+settings:
+  maxFileSizeMb: 15
+  requireLicense: true
