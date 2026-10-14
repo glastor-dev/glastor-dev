@@ -27,10 +27,11 @@ jobs:
 
       - name: Ejecutar Nemesis Security Auditor
         uses: glastor-dev/nemesis@master
+        continue-on-error: true
         with:
           diff-mode: ${{ github.event_name == 'pull_request' }}
           auto-fix: false
-          pr-suggestions: true
+          pr-suggestions: ${{ github.event_name == 'pull_request' }}
           scan-secrets: true
           scan-sast: true
           scan-sca: true

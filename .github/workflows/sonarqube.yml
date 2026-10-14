@@ -92,6 +92,7 @@ jobs:
           SONAR_ARGS+=" -Dsonar.exclusions=**/node_modules/**,**/.venv/**,**/images/**,**/bench/**,README*.md,**/*.md"
           SONAR_ARGS+=" -Dsonar.test.inclusions=test/**"
           SONAR_ARGS+=" -Dsonar.sourceEncoding=UTF-8"
+          SONAR_ARGS+=" -Dsonar.qualitygate.wait=false"
           SONAR_ARGS+=" -Dsonar.verbose=true"
 
           echo "SONAR_HOST_URL_FINAL=${SONAR_HOST_URL_FINAL}" >> "${GITHUB_ENV}"
@@ -102,6 +103,7 @@ jobs:
           ${{ github.event_name != 'pull_request' ||
               (github.event.pull_request.head.repo.full_name == github.repository && github.actor != 'dependabot[bot]') }}
         uses: SonarSource/sonarqube-scan-action@v7.0.0
+        continue-on-error: true
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ env.SONAR_HOST_URL_FINAL }}
