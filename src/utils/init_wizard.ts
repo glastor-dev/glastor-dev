@@ -1,6 +1,6 @@
 import { Confirm, Input, Select } from "jsr:@cliffy/prompt@1.0.0-rc.7";
 import { Logger } from "./logger.ts";
-import { join } from "jsr:@std/path/join";
+import { join } from "jsr:@std/path@^1.0.0/join";
 
 export async function runInitWizard(projectRoot: string) {
   Logger.banner("GLASTOR README GENERATOR - SETUP");

@@ -1,5 +1,5 @@
-import { walk } from "jsr:@std/fs/walk";
-import { basename } from "jsr:@std/path/basename";
+import { walk } from "jsr:@std/fs@^1.0.0/walk";
+import { basename } from "jsr:@std/path@^1.0.0/basename";
 
 export interface TestDetection {
   hasTests: boolean;

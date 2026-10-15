@@ -10,6 +10,9 @@ import { generateBadges, generateRepoBadges } from "../generators/badges.ts";
 import { generateToc } from "../generators/toc.ts";
 import { generateApiDocs } from "../generators/api.ts";
 import { generateExamples } from "../generators/examples.ts";
+import { generateMermaidGraph } from "../generators/mermaid.ts";
+import { calculateDocCoverage } from "../generators/doc_coverage.ts";
+import { generateLlmsTxt } from "../generators/llms.ts";
 import { inferDescriptionFromReadme } from "../utils/readme_infer.ts";
 
 export interface AnalyzeProjectOptions {
@@ -39,6 +42,10 @@ export interface TemplateData {
   currentYear: string;
   nextOpening: string;
   proximasAperturas: string;
+  docCoverage: string;
+  docCoverageBadge: string;
+  architecture: string;
+  llmsTxt: string;
 }
 
 export interface ProjectAnalysis {
@@ -110,6 +117,16 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
   const examples = await generateExamples(options.projectRoot, filteredExports, {
     includeExamples: userConfig.includeExamples,
     exclude: userConfig.exclude,
+  });
+
+  const docCoverageResult = calculateDocCoverage(filteredExports);
+  const docCoverage = docCoverageResult.summary;
+  const docCoverageBadge = docCoverageResult.badge;
+
+  const architecture = await generateMermaidGraph(options.projectRoot);
+  const llmsTxt = await generateLlmsTxt({
+    projectRoot: options.projectRoot,
+    exports: filteredExports,
   });
 
   const binName = denoConfig?.name
@@ -194,6 +211,10 @@ export async function analyzeProject(options: AnalyzeProjectOptions): Promise<Pr
     currentYear: now.getFullYear().toString(),
     nextOpening,
     proximasAperturas: nextOpening,
+    docCoverage,
+    docCoverageBadge,
+    architecture,
+    llmsTxt,
   };
 
   if (userConfig.strict) {

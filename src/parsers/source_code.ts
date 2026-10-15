@@ -1,5 +1,5 @@
-import { walk } from "jsr:@std/fs/walk";
-import { extname } from "jsr:@std/path/extname";
+import { walk } from "jsr:@std/fs@^1.0.0/walk";
+import { extname } from "jsr:@std/path@^1.0.0/extname";
 import { extractExportsAst } from "./source_code_ast.ts";
 
 export type ExportType =
@@ -261,7 +261,9 @@ function isSourceExt(ext: string): boolean {
 }
 
 function buildSkipRegexes(exclude: string[] | undefined): RegExp[] {
-  const list = exclude && exclude.length ? exclude : [".git", "node_modules", "dist", "build"];
+  const list = exclude && exclude.length
+    ? exclude
+    : [".git", "node_modules", "dist", "build", "test", "bench"];
   return list.map((segment) => new RegExp(escapeRegExp(segment)));
 }
 

@@ -4,14 +4,24 @@ import { renderTemplate } from "./templates/render.ts";
 import { ensureWritableOutput } from "./utils/file_system.ts";
 import { join } from "jsr:@std/path@^1.0.0/join";
 
+/** Supported README template styles */
 export type TemplateName = "minimal" | "modern" | "detailed";
 
+/** Arguments for generating the project README */
 export interface GenerateReadmeArgs {
   template: TemplateName | string;
   output: string;
   force: boolean;
 }
 
+/**
+ * Generates the README documentation for the project by analyzing AST and rendering templates.
+ *
+ * @param args Configuration options including template style, output file, and force flag.
+ * @returns A promise that resolves when the README and related artifacts are generated.
+ * @example
+ * await generateReadme({ template: "modern", output: "README.md", force: true });
+ */
 export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
   const templateName = (args.template || "modern").toLowerCase();
   const profileTemplatePath = join(Deno.cwd(), "README.profile.md");
@@ -71,12 +81,33 @@ export async function generateReadme(args: GenerateReadmeArgs): Promise<void> {
       `\n\n<details>\n  <summary><strong>📦 Dependencies</strong></summary>\n\n${dependencies}\n\n</details>`;
   }
 
+  const architecture = analysis.templateData.architecture;
+  if (!template.includes("{{architecture}}") && architecture) {
+    markdown +=
+      `\n\n<details>\n  <summary><strong>📐 Architecture & Module Graph</strong></summary>\n\n${architecture}\n\n</details>`;
+  }
+
   const cleaned = sanitizeGeneratedMarkdown(markdown);
   await Deno.writeTextFile(args.output, cleaned);
+
+  if (analysis.templateData.llmsTxt) {
+    try {
+      await Deno.writeTextFile(join(Deno.cwd(), "llms.txt"), analysis.templateData.llmsTxt);
+    } catch {
+      // Ignore if cannot write
+    }
+  }
 
   console.log(`README generated: ${args.output}`);
 }
 
+/**
+ * Normalizes and cleans generated Markdown text by stripping BOM, removing accidental trash code,
+ * and ensuring banner images are positioned at the document header.
+ *
+ * @param markdown Raw generated markdown content.
+ * @returns Cleaned and sanitized markdown string.
+ */
 export function sanitizeGeneratedMarkdown(markdown: string): string {
   // Normalizar BOM / caracteres invisibles si se cuelan al principio del archivo
   markdown = markdown.replace(/^[\uFEFF\u200B\u200C\u200D\u2060]+/, "");

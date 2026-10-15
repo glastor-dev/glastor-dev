@@ -1,0 +1,76 @@
+# @glastor-dev/readmegen
+
+> Professional README Generator for Deno projects with interactive CLI and GitHub Actions integration.
+
+## Quick Overview
+- Version: 2.2.0
+- License: GPL-3.0-only
+- Runtime: Deno >= 2.0.0
+- Entrypoint: ./src/mod.ts
+
+## Public API Reference
+- `Pillar` (type)
+- `Severity` (type)
+- `Finding` (interface)
+- `PillarScore` (interface)
+- `ReviewResult` (interface)
+- `reviewFile(filePath: string, content: string): Finding[]`
+- `calculateReviewResult(findings: Finding[], filesAnalyzed: string[]): ReviewResult`
+- `formatTerminal(result: ReviewResult): string`
+- `formatMarkdown(result: ReviewResult): string`
+- `generateApiDocs(exports: ExportInfo[], projectRoot: string = Deno.cwd()): string`
+- `BadgesConfig` (interface)
+- `RepoBadgesConfig` (interface)
+- `generateBadges(_config: BadgesConfig): string`
+- `generateRepoBadges(config: RepoBadgesConfig): string`
+- `VisitorBadgeConfig` (interface)
+- `generateVisitorBadge(config: VisitorBadgeConfig): string`
+- `DocCoverageResult` (interface)
+- `calculateDocCoverage(exports: ExportInfo[]): DocCoverageResult`
+- `ExamplesOptions` (interface)
+- `ExamplesResult` (interface)
+- `async generateExamples(projectRoot: string, exports: ExportInfo[], options: ExamplesOptions = {}): Promise<ExamplesResult>`
+- `LlmsTxtOptions` (interface)
+- `async generateLlmsTxt(options: LlmsTxtOptions): Promise<string>`
+- `MermaidGraphOptions` (interface)
+- `async generateMermaidGraph(projectRoot: string, options: MermaidGraphOptions = {}): Promise<string>`
+- `TocOptions` (interface)
+- `generateToc(options: TocOptions): string`
+- `TemplateName` (type) - Supported README template styles
+- `GenerateReadmeArgs` (interface) - Arguments for generating the project README
+- `async generateReadme(args: GenerateReadmeArgs): Promise<void>` - Generates the README documentation for the project by analyzing AST and rendering templates.
+  - Example: `await generateReadme({ template: "modern", output: "README.md", force: true });`
+- `sanitizeGeneratedMarkdown(markdown: string): string` - Normalizes and cleans generated Markdown text by stripping BOM, removing accidental trash code, and ensuring banner images are positioned at the document header.
+- `DenoConfig` (interface)
+- `async readDenoConfig(projectRoot: string): Promise<DenoConfig | null>`
+- `ImportAnalysis` (interface)
+- `AnalyzeImportsOptions` (interface)
+- `async analyzeImports(projectRoot: string, options: AnalyzeImportsOptions = {}): Promise<ImportAnalysis>`
+- `ImportMap` (interface)
+- `async readImportMap(projectRoot: string): Promise<ImportMap | null>`
+- `async detectProjectFiles(projectRoot: string): Promise<string[]>`
+- `ExportType` (type)
+- `JSDocParam` (interface)
+- `ExportInfo` (interface)
+- `ExtractOptions` (interface)
+- `async extractExports(filePath: string): Promise<ExportInfo[]>`
+- `async extractExportsFromProject(projectRoot: string, options: ExtractOptions = {}): Promise<ExportInfo[]>`
+- `JSDocInfo` (interface)
+- `async extractExportsAst(filePath: string): Promise<ExportInfo[]>`
+- `extractExportsAstFromCode(code: string, filePath: string): ExportInfo[]`
+- `async detectWorkflows(projectRoot: string): Promise<string[]>`
+- `AnalyzeProjectOptions` (interface)
+- `TemplateData` (interface)
+- `ProjectAnalysis` (interface)
+- `async analyzeProject(options: AnalyzeProjectOptions): Promise<ProjectAnalysis>`
+- `async ensureWritableOutput(outputPath: string, options: { force: boolean }): Promise<void>`
+- `async runInitWizard(projectRoot: string)`
+- `const Logger`
+- `async inferDescriptionFromReadme(readmePath: string): Promise<string | null>`
+- `UserConfig` (interface)
+- `async loadUserConfig(projectRoot: string): Promise<UserConfig>`
+
+## Documentation & Links
+- Repository: https://github.com/glastor-dev/glastor-dev
+- Documentation: ./book/
+- Full README: ./README.md

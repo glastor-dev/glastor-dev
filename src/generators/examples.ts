@@ -1,7 +1,7 @@
 import type { ExportInfo } from "../parsers/source_code.ts";
-import { exists } from "jsr:@std/fs/exists";
-import { join } from "jsr:@std/path/join";
-import { walk } from "jsr:@std/fs/walk";
+import { exists } from "jsr:@std/fs@^1.0.0/exists";
+import { join } from "jsr:@std/path@^1.0.0/join";
+import { walk } from "jsr:@std/fs@^1.0.0/walk";
 
 export interface ExamplesOptions {
   includeExamples?: boolean;

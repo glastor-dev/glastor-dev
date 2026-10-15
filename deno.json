@@ -8,6 +8,7 @@
     "include": [
       "LICENSE",
       "README.md",
+      "llms.txt",
       "deno.json",
       "src/**/*.ts",
       "src/templates/*.md"
@@ -57,6 +58,10 @@
     "check": "deno check src/main.ts",
     "test": "deno test --allow-read --allow-write --allow-env",
     "bench": "deno bench --allow-read --allow-write --allow-env --lock=deno.lock",
+    "publish:check": "deno publish --dry-run",
+    "review": "deno run --allow-read --allow-run --allow-env scripts/code_review.ts",
+    "review:all": "deno run --allow-read --allow-run --allow-env scripts/code_review.ts --all",
+    "review:diff": "deno run --allow-read --allow-run --allow-env scripts/code_review.ts --diff",
     "spell:check": "npx cspell \"**/*.md\"",
     "spell:add": "deno run --allow-run --allow-read --allow-write scripts/spell_add.ts"
   },

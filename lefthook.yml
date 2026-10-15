@@ -9,3 +9,5 @@ pre-commit:
       run: deno check src/main.ts
     test:
       run: deno task test
+    review:
+      run: deno task review --diff

@@ -1,5 +1,5 @@
-import { globToRegExp } from "jsr:@std/path/glob-to-regexp";
-import { walk } from "jsr:@std/fs/walk";
+import { globToRegExp } from "jsr:@std/path@^1.0.0/glob-to-regexp";
+import { walk } from "jsr:@std/fs@^1.0.0/walk";
 
 export async function detectWorkflows(projectRoot: string): Promise<string[]> {
   const workflows: string[] = [];

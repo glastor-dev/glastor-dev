@@ -1,0 +1,44 @@
+name: "Readmegen - Deno README Generator"
+description: "Generate and synchronize professional README documentation from TypeScript AST and project configuration"
+author: "Glastor"
+inputs:
+  template:
+    description: "Template style (minimal|modern|detailed)"
+    required: false
+    default: "modern"
+  output:
+    description: "Output file path"
+    required: false
+    default: "README.md"
+  force:
+    description: "Overwrite existing file"
+    required: false
+    default: "true"
+  deno-version:
+    description: "Deno version to use"
+    required: false
+    default: "v2.x"
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Deno
+      uses: denoland/setup-deno@v2
+      with:
+        deno-version: ${{ inputs.deno-version }}
+    - name: Run Readmegen
+      shell: bash
+      run: |
+        ARGS=""
+        if [ -n "${{ inputs.template }}" ]; then
+          ARGS="$ARGS --template ${{ inputs.template }}"
+        fi
+        if [ -n "${{ inputs.output }}" ]; then
+          ARGS="$ARGS --output ${{ inputs.output }}"
+        fi
+        if [ "${{ inputs.force }}" = "true" ]; then
+          ARGS="$ARGS --force"
+        fi
+        deno run --allow-read --allow-write --allow-env "${{ github.action_path }}/src/main.ts" $ARGS
+branding:
+  icon: "file-text"
+  color: "purple"

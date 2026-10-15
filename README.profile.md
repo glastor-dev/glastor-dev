@@ -17,13 +17,16 @@
 [![License: GPL v3](https://img.shields.io/badge/Code_License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY 4.0](https://img.shields.io/badge/Text_License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Profile Views](https://hits.sh/github.com/glastor-dev.svg?style=flat-square&label=Visitas&extraCount=1465&color=8a2be2&labelColor=555555)](https://hits.sh/github.com/glastor-dev/)
+[![JSR](https://jsr.io/badges/@glastor-dev/readmegen)](https://jsr.io/@glastor-dev/readmegen)
+[![llms.txt](https://img.shields.io/badge/llms.txt-standard-8A2BE2?style=flat-square)](llms.txt)
+{{docCoverageBadge}}
 [![Estado](https://status.glastor-dev.deno.net/badge/glastor-dev/glastor-dev.svg)](https://status.glastor-dev.deno.net/glastor-dev/glastor-dev)
 
 <div align="center">
 
 **🟢 Disponible para proyectos — Próximas aperturas: {{nextOpening}}**
 
-[📧 Contacto](mailto:ventas@glastor.es) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
+[📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
 
 </div>
 
@@ -36,8 +39,8 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 **Fundador de GLASTOR®** — Especializado en arquitectura backend, DevOps y soluciones técnicas que reducen costos operativos hasta un 40%.
 
 > _"Andres entregó una solución de API que maneja 5,000 req/s con latencia p99 < 50ms. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
-> — **Dan Khasis
-> Chief Executive Officer and Founde, Route4Me**
+> — **Dan Khasis**  
+> _Chief Executive Officer and Founder, Route4Me_
 
 ### 💼 Especialidades técnicas
 
@@ -48,10 +51,11 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ### 🔭 Actualmente trabajando en
 
-- 🚀 **CLI migration a Deno** — Sistema de plugins extensible para generación de docs (ETA: Feb 2026)
+- 🚀 **Ecosistema Deno 2 & JSR** — Generador de READMEs de alto rendimiento con análisis AST y plugins modulares (`@glastor-dev/readmegen`)
+- 🤖 **Herramientas AI-Ready** — Integración nativa del estándar `llms.txt` y pipelines de automatización
 - 🧪 **Smart injection engine** — Template engine inteligente que reduce boilerplate 60%
-- 📝 **Contenido técnico** — Serie sobre arquitectura de APIs y patrones de diseño backend
-- 🤝 **Open Source** — Aceptando contribuciones en proyectos Python (ver [CONTRIBUTING](.github/CONTRIBUTING.md))
+- 📝 **Contenido técnico** — Serie sobre arquitectura de APIs, optimización p99 y patrones backend
+- 🤝 **Open Source** — Aceptando contribuciones en herramientas de developer experience (ver [CONTRIBUTING](.github/CONTRIBUTING.md))
 
 ### ✨ Disponible para
 
@@ -78,23 +82,26 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ### 🎓 Certificaciones & Aprendizaje
 
-- 🏆 **AWS Certified Solutions Architect** (en progreso, ETA: Q2 2026)
-- 📚 Estudiando: Kubernetes (CKA), Advanced PostgreSQL Performance Tuning
-- 🎯 Siguiendo: FastAPI best practices, AsyncIO patterns, Distributed systems
+- 🏆 **AWS Solutions Architect** & **DevOps Specialist** (Arquitecturas cloud y microservicios)
+- 📚 Especialización continua: Kubernetes (CKA), Advanced PostgreSQL Performance Tuning
+- 🎯 Enfoque técnico: FastAPI patterns, AsyncIO, Distributed systems, AI Agents
 
 ---
 
 ## 📊 GitHub Stats & Activity
 
+<details>
+  <summary><strong>📈 Ver métricas completas e historial de actividad</strong></summary>
+
+<br>
+
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats-theta-woad-23.vercel.app/api?username=glastor-dev&show_icons=true&theme=transparent&hide_border=true&include_all_commits=true&count_private=true)
-
-![Top Languages](https://github-readme-stats-theta-woad-23.vercel.app/api/top-langs/?username=glastor-dev&layout=compact&theme=transparent&hide_border=true&card_width=470&langs_count=8)
-
-**🔥 Contribuciones en 2025:** 847 commits • 23 repos • 156 PRs merged
+![GitHub Metrics](images/metrics.svg)
 
 </div>
+
+</details>
 
 ---
 
@@ -155,7 +162,7 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 <br>
 
-**Impacto combinado:** 45K+ líneas de código • 390 proyectos entregados • 99.5% satisfacción del cliente
+**Impacto comprobado:** +15 años en producción • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
 
 </div>
 
@@ -169,19 +176,18 @@ Tu apoyo permite dedicar más tiempo al desarrollo de herramientas Open Source d
 
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Glastor_DEV-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/glastor-dev)
 ![Takenos ACH](https://img.shields.io/badge/Takenos-ACH_Transfer_USD-1E1E1E?style=for-the-badge)
-![Banco Galicia](https://img.shields.io/badge/Banco_Galicia-DIBUJO.DRAGA.PRIMO-F05C2B?style=for-the-badge)
+![Banco Galicia](https://img.shields.io/badge/Banco_Galicia-Transferencia_ARS-F05C2B?style=for-the-badge)
 
 <br>
 
 <details>
-<summary><b>📄 Ver datos para transferencia ACH (USD)</b></summary>
+<summary><b>📄 Coordenadas para transferencia bancaria directa (USD / ARS)</b></summary>
 <br>
 
-**Banco:** Lead Bank, 1801 Main St., Kansas City, MO, 64108<br>
-**Titular:** Andres Antonio Cardoso<br>
-**Ruta (Routing):** 101019644<br>
-**Cuenta:** 214564140545<br>
-**Tipo:** Personal checking
+Para transferencias directas ACH (USD), wire internacional o transferencias locales (ARS / Galicia):  
+👉 [**Solicitar datos bancarios vía email**](mailto:glastor.info@gmail.com?subject=Solicitud%20de%20datos%20bancarios%20para%20Sponsorship)
+
+_Se proporcionan de forma privada para mayor seguridad y emisión de la factura/recibo correspondiente._
 
 </details>
 
@@ -265,11 +271,23 @@ Agradecemos a todos nuestros contributors:
 
 ### API Reference
 
-#### Core Generators
+#### Core Generators & Review Tools
 
 ```typescript
 generateReadme(args: GenerateReadmeArgs): Promise<string>
 // Generador principal de README con análisis completo de proyecto
+
+generateMermaidGraph(projectRoot: string): Promise<string>
+// Grafo de módulos y dependencias de arquitectura en formato Mermaid
+
+generateLlmsTxt(analysis: ProjectAnalysis): string
+// Generador del estándar llms.txt para agentes y LLMs
+
+calculateDocCoverage(exports: ExportInfo[]): DocCoverageResult
+// Auditoría de cobertura de documentación JSDoc y badges
+
+reviewFile(filePath: string, content: string): FileReview
+// Auditoría de código bajo 4Rs: Risk, Readability, Reliability, Resilience
 
 generateBadges(_config: BadgesConfig): string
 // Genera badges dinámicos basados en project config
@@ -304,13 +322,13 @@ sanitizeGeneratedMarkdown(markdown: string): string
 // Limpia y normaliza markdown generado
 
 loadUserConfig(projectRoot: string): Promise<UserConfig>
-// Carga configuración de usuario desde .glastor.json
+// Carga configuración de usuario desde .readmegen.json
 
 ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
 // Valida permisos y crea directorio si necesario
 ```
 
-**Ver docs completas:** [API Documentation](https://glastor.dev/docs/api)
+**Ver docs completas:** [API Documentation](https://glastor-dev.github.io/glastor-dev/)
 
 </details>
 
@@ -360,14 +378,14 @@ ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
 - **Playwright** — Para screenshots automáticos
 - **Sharp** — Image optimization
 
-**Installation:**
+**Installation & Usage:**
 
 ```bash
-# Via Deno
-deno install -A -n glastor https://deno.land/x/glastor/cli.ts
+# Via Deno 2 (JSR)
+deno install -g -A -n readmegen jsr:@glastor-dev/readmegen
 
-# Via npm (wrapper)
-npm install -g @glastor/cli
+# O ejecución directa sin instalación previa:
+deno run -A jsr:@glastor-dev/readmegen
 ```
 
 </details>
@@ -455,9 +473,9 @@ npm install -g @glastor/cli
 
 **Cursos & Certificaciones en proceso:**
 
-- 🎓 AWS Solutions Architect Associate (ETA: Q2 2026)
-- 🎓 Certified Kubernetes Administrator (CKA) (ETA: Q3 2026)
-- 📚 FastAPI Advanced Patterns (FastAPI creator's course)
+- 🎓 AWS Solutions Architect Associate (Completado)
+- 🎓 Certified Kubernetes Administrator (CKA) (En preparación)
+- 📚 FastAPI Advanced Patterns & AI Agent Architectures
 
 **Podcasts favoritos:**
 

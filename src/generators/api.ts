@@ -1,4 +1,4 @@
-import { relative } from "jsr:@std/path";
+import { relative } from "jsr:@std/path@^1.0.0/relative";
 import type { ExportInfo } from "../parsers/source_code.ts";
 
 export function generateApiDocs(exports: ExportInfo[], projectRoot: string = Deno.cwd()): string {

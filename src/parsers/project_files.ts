@@ -1,5 +1,5 @@
-import { exists } from "jsr:@std/fs/exists";
-import { join } from "jsr:@std/path/join";
+import { exists } from "jsr:@std/fs@^1.0.0/exists";
+import { join } from "jsr:@std/path@^1.0.0/join";
 
 export async function detectProjectFiles(projectRoot: string): Promise<string[]> {
   const candidates = [

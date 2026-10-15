@@ -1,5 +1,5 @@
-import { walk } from "jsr:@std/fs/walk";
-import { extname } from "jsr:@std/path/extname";
+import { walk } from "jsr:@std/fs@^1.0.0/walk";
+import { extname } from "jsr:@std/path@^1.0.0/extname";
 
 export interface ImportAnalysis {
   std: string[];
