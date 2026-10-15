@@ -2,8 +2,11 @@ name: Publish to JSR
 
 on:
   push:
+    branches:
+      - master
+      - main
     tags:
-      - "v*"
+      - 'v*'
   workflow_dispatch:
 
 permissions:

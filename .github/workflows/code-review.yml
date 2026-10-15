@@ -32,7 +32,7 @@ jobs:
 
       - name: Run 4R Code Review Engine
         run: |
-          deno run --allow-read --allow-run --allow-env scripts/code_review.ts --format markdown --output review-summary.md
+          deno run --allow-read --allow-write --allow-run --allow-env scripts/code_review.ts --format markdown --output review-summary.md
           cat review-summary.md >> $GITHUB_STEP_SUMMARY
 
       - name: Comment on PR
