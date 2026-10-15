@@ -39,4 +39,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: auto-update README [skip ci]" && git pull --rebase origin ${{ github.ref_name }} && git push origin ${{ github.ref_name }})
+          if ! git diff --staged --quiet; then
+            git commit -m "docs: auto-update README [skip ci]"
+            git pull --rebase origin ${{ github.ref_name }}
+            git push origin ${{ github.ref_name }}
+          else
+            echo "README.md is already up to date, nothing to commit."
+          fi
