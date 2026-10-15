@@ -11,6 +11,10 @@ on:
     - cron: "0 0 1 * *" # Primer día del mes a las 00:00 UTC (rotación de aperturas)
   workflow_dispatch:
 
+concurrency:
+  group: readme-update-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -35,4 +39,4 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: auto-update README [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "docs: auto-update README [skip ci]" && git pull --rebase origin ${{ github.ref_name }} && git push origin ${{ github.ref_name }})
