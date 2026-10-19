@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-10-15
+  🔄 Última actualización: 2026-10-19
   📦 Versión del generador: v2.2.0
 -->
 
@@ -22,11 +22,14 @@
 [![Doc Coverage](https://img.shields.io/badge/docs-7%25-red.svg)](https://jsr.io/@glastor-dev/readmegen)
 [![Estado](https://status.glastor-dev.deno.net/badge/glastor-dev/glastor-dev.svg)](https://status.glastor-dev.deno.net/glastor-dev/glastor-dev)
 
+> [!NOTE]
+> ⚡ **Autonomous Living Profile:** Este perfil es un artefacto de ingeniería vivo, autogenerado y validado en tiempo real con análisis AST de TypeScript, auditoría 4R (*Risk, Readability, Reliability, Resilience*) y despliegue continuo de su documentación técnica a [GitHub Pages (mdBook)](https://glastor-dev.github.io/glastor-dev/).
+
 <div align="center">
 
 **🟢 Disponible para proyectos — Próximas aperturas: Noviembre 2026**
 
-[📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
 
 </div>
 
@@ -36,7 +39,7 @@
 
 Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización** con Python para equipos de producto en producción. Más de **15 años** creando soluciones backend escalables para empresas tecnológicas.
 
-**Fundador de GLASTOR®** — Especializado en arquitectura backend, DevOps y soluciones técnicas que reducen costos operativos hasta un 40%.
+**Fundador y Lead Architect en [GLASTOR® Core](https://github.com/glastor-core)** — Especializado en arquitectura backend, DevOps, motores de análisis estático y soluciones técnicas que reducen costos operativos hasta un 40%.
 
 > _"Andres entregó una solución de API que maneja 5,000 req/s con latencia p99 < 50ms. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
 > — **Dan Khasis**  
@@ -267,7 +270,9 @@ Agradecemos a todos nuestros contributors:
 ---
 
 <details>
-  <summary><strong>📖 Documentación Técnica (Auto-generada)</strong></summary>
+  <summary><strong>📖 Documentación Técnica & Arquitectura (Motor Autónomo)</strong></summary>
+
+> 💡 **Portal Completo de Arquitectura:** Accede al manual técnico completo, diagramas de módulos y guías en el portal oficial: **[glastor-dev.github.io/glastor-dev](https://glastor-dev.github.io/glastor-dev/)**
 
 ### API Reference
 
@@ -518,7 +523,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-15</sub>  
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-19</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
@@ -806,31 +811,31 @@ Supported README template styles
 
 ```mermaid
 graph TD
-    src_templates_load_ts["src/templates/load.ts"]
-    src_templates_render_ts["src/templates/render.ts"]
-    src_utils_file_system_ts["src/utils/file_system.ts"]
-    src_utils_init_wizard_ts["src/utils/init_wizard.ts"]
-    src_utils_logger_ts["src/utils/logger.ts"]
-    src_utils_user_config_ts["src/utils/user_config.ts"]
-    src_utils_readme_infer_ts["src/utils/readme_infer.ts"]
-    src_generators_mermaid_ts["src/generators/mermaid.ts"]
-    src_generators_doc_coverage_ts["src/generators/doc_coverage.ts"]
+    src_generators_api_ts["src/generators/api.ts"]
     src_parsers_source_code_ts["src/parsers/source_code.ts"]
+    src_generators_badges_ts["src/generators/badges.ts"]
+    src_generators_doc_coverage_ts["src/generators/doc_coverage.ts"]
     src_generators_examples_ts["src/generators/examples.ts"]
     src_generators_llms_ts["src/generators/llms.ts"]
     src_parsers_deno_json_ts["src/parsers/deno_json.ts"]
-    src_generators_api_ts["src/generators/api.ts"]
-    src_generators_badges_ts["src/generators/badges.ts"]
+    src_utils_user_config_ts["src/utils/user_config.ts"]
+    src_generators_mermaid_ts["src/generators/mermaid.ts"]
     src_generators_toc_ts["src/generators/toc.ts"]
-    src_mod_ts["src/mod.ts"]
-    src_project_analyze_ts["src/project/analyze.ts"]
     src_main_ts["src/main.ts"]
-    src_parsers_import_map_ts["src/parsers/import_map.ts"]
+    src_mod_ts["src/mod.ts"]
+    src_utils_init_wizard_ts["src/utils/init_wizard.ts"]
+    src_utils_logger_ts["src/utils/logger.ts"]
+    src_project_analyze_ts["src/project/analyze.ts"]
+    src_templates_load_ts["src/templates/load.ts"]
+    src_templates_render_ts["src/templates/render.ts"]
+    src_utils_file_system_ts["src/utils/file_system.ts"]
     src_parsers_imports_ts["src/parsers/imports.ts"]
-    src_parsers_tests_ts["src/parsers/tests.ts"]
-    src_parsers_workflows_ts["src/parsers/workflows.ts"]
+    src_parsers_import_map_ts["src/parsers/import_map.ts"]
     src_parsers_project_files_ts["src/parsers/project_files.ts"]
     src_parsers_source_code_ast_ts["src/parsers/source_code_ast.ts"]
+    src_parsers_workflows_ts["src/parsers/workflows.ts"]
+    src_parsers_tests_ts["src/parsers/tests.ts"]
+    src_utils_readme_infer_ts["src/utils/readme_infer.ts"]
     src_generators_api_ts --> src_parsers_source_code_ts
     src_generators_doc_coverage_ts --> src_parsers_source_code_ts
     src_generators_examples_ts --> src_parsers_source_code_ts

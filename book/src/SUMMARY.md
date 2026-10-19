@@ -1,6 +1,7 @@
 # Resumen
 
 - [Introducción](./introduccion.md)
+- [Ecosistema GLASTOR® Core](./ecosistema.md)
 - [Cómo se Realizó](./como-se-realizo.md)
   - [Arquitectura del Sistema](./arquitectura.md)
   - [Análisis de Proyectos y AST](./analisis-ast.md)

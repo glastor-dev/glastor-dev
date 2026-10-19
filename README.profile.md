@@ -22,11 +22,14 @@
 {{docCoverageBadge}}
 [![Estado](https://status.glastor-dev.deno.net/badge/glastor-dev/glastor-dev.svg)](https://status.glastor-dev.deno.net/glastor-dev/glastor-dev)
 
+> [!NOTE]
+> ⚡ **Autonomous Living Profile:** Este perfil es un artefacto de ingeniería vivo, autogenerado y validado en tiempo real con análisis AST de TypeScript, auditoría 4R (*Risk, Readability, Reliability, Resilience*) y despliegue continuo de su documentación técnica a [GitHub Pages (mdBook)](https://glastor-dev.github.io/glastor-dev/).
+
 <div align="center">
 
 **🟢 Disponible para proyectos — Próximas aperturas: {{nextOpening}}**
 
-[📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
 
 </div>
 
@@ -36,7 +39,7 @@
 
 Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización** con Python para equipos de producto en producción. Más de **15 años** creando soluciones backend escalables para empresas tecnológicas.
 
-**Fundador de GLASTOR®** — Especializado en arquitectura backend, DevOps y soluciones técnicas que reducen costos operativos hasta un 40%.
+**Fundador y Lead Architect en [GLASTOR® Core](https://github.com/glastor-core)** — Especializado en arquitectura backend, DevOps, motores de análisis estático y soluciones técnicas que reducen costos operativos hasta un 40%.
 
 > _"Andres entregó una solución de API que maneja 5,000 req/s con latencia p99 < 50ms. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
 > — **Dan Khasis**  
@@ -267,7 +270,9 @@ Agradecemos a todos nuestros contributors:
 ---
 
 <details>
-  <summary><strong>📖 Documentación Técnica (Auto-generada)</strong></summary>
+  <summary><strong>📖 Documentación Técnica & Arquitectura (Motor Autónomo)</strong></summary>
+
+> 💡 **Portal Completo de Arquitectura:** Accede al manual técnico completo, diagramas de módulos y guías en el portal oficial: **[glastor-dev.github.io/glastor-dev](https://glastor-dev.github.io/glastor-dev/)**
 
 ### API Reference
 

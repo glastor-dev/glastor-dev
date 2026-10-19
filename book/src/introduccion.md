@@ -41,6 +41,7 @@ Mantener la documentación y los archivos `README.md` actualizados en proyectos 
 
 En las siguientes secciones encontrarás el detalle completo de cómo se construyó la herramienta y cómo utilizarla:
 
+- **[Ecosistema GLASTOR® Core](./ecosistema.md)**: El modelo Dual-Core que une la marca personal con la organización.
 - **[Cómo se realizó](./como-se-realizo.md)**: Visión general del proceso de desarrollo y diseño.
 - **[Arquitectura del Sistema](./arquitectura.md)**: Diagramas y desglose de capas y módulos.
 - **[Análisis de Proyectos y AST](./analisis-ast.md)**: Cómo funciona la extracción de datos y el parseo de código.
