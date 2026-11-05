@@ -22,10 +22,10 @@ graph TD
     end
 
     subgraph Org ["🏢 GLASTOR® Core (Plataforma & Sistemas)"]
-        E["Runtime Engines & Microservicios"]
-        F["DevSecOps Gateways (Nemesis)"]
-        G["Infraestructura de Alta Concurrencia"]
-        H["Gobernanza Centralizada"]
+        E["Runtime Engines & Microservicios<br/>(glastor-core)"]
+        F["DevSecOps & CI Predictivo<br/>(nemesis · vortex)"]
+        G["Edge Gateways, AI & Docs<br/>(medusa · hyper-flow · zerho)"]
+        H["Gobernanza Centralizada<br/>(.github)"]
     end
 
     A --> DOC
@@ -39,18 +39,22 @@ graph TD
 
 ### 1. Perfil Personal: [github.com/glastor-dev](https://github.com/glastor-dev)
 
-- **Rol:** Representa al creador, arquitecto de software y consultor senior (Andres).
+- **Rol:** Representa a **Andres A. Cardoso**, Fundador, CEO & Arquitecto Jefe de **GLASTOR®** ([glastor.es](https://glastor.es)).
 - **Living Profile (`glastor-dev/glastor-dev`):** Demuestra en tiempo real la confiabilidad del código mediante _dogfooding_: el perfil no es un documento estático, sino un artefacto de ingeniería compilado periódicamente por pipelines de CI/CD, extrayendo tipos mediante AST e inyectando métricas.
-- **Especialidades:** APIs de alto rendimiento con Python (FastAPI/Django), ingeniería de automatización, DevOps y testing estricto.
+- **Especialidades:** Sistemas distribuidos y microservicios críticos en **Rust y Python** (FastAPI/Django), runtimes de alta velocidad (**Deno 2 / Bun**), ingeniería de automatización, DevSecOps y optimización de latencia/costos B2B.
 
 ### 2. Organización: [github.com/glastor-core](https://github.com/glastor-core)
 
 - **Rol:** La entidad colectiva y el hogar de las herramientas críticas de infraestructura.
 - **Misión:** Desarrollar motores de ejecución determinística, arquitecturas resilientes para edge/cloud y plataformas de developer experience de última generación.
 - **Repositorios Core:**
-  - **`glastor-core`**: Primitivas y runtime principal para microservicios y streaming con baja latencia.
-  - **`nemesis`**: Framework y gateway de auditoría continua DevSecOps.
-  - **`.github`**: Gobernanza centralizada y plantillas institucionales de seguridad y colaboración.
+  - **[`glastor-core`](https://github.com/glastor-core/glastor-core)**: Primitivas, kernel modular y runtime principal para microservicios y pipelines stateful de baja latencia.
+  - **[`nemesis`](https://github.com/glastor-core/nemesis)**: Framework, CLI y GitHub Action de auditoría continua DevSecOps, higiene de repositorios y auto-fix.
+  - **[`vortex`](https://github.com/glastor-core/vortex)**: Orquestador de CI predictivo basado en AST, podador de barrels, divisor dinámico de tests (LPT) y motor FinOps para GitHub Actions.
+  - **[`zerho`](https://github.com/glastor-core/zerho)**: Motor de documentación de alto rendimiento para Deno 2 y Edge runtimes con playground interactivo, explorador OpenAPI y soporte nativo `llms.txt`.
+  - **[`medusa`](https://github.com/glastor-core/medusa)**: Edge API Gateway resiliente y proxy de caché con Circuit Breaker, deduplicación Single-Flight y Deno KV.
+  - **[`hyper-flow`](https://github.com/glastor-core/hyper-flow)**: API de IA en el Edge de ultra-alto rendimiento construida con Hono, Bun y OpenAPI 3.1.
+  - **[`.github`](https://github.com/glastor-core/.github)**: Gobernanza centralizada, políticas de seguridad, RFCs y workflows reutilizables de CI/CD.
 
 ### 3. Portal de Documentación: [glastor-dev.github.io/glastor-dev](https://glastor-dev.github.io/glastor-dev/)
 

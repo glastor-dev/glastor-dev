@@ -2,13 +2,13 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-10-19
+  🔄 Última actualización: 2026-11-05
   📦 Versión del generador: v2.2.0
 -->
 
-# GLASTOR® — Ingeniería de backend y arquitectura
+# GLASTOR® — Ingeniería de Sistemas, Backend & Arquitectura Crítica
 
-**Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps**
+**Arquitecto Jefe en Rust & Python · Sistemas Distribuidos de Ultra-Baja Latencia · DevSecOps & Edge Tooling**
 
 [![Deno](https://img.shields.io/badge/Deno-%5E2.0.0-black?logo=deno&logoColor=white)](https://deno.land/)
 [![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker&logoColor=white)](https://hub.docker.com/)
@@ -27,9 +27,9 @@
 
 <div align="center">
 
-**🟢 Disponible para proyectos — Próximas aperturas: Noviembre 2026**
+**🟢 Disponible para proyectos — Próximas aperturas: Diciembre 2026**
 
-[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [📧 Contacto](mailto:glastor.info@gmail.com) • [🌐 Website](https://glastor.es) • [🎥 Demo](https://youtube.com/@glastor-es)
 
 </div>
 
@@ -37,9 +37,9 @@
 
 ## 👋 Sobre mí
 
-Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización** con Python para equipos de producto en producción. Más de **15 años** creando soluciones backend escalables para empresas tecnológicas.
+Arquitecto **sistemas distribuidos de misión crítica, backends de ultra-baja latencia y herramientas de automatización** en **Rust, Python y runtimes modernos (Deno 2 / Bun)** para empresas B2B en producción. Desde **2010 (+15 años de trayectoria y 150+ proyectos desplegados)**, transformo retos técnicos complejos en infraestructuras escalables de alto rendimiento, alto uptime y costos operativos optimizados.
 
-**Fundador y Lead Architect en [GLASTOR® Core](https://github.com/glastor-core)** — Especializado en arquitectura backend, DevOps, motores de análisis estático y soluciones técnicas que reducen costos operativos hasta un 40%.
+**Fundador, CEO & Arquitecto Jefe en [GLASTOR®](https://glastor.es) y [GLASTOR® Core](https://github.com/glastor-core)** — Lidero la ingeniería directa —sin intermediarios— de motores de ejecución determinística, gateways Edge, análisis estático AST y pipelines DevSecOps que reducen latencias hasta un 90% y costos de infraestructura hasta un 40%.
 
 > _"Andres entregó una solución de API que maneja 5,000 req/s con latencia p99 < 50ms. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
 > — **Dan Khasis**  
@@ -47,14 +47,15 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ### 💼 Especialidades técnicas
 
-- ✅ **Backend Python** — APIs con FastAPI y Django, optimizadas para alto tráfico (5K+ req/s)
-- ✅ **DevOps & CI/CD** — Pipelines robustos que reducen deployment time 75% (30min → 7min)
-- ✅ **Contenedores** — Arquitecturas Docker que facilitan escalado horizontal automático
-- ✅ **Git avanzado** — Flujos de trabajo con GitKraken, pair programming y code review efectivo
+- ✅ **Sistemas Críticos en Rust & Python** — Microservicios seguros en memoria y APIs (FastAPI/Django) optimizadas para alto tráfico (5K+ req/s, p99 < 50ms)
+- ✅ **Edge Runtimes & Developer Tooling** — Motores de alto rendimiento y baja latencia sobre Deno 2, Bun y TypeScript AST
+- ✅ **DevSecOps & CI Predictivo** — Pipelines y orquestación inteligente que reducen tiempos de despliegue un 75% (30min → 7min)
+- ✅ **Infraestructura Cloud & Contenedores** — Arquitecturas Docker, Kubernetes y AWS diseñadas para escalado horizontal y alta disponibilidad (HPC)
 
 ### 🔭 Actualmente trabajando en
 
 - 🚀 **Ecosistema Deno 2 & JSR** — Generador de READMEs de alto rendimiento con análisis AST y plugins modulares (`@glastor-dev/readmegen`)
+- 🏛️ **Plataforma [GLASTOR® Core](https://github.com/glastor-core)** — Sistemas distribuidos y motores Edge/CI: [`glastor-core`](https://github.com/glastor-core/glastor-core), [`nemesis`](https://github.com/glastor-core/nemesis) (DevSecOps), [`vortex`](https://github.com/glastor-core/vortex) (Predictive AST CI), [`zerho`](https://github.com/glastor-core/zerho) (Edge Docs), [`medusa`](https://github.com/glastor-core/medusa) (Edge API Gateway) y [`hyper-flow`](https://github.com/glastor-core/hyper-flow) (Edge AI API)
 - 🤖 **Herramientas AI-Ready** — Integración nativa del estándar `llms.txt` y pipelines de automatización
 - 🧪 **Smart injection engine** — Template engine inteligente que reduce boilerplate 60%
 - 📝 **Contenido técnico** — Serie sobre arquitectura de APIs, optimización p99 y patrones backend
@@ -62,32 +63,32 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ### ✨ Disponible para
 
-- **Consultoría técnica** en arquitectura de APIs y optimización de rendimiento
-- **Code review** y auditoría de seguridad en proyectos Python/FastAPI
-- **Desarrollo** de tooling interno, CLI tools y automatizaciones
-- **Technical writing** y documentación de APIs
-- **Proyectos Open Source** — Issues y PRs bienvenidos
+- **Arquitectura e Ingeniería B2B** en sistemas críticos, migraciones a Rust/Python y optimización de latencia/costos cloud
+- **Code review & Auditoría DevSecOps** en infraestructuras Rust, Python/FastAPI y TypeScript (Deno/Bun)
+- **Desarrollo** de motores core, tooling interno, CLI tools y automatizaciones determinísticas
+- **Technical writing** y arquitectura de portales de documentación (`mdBook`, OpenAPI 3.1, `llms.txt`)
+- **Proyectos Open Source** — Issues, RFCs y PRs bienvenidos en [GLASTOR® Core](https://github.com/glastor-core)
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
 <p align="center">
-  <strong>Backend & Lenguajes:</strong><br>
-  <img src="https://skillicons.dev/icons?i=python,nodejs,ts,js,bash,deno,linux" alt="Backend" /><br><br>
-  <strong>Frameworks & APIs:</strong><br>
-  <img src="https://skillicons.dev/icons?i=fastapi,flask,django,vue,vite,nextjs,svelte,symfony" alt="Frameworks" /><br><br>
-  <strong>DevOps & Cloud:</strong><br>
-  <img src="https://skillicons.dev/icons?i=docker,aws,vercel,heroku,githubactions,git,gitlab" alt="DevOps" /><br><br>
-  <strong>Databases & Tools:</strong><br>
-  <img src="https://skillicons.dev/icons?i=postgresql,mongodb,mysql,redis,postman,vscode,jest" alt="DB & Tools" />
+  <strong>Backend, Sistemas & Runtimes:</strong><br>
+  <img src="https://skillicons.dev/icons?i=rust,python,deno,bun,ts,wasm,bash,linux,arch" alt="Backend & Systems" /><br><br>
+  <strong>Frameworks, APIs & WebGL:</strong><br>
+  <img src="https://skillicons.dev/icons?i=fastapi,django,graphql,nextjs,react,threejs,tailwind,vite" alt="Frameworks, APIs & WebGL" /><br><br>
+  <strong>DevSecOps, Cloud & Edge Infra:</strong><br>
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,cloudflare,githubactions,nginx,git" alt="DevSecOps & Cloud" /><br><br>
+  <strong>Databases, Caching & Developer Tooling:</strong><br>
+  <img src="https://skillicons.dev/icons?i=postgresql,redis,mongodb,sqlite,neovim,vscode,vitest,postman" alt="DB & Tools" />
 </p>
 
 ### 🎓 Certificaciones & Aprendizaje
 
 - 🏆 **AWS Solutions Architect** & **DevOps Specialist** (Arquitecturas cloud y microservicios)
 - 📚 Especialización continua: Kubernetes (CKA), Advanced PostgreSQL Performance Tuning
-- 🎯 Enfoque técnico: FastAPI patterns, AsyncIO, Distributed systems, AI Agents
+- 🎯 Enfoque técnico: Rust (Tokio/Axum), FastAPI patterns, AsyncIO, Deno 2 / Bun Edge Runtimes, Distributed Systems & AI Agents
 
 ---
 
@@ -108,11 +109,11 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ---
 
-## 💙 Sponsors & Colaboradores
+## 💙 Sponsors, Casos de Éxito & Ecosistema
 
 <div align="center">
 
-**Empresas que apoyan financieramente el desarrollo de herramientas Open Source:**
+**Empresas con las que hemos desplegado sistemas críticos en producción y proyectos Open Source del ecosistema:**
 
 <table>
   <tr>
@@ -131,20 +132,20 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
       <sub>Sistema de gestión de inventario y logística</sub>
     </td>
     <td align="center" width="200">
-      <a href="https://rizin.re/" target="_blank">
-        <img src="images/rizin.png" alt="Rizin" height="80"/><br>
-        <strong>Rizin</strong>
-      </a><br>
-      <sub>Contribuciones a reverse engineering framework</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="200">
       <a href="https://route4me.com/es" target="_blank">
         <img src="images/route4me-logo.png" alt="Route4Me" height="80"/><br>
         <strong>Route4Me</strong>
       </a><br>
       <sub>API de geolocalización y routing en tiempo real</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="200">
+      <a href="https://rizin.re/" target="_blank">
+        <img src="images/rizin.png" alt="Rizin" height="80"/><br>
+        <strong>Rizin</strong>
+      </a><br>
+      <sub>Contribuciones al framework de ingeniería inversa</sub>
     </td>
     <td align="center" width="200">
       <a href="https://neovim.io/" target="_blank">
@@ -155,65 +156,30 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
     </td>
     <td align="center" width="200">
       <strong>¿Tu empresa?</strong><br><br>
-      <a href="#-convertirte-en-sponsor">
+      <a href="./SPONSORS.md">
         <img src="https://img.shields.io/badge/Become-Sponsor-EA4AAA?style=for-the-badge" alt="Become Sponsor"/>
       </a><br>
-      <sub>Apoya el desarrollo Open Source</sub>
+      <sub>Apoya el ecosistema con Factura E / Factura A</sub>
     </td>
   </tr>
 </table>
 
 <br>
 
-**Impacto comprobado:** +15 años en producción • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
+**Impacto comprobado:** +15 años en producción (desde 2010) • 150+ proyectos desplegados • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
 
-</div>
-
----
-
-### 🤝 Convertirte en Sponsor
-
-Tu apoyo permite dedicar más tiempo al desarrollo de herramientas Open Source de calidad profesional.
-
-<div align="center">
+<br>
 
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Glastor_DEV-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/glastor-dev)
-![Takenos ACH](https://img.shields.io/badge/Takenos-ACH_Transfer_USD-1E1E1E?style=for-the-badge)
-![Banco Galicia](https://img.shields.io/badge/Banco_Galicia-Transferencia_ARS-F05C2B?style=for-the-badge)
+[![ACH USD Factura E](https://img.shields.io/badge/ACH_%2F_Wire_USD-Factura_E_%28Exportaci%C3%B3n%29-1E1E1E?style=for-the-badge)](./SPONSORS.md#-canales-de-pago--facturaci%C3%B3n-fiscal-factura-e--factura-a)
+[![Banco Galicia ARS](https://img.shields.io/badge/Banco_Galicia_ARS-Factura_A_%2F_B_%28Resp._Inscripto%29-F05C2B?style=for-the-badge)](./SPONSORS.md#-canales-de-pago--facturaci%C3%B3n-fiscal-factura-e--factura-a)
 
 <br>
 
-<details>
-<summary><b>📄 Coordenadas para transferencia bancaria directa (USD / ARS)</b></summary>
-<br>
-
-Para transferencias directas ACH (USD), wire internacional o transferencias locales (ARS / Galicia):  
-👉 [**Solicitar datos bancarios vía email**](mailto:glastor.info@gmail.com?subject=Solicitud%20de%20datos%20bancarios%20para%20Sponsorship)
-
-_Se proporcionan de forma privada para mayor seguridad y emisión de la factura/recibo correspondiente._
-
-</details>
+👉 **[📄 Ver Programa Completo de Sponsorship, Tiers Corporativos y Facturación Fiscal (`SPONSORS.md`) →](./SPONSORS.md)**  
+<sub>Emitimos <b>Factura E de Exportación de Servicios</b> (USD/EUR para empresas internacionales) y <b>Factura A / B</b> (IVA Responsable Inscripto en Argentina).</sub>
 
 </div>
-
-**Beneficios según tier:**
-
-| Tier              | Inversión/mes | Beneficios                                                       |
-| ----------------- | ------------- | ---------------------------------------------------------------- |
-| 🥉 **Bronze**     | 10 USD        | Logo en README • Mención en releases                             |
-| 🥈 **Silver**     | 50 USD        | Todo anterior + Prioridad en issues • Acceso temprano a features |
-| 🥇 **Gold**       | 100 USD       | Todo anterior + 2h consultoría/mes • Code review prioritario     |
-| 💎 **Platinum**   | 500 USD       | Todo anterior + Feature requests dedicados • Soporte 24/7        |
-| 🏢 **Enterprise** | Custom        | Soluciones a medida • SLA garantizado • Desarrollo privado       |
-
-**ROI para empresas:**
-
-- 🎯 Visibilidad ante 50K+ developers activos
-- 🔧 Acceso prioritario a herramientas que aumentan productividad
-- 🤝 Relación directa con maintainer experimentado
-- 📈 Soporte para herramientas críticas en tu stack
-
-[📧 Contactar para plan Enterprise](mailto:glastor.info@gmail.com?subject=Enterprise%20Sponsorship)
 
 ---
 
@@ -274,262 +240,70 @@ Agradecemos a todos nuestros contributors:
 
 > 💡 **Portal Completo de Arquitectura:** Accede al manual técnico completo, diagramas de módulos y guías en el portal oficial: **[glastor-dev.github.io/glastor-dev](https://glastor-dev.github.io/glastor-dev/)**
 
-### API Reference
+### 📐 Architecture & Module Graph
 
-#### Core Generators & Review Tools
-
-```typescript
-generateReadme(args: GenerateReadmeArgs): Promise<string>
-// Generador principal de README con análisis completo de proyecto
-
-generateMermaidGraph(projectRoot: string): Promise<string>
-// Grafo de módulos y dependencias de arquitectura en formato Mermaid
-
-generateLlmsTxt(analysis: ProjectAnalysis): string
-// Generador del estándar llms.txt para agentes y LLMs
-
-calculateDocCoverage(exports: ExportInfo[]): DocCoverageResult
-// Auditoría de cobertura de documentación JSDoc y badges
-
-reviewFile(filePath: string, content: string): FileReview
-// Auditoría de código bajo 4Rs: Risk, Readability, Reliability, Resilience
-
-generateBadges(_config: BadgesConfig): string
-// Genera badges dinámicos basados en project config
-
-generateApiDocs(exports: ExportInfo[]): string
-// Documenta exports automáticamente desde análisis AST
-
-generateToc(options: TocOptions): string
-// Tabla de contenidos con links automáticos
+```mermaid
+graph TD
+    src_generators_api_ts["src/generators/api.ts"]
+    src_parsers_source_code_ts["src/parsers/source_code.ts"]
+    src_generators_badges_ts["src/generators/badges.ts"]
+    src_generators_doc_coverage_ts["src/generators/doc_coverage.ts"]
+    src_generators_examples_ts["src/generators/examples.ts"]
+    src_generators_llms_ts["src/generators/llms.ts"]
+    src_parsers_deno_json_ts["src/parsers/deno_json.ts"]
+    src_utils_user_config_ts["src/utils/user_config.ts"]
+    src_generators_mermaid_ts["src/generators/mermaid.ts"]
+    src_generators_toc_ts["src/generators/toc.ts"]
+    src_main_ts["src/main.ts"]
+    src_mod_ts["src/mod.ts"]
+    src_utils_init_wizard_ts["src/utils/init_wizard.ts"]
+    src_utils_logger_ts["src/utils/logger.ts"]
+    src_project_analyze_ts["src/project/analyze.ts"]
+    src_templates_load_ts["src/templates/load.ts"]
+    src_templates_render_ts["src/templates/render.ts"]
+    src_utils_file_system_ts["src/utils/file_system.ts"]
+    src_parsers_imports_ts["src/parsers/imports.ts"]
+    src_parsers_import_map_ts["src/parsers/import_map.ts"]
+    src_parsers_project_files_ts["src/parsers/project_files.ts"]
+    src_parsers_source_code_ast_ts["src/parsers/source_code_ast.ts"]
+    src_parsers_workflows_ts["src/parsers/workflows.ts"]
+    src_parsers_tests_ts["src/parsers/tests.ts"]
+    src_utils_readme_infer_ts["src/utils/readme_infer.ts"]
+    src_generators_api_ts --> src_parsers_source_code_ts
+    src_generators_doc_coverage_ts --> src_parsers_source_code_ts
+    src_generators_examples_ts --> src_parsers_source_code_ts
+    src_generators_llms_ts --> src_parsers_deno_json_ts
+    src_generators_llms_ts --> src_parsers_source_code_ts
+    src_generators_llms_ts --> src_utils_user_config_ts
+    src_main_ts --> src_mod_ts
+    src_main_ts --> src_utils_init_wizard_ts
+    src_main_ts --> src_utils_logger_ts
+    src_mod_ts --> src_project_analyze_ts
+    src_mod_ts --> src_templates_load_ts
+    src_mod_ts --> src_templates_render_ts
+    src_mod_ts --> src_utils_file_system_ts
+    src_parsers_source_code_ast_ts --> src_parsers_source_code_ts
+    src_parsers_source_code_ts --> src_parsers_source_code_ast_ts
+    src_project_analyze_ts --> src_generators_api_ts
+    src_project_analyze_ts --> src_generators_badges_ts
+    src_project_analyze_ts --> src_generators_doc_coverage_ts
+    src_project_analyze_ts --> src_generators_examples_ts
+    src_project_analyze_ts --> src_generators_llms_ts
+    src_project_analyze_ts --> src_generators_mermaid_ts
+    src_project_analyze_ts --> src_generators_toc_ts
+    src_project_analyze_ts --> src_parsers_deno_json_ts
+    src_project_analyze_ts --> src_parsers_import_map_ts
+    src_project_analyze_ts --> src_parsers_imports_ts
+    src_project_analyze_ts --> src_parsers_project_files_ts
+    src_project_analyze_ts --> src_parsers_source_code_ts
+    src_project_analyze_ts --> src_parsers_tests_ts
+    src_project_analyze_ts --> src_parsers_workflows_ts
+    src_project_analyze_ts --> src_utils_readme_infer_ts
+    src_project_analyze_ts --> src_utils_user_config_ts
+    src_utils_init_wizard_ts --> src_utils_logger_ts
 ```
 
-#### Project Analysis
-
-```typescript
-analyzeProject(options: AnalyzeProjectOptions): Promise<ProjectAnalysis>
-// Análisis completo: estructura, deps, tests, workflows
-
-extractExports(filePath: string): Promise<ExportInfo[]>
-// Extrae exports de archivos TS/JS con tipos y JSDoc
-
-detectTests(projectRoot: string): Promise<TestDetection>
-// Detecta frameworks de testing y coverage
-
-readDenoConfig(projectRoot: string): Promise<DenoConfig>
-// Lee y parsea deno.json/deno.jsonc
-```
-
-#### Utilities
-
-```typescript
-sanitizeGeneratedMarkdown(markdown: string): string
-// Limpia y normaliza markdown generado
-
-loadUserConfig(projectRoot: string): Promise<UserConfig>
-// Carga configuración de usuario desde .readmegen.json
-
-ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
-// Valida permisos y crea directorio si necesario
-```
-
-**Ver docs completas:** [API Documentation](https://glastor-dev.github.io/glastor-dev/)
-
-</details>
-
-<details>
-  <summary><strong>📦 Dependencies & Tech Stack</strong></summary>
-
-### Runtime Requirements
-
-- **Deno** >= 2.1.0 (recommended: latest stable)
-- **TypeScript** 5.x (bundled with Deno)
-- **Node.js** 18+ (optional, for npm packages)
-
-### Core Dependencies (JSR)
-
-**Standard Library:**
-
-```json
-{
-  "@std/assert": "^1.0.0", // Testing assertions
-  "@std/fs": "^1.0.0", // File system operations
-  "@std/path": "^1.0.0", // Path manipulation
-  "@std/jsonc": "^1.0.0" // JSON with comments parser
-}
-```
-
-**CLI Framework:**
-
-```json
-{
-  "@cliffy/command": "1.0.0-rc.7", // Command-line framework
-  "@cliffy/prompt": "1.0.0-rc.7", // Interactive prompts
-  "@cliffy/ansi": "1.0.0-rc.7" // Terminal colors & formatting
-}
-```
-
-### Third-party (npm)
-
-```json
-{
-  "typescript": "^5.7.0" // TypeScript Compiler AST API (offline, zero WASM)
-}
-```
-
-### Optional Integrations
-
-- **Pandoc** — Para export a PDF/DOCX
-- **Playwright** — Para screenshots automáticos
-- **Sharp** — Image optimization
-
-**Installation & Usage:**
-
-```bash
-# Via Deno 2 (JSR)
-deno install -g -A -n readmegen jsr:@glastor-dev/readmegen
-
-# O ejecución directa sin instalación previa:
-deno run -A jsr:@glastor-dev/readmegen
-```
-
-</details>
-
-<details>
-  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
-
-### 🖥️ Entorno de Desarrollo
-
-**Sistemas Operativos:**
-
-- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
-  - Terminal: Xterm + Zsh + Oh-My-Zsh
-  - WM: i3-gaps con Polybar
-  - Terminal alternativo: eDEX-UI (cyberpunk style)
-- 🪟 **Windows 10 Pro** (testing)
-  - Terminal: Windows Terminal + Git Bash
-  - WSL2: Ubuntu 22.04 LTS
-
-**Editores & IDEs:**
-
-- 💻 **VS Code** (principal) — Extensions:
-  - Python, Deno, ESLint, Prettier
-  - GitLens, Docker, Thunder Client
-  - Quimera Theme (propio)
-- ⚡ **Neovim** — Para edición rápida y remota
-  - Config: LazyVim + custom plugins
-  - LSP: pyright, tsserver, rust-analyzer
-
-**Version Control:**
-
-- 🦑 **GitKraken PRO** — GUI para operaciones complejas
-- 🔧 **Git CLI** — Para automation y scripts
-- 📊 **GitHub Desktop** — Para quick commits
-
-### 🎯 Áreas de Especialización
-
-**Backend & APIs:**
-
-- FastAPI patterns & best practices
-- Django REST Framework optimization
-- GraphQL con Strawberry/Ariadne
-- gRPC con Python
-
-**DevOps & Infrastructure:**
-
-- Docker multi-stage builds
-- Docker Compose orchestration
-- GitHub Actions workflows
-- AWS (EC2, Lambda, RDS, S3)
-- Terraform (IaC)
-
-**Security & Cryptography:**
-
-- OWASP Top 10 mitigation
-- JWT/OAuth2 implementation
-- Encryption (AES, RSA)
-- Penetration testing basics
-- Secure coding practices
-
-**AI/ML & Automation:**
-
-- Prompt Engineering (GPT-4, Claude)
-- LangChain for AI workflows
-- OpenAI API integration
-- Automation scripts (Python, Bash)
-- Web scraping (Beautiful Soup, Scrapy)
-
-**Documentation & Technical Writing:**
-
-- API documentation (OpenAPI/Swagger)
-- Technical blog writing
-- Video tutorial creation
-- Code documentation standards
-
-### 📚 Lecturas & Formación Continua
-
-**Libros técnicos recientes:**
-
-- ✅ _The Pragmatic Programmer_ (20th Anniversary)
-- ✅ _Clean Architecture_ — Robert C. Martin
-- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
-- 📖 _Building Microservices_ (2nd ed.) — En progreso
-- 📖 _Site Reliability Engineering_ — Google (En progreso)
-
-**Cursos & Certificaciones en proceso:**
-
-- 🎓 AWS Solutions Architect Associate (Completado)
-- 🎓 Certified Kubernetes Administrator (CKA) (En preparación)
-- 📚 FastAPI Advanced Patterns & AI Agent Architectures
-
-**Podcasts favoritos:**
-
-- 🎙️ Talk Python To Me
-- 🎙️ Python Bytes
-- 🎙️ The Changelog
-- 🎙️ Software Engineering Daily
-
-</details>
-
----
-
-<div align="center">
-
-**📋 Políticas del Proyecto**
-
-[📞 Soporte](.github/SUPPORT.md) • [🔒 Seguridad](.github/SECURITY.md) • [⚖️ Código de Conducta](.github/CODE_OF_CONDUCT.md) • [📜 Licencia](LICENSE)
-
-</div>
-
----
-
-<div align="center">
-
-© 2010-2026 GLASTOR-DEV — Todos los derechos reservados.
-
-**2025 GLASTOR®** marca registrada en Argentina (INPI)  
-Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
-
-<br>
-
-[![Open Source GPL v3](https://i.postimg.cc/PxWYdHPN/gplv3-with-text-136x68.png)](https://www.gnu.org/licenses/gpl-3.0.html)
-&nbsp;&nbsp;
-[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
-
-**Licencia Dual:**
-
-- **Código de la herramienta:** Licenciado bajo [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
-- **Textos generados y plantillas:** Licenciados bajo [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
-
----
-
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-10-19</sub>  
-<sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
-
-</div>
-
-<details>
-  <summary><strong>📖 API Documentation</strong></summary>
+### 📚 API Reference (AST Autogenerated)
 
 ### scripts/code_review.ts
 #### calculateReviewResult
@@ -775,10 +549,27 @@ Supported README template styles
 #### UserConfig
 - Type: interface
 
+**Ver docs completas:** [API Documentation](https://glastor-dev.github.io/glastor-dev/)
+
 </details>
 
 <details>
-  <summary><strong>📦 Dependencies</strong></summary>
+  <summary><strong>📦 Dependencies & Tech Stack</strong></summary>
+
+### Runtime & Installation
+
+- **Deno** >= 2.1.0 (recommended: latest stable)
+- **TypeScript** 5.x (bundled with Deno)
+
+```bash
+# Via Deno 2 (JSR)
+deno install -g -A -n readmegen jsr:@glastor-dev/readmegen
+
+# O ejecución directa sin instalación previa:
+deno run -A jsr:@glastor-dev/readmegen
+```
+
+### Detected Project Dependencies & Manifests
 
 ### Config files
 - deno.json/deno.jsonc
@@ -807,67 +598,134 @@ Supported README template styles
 </details>
 
 <details>
-  <summary><strong>📐 Architecture & Module Graph</strong></summary>
+  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
 
-```mermaid
-graph TD
-    src_generators_api_ts["src/generators/api.ts"]
-    src_parsers_source_code_ts["src/parsers/source_code.ts"]
-    src_generators_badges_ts["src/generators/badges.ts"]
-    src_generators_doc_coverage_ts["src/generators/doc_coverage.ts"]
-    src_generators_examples_ts["src/generators/examples.ts"]
-    src_generators_llms_ts["src/generators/llms.ts"]
-    src_parsers_deno_json_ts["src/parsers/deno_json.ts"]
-    src_utils_user_config_ts["src/utils/user_config.ts"]
-    src_generators_mermaid_ts["src/generators/mermaid.ts"]
-    src_generators_toc_ts["src/generators/toc.ts"]
-    src_main_ts["src/main.ts"]
-    src_mod_ts["src/mod.ts"]
-    src_utils_init_wizard_ts["src/utils/init_wizard.ts"]
-    src_utils_logger_ts["src/utils/logger.ts"]
-    src_project_analyze_ts["src/project/analyze.ts"]
-    src_templates_load_ts["src/templates/load.ts"]
-    src_templates_render_ts["src/templates/render.ts"]
-    src_utils_file_system_ts["src/utils/file_system.ts"]
-    src_parsers_imports_ts["src/parsers/imports.ts"]
-    src_parsers_import_map_ts["src/parsers/import_map.ts"]
-    src_parsers_project_files_ts["src/parsers/project_files.ts"]
-    src_parsers_source_code_ast_ts["src/parsers/source_code_ast.ts"]
-    src_parsers_workflows_ts["src/parsers/workflows.ts"]
-    src_parsers_tests_ts["src/parsers/tests.ts"]
-    src_utils_readme_infer_ts["src/utils/readme_infer.ts"]
-    src_generators_api_ts --> src_parsers_source_code_ts
-    src_generators_doc_coverage_ts --> src_parsers_source_code_ts
-    src_generators_examples_ts --> src_parsers_source_code_ts
-    src_generators_llms_ts --> src_parsers_deno_json_ts
-    src_generators_llms_ts --> src_parsers_source_code_ts
-    src_generators_llms_ts --> src_utils_user_config_ts
-    src_main_ts --> src_mod_ts
-    src_main_ts --> src_utils_init_wizard_ts
-    src_main_ts --> src_utils_logger_ts
-    src_mod_ts --> src_project_analyze_ts
-    src_mod_ts --> src_templates_load_ts
-    src_mod_ts --> src_templates_render_ts
-    src_mod_ts --> src_utils_file_system_ts
-    src_parsers_source_code_ast_ts --> src_parsers_source_code_ts
-    src_parsers_source_code_ts --> src_parsers_source_code_ast_ts
-    src_project_analyze_ts --> src_generators_api_ts
-    src_project_analyze_ts --> src_generators_badges_ts
-    src_project_analyze_ts --> src_generators_doc_coverage_ts
-    src_project_analyze_ts --> src_generators_examples_ts
-    src_project_analyze_ts --> src_generators_llms_ts
-    src_project_analyze_ts --> src_generators_mermaid_ts
-    src_project_analyze_ts --> src_generators_toc_ts
-    src_project_analyze_ts --> src_parsers_deno_json_ts
-    src_project_analyze_ts --> src_parsers_import_map_ts
-    src_project_analyze_ts --> src_parsers_imports_ts
-    src_project_analyze_ts --> src_parsers_project_files_ts
-    src_project_analyze_ts --> src_parsers_source_code_ts
-    src_project_analyze_ts --> src_parsers_tests_ts
-    src_project_analyze_ts --> src_parsers_workflows_ts
-    src_project_analyze_ts --> src_utils_readme_infer_ts
-    src_project_analyze_ts --> src_utils_user_config_ts
-    src_utils_init_wizard_ts --> src_utils_logger_ts
-```
+### 🖥️ Entorno de Desarrollo
+
+**Sistemas Operativos:**
+
+- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
+  - Terminal: Xterm + Zsh + Oh-My-Zsh
+  - WM: i3-gaps con Polybar
+  - Terminal alternativo: eDEX-UI (cyberpunk style)
+- 🪟 **Windows 10 Pro** (testing)
+  - Terminal: Windows Terminal + Git Bash
+  - WSL2: Ubuntu 22.04 LTS
+
+**Editores & IDEs:**
+
+- 💻 **VS Code** (principal) — Extensions:
+  - Python, Deno, ESLint, Prettier
+  - GitLens, Docker, Thunder Client
+  - Quimera Theme (propio)
+- ⚡ **Neovim** — Para edición rápida y remota
+  - Config: LazyVim + custom plugins
+  - LSP: pyright, tsserver, rust-analyzer
+
+**Version Control:**
+
+- 🦑 **GitKraken PRO** — GUI para operaciones complejas
+- 🔧 **Git CLI** — Para automation y scripts
+- 📊 **GitHub Desktop** — Para quick commits
+
+### 🎯 Áreas de Especialización
+
+**Backend, Sistemas Críticos & APIs:**
+
+- Microservicios en Rust (Tokio, Axum, memoria segura y concurrencia sin data races)
+- FastAPI & Django REST Framework patterns de ultra-baja latencia
+- Edge Runtimes & Gateways con Deno 2, Bun y Hono
+- gRPC, GraphQL (Strawberry/Ariadne) y OpenAPI 3.1
+
+**DevOps & Infrastructure:**
+
+- Docker multi-stage builds
+- Docker Compose orchestration
+- GitHub Actions workflows
+- AWS (EC2, Lambda, RDS, S3)
+- Terraform (IaC)
+
+**Security & Cryptography:**
+
+- OWASP Top 10 mitigation
+- JWT/OAuth2 implementation
+- Encryption (AES, RSA)
+- Penetration testing basics
+- Secure coding practices
+
+**AI/ML & Automation:**
+
+- Prompt Engineering (GPT-4, Claude)
+- LangChain for AI workflows
+- OpenAI API integration
+- Automation scripts (Python, Bash)
+- Web scraping (Beautiful Soup, Scrapy)
+
+**Documentation & Technical Writing:**
+
+- API documentation (OpenAPI/Swagger)
+- Technical blog writing
+- Video tutorial creation
+- Code documentation standards
+
+### 📚 Lecturas & Formación Continua
+
+**Libros técnicos recientes:**
+
+- ✅ _The Pragmatic Programmer_ (20th Anniversary)
+- ✅ _Clean Architecture_ — Robert C. Martin
+- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
+- 📖 _Building Microservices_ (2nd ed.) — En progreso
+- 📖 _Site Reliability Engineering_ — Google (En progreso)
+
+**Cursos & Certificaciones en proceso:**
+
+- 🎓 AWS Solutions Architect Associate (Completado)
+- 🎓 Certified Kubernetes Administrator (CKA) (En preparación)
+- 📚 FastAPI Advanced Patterns & AI Agent Architectures
+
+**Podcasts favoritos:**
+
+- 🎙️ Talk Python To Me
+- 🎙️ Python Bytes
+- 🎙️ The Changelog
+- 🎙️ Software Engineering Daily
 
 </details>
+
+---
+
+<div align="center">
+
+**📋 Políticas del Proyecto**
+
+[💙 Sponsors](SPONSORS.md) • [📞 Soporte](.github/SUPPORT.md) • [🔒 Seguridad](.github/SECURITY.md) • [⚖️ Código de Conducta](.github/CODE_OF_CONDUCT.md) • [📜 Licencia](LICENSE)
+
+</div>
+
+---
+
+<div align="center">
+
+© 2010-2026 GLASTOR-DEV — Todos los derechos reservados.
+
+**2025 GLASTOR®** marca registrada en Argentina (INPI)  
+Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
+
+<br>
+
+[![Open Source GPL v3](https://i.postimg.cc/PxWYdHPN/gplv3-with-text-136x68.png)](https://www.gnu.org/licenses/gpl-3.0.html)
+&nbsp;&nbsp;
+[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by/4.0/)
+
+**Licencia Dual:**
+
+- **Código de la herramienta:** Licenciado bajo [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html)
+- **Textos generados y plantillas:** Licenciados bajo [Creative Commons Attribution 4.0 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
+---
+
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-05</sub>  
+<sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
+
+</div>

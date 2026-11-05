@@ -43,7 +43,7 @@ Implementamos un flujo de CI/CD riguroso para proteger la estabilidad de `main`:
    Adoptamos _Conventional Commits_ para una trazabilidad automatizada:
 
    ```bash
-   git commit -m "feat: implement robust state management for glastor-deno"
+   git commit -m "feat: implement robust state management for glastor-dev"
    ```
 
    _Estándares: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `perf:`, `test:`, `chore:`._
@@ -63,8 +63,8 @@ Implementamos un flujo de CI/CD riguroso para proteger la estabilidad de `main`:
 
 1. **Clonación**
    ```bash
-   git clone https://github.com/glastor-dev/glastor-deno.git
-   cd glastor-deno
+   git clone https://github.com/glastor-dev/glastor-dev.git
+   cd glastor-dev
    ```
 2. **Ejecución y Desarrollo**
    ```bash
@@ -93,8 +93,8 @@ Implementamos un flujo de CI/CD riguroso para proteger la estabilidad de `main`:
 
 Para discusiones arquitectónicas o consultas de infraestructura:
 
-- **GitHub Discussions:** Canal preferente para debate técnico.
-- **Soporte Corporativo:** [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+- **GitHub Discussions:** [Canal preferente para debate técnico](https://github.com/orgs/glastor-core/discussions).
+- **Soporte Corporativo:** [ventas@glastor.es](mailto:ventas@glastor.es) / [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
 - **Comunicación Directa (Telegram):** [@zerhocool](https://t.me/zerhocool)
 
 ---
@@ -103,6 +103,6 @@ Para discusiones arquitectónicas o consultas de infraestructura:
 
 Este ecosistema opera bajo nuestro [Código de Conducta](./CODE_OF_CONDUCT.md). Fomentamos un entorno de colaboración profesional, meritocrático y respetuoso.
 
-Agradecemos tu contribución a la excelencia tecnológica de GLASTOR-DENO.
+Agradecemos tu contribución a la excelencia tecnológica de GLASTOR®.
 
 © 2010-2026 Andrés Antonio Cardoso — Todos los derechos reservados

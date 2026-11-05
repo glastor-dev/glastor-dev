@@ -6,7 +6,7 @@ El éxito de un sistema escalable no reside únicamente en su implementación, s
 
 Para garantizar un flujo de CI/CD sin fricciones y proteger la integridad de la base de código, es imperativo seguir nuestros protocolos técnicos de estandarización antes de realizar cualquier commit:
 
-- **Directrices de Contribución:** [Consultar CONTRIBUTING.md](../CONTRIBUTING.md) — Optimiza tu impacto técnico alineándote con nuestros estándares de revisión y calidad de código.
+- **Directrices de Contribución:** [Consultar CONTRIBUTING.md](./CONTRIBUTING.md) — Optimiza tu impacto técnico alineándote con nuestros estándares de revisión y calidad de código.
 
 ## 🛡️ Resiliencia y Seguridad Proactiva
 

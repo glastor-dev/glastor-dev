@@ -1,9 +1,10 @@
-# FUNDING.yml - Supernova
-# Configuración de financiación para GitHub.
+# FUNDING.yml - GLASTOR® Dual-Core Ecosystem
+# Configuración de financiación y patrocinio corporativo para GitHub.
 
 # GitHub Sponsors
-github: glastor-dev
+github: [glastor-dev, glastor-core]
 
-# URLs personalizadas (Redirige a la sección de Sponsor del README para ver Alias y ACH)
+# URLs personalizadas (Programa completo de Sponsorship, Factura E internacional y Factura A en Argentina)
 custom:
-  - https://github.com/sponsors/glastor-dev
+  - https://github.com/glastor-dev/glastor-dev/blob/master/SPONSORS.md
+  - https://glastor.es

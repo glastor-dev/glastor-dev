@@ -6,9 +6,9 @@
   📦 Versión del generador: v{{currentVersion}}
 -->
 
-# GLASTOR® — Ingeniería de backend y arquitectura
+# GLASTOR® — Ingeniería de Sistemas, Backend & Arquitectura Crítica
 
-**Ingeniero de backend en Python · Arquitecto de API · Automatización y DevOps**
+**Arquitecto Jefe en Rust & Python · Sistemas Distribuidos de Ultra-Baja Latencia · DevSecOps & Edge Tooling**
 
 [![Deno](https://img.shields.io/badge/Deno-%5E2.0.0-black?logo=deno&logoColor=white)](https://deno.land/)
 [![Docker](https://img.shields.io/badge/Docker-ready-blue?logo=docker&logoColor=white)](https://hub.docker.com/)
@@ -29,7 +29,7 @@
 
 **🟢 Disponible para proyectos — Próximas aperturas: {{nextOpening}}**
 
-[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [📧 Contacto](mailto:glastor.info@gmail.com) • [📁 Portfolio](./PORTFOLIO.md) • [🎥 Demo](https://youtube.com/@glastor-es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [📧 Contacto](mailto:glastor.info@gmail.com) • [🌐 Website](https://glastor.es) • [🎥 Demo](https://youtube.com/@glastor-es)
 
 </div>
 
@@ -37,9 +37,9 @@
 
 ## 👋 Sobre mí
 
-Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización** con Python para equipos de producto en producción. Más de **15 años** creando soluciones backend escalables para empresas tecnológicas.
+Arquitecto **sistemas distribuidos de misión crítica, backends de ultra-baja latencia y herramientas de automatización** en **Rust, Python y runtimes modernos (Deno 2 / Bun)** para empresas B2B en producción. Desde **2010 (+15 años de trayectoria y 150+ proyectos desplegados)**, transformo retos técnicos complejos en infraestructuras escalables de alto rendimiento, alto uptime y costos operativos optimizados.
 
-**Fundador y Lead Architect en [GLASTOR® Core](https://github.com/glastor-core)** — Especializado en arquitectura backend, DevOps, motores de análisis estático y soluciones técnicas que reducen costos operativos hasta un 40%.
+**Fundador, CEO & Arquitecto Jefe en [GLASTOR®](https://glastor.es) y [GLASTOR® Core](https://github.com/glastor-core)** — Lidero la ingeniería directa —sin intermediarios— de motores de ejecución determinística, gateways Edge, análisis estático AST y pipelines DevSecOps que reducen latencias hasta un 90% y costos de infraestructura hasta un 40%.
 
 > _"Andres entregó una solución de API que maneja 5,000 req/s con latencia p99 < 50ms. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
 > — **Dan Khasis**  
@@ -47,14 +47,15 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ### 💼 Especialidades técnicas
 
-- ✅ **Backend Python** — APIs con FastAPI y Django, optimizadas para alto tráfico (5K+ req/s)
-- ✅ **DevOps & CI/CD** — Pipelines robustos que reducen deployment time 75% (30min → 7min)
-- ✅ **Contenedores** — Arquitecturas Docker que facilitan escalado horizontal automático
-- ✅ **Git avanzado** — Flujos de trabajo con GitKraken, pair programming y code review efectivo
+- ✅ **Sistemas Críticos en Rust & Python** — Microservicios seguros en memoria y APIs (FastAPI/Django) optimizadas para alto tráfico (5K+ req/s, p99 < 50ms)
+- ✅ **Edge Runtimes & Developer Tooling** — Motores de alto rendimiento y baja latencia sobre Deno 2, Bun y TypeScript AST
+- ✅ **DevSecOps & CI Predictivo** — Pipelines y orquestación inteligente que reducen tiempos de despliegue un 75% (30min → 7min)
+- ✅ **Infraestructura Cloud & Contenedores** — Arquitecturas Docker, Kubernetes y AWS diseñadas para escalado horizontal y alta disponibilidad (HPC)
 
 ### 🔭 Actualmente trabajando en
 
 - 🚀 **Ecosistema Deno 2 & JSR** — Generador de READMEs de alto rendimiento con análisis AST y plugins modulares (`@glastor-dev/readmegen`)
+- 🏛️ **Plataforma [GLASTOR® Core](https://github.com/glastor-core)** — Sistemas distribuidos y motores Edge/CI: [`glastor-core`](https://github.com/glastor-core/glastor-core), [`nemesis`](https://github.com/glastor-core/nemesis) (DevSecOps), [`vortex`](https://github.com/glastor-core/vortex) (Predictive AST CI), [`zerho`](https://github.com/glastor-core/zerho) (Edge Docs), [`medusa`](https://github.com/glastor-core/medusa) (Edge API Gateway) y [`hyper-flow`](https://github.com/glastor-core/hyper-flow) (Edge AI API)
 - 🤖 **Herramientas AI-Ready** — Integración nativa del estándar `llms.txt` y pipelines de automatización
 - 🧪 **Smart injection engine** — Template engine inteligente que reduce boilerplate 60%
 - 📝 **Contenido técnico** — Serie sobre arquitectura de APIs, optimización p99 y patrones backend
@@ -62,32 +63,32 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ### ✨ Disponible para
 
-- **Consultoría técnica** en arquitectura de APIs y optimización de rendimiento
-- **Code review** y auditoría de seguridad en proyectos Python/FastAPI
-- **Desarrollo** de tooling interno, CLI tools y automatizaciones
-- **Technical writing** y documentación de APIs
-- **Proyectos Open Source** — Issues y PRs bienvenidos
+- **Arquitectura e Ingeniería B2B** en sistemas críticos, migraciones a Rust/Python y optimización de latencia/costos cloud
+- **Code review & Auditoría DevSecOps** en infraestructuras Rust, Python/FastAPI y TypeScript (Deno/Bun)
+- **Desarrollo** de motores core, tooling interno, CLI tools y automatizaciones determinísticas
+- **Technical writing** y arquitectura de portales de documentación (`mdBook`, OpenAPI 3.1, `llms.txt`)
+- **Proyectos Open Source** — Issues, RFCs y PRs bienvenidos en [GLASTOR® Core](https://github.com/glastor-core)
 
 ---
 
 ## 🛠️ Stack Tecnológico
 
 <p align="center">
-  <strong>Backend & Lenguajes:</strong><br>
-  <img src="https://skillicons.dev/icons?i=python,nodejs,ts,js,bash,deno,linux" alt="Backend" /><br><br>
-  <strong>Frameworks & APIs:</strong><br>
-  <img src="https://skillicons.dev/icons?i=fastapi,flask,django,vue,vite,nextjs,svelte,symfony" alt="Frameworks" /><br><br>
-  <strong>DevOps & Cloud:</strong><br>
-  <img src="https://skillicons.dev/icons?i=docker,aws,vercel,heroku,githubactions,git,gitlab" alt="DevOps" /><br><br>
-  <strong>Databases & Tools:</strong><br>
-  <img src="https://skillicons.dev/icons?i=postgresql,mongodb,mysql,redis,postman,vscode,jest" alt="DB & Tools" />
+  <strong>Backend, Sistemas & Runtimes:</strong><br>
+  <img src="https://skillicons.dev/icons?i=rust,python,deno,bun,ts,wasm,bash,linux,arch" alt="Backend & Systems" /><br><br>
+  <strong>Frameworks, APIs & WebGL:</strong><br>
+  <img src="https://skillicons.dev/icons?i=fastapi,django,graphql,nextjs,react,threejs,tailwind,vite" alt="Frameworks, APIs & WebGL" /><br><br>
+  <strong>DevSecOps, Cloud & Edge Infra:</strong><br>
+  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,terraform,cloudflare,githubactions,nginx,git" alt="DevSecOps & Cloud" /><br><br>
+  <strong>Databases, Caching & Developer Tooling:</strong><br>
+  <img src="https://skillicons.dev/icons?i=postgresql,redis,mongodb,sqlite,neovim,vscode,vitest,postman" alt="DB & Tools" />
 </p>
 
 ### 🎓 Certificaciones & Aprendizaje
 
 - 🏆 **AWS Solutions Architect** & **DevOps Specialist** (Arquitecturas cloud y microservicios)
 - 📚 Especialización continua: Kubernetes (CKA), Advanced PostgreSQL Performance Tuning
-- 🎯 Enfoque técnico: FastAPI patterns, AsyncIO, Distributed systems, AI Agents
+- 🎯 Enfoque técnico: Rust (Tokio/Axum), FastAPI patterns, AsyncIO, Deno 2 / Bun Edge Runtimes, Distributed Systems & AI Agents
 
 ---
 
@@ -108,11 +109,11 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
 
 ---
 
-## 💙 Sponsors & Colaboradores
+## 💙 Sponsors, Casos de Éxito & Ecosistema
 
 <div align="center">
 
-**Empresas que apoyan financieramente el desarrollo de herramientas Open Source:**
+**Empresas con las que hemos desplegado sistemas críticos en producción y proyectos Open Source del ecosistema:**
 
 <table>
   <tr>
@@ -131,20 +132,20 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
       <sub>Sistema de gestión de inventario y logística</sub>
     </td>
     <td align="center" width="200">
-      <a href="https://rizin.re/" target="_blank">
-        <img src="images/rizin.png" alt="Rizin" height="80"/><br>
-        <strong>Rizin</strong>
-      </a><br>
-      <sub>Contribuciones a reverse engineering framework</sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="200">
       <a href="https://route4me.com/es" target="_blank">
         <img src="images/route4me-logo.png" alt="Route4Me" height="80"/><br>
         <strong>Route4Me</strong>
       </a><br>
       <sub>API de geolocalización y routing en tiempo real</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="200">
+      <a href="https://rizin.re/" target="_blank">
+        <img src="images/rizin.png" alt="Rizin" height="80"/><br>
+        <strong>Rizin</strong>
+      </a><br>
+      <sub>Contribuciones al framework de ingeniería inversa</sub>
     </td>
     <td align="center" width="200">
       <a href="https://neovim.io/" target="_blank">
@@ -155,65 +156,30 @@ Desarrollo **APIs REST de alto rendimiento** y **herramientas de automatización
     </td>
     <td align="center" width="200">
       <strong>¿Tu empresa?</strong><br><br>
-      <a href="#-convertirte-en-sponsor">
+      <a href="./SPONSORS.md">
         <img src="https://img.shields.io/badge/Become-Sponsor-EA4AAA?style=for-the-badge" alt="Become Sponsor"/>
       </a><br>
-      <sub>Apoya el desarrollo Open Source</sub>
+      <sub>Apoya el ecosistema con Factura E / Factura A</sub>
     </td>
   </tr>
 </table>
 
 <br>
 
-**Impacto comprobado:** +15 años en producción • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
+**Impacto comprobado:** +15 años en producción (desde 2010) • 150+ proyectos desplegados • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
 
-</div>
-
----
-
-### 🤝 Convertirte en Sponsor
-
-Tu apoyo permite dedicar más tiempo al desarrollo de herramientas Open Source de calidad profesional.
-
-<div align="center">
+<br>
 
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Glastor_DEV-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/glastor-dev)
-![Takenos ACH](https://img.shields.io/badge/Takenos-ACH_Transfer_USD-1E1E1E?style=for-the-badge)
-![Banco Galicia](https://img.shields.io/badge/Banco_Galicia-Transferencia_ARS-F05C2B?style=for-the-badge)
+[![ACH USD Factura E](https://img.shields.io/badge/ACH_%2F_Wire_USD-Factura_E_%28Exportaci%C3%B3n%29-1E1E1E?style=for-the-badge)](./SPONSORS.md#-canales-de-pago--facturaci%C3%B3n-fiscal-factura-e--factura-a)
+[![Banco Galicia ARS](https://img.shields.io/badge/Banco_Galicia_ARS-Factura_A_%2F_B_%28Resp._Inscripto%29-F05C2B?style=for-the-badge)](./SPONSORS.md#-canales-de-pago--facturaci%C3%B3n-fiscal-factura-e--factura-a)
 
 <br>
 
-<details>
-<summary><b>📄 Coordenadas para transferencia bancaria directa (USD / ARS)</b></summary>
-<br>
-
-Para transferencias directas ACH (USD), wire internacional o transferencias locales (ARS / Galicia):  
-👉 [**Solicitar datos bancarios vía email**](mailto:glastor.info@gmail.com?subject=Solicitud%20de%20datos%20bancarios%20para%20Sponsorship)
-
-_Se proporcionan de forma privada para mayor seguridad y emisión de la factura/recibo correspondiente._
-
-</details>
+👉 **[📄 Ver Programa Completo de Sponsorship, Tiers Corporativos y Facturación Fiscal (`SPONSORS.md`) →](./SPONSORS.md)**  
+<sub>Emitimos <b>Factura E de Exportación de Servicios</b> (USD/EUR para empresas internacionales) y <b>Factura A / B</b> (IVA Responsable Inscripto en Argentina).</sub>
 
 </div>
-
-**Beneficios según tier:**
-
-| Tier              | Inversión/mes | Beneficios                                                       |
-| ----------------- | ------------- | ---------------------------------------------------------------- |
-| 🥉 **Bronze**     | 10 USD        | Logo en README • Mención en releases                             |
-| 🥈 **Silver**     | 50 USD        | Todo anterior + Prioridad en issues • Acceso temprano a features |
-| 🥇 **Gold**       | 100 USD       | Todo anterior + 2h consultoría/mes • Code review prioritario     |
-| 💎 **Platinum**   | 500 USD       | Todo anterior + Feature requests dedicados • Soporte 24/7        |
-| 🏢 **Enterprise** | Custom        | Soluciones a medida • SLA garantizado • Desarrollo privado       |
-
-**ROI para empresas:**
-
-- 🎯 Visibilidad ante 50K+ developers activos
-- 🔧 Acceso prioritario a herramientas que aumentan productividad
-- 🤝 Relación directa con maintainer experimentado
-- 📈 Soporte para herramientas críticas en tu stack
-
-[📧 Contactar para plan Enterprise](mailto:glastor.info@gmail.com?subject=Enterprise%20Sponsorship)
 
 ---
 
@@ -274,64 +240,13 @@ Agradecemos a todos nuestros contributors:
 
 > 💡 **Portal Completo de Arquitectura:** Accede al manual técnico completo, diagramas de módulos y guías en el portal oficial: **[glastor-dev.github.io/glastor-dev](https://glastor-dev.github.io/glastor-dev/)**
 
-### API Reference
+### 📐 Architecture & Module Graph
 
-#### Core Generators & Review Tools
+{{architecture}}
 
-```typescript
-generateReadme(args: GenerateReadmeArgs): Promise<string>
-// Generador principal de README con análisis completo de proyecto
+### 📚 API Reference (AST Autogenerated)
 
-generateMermaidGraph(projectRoot: string): Promise<string>
-// Grafo de módulos y dependencias de arquitectura en formato Mermaid
-
-generateLlmsTxt(analysis: ProjectAnalysis): string
-// Generador del estándar llms.txt para agentes y LLMs
-
-calculateDocCoverage(exports: ExportInfo[]): DocCoverageResult
-// Auditoría de cobertura de documentación JSDoc y badges
-
-reviewFile(filePath: string, content: string): FileReview
-// Auditoría de código bajo 4Rs: Risk, Readability, Reliability, Resilience
-
-generateBadges(_config: BadgesConfig): string
-// Genera badges dinámicos basados en project config
-
-generateApiDocs(exports: ExportInfo[]): string
-// Documenta exports automáticamente desde análisis AST
-
-generateToc(options: TocOptions): string
-// Tabla de contenidos con links automáticos
-```
-
-#### Project Analysis
-
-```typescript
-analyzeProject(options: AnalyzeProjectOptions): Promise<ProjectAnalysis>
-// Análisis completo: estructura, deps, tests, workflows
-
-extractExports(filePath: string): Promise<ExportInfo[]>
-// Extrae exports de archivos TS/JS con tipos y JSDoc
-
-detectTests(projectRoot: string): Promise<TestDetection>
-// Detecta frameworks de testing y coverage
-
-readDenoConfig(projectRoot: string): Promise<DenoConfig>
-// Lee y parsea deno.json/deno.jsonc
-```
-
-#### Utilities
-
-```typescript
-sanitizeGeneratedMarkdown(markdown: string): string
-// Limpia y normaliza markdown generado
-
-loadUserConfig(projectRoot: string): Promise<UserConfig>
-// Carga configuración de usuario desde .readmegen.json
-
-ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
-// Valida permisos y crea directorio si necesario
-```
+{{apiDocs}}
 
 **Ver docs completas:** [API Documentation](https://glastor-dev.github.io/glastor-dev/)
 
@@ -340,50 +255,10 @@ ensureWritableOutput(path: string, options: WriteOptions): Promise<void>
 <details>
   <summary><strong>📦 Dependencies & Tech Stack</strong></summary>
 
-### Runtime Requirements
+### Runtime & Installation
 
 - **Deno** >= 2.1.0 (recommended: latest stable)
 - **TypeScript** 5.x (bundled with Deno)
-- **Node.js** 18+ (optional, for npm packages)
-
-### Core Dependencies (JSR)
-
-**Standard Library:**
-
-```json
-{
-  "@std/assert": "^1.0.0", // Testing assertions
-  "@std/fs": "^1.0.0", // File system operations
-  "@std/path": "^1.0.0", // Path manipulation
-  "@std/jsonc": "^1.0.0" // JSON with comments parser
-}
-```
-
-**CLI Framework:**
-
-```json
-{
-  "@cliffy/command": "1.0.0-rc.7", // Command-line framework
-  "@cliffy/prompt": "1.0.0-rc.7", // Interactive prompts
-  "@cliffy/ansi": "1.0.0-rc.7" // Terminal colors & formatting
-}
-```
-
-### Third-party (npm)
-
-```json
-{
-  "typescript": "^5.7.0" // TypeScript Compiler AST API (offline, zero WASM)
-}
-```
-
-### Optional Integrations
-
-- **Pandoc** — Para export a PDF/DOCX
-- **Playwright** — Para screenshots automáticos
-- **Sharp** — Image optimization
-
-**Installation & Usage:**
 
 ```bash
 # Via Deno 2 (JSR)
@@ -392,6 +267,10 @@ deno install -g -A -n readmegen jsr:@glastor-dev/readmegen
 # O ejecución directa sin instalación previa:
 deno run -A jsr:@glastor-dev/readmegen
 ```
+
+### Detected Project Dependencies & Manifests
+
+{{dependencies}}
 
 </details>
 
@@ -428,12 +307,12 @@ deno run -A jsr:@glastor-dev/readmegen
 
 ### 🎯 Áreas de Especialización
 
-**Backend & APIs:**
+**Backend, Sistemas Críticos & APIs:**
 
-- FastAPI patterns & best practices
-- Django REST Framework optimization
-- GraphQL con Strawberry/Ariadne
-- gRPC con Python
+- Microservicios en Rust (Tokio, Axum, memoria segura y concurrencia sin data races)
+- FastAPI & Django REST Framework patterns de ultra-baja latencia
+- Edge Runtimes & Gateways con Deno 2, Bun y Hono
+- gRPC, GraphQL (Strawberry/Ariadne) y OpenAPI 3.1
 
 **DevOps & Infrastructure:**
 
@@ -497,7 +376,7 @@ deno run -A jsr:@glastor-dev/readmegen
 
 **📋 Políticas del Proyecto**
 
-[📞 Soporte](.github/SUPPORT.md) • [🔒 Seguridad](.github/SECURITY.md) • [⚖️ Código de Conducta](.github/CODE_OF_CONDUCT.md) • [📜 Licencia](LICENSE)
+[💙 Sponsors](SPONSORS.md) • [📞 Soporte](.github/SUPPORT.md) • [🔒 Seguridad](.github/SECURITY.md) • [⚖️ Código de Conducta](.github/CODE_OF_CONDUCT.md) • [📜 Licencia](LICENSE)
 
 </div>
 
