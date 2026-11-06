@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-11-05
+  🔄 Última actualización: 2026-11-06
   📦 Versión del generador: v2.2.0
 -->
 
@@ -29,9 +29,12 @@
 
 **🟢 Disponible para proyectos — Próximas aperturas: Diciembre 2026**
 
-[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [📧 Contacto](mailto:glastor.info@gmail.com) • [🌐 Website](https://glastor.es) • [🎥 Demo](https://youtube.com/@glastor-es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:ventas@glastor.es) • [🌐 Website](https://glastor.es)
 
 </div>
+
+> _"Andres entregó una solución de API que maneja **5,000 req/s con latencia p99 < 50ms**. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
+> — **Dan Khasis**, _Chief Executive Officer and Founder at [Route4Me](https://route4me.com/es)_
 
 ---
 
@@ -41,9 +44,7 @@ Arquitecto **sistemas distribuidos de misión crítica, backends de ultra-baja l
 
 **Fundador, CEO & Arquitecto Jefe en [GLASTOR®](https://glastor.es) y [GLASTOR® Core](https://github.com/glastor-core)** — Lidero la ingeniería directa —sin intermediarios— de motores de ejecución determinística, gateways Edge, análisis estático AST y pipelines DevSecOps que reducen latencias hasta un 90% y costos de infraestructura hasta un 40%.
 
-> _"Andres entregó una solución de API que maneja 5,000 req/s con latencia p99 < 50ms. Su trabajo redujo nuestros costos de infraestructura significativamente."_  
-> — **Dan Khasis**  
-> _Chief Executive Officer and Founder, Route4Me_
+🌍 **Operación Internacional Dual-Hub (España & Argentina):** Cobertura de husos horarios **CET (Europa)** y **ART / EST (Américas)**, con facturación corporativa internacional libre de impuestos locales (**Factura E de Exportación en USD/EUR**) y facturación local en Argentina (**Factura A / B — IVA Responsable Inscripto**).
 
 ### 💼 Especialidades técnicas
 
@@ -597,109 +598,13 @@ deno run -A jsr:@glastor-dev/readmegen
 
 </details>
 
-<details>
-  <summary><strong>🔧 Development Setup & Toolbox</strong></summary>
-
-### 🖥️ Entorno de Desarrollo
-
-**Sistemas Operativos:**
-
-- 🐧 **Arch Linux** (principal) — Kernel 6.x custom
-  - Terminal: Xterm + Zsh + Oh-My-Zsh
-  - WM: i3-gaps con Polybar
-  - Terminal alternativo: eDEX-UI (cyberpunk style)
-- 🪟 **Windows 10 Pro** (testing)
-  - Terminal: Windows Terminal + Git Bash
-  - WSL2: Ubuntu 22.04 LTS
-
-**Editores & IDEs:**
-
-- 💻 **VS Code** (principal) — Extensions:
-  - Python, Deno, ESLint, Prettier
-  - GitLens, Docker, Thunder Client
-  - Quimera Theme (propio)
-- ⚡ **Neovim** — Para edición rápida y remota
-  - Config: LazyVim + custom plugins
-  - LSP: pyright, tsserver, rust-analyzer
-
-**Version Control:**
-
-- 🦑 **GitKraken PRO** — GUI para operaciones complejas
-- 🔧 **Git CLI** — Para automation y scripts
-- 📊 **GitHub Desktop** — Para quick commits
-
-### 🎯 Áreas de Especialización
-
-**Backend, Sistemas Críticos & APIs:**
-
-- Microservicios en Rust (Tokio, Axum, memoria segura y concurrencia sin data races)
-- FastAPI & Django REST Framework patterns de ultra-baja latencia
-- Edge Runtimes & Gateways con Deno 2, Bun y Hono
-- gRPC, GraphQL (Strawberry/Ariadne) y OpenAPI 3.1
-
-**DevOps & Infrastructure:**
-
-- Docker multi-stage builds
-- Docker Compose orchestration
-- GitHub Actions workflows
-- AWS (EC2, Lambda, RDS, S3)
-- Terraform (IaC)
-
-**Security & Cryptography:**
-
-- OWASP Top 10 mitigation
-- JWT/OAuth2 implementation
-- Encryption (AES, RSA)
-- Penetration testing basics
-- Secure coding practices
-
-**AI/ML & Automation:**
-
-- Prompt Engineering (GPT-4, Claude)
-- LangChain for AI workflows
-- OpenAI API integration
-- Automation scripts (Python, Bash)
-- Web scraping (Beautiful Soup, Scrapy)
-
-**Documentation & Technical Writing:**
-
-- API documentation (OpenAPI/Swagger)
-- Technical blog writing
-- Video tutorial creation
-- Code documentation standards
-
-### 📚 Lecturas & Formación Continua
-
-**Libros técnicos recientes:**
-
-- ✅ _The Pragmatic Programmer_ (20th Anniversary)
-- ✅ _Clean Architecture_ — Robert C. Martin
-- ✅ _Designing Data-Intensive Applications_ — Martin Kleppmann
-- 📖 _Building Microservices_ (2nd ed.) — En progreso
-- 📖 _Site Reliability Engineering_ — Google (En progreso)
-
-**Cursos & Certificaciones en proceso:**
-
-- 🎓 AWS Solutions Architect Associate (Completado)
-- 🎓 Certified Kubernetes Administrator (CKA) (En preparación)
-- 📚 FastAPI Advanced Patterns & AI Agent Architectures
-
-**Podcasts favoritos:**
-
-- 🎙️ Talk Python To Me
-- 🎙️ Python Bytes
-- 🎙️ The Changelog
-- 🎙️ Software Engineering Daily
-
-</details>
-
 ---
 
 <div align="center">
 
-**📋 Políticas del Proyecto**
+**📋 Políticas & Recursos del Proyecto**
 
-[💙 Sponsors](SPONSORS.md) • [📞 Soporte](.github/SUPPORT.md) • [🔒 Seguridad](.github/SECURITY.md) • [⚖️ Código de Conducta](.github/CODE_OF_CONDUCT.md) • [📜 Licencia](LICENSE)
+[💙 Sponsors](SPONSORS.md) • [🔧 Toolbox & Setup](TOOLBOX.md) • [📞 Soporte](.github/SUPPORT.md) • [🔒 Seguridad](.github/SECURITY.md) • [⚖️ Código de Conducta](.github/CODE_OF_CONDUCT.md) • [📜 Licencia](LICENSE)
 
 </div>
 
@@ -725,7 +630,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-05</sub>  
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-06</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
