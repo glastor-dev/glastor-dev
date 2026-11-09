@@ -222,7 +222,11 @@ Agradecemos a todos nuestros contributors:
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/glastor-dev" title="GitHub - Código y proyectos">
-    <img src="https://thesvg.org/icons/github/default.svg" alt="GitHub" width="55" height="55"/>
+    <img src="images/github.svg" alt="GitHub" width="55" height="55"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://dly.to/WcUGalBbTeP" title="Daily.dev - Perfil & Artículos">
+    <img src="images/dailydev.svg" alt="Daily.dev" width="55" height="55"/>
   </a>
 </p>
 

@@ -99,8 +99,8 @@ export async function extractExportsFromProject(
     })
   ) {
     if (include.length) {
-      const normalized = entry.path.replaceAll("\\\\", "/");
-      const ok = include.some((seg) => normalized.includes(seg.replaceAll("\\\\", "/")));
+      const normalized = entry.path.replaceAll("\\", "/");
+      const ok = include.some((seg) => normalized.includes(seg.replaceAll("\\", "/")));
       if (!ok) continue;
     }
 

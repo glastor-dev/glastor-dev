@@ -6,5 +6,8 @@
   "defaultBranch": "master",
   "ciWorkflow": "ci.yml",
   "badgeStyle": "flat-square",
-  "exclude": [".git", "node_modules", "dist", "build", "test", "bench"]
+  "exclude": [".git", "node_modules", "dist", "build", "test", "bench", "scripts"],
+  "api": {
+    "include": ["src/mod.ts"]
+  }
 }
