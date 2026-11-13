@@ -20,7 +20,7 @@ Nuestro sistema de _issue tracking_ sigue estándares de alta fidelidad. Si has 
 La integridad del código es nuestra prioridad absoluta. Ante el hallazgo de vulnerabilidades críticas, solicitamos seguir nuestro protocolo de seguridad de forma privada para evitar vectores de ataque en entornos productivos:
 
 1. Revisa nuestra **[Política de Seguridad](https://github.com/glastor-dev/glastor-dev/security/policy)**.
-2. Envía un reporte cifrado a: **[glastor.info@gmail.com](mailto:glastor.info@gmail.com)** o **[ventas@glastor.es](mailto:ventas@glastor.es)**.
+2. Envía un reporte cifrado a: **[founder@glastor.es](mailto:founder@glastor.es)**.
 
 ---
 

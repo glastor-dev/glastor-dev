@@ -7,8 +7,8 @@
 **Impulsando la ingeniería Open Source de alto rendimiento, sistemas distribuidos en Rust & Python y tooling de próxima generación en Deno 2 / Bun.**
 
 [![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-Glastor_DEV-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/glastor-dev)
-[![Takenos ACH](https://img.shields.io/badge/ACH_%2F_Wire_USD-Factura_E_%28Exportaci%C3%B3n%29-1E1E1E?style=for-the-badge)](mailto:ventas@glastor.es?subject=Sponsorship%20Internacional%20-%20Solicitud%20Factura%20E)
-[![Banco Galicia](https://img.shields.io/badge/Banco_Galicia_ARS-Factura_A_%2F_B_%28IVA_Resp._Inscripto%29-F05C2B?style=for-the-badge)](mailto:glastor.info@gmail.com?subject=Sponsorship%20Argentina%20-%20Solicitud%20Factura%20A)
+[![Takenos ACH](https://img.shields.io/badge/ACH_%2F_Wire_USD-Factura_E_%28Exportaci%C3%B3n%29-1E1E1E?style=for-the-badge)](mailto:founder@glastor.es?subject=Sponsorship%20Internacional%20-%20Solicitud%20Factura%20E)
+[![Banco Galicia](https://img.shields.io/badge/Banco_Galicia_ARS-Factura_A_%2F_B_%28IVA_Resp._Inscripto%29-F05C2B?style=for-the-badge)](mailto:founder@glastor.es?subject=Sponsorship%20Argentina%20-%20Solicitud%20Factura%20A)
 
 [👤 Perfil Personal (`@glastor-dev`)](https://github.com/glastor-dev) • [🏢 Organización (`glastor-core`)](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [🌐 Sitio Oficial (`glastor.es`)](https://glastor.es)
 
@@ -135,7 +135,7 @@ Para empresas radicadas en **Estados Unidos, Europa (UE) o resto del mundo** que
 - **Comprobante Oficial:** Emisión de **Factura E electrónica oficial (ARCA / ex-AFIP)** en **USD** o **EUR**, libre de IVA local y válida para contabilidad internacional.
 - **Medios de Recepción:** Transferencia local en EE. UU. vía **ACH (USD)** (Takenos / cuenta receptora en EE. UU.) o transferencia internacional **SWIFT / Wire**.
 
-📩 **[Solicitar coordenadas ACH / Wire y alta de proveedor (Factura E)](mailto:ventas@glastor.es?cc=glastor.info@gmail.com&subject=Sponsorship%20B2B%20Internacional%20-%20Solicitud%20de%20Factura%20E%20y%20Datos%20ACH)**
+📩 **[Solicitar coordenadas ACH / Wire y alta de proveedor (Factura E)](mailto:founder@glastor.es?subject=Sponsorship%20B2B%20Internacional%20-%20Solicitud%20de%20Factura%20E%20y%20Datos%20ACH)**
 
 ---
 
@@ -147,7 +147,7 @@ Para empresas, pymes y profesionales radicados en la **República Argentina**:
 - **Comprobante Oficial:** Emisión de **Factura A** (con IVA discriminado para Responsables Inscriptos) o **Factura B**.
 - **Medios de Recepción:** Transferencia bancaria directa vía **Banco Galicia** (CBU / Alias en **ARS** o **USD**).
 
-📩 **[Solicitar CBU / Alias de Banco Galicia y emisión de Factura A](mailto:glastor.info@gmail.com?cc=ventas@glastor.es&subject=Sponsorship%20Argentina%20-%20Solicitud%20de%20Datos%20Banco%20Galicia%20y%20Factura%20A)**
+📩 **[Solicitar CBU / Alias de Banco Galicia y emisión de Factura A](mailto:founder@glastor.es?subject=Sponsorship%20Argentina%20-%20Solicitud%20de%20Datos%20Banco%20Galicia%20y%20Factura%20A)**
 
 > 🔒 _Por razones de seguridad bancaria y cumplimiento de políticas anti-fraude, los números de cuenta, routing ACH y CBU se envían de forma privada tras el contacto por correo electrónico junto con la factura correspondiente._
 
@@ -155,8 +155,7 @@ Para empresas, pymes y profesionales radicados en la **República Argentina**:
 
 ## 📫 Contacto Directo para Alianzas & Plan Enterprise
 
-- **📧 Email Corporativo & Ventas B2B:** [ventas@glastor.es](mailto:ventas@glastor.es)
-- **📧 Email Directo & Administración (Argentina):** [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+- **📧 Email Principal & Fundador:** [founder@glastor.es](mailto:founder@glastor.es)
 - **🗓️ Reunión de Alineación (30 min sin cargo):** [cal.com/glastor](https://cal.com/glastor)
 - **💬 Telegram Directo:** [@zerhocool](https://t.me/zerhocool)
 

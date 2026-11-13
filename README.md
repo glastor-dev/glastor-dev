@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-11-09
+  🔄 Última actualización: 2026-11-13
   📦 Versión del generador: v2.2.0
 -->
 
@@ -29,7 +29,7 @@
 
 **🟢 Disponible para proyectos — Próximas aperturas: Diciembre 2026**
 
-[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:ventas@glastor.es) • [🌐 Website](https://glastor.es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:founder@glastor.es) • [🌐 Website](https://glastor.es)
 
 </div>
 
@@ -217,7 +217,7 @@ Agradecemos a todos nuestros contributors:
     <img src="https://thesvg.org/icons/telegram/default.svg" alt="Telegram" width="55" height="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;
-  <a href="mailto:glastor.info@gmail.com" title="Email - Consultas profesionales">
+  <a href="mailto:founder@glastor.es" title="Email - Consultas profesionales">
     <img src="https://thesvg.org/icons/gmail/default.svg" alt="Email" width="55" height="55"/>
   </a>
   &nbsp;&nbsp;&nbsp;
@@ -420,7 +420,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-09</sub>  
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-13</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>

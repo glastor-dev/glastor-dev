@@ -36,7 +36,7 @@ Este framework es vinculante en todos los espacios oficiales de GLASTOR-DENO en 
 
 Ante cualquier desviación de estos estándares, active el protocolo de notificación inmediata:
 
-📧 **Canal de Integridad:** [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+📧 **Canal de Integridad:** [founder@glastor.es](mailto:founder@glastor.es)
 
 **Requisitos del Reporte:**
 
