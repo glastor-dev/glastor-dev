@@ -16,13 +16,15 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
 
@@ -34,15 +36,26 @@ jobs:
       - name: Generate README
         run: deno task readme:force
 
-      - name: Commit and Push if changed
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          if ! git diff --staged --quiet; then
-            git commit -m "docs: auto-update README [skip ci]"
-            git pull --rebase origin ${{ github.ref_name }}
-            git push origin ${{ github.ref_name }}
-          else
-            echo "README.md is already up to date, nothing to commit."
-          fi
+      - name: Create Pull Request with Co-Author
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: |
+            docs: auto-update README and metrics
+
+            Co-authored-by: Andrés Cardoso <founder@glastor.es>
+          committer: GitHub Action <action@github.com>
+          author: Andrés Cardoso <founder@glastor.es>
+          branch: automation/readme-update
+          delete-branch: true
+          title: "docs: automated README and ecosystem update"
+          body: |
+            ### 🤖 Automated Documentation Sync
+
+            - Updated living profile metrics and AST generation.
+            - Synchronized with `README.profile.md`.
+
+            Co-authored-by: @glastor-dev <founder@glastor.es>
+          labels: |
+            documentation
+            automated-pr
