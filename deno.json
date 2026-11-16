@@ -39,6 +39,7 @@
       "README.md",
       "README.profile.md",
       "src/templates",
+      "images",
       "node_modules",
       "dist",
       "build"
