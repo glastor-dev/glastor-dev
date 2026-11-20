@@ -29,7 +29,7 @@
 
 **🟢 Disponible para proyectos — Próximas aperturas: {{nextOpening}}**
 
-[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:founder@glastor.es) • [🌐 Website](https://glastor.es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [🔬 Benchmarks](https://github.com/glastor-core/benchmarks) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:founder@glastor.es) • [🌐 Website](https://glastor.es)
 
 </div>
 
@@ -167,7 +167,8 @@ Arquitecto **sistemas distribuidos de misión crítica, backends de ultra-baja l
 
 <br>
 
-**Impacto comprobado:** +15 años en producción (desde 2010) • 150+ proyectos desplegados • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
+**Impacto comprobado:** +15 años en producción (desde 2010) • 150+ proyectos desplegados • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura  
+🔬 _Evidencia empírica y tests de estrés reproducibles (Rust vs Go vs Node vs Python):_ [**Ver suite glastor-core/benchmarks →**](https://github.com/glastor-core/benchmarks)
 
 <br>
 

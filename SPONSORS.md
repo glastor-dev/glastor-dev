@@ -10,7 +10,7 @@
 [![Takenos ACH](https://img.shields.io/badge/ACH_%2F_Wire_USD-Factura_E_%28Exportaci%C3%B3n%29-1E1E1E?style=for-the-badge)](mailto:founder@glastor.es?subject=Sponsorship%20Internacional%20-%20Solicitud%20Factura%20E)
 [![Banco Galicia](https://img.shields.io/badge/Banco_Galicia_ARS-Factura_A_%2F_B_%28IVA_Resp._Inscripto%29-F05C2B?style=for-the-badge)](mailto:founder@glastor.es?subject=Sponsorship%20Argentina%20-%20Solicitud%20Factura%20A)
 
-[👤 Perfil Personal (`@glastor-dev`)](https://github.com/glastor-dev) • [🏢 Organización (`glastor-core`)](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [🌐 Sitio Oficial (`glastor.es`)](https://glastor.es)
+[👤 Perfil Personal (`@glastor-dev`)](https://github.com/glastor-dev) • [🏢 Organización (`glastor-core`)](https://github.com/glastor-core) • [🔬 Benchmarks](https://github.com/glastor-core/benchmarks) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [🌐 Sitio Oficial (`glastor.es`)](https://glastor.es)
 
 </div>
 
@@ -24,6 +24,7 @@ El programa de Sponsorship de **GLASTOR®** sostiene el desarrollo continuo, las
 | :-------------------------------------------------------------------- | :------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
 | **[`@glastor-dev/readmegen`](https://jsr.io/@glastor-dev/readmegen)** | Developer Tooling (JSR / Deno 2) | Generador autónomo de documentación mediante análisis AST de TypeScript, auditoría 4R y soporte nativo `llms.txt`.           |
 | **[`glastor-core`](https://github.com/glastor-core/glastor-core)**    | Distributed Systems Kernel       | Primitivas de ejecución determinística y pipelines stateful de sub-milisegundo para microservicios críticos.                 |
+| **[`benchmarks`](https://github.com/glastor-core/benchmarks)**        | Empirical Systems Harness        | Suite reproducible de estrés HTTP (Rust, Go, Node, Python) en Docker + k6 bajo cuotas de CPU/RAM y cargas idénticas.         |
 | **[`nemesis`](https://github.com/glastor-core/nemesis)**              | DevSecOps & Compliance           | Motor CLI y GitHub Action para auditoría de seguridad continua, higiene de repositorios y auto-fix.                          |
 | **[`vortex`](https://github.com/glastor-core/vortex)**                | Predictive CI & FinOps           | Orquestador de CI basado en AST, podador de barrels y divisor dinámico de tests (LPT) para reducir costos en GitHub Actions. |
 | **[`zerho`](https://github.com/glastor-core/zerho)**                  | Edge Documentation Engine        | Motor de documentación de ultra-alta velocidad para Deno 2 & Edge con explorador OpenAPI interactivo y `llms.txt`.           |

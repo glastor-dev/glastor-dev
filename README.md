@@ -2,7 +2,7 @@
 
 <!--
   ⚠️ SOURCE OF TRUTH: Edita este archivo, no el README.md generado.
-  🔄 Última actualización: 2026-11-16
+  🔄 Última actualización: 2026-11-20
   📦 Versión del generador: v2.2.0
 -->
 
@@ -29,7 +29,7 @@
 
 **🟢 Disponible para proyectos — Próximas aperturas: Diciembre 2026**
 
-[🏢 GLASTOR® Core](https://github.com/glastor-core) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:founder@glastor.es) • [🌐 Website](https://glastor.es)
+[🏢 GLASTOR® Core](https://github.com/glastor-core) • [🔬 Benchmarks](https://github.com/glastor-core/benchmarks) • [📖 Documentación Técnica (mdBook)](https://glastor-dev.github.io/glastor-dev/) • [📦 JSR Package](https://jsr.io/@glastor-dev/readmegen) • [💙 Sponsors](./SPONSORS.md) • [🔧 Toolbox](./TOOLBOX.md) • [📧 Contacto](mailto:founder@glastor.es) • [🌐 Website](https://glastor.es)
 
 </div>
 
@@ -167,7 +167,8 @@ Arquitecto **sistemas distribuidos de misión crítica, backends de ultra-baja l
 
 <br>
 
-**Impacto comprobado:** +15 años en producción (desde 2010) • 150+ proyectos desplegados • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura
+**Impacto comprobado:** +15 años en producción (desde 2010) • 150+ proyectos desplegados • Arquitecturas de 5K+ req/s (p99 < 50ms) • Hasta 40% ahorro en infraestructura  
+🔬 _Evidencia empírica y tests de estrés reproducibles (Rust vs Go vs Node vs Python):_ [**Ver suite glastor-core/benchmarks →**](https://github.com/glastor-core/benchmarks)
 
 <br>
 
@@ -249,31 +250,31 @@ Agradecemos a todos nuestros contributors:
 
 ```mermaid
 graph TD
-    src_templates_render_ts["src/templates/render.ts"]
-    src_templates_load_ts["src/templates/load.ts"]
-    src_project_analyze_ts["src/project/analyze.ts"]
-    src_parsers_deno_json_ts["src/parsers/deno_json.ts"]
-    src_parsers_import_map_ts["src/parsers/import_map.ts"]
-    src_parsers_imports_ts["src/parsers/imports.ts"]
-    src_parsers_source_code_ts["src/parsers/source_code.ts"]
-    src_parsers_tests_ts["src/parsers/tests.ts"]
-    src_parsers_workflows_ts["src/parsers/workflows.ts"]
-    src_parsers_project_files_ts["src/parsers/project_files.ts"]
-    src_utils_user_config_ts["src/utils/user_config.ts"]
-    src_generators_badges_ts["src/generators/badges.ts"]
-    src_generators_toc_ts["src/generators/toc.ts"]
     src_generators_api_ts["src/generators/api.ts"]
-    src_generators_examples_ts["src/generators/examples.ts"]
-    src_generators_mermaid_ts["src/generators/mermaid.ts"]
+    src_parsers_source_code_ts["src/parsers/source_code.ts"]
+    src_generators_badges_ts["src/generators/badges.ts"]
     src_generators_doc_coverage_ts["src/generators/doc_coverage.ts"]
+    src_generators_examples_ts["src/generators/examples.ts"]
     src_generators_llms_ts["src/generators/llms.ts"]
-    src_utils_readme_infer_ts["src/utils/readme_infer.ts"]
-    src_utils_file_system_ts["src/utils/file_system.ts"]
-    src_utils_init_wizard_ts["src/utils/init_wizard.ts"]
-    src_utils_logger_ts["src/utils/logger.ts"]
-    src_parsers_source_code_ast_ts["src/parsers/source_code_ast.ts"]
+    src_parsers_deno_json_ts["src/parsers/deno_json.ts"]
+    src_utils_user_config_ts["src/utils/user_config.ts"]
+    src_generators_mermaid_ts["src/generators/mermaid.ts"]
+    src_generators_toc_ts["src/generators/toc.ts"]
     src_main_ts["src/main.ts"]
     src_mod_ts["src/mod.ts"]
+    src_utils_init_wizard_ts["src/utils/init_wizard.ts"]
+    src_utils_logger_ts["src/utils/logger.ts"]
+    src_project_analyze_ts["src/project/analyze.ts"]
+    src_templates_load_ts["src/templates/load.ts"]
+    src_templates_render_ts["src/templates/render.ts"]
+    src_utils_file_system_ts["src/utils/file_system.ts"]
+    src_parsers_imports_ts["src/parsers/imports.ts"]
+    src_parsers_import_map_ts["src/parsers/import_map.ts"]
+    src_parsers_project_files_ts["src/parsers/project_files.ts"]
+    src_parsers_source_code_ast_ts["src/parsers/source_code_ast.ts"]
+    src_parsers_workflows_ts["src/parsers/workflows.ts"]
+    src_parsers_tests_ts["src/parsers/tests.ts"]
+    src_utils_readme_infer_ts["src/utils/readme_infer.ts"]
     src_generators_api_ts --> src_parsers_source_code_ts
     src_generators_doc_coverage_ts --> src_parsers_source_code_ts
     src_generators_examples_ts --> src_parsers_source_code_ts
@@ -420,7 +421,7 @@ Reg. 4559568 (Clase 42) y 4559567 (Clase 35) — Fecha: 19/08/2025
 
 ---
 
-<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-16</sub>  
+<sub>🤖 README generado automáticamente • Versión 2.2.0 • Última actualización: 2026-11-20</sub>  
 <sub>⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub</sub>
 
 </div>
